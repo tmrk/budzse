@@ -26,10 +26,17 @@ export interface ChartInput {
   unitLabel: (p: ChartPanel) => string;
 }
 
+export function chartHeight(panels: number, width: number): number {
+  const phone = width < 640;
+  if (panels <= 1) return phone ? 360 : 500;
+  if (panels === 2) return phone ? 470 : 580;
+  return phone ? 600 : 700;
+}
+
 /** Names what is drawn and in which unit, so the price basis is always on the chart itself. */
 export function panelTitle(p: ChartPanel, m: Messages, unit: string): string {
   const name =
-    p.id === 'level' ? p.metrics.map((k) => m.metricChips[k as MetricKey]).join(', ') : p.id === 'deficit' ? m.chart.panelDeficit : m.chart.panelOda;
+    p.id === 'level' ? p.metrics.map((k, i) => (i && k !== 'gdp' ? m.metricChips[k as MetricKey].toLowerCase() : m.metricChips[k as MetricKey])).join(', ') : p.id === 'deficit' ? m.chart.panelDeficit : m.chart.panelOda;
   return m.chart.panelWithUnit(name, unit);
 }
 

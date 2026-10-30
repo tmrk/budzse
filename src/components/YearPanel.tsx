@@ -80,7 +80,7 @@ export default function YearPanel() {
     <section className="year-panel" aria-labelledby="year-title" data-testid="year-panel">
       <header className="year-head">
         <button type="button" className="year-step" onClick={() => setView({ year: Math.max(FIRST_YEAR, y - 1) })} disabled={y <= FIRST_YEAR} aria-label={m.year.prev}>‹</button>
-        <h3 id="year-title">
+        <h2 id="year-title">
           <label>
             <span className="sr-only">{m.year.select}</span>
             <select value={y} onChange={(e) => setView({ year: Number(e.target.value) })} data-testid="year-select">
@@ -89,7 +89,7 @@ export default function YearPanel() {
               ))}
             </select>
           </label>
-        </h3>
+        </h2>
         <button type="button" className="year-step" onClick={() => setView({ year: Math.min(LAST_YEAR, y + 1) })} disabled={y >= LAST_YEAR} aria-label={m.year.next}>›</button>
       </header>
 
@@ -99,7 +99,7 @@ export default function YearPanel() {
         <div className="year-group" key={group}>
           {group === 'fiscal' && (
             <>
-              <h4 className="year-group-title">{view.scope === 'central' ? (y < 2010 ? m.scopes.centralBudget : m.scopes.centralSubsystem) : m.scopes.generalGovernment}</h4>
+              <h3 className="year-group-title">{view.scope === 'central' ? (y < 2010 ? m.scopes.centralBudget : m.scopes.centralSubsystem) : m.scopes.generalGovernment}</h3>
               <IndicatorBlock indicator="revenue" />
               <IndicatorBlock indicator="expenditure" />
               <IndicatorBlock indicator="deficit" />
@@ -108,7 +108,7 @@ export default function YearPanel() {
           )}
           {group === 'economy' && (
             <>
-              <h4 className="year-group-title">{m.year.economy}</h4>
+              <h3 className="year-group-title">{m.year.economy}</h3>
               <IndicatorBlock indicator="gdp" />
               <IndicatorBlock indicator="realGdpGrowth" />
               <IndicatorBlock indicator="cpi" />
@@ -116,7 +116,7 @@ export default function YearPanel() {
           )}
           {group === 'aid' && (
             <>
-              <h4 className="year-group-title">{m.year.aid}</h4>
+              <h3 className="year-group-title">{m.year.aid}</h3>
               <IndicatorBlock indicator="oda" />
               <IndicatorBlock indicator="odaGe" />
               <IndicatorBlock indicator="odaPctGni" />

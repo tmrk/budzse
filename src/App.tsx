@@ -9,6 +9,7 @@ import Legend from './components/Legend';
 import Methodology from './components/Methodology';
 import SourceDialog from './components/SourceDialog';
 import YearPanel from './components/YearPanel';
+import { chartHeight } from './charts/option';
 import { useAppState } from './hooks/useAppState';
 import { useTheme, type ThemeChoice } from './hooks/useTheme';
 import { formatDate } from './lib/format';
@@ -131,7 +132,7 @@ export default function App() {
                   ) : !hasPoints ? (
                     <p className="empty-state">{m.chart.emptyMode}</p>
                   ) : (
-                    <Suspense fallback={<div className="chart-placeholder" role="status">{m.app.loading}</div>}>
+                    <Suspense fallback={<div className="chart-placeholder" style={{ height: chartHeight(panels.length, window.innerWidth) }} role="status">{m.app.loading}</div>}>
                       <ChartView panels={panels} themeVersion={version} />
                     </Suspense>
                   )}

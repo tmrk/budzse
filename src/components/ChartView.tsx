@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { type ECharts, init } from '../charts/echarts';
-import { buildOption, panelTitle } from '../charts/option';
+import { buildOption, chartHeight, panelTitle } from '../charts/option';
 import { readTheme, SERIES_VAR } from '../charts/palette';
 import { type ChartPanel, planVersusActual } from '../lib/measure';
 import { formatDate, formatSignedHuf, formatSignedPct } from '../lib/format';
@@ -10,19 +10,12 @@ import { figure, seriesLabel } from './figures';
 
 const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
 
-function heightFor(panels: number, width: number): number {
-  const phone = width < 640;
-  if (panels <= 1) return phone ? 360 : 500;
-  if (panels === 2) return phone ? 470 : 580;
-  return phone ? 600 : 700;
-}
-
 export default function ChartView({ themeVersion, panels }: { themeVersion: number; panels: ChartPanel[] }) {
   const { data, view, setView, lang, m } = useApp();
   const host = useRef<HTMLDivElement>(null);
   const chart = useRef<ECharts | null>(null);
   const [width, setWidth] = useState(() => (typeof window === 'undefined' ? 1000 : window.innerWidth));
-  const height = heightFor(panels.length, width);
+  const height = chartHeight(panels.length, width);
   const coarse = useMemo(() => window.matchMedia('(pointer: coarse)').matches, []);
   const reducedMotion = useMemo(() => window.matchMedia('(prefers-reduced-motion: reduce)').matches, []);
   const viewRef = useRef(view);
