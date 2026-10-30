@@ -1,0 +1,899 @@
+[
+ {
+  "id": "central.revenue.2025.actual",
+  "year": 2025,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "39338844700000",
+  "unit": "HUF",
+  "original": {
+   "value": "39 338 844,7",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Magyar Államkincstár",
+  "source": "mak-2025-final",
+  "locator": "„Bevétel” sor, „2025. évi teljesítés” oszlop",
+  "revision": "final",
+  "note": {
+   "hu": "A 2025. évi zárszámadási törvény a kutatás idején még nem volt kihirdetve, ezért a Kincstár zárszámadási mérlege a forrás.",
+   "en": "The 2025 final-accounts act had not been promulgated at the time of research, so the source is the Treasury final-accounts balance."
+  }
+ },
+ {
+  "id": "central.expenditure.2025.actual",
+  "year": 2025,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "44885243500000",
+  "unit": "HUF",
+  "original": {
+   "value": "44 885 243,5",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Magyar Államkincstár",
+  "source": "mak-2025-final",
+  "locator": "„Kiadás” sor, „2025. évi teljesítés” oszlop",
+  "revision": "final",
+  "note": {
+   "hu": "A 2025. évi zárszámadási törvény a kutatás idején még nem volt kihirdetve, ezért a Kincstár zárszámadási mérlege a forrás.",
+   "en": "The 2025 final-accounts act had not been promulgated at the time of research, so the source is the Treasury final-accounts balance."
+  }
+ },
+ {
+  "id": "central.deficit.2025.actual",
+  "year": 2025,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "5546398800000",
+  "unit": "HUF",
+  "original": {
+   "value": "5 546 398,8",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Magyar Államkincstár",
+  "source": "mak-2025-final",
+  "locator": "Egyenlegek: központi költségvetés −5 305 798,8; elkülönített alapok +7 178,5; TB-alapok −247 778,5",
+  "revision": "final",
+  "note": {
+   "hu": "A Kincstár egyenlegei negatív előjellel szerepelnek; itt hiányként, pozitív előjellel. Egyezik a kiadás és a bevétel különbségével.",
+   "en": "The Treasury shows balances with a negative sign; here it is a deficit with a positive sign. It equals expenditure minus revenue."
+  }
+ },
+ {
+  "id": "central.revenue.2026.ytd",
+  "year": 2026,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "ytd",
+  "method": "cash",
+  "value": "30218146292202",
+  "unit": "HUF",
+  "original": {
+   "value": "30 218 146,292",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Magyar Államkincstár",
+  "source": "mak-2026-09",
+  "locator": "MERLEG munkalap, „BEVÉTEL” sor, 2026. I–IX. hó oszlop",
+  "revision": "preliminary",
+  "period": "2026-01/2026-09",
+  "note": {
+   "hu": "Csak január–szeptember, előzetes adat. Nem éves tény.",
+   "en": "January to September only, preliminary. Not an annual outcome."
+  }
+ },
+ {
+  "id": "central.expenditure.2026.ytd",
+  "year": 2026,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "ytd",
+  "method": "cash",
+  "value": "35480049962587",
+  "unit": "HUF",
+  "original": {
+   "value": "35 480 049,963",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Magyar Államkincstár",
+  "source": "mak-2026-09",
+  "locator": "MERLEG munkalap, „KIADÁS” sor, 2026. I–IX. hó oszlop",
+  "revision": "preliminary",
+  "period": "2026-01/2026-09",
+  "note": {
+   "hu": "Csak január–szeptember, előzetes adat. Nem éves tény.",
+   "en": "January to September only, preliminary. Not an annual outcome."
+  }
+ },
+ {
+  "id": "central.deficit.2026.ytd",
+  "year": 2026,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "ytd",
+  "method": "cash",
+  "value": "5261903670385",
+  "unit": "HUF",
+  "original": {
+   "value": "5 261 903,670",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Magyar Államkincstár",
+  "source": "mak-2026-09",
+  "locator": "MERLEG munkalap, „KÖZPONTI ALRENDSZER ÖSSZESEN (−)” sor, 2026. I–IX. hó oszlop",
+  "revision": "preliminary",
+  "period": "2026-01/2026-09",
+  "note": {
+   "hu": "Csak január–szeptember, előzetes adat. Nem éves tény.",
+   "en": "January to September only, preliminary. Not an annual outcome."
+  }
+ },
+ {
+  "id": "central.revenue.2027.draft",
+  "year": 2027,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "draft",
+  "method": "cash",
+  "value": "42483800000000",
+  "unit": "HUF",
+  "original": {
+   "value": "42 483,8",
+   "unit": "milliárd forint",
+   "currency": "HUF"
+  },
+  "institution": "Pénzügyminisztérium (Költségvetési Tanács véleménye nyomán)",
+  "source": "press-2027-draft",
+  "locator": "A cikk a tervezett bevételt, kiadást és a központi alrendszer pénzforgalmi hiányát közli; egyező szám: economx.hu, 2026. 10. 29.; index.hu, 2026. 10. 30.",
+  "revision": "projection",
+  "secondary": true,
+  "note": {
+   "hu": "Törvényjavaslat-tervezet, nem elfogadott költségvetés. A számok a Költségvetési Tanács véleményét ismertető sajtóközlésekből származnak; a tervezet az Országgyűlés honlapján automatizált eszközzel nem volt elérhető.",
+   "en": "A draft bill, not an adopted budget. The figures come from press reports of the Fiscal Council's opinion; the draft on Parliament's website could not be reached with automated tools."
+  }
+ },
+ {
+  "id": "central.expenditure.2027.draft",
+  "year": 2027,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "draft",
+  "method": "cash",
+  "value": "47586500000000",
+  "unit": "HUF",
+  "original": {
+   "value": "47 586,5",
+   "unit": "milliárd forint",
+   "currency": "HUF"
+  },
+  "institution": "Pénzügyminisztérium (Költségvetési Tanács véleménye nyomán)",
+  "source": "press-2027-draft",
+  "locator": "A cikk a tervezett bevételt, kiadást és a központi alrendszer pénzforgalmi hiányát közli; egyező szám: economx.hu, 2026. 10. 29.; index.hu, 2026. 10. 30.",
+  "revision": "projection",
+  "secondary": true,
+  "note": {
+   "hu": "Törvényjavaslat-tervezet, nem elfogadott költségvetés. A számok a Költségvetési Tanács véleményét ismertető sajtóközlésekből származnak; a tervezet az Országgyűlés honlapján automatizált eszközzel nem volt elérhető.",
+   "en": "A draft bill, not an adopted budget. The figures come from press reports of the Fiscal Council's opinion; the draft on Parliament's website could not be reached with automated tools."
+  }
+ },
+ {
+  "id": "central.deficit.2027.draft",
+  "year": 2027,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "draft",
+  "method": "cash",
+  "value": "5102700000000",
+  "unit": "HUF",
+  "original": {
+   "value": "5 102,7",
+   "unit": "milliárd forint",
+   "currency": "HUF"
+  },
+  "institution": "Pénzügyminisztérium (Költségvetési Tanács véleménye nyomán)",
+  "source": "press-2027-draft",
+  "locator": "A cikk a tervezett bevételt, kiadást és a központi alrendszer pénzforgalmi hiányát közli; egyező szám: economx.hu, 2026. 10. 29.; index.hu, 2026. 10. 30.",
+  "revision": "projection",
+  "secondary": true,
+  "note": {
+   "hu": "Törvényjavaslat-tervezet, nem elfogadott költségvetés. A számok a Költségvetési Tanács véleményét ismertető sajtóközlésekből származnak; a tervezet az Országgyűlés honlapján automatizált eszközzel nem volt elérhető.",
+   "en": "A draft bill, not an adopted budget. The figures come from press reports of the Fiscal Council's opinion; the draft on Parliament's website could not be reached with automated tools."
+  }
+ },
+ {
+  "id": "gdp.2017.planned",
+  "year": 2017,
+  "indicator": "gdp",
+  "scope": "economy",
+  "status": "planned",
+  "method": "nationalAccounts",
+  "value": "37279200000000",
+  "unit": "HUF",
+  "original": {
+   "value": "37 279,2",
+   "unit": "Mrd Ft",
+   "currency": "HUF"
+  },
+  "institution": "Állami Számvevőszék",
+  "source": "asz-2017",
+  "locator": "18. oldal",
+  "revision": "projection",
+  "note": {
+   "hu": "A költségvetési törvényjavaslat indokolásának GDP-feltevése az Állami Számvevőszék véleménye szerint. Nem törvényi főösszeg.",
+   "en": "The GDP assumption in the budget bill's justification, per the State Audit Office opinion. Not a statutory main sum."
+  }
+ },
+ {
+  "id": "gdp.2018.planned",
+  "year": 2018,
+  "indicator": "gdp",
+  "scope": "economy",
+  "status": "planned",
+  "method": "nationalAccounts",
+  "value": "40353000000000",
+  "unit": "HUF",
+  "original": {
+   "value": "40 353,0",
+   "unit": "Mrd Ft",
+   "currency": "HUF"
+  },
+  "institution": "Állami Számvevőszék",
+  "source": "asz-2018",
+  "locator": "16. oldal",
+  "revision": "projection",
+  "note": {
+   "hu": "A költségvetési törvényjavaslat indokolásának GDP-feltevése az Állami Számvevőszék véleménye szerint. Nem törvényi főösszeg.",
+   "en": "The GDP assumption in the budget bill's justification, per the State Audit Office opinion. Not a statutory main sum."
+  }
+ },
+ {
+  "id": "gdp.2019.planned",
+  "year": 2019,
+  "indicator": "gdp",
+  "scope": "economy",
+  "status": "planned",
+  "method": "nationalAccounts",
+  "value": "43935000000000",
+  "unit": "HUF",
+  "original": {
+   "value": "43 935,0",
+   "unit": "Mrd Ft",
+   "currency": "HUF"
+  },
+  "institution": "Állami Számvevőszék",
+  "source": "asz-2019",
+  "locator": "14. oldal",
+  "revision": "projection",
+  "note": {
+   "hu": "A költségvetési törvényjavaslat indokolásának GDP-feltevése az Állami Számvevőszék véleménye szerint. Nem törvényi főösszeg.",
+   "en": "The GDP assumption in the budget bill's justification, per the State Audit Office opinion. Not a statutory main sum."
+  }
+ },
+ {
+  "id": "gdp.2020.planned",
+  "year": 2020,
+  "indicator": "gdp",
+  "scope": "economy",
+  "status": "planned",
+  "method": "nationalAccounts",
+  "value": "48779500000000",
+  "unit": "HUF",
+  "original": {
+   "value": "48 779,5",
+   "unit": "Mrd Ft",
+   "currency": "HUF"
+  },
+  "institution": "Állami Számvevőszék",
+  "source": "asz-2020",
+  "locator": "16. oldal",
+  "revision": "projection",
+  "note": {
+   "hu": "A költségvetési törvényjavaslat indokolásának GDP-feltevése az Állami Számvevőszék véleménye szerint. Nem törvényi főösszeg.",
+   "en": "The GDP assumption in the budget bill's justification, per the State Audit Office opinion. Not a statutory main sum."
+  }
+ },
+ {
+  "id": "gdp.2021.planned",
+  "year": 2021,
+  "indicator": "gdp",
+  "scope": "economy",
+  "status": "planned",
+  "method": "nationalAccounts",
+  "value": "50903800000000",
+  "unit": "HUF",
+  "original": {
+   "value": "50 903,8",
+   "unit": "Mrd Ft",
+   "currency": "HUF"
+  },
+  "institution": "Állami Számvevőszék",
+  "source": "asz-2021",
+  "locator": "18. oldal",
+  "revision": "projection",
+  "note": {
+   "hu": "A költségvetési törvényjavaslat indokolásának GDP-feltevése az Állami Számvevőszék véleménye szerint. Nem törvényi főösszeg.",
+   "en": "The GDP assumption in the budget bill's justification, per the State Audit Office opinion. Not a statutory main sum."
+  }
+ },
+ {
+  "id": "gdp.2022.planned",
+  "year": 2022,
+  "indicator": "gdp",
+  "scope": "economy",
+  "status": "planned",
+  "method": "nationalAccounts",
+  "value": "56360600000000",
+  "unit": "HUF",
+  "original": {
+   "value": "56 360,6",
+   "unit": "Mrd Ft",
+   "currency": "HUF"
+  },
+  "institution": "Állami Számvevőszék",
+  "source": "asz-2022",
+  "locator": "18. oldal",
+  "revision": "projection",
+  "note": {
+   "hu": "A költségvetési törvényjavaslat indokolásának GDP-feltevése az Állami Számvevőszék véleménye szerint. Nem törvényi főösszeg.",
+   "en": "The GDP assumption in the budget bill's justification, per the State Audit Office opinion. Not a statutory main sum."
+  }
+ },
+ {
+  "id": "gdp.2023.planned",
+  "year": 2023,
+  "indicator": "gdp",
+  "scope": "economy",
+  "status": "planned",
+  "method": "nationalAccounts",
+  "value": "68450400000000",
+  "unit": "HUF",
+  "original": {
+   "value": "68 450,4",
+   "unit": "Mrd Ft",
+   "currency": "HUF"
+  },
+  "institution": "Állami Számvevőszék",
+  "source": "asz-2023",
+  "locator": "18. oldal",
+  "revision": "projection",
+  "note": {
+   "hu": "A költségvetési törvényjavaslat indokolásának GDP-feltevése az Állami Számvevőszék véleménye szerint. Nem törvényi főösszeg.",
+   "en": "The GDP assumption in the budget bill's justification, per the State Audit Office opinion. Not a statutory main sum."
+  }
+ },
+ {
+  "id": "gdp.2024.planned",
+  "year": 2024,
+  "indicator": "gdp",
+  "scope": "economy",
+  "status": "planned",
+  "method": "nationalAccounts",
+  "value": "85255400000000",
+  "unit": "HUF",
+  "original": {
+   "value": "85 255,4",
+   "unit": "Mrd Ft",
+   "currency": "HUF"
+  },
+  "institution": "Állami Számvevőszék",
+  "source": "asz-2024",
+  "locator": "41. oldal",
+  "revision": "projection",
+  "note": {
+   "hu": "A költségvetési törvényjavaslat indokolásának GDP-feltevése az Állami Számvevőszék véleménye szerint. Nem törvényi főösszeg.",
+   "en": "The GDP assumption in the budget bill's justification, per the State Audit Office opinion. Not a statutory main sum."
+  }
+ },
+ {
+  "id": "gdp.2025.planned",
+  "year": 2025,
+  "indicator": "gdp",
+  "scope": "economy",
+  "status": "planned",
+  "method": "nationalAccounts",
+  "value": "87954500000000",
+  "unit": "HUF",
+  "original": {
+   "value": "87 954,5",
+   "unit": "Mrd Ft",
+   "currency": "HUF"
+  },
+  "institution": "Állami Számvevőszék",
+  "source": "asz-2025",
+  "locator": "39. oldal",
+  "revision": "projection",
+  "note": {
+   "hu": "A költségvetési törvényjavaslat indokolásának GDP-feltevése az Állami Számvevőszék véleménye szerint. Nem törvényi főösszeg.",
+   "en": "The GDP assumption in the budget bill's justification, per the State Audit Office opinion. Not a statutory main sum."
+  }
+ },
+ {
+  "id": "gdp.2026.planned",
+  "year": 2026,
+  "indicator": "gdp",
+  "scope": "economy",
+  "status": "planned",
+  "method": "nationalAccounts",
+  "value": "95747000000000",
+  "unit": "HUF",
+  "original": {
+   "value": "95 747,0",
+   "unit": "Mrd Ft",
+   "currency": "HUF"
+  },
+  "institution": "Állami Számvevőszék",
+  "source": "asz-2026",
+  "locator": "38. oldal",
+  "revision": "projection",
+  "note": {
+   "hu": "A költségvetési törvényjavaslat indokolásának GDP-feltevése az Állami Számvevőszék véleménye szerint. Nem törvényi főösszeg.",
+   "en": "The GDP assumption in the budget bill's justification, per the State Audit Office opinion. Not a statutory main sum."
+  }
+ },
+ {
+  "id": "general.deficit.2021.planned",
+  "year": 2021,
+  "indicator": "deficit",
+  "scope": "generalGovernment",
+  "status": "planned",
+  "method": "esa2010",
+  "value": "1476200000000",
+  "unit": "HUF",
+  "original": {
+   "value": "1476,2",
+   "unit": "Mrd Ft",
+   "currency": "HUF"
+  },
+  "institution": "Állami Számvevőszék",
+  "source": "asz-2021",
+  "locator": "16. oldal",
+  "revision": "projection",
+  "note": {
+   "hu": "A költségvetési törvényjavaslat indokolásának ESA-hiánybecslése az Állami Számvevőszék véleménye szerint. Nem törvényi főösszeg.",
+   "en": "The ESA deficit estimate in the budget bill's justification, per the State Audit Office opinion. Not a statutory main sum."
+  }
+ },
+ {
+  "id": "general.deficit.2022.planned",
+  "year": 2022,
+  "indicator": "deficit",
+  "scope": "generalGovernment",
+  "status": "planned",
+  "method": "esa2010",
+  "value": "3325300000000",
+  "unit": "HUF",
+  "original": {
+   "value": "3325,3",
+   "unit": "Mrd Ft",
+   "currency": "HUF"
+  },
+  "institution": "Állami Számvevőszék",
+  "source": "asz-2022",
+  "locator": "16. oldal",
+  "revision": "projection",
+  "note": {
+   "hu": "A költségvetési törvényjavaslat indokolásának ESA-hiánybecslése az Állami Számvevőszék véleménye szerint. Nem törvényi főösszeg.",
+   "en": "The ESA deficit estimate in the budget bill's justification, per the State Audit Office opinion. Not a statutory main sum."
+  }
+ },
+ {
+  "id": "general.deficit.2023.planned",
+  "year": 2023,
+  "indicator": "deficit",
+  "scope": "generalGovernment",
+  "status": "planned",
+  "method": "esa2010",
+  "value": "2422500000000",
+  "unit": "HUF",
+  "original": {
+   "value": "2 422,5",
+   "unit": "Mrd Ft",
+   "currency": "HUF"
+  },
+  "institution": "Állami Számvevőszék",
+  "source": "asz-2023",
+  "locator": "18. oldal",
+  "revision": "projection",
+  "note": {
+   "hu": "A költségvetési törvényjavaslat indokolásának ESA-hiánybecslése az Állami Számvevőszék véleménye szerint. Nem törvényi főösszeg.",
+   "en": "The ESA deficit estimate in the budget bill's justification, per the State Audit Office opinion. Not a statutory main sum."
+  }
+ },
+ {
+  "id": "general.deficit.2024.planned",
+  "year": 2024,
+  "indicator": "deficit",
+  "scope": "generalGovernment",
+  "status": "planned",
+  "method": "esa2010",
+  "value": "2506500000000",
+  "unit": "HUF",
+  "original": {
+   "value": "2 506,5",
+   "unit": "Mrd Ft",
+   "currency": "HUF"
+  },
+  "institution": "Állami Számvevőszék",
+  "source": "asz-2024",
+  "locator": "42. oldal",
+  "revision": "projection",
+  "note": {
+   "hu": "A költségvetési törvényjavaslat indokolásának ESA-hiánybecslése az Állami Számvevőszék véleménye szerint. Nem törvényi főösszeg.",
+   "en": "The ESA deficit estimate in the budget bill's justification, per the State Audit Office opinion. Not a statutory main sum."
+  }
+ },
+ {
+  "id": "general.deficit.2025.planned",
+  "year": 2025,
+  "indicator": "deficit",
+  "scope": "generalGovernment",
+  "status": "planned",
+  "method": "esa2010",
+  "value": "3272300000000",
+  "unit": "HUF",
+  "original": {
+   "value": "3 272,3",
+   "unit": "Mrd Ft",
+   "currency": "HUF"
+  },
+  "institution": "Állami Számvevőszék",
+  "source": "asz-2025",
+  "locator": "40. oldal",
+  "revision": "projection",
+  "note": {
+   "hu": "A költségvetési törvényjavaslat indokolásának ESA-hiánybecslése az Állami Számvevőszék véleménye szerint. Nem törvényi főösszeg.",
+   "en": "The ESA deficit estimate in the budget bill's justification, per the State Audit Office opinion. Not a statutory main sum."
+  }
+ },
+ {
+  "id": "general.deficit.2026.planned",
+  "year": 2026,
+  "indicator": "deficit",
+  "scope": "generalGovernment",
+  "status": "planned",
+  "method": "esa2010",
+  "value": "3588200000000",
+  "unit": "HUF",
+  "original": {
+   "value": "3 588,2",
+   "unit": "Mrd Ft",
+   "currency": "HUF"
+  },
+  "institution": "Állami Számvevőszék",
+  "source": "asz-2026",
+  "locator": "39. oldal",
+  "revision": "projection",
+  "note": {
+   "hu": "A költségvetési törvényjavaslat indokolásának ESA-hiánybecslése az Állami Számvevőszék véleménye szerint. Nem törvényi főösszeg.",
+   "en": "The ESA deficit estimate in the budget bill's justification, per the State Audit Office opinion. Not a statutory main sum."
+  }
+ },
+ {
+  "id": "general.deficitPctGdp.2017.planned",
+  "year": 2017,
+  "indicator": "deficitPctGdp",
+  "scope": "generalGovernment",
+  "status": "planned",
+  "method": "esa2010",
+  "value": 2.4,
+  "unit": "pct",
+  "original": {
+   "value": "2,4%",
+   "unit": "a GDP százaléka",
+   "currency": "HUF"
+  },
+  "institution": "Állami Számvevőszék",
+  "source": "asz-2017",
+  "locator": "28. oldal",
+  "revision": "projection",
+  "note": {
+   "hu": "Az EU-módszertan szerinti hiánycél az Állami Számvevőszék véleménye szerint. Forintban nem szerepel.",
+   "en": "The EU-method deficit target per the State Audit Office opinion. No forint amount is given."
+  }
+ },
+ {
+  "id": "general.deficitPctGdp.2018.planned",
+  "year": 2018,
+  "indicator": "deficitPctGdp",
+  "scope": "generalGovernment",
+  "status": "planned",
+  "method": "esa2010",
+  "value": 2.4,
+  "unit": "pct",
+  "original": {
+   "value": "2,4%",
+   "unit": "a GDP százaléka",
+   "currency": "HUF"
+  },
+  "institution": "Állami Számvevőszék",
+  "source": "asz-2018",
+  "locator": "27. oldal",
+  "revision": "projection",
+  "note": {
+   "hu": "Az EU-módszertan szerinti hiánycél az Állami Számvevőszék véleménye szerint. Forintban nem szerepel.",
+   "en": "The EU-method deficit target per the State Audit Office opinion. No forint amount is given."
+  }
+ },
+ {
+  "id": "general.deficitPctGdp.2019.planned",
+  "year": 2019,
+  "indicator": "deficitPctGdp",
+  "scope": "generalGovernment",
+  "status": "planned",
+  "method": "esa2010",
+  "value": 1.8,
+  "unit": "pct",
+  "original": {
+   "value": "1,8%",
+   "unit": "a GDP százaléka",
+   "currency": "HUF"
+  },
+  "institution": "Állami Számvevőszék",
+  "source": "asz-2019",
+  "locator": "24. oldal",
+  "revision": "projection",
+  "note": {
+   "hu": "Az EU-módszertan szerinti hiánycél az Állami Számvevőszék véleménye szerint. Forintban nem szerepel.",
+   "en": "The EU-method deficit target per the State Audit Office opinion. No forint amount is given."
+  }
+ },
+ {
+  "id": "general.deficitPctGdp.2020.planned",
+  "year": 2020,
+  "indicator": "deficitPctGdp",
+  "scope": "generalGovernment",
+  "status": "planned",
+  "method": "esa2010",
+  "value": 1,
+  "unit": "pct",
+  "original": {
+   "value": "1%",
+   "unit": "a GDP százaléka",
+   "currency": "HUF"
+  },
+  "institution": "Állami Számvevőszék",
+  "source": "asz-2020",
+  "locator": "23. oldal",
+  "revision": "projection",
+  "note": {
+   "hu": "Az EU-módszertan szerinti hiánycél az Állami Számvevőszék véleménye szerint. Forintban nem szerepel.",
+   "en": "The EU-method deficit target per the State Audit Office opinion. No forint amount is given."
+  }
+ },
+ {
+  "id": "gdp.2026.forecast.gov",
+  "year": 2026,
+  "indicator": "gdp",
+  "scope": "economy",
+  "status": "forecast",
+  "method": "nationalAccounts",
+  "value": "92303000000000",
+  "unit": "HUF",
+  "original": {
+   "value": "92303",
+   "unit": "billion HUF",
+   "currency": "HUF"
+  },
+  "institution": "Pénzügyminisztérium",
+  "source": "pm-mtp-2027",
+  "locator": "Annex, Macroeconomic Outlook, row 2 (PDF p. 34)",
+  "revision": "projection",
+  "publisher": "gov"
+ },
+ {
+  "id": "gdp.2027.forecast.gov",
+  "year": 2027,
+  "indicator": "gdp",
+  "scope": "economy",
+  "status": "forecast",
+  "method": "nationalAccounts",
+  "value": "97716000000000",
+  "unit": "HUF",
+  "original": {
+   "value": "97716",
+   "unit": "billion HUF",
+   "currency": "HUF"
+  },
+  "institution": "Pénzügyminisztérium",
+  "source": "pm-mtp-2027",
+  "locator": "Annex, Macroeconomic Outlook, row 2 (PDF p. 34)",
+  "revision": "projection",
+  "publisher": "gov"
+ },
+ {
+  "id": "realGdpGrowth.2026.forecast.gov",
+  "year": 2026,
+  "indicator": "realGdpGrowth",
+  "scope": "economy",
+  "status": "forecast",
+  "method": "nationalAccounts",
+  "value": 1.7,
+  "unit": "pct",
+  "original": {
+   "value": "1.7",
+   "unit": "%",
+   "currency": ""
+  },
+  "institution": "Pénzügyminisztérium",
+  "source": "pm-mtp-2027",
+  "locator": "Annex, Macroeconomic Outlook, row 1 (PDF p. 34)",
+  "revision": "projection",
+  "publisher": "gov"
+ },
+ {
+  "id": "realGdpGrowth.2027.forecast.gov",
+  "year": 2027,
+  "indicator": "realGdpGrowth",
+  "scope": "economy",
+  "status": "forecast",
+  "method": "nationalAccounts",
+  "value": 2.4,
+  "unit": "pct",
+  "original": {
+   "value": "2.4",
+   "unit": "%",
+   "currency": ""
+  },
+  "institution": "Pénzügyminisztérium",
+  "source": "pm-mtp-2027",
+  "locator": "Annex, Macroeconomic Outlook, row 1 (PDF p. 34)",
+  "revision": "projection",
+  "publisher": "gov"
+ },
+ {
+  "id": "general.revenuePctGdp.2026.forecast.gov",
+  "year": 2026,
+  "indicator": "revenuePctGdp",
+  "scope": "generalGovernment",
+  "status": "forecast",
+  "method": "esa2010",
+  "value": 43.7,
+  "unit": "pct",
+  "original": {
+   "value": "43.7%",
+   "unit": "percent of GDP",
+   "currency": ""
+  },
+  "institution": "Pénzügyminisztérium",
+  "source": "pm-mtp-2027",
+  "locator": "Table 2, row 7 Total revenue (PDF p. 30)",
+  "revision": "projection",
+  "publisher": "gov"
+ },
+ {
+  "id": "general.revenuePctGdp.2027.forecast.gov",
+  "year": 2027,
+  "indicator": "revenuePctGdp",
+  "scope": "generalGovernment",
+  "status": "forecast",
+  "method": "esa2010",
+  "value": 42.4,
+  "unit": "pct",
+  "original": {
+   "value": "42.4%",
+   "unit": "percent of GDP",
+   "currency": ""
+  },
+  "institution": "Pénzügyminisztérium",
+  "source": "pm-mtp-2027",
+  "locator": "Table 2, row 7 Total revenue (PDF p. 30)",
+  "revision": "projection",
+  "publisher": "gov"
+ },
+ {
+  "id": "general.expenditurePctGdp.2026.forecast.gov",
+  "year": 2026,
+  "indicator": "expenditurePctGdp",
+  "scope": "generalGovernment",
+  "status": "forecast",
+  "method": "esa2010",
+  "value": 51.2,
+  "unit": "pct",
+  "original": {
+   "value": "51.2%",
+   "unit": "percent of GDP",
+   "currency": ""
+  },
+  "institution": "Pénzügyminisztérium",
+  "source": "pm-mtp-2027",
+  "locator": "Table 2, row 23 Total expenditure (PDF p. 30)",
+  "revision": "projection",
+  "publisher": "gov"
+ },
+ {
+  "id": "general.expenditurePctGdp.2027.forecast.gov",
+  "year": 2027,
+  "indicator": "expenditurePctGdp",
+  "scope": "generalGovernment",
+  "status": "forecast",
+  "method": "esa2010",
+  "value": 47.3,
+  "unit": "pct",
+  "original": {
+   "value": "47.3%",
+   "unit": "percent of GDP",
+   "currency": ""
+  },
+  "institution": "Pénzügyminisztérium",
+  "source": "pm-mtp-2027",
+  "locator": "Table 2, row 23 Total expenditure (PDF p. 30)",
+  "revision": "projection",
+  "publisher": "gov"
+ },
+ {
+  "id": "general.deficitPctGdp.2026.forecast.gov",
+  "year": 2026,
+  "indicator": "deficitPctGdp",
+  "scope": "generalGovernment",
+  "status": "forecast",
+  "method": "esa2010",
+  "value": 7.5,
+  "unit": "pct",
+  "original": {
+   "value": "-7.5%",
+   "unit": "percent of GDP",
+   "currency": ""
+  },
+  "institution": "Pénzügyminisztérium",
+  "source": "pm-mtp-2027",
+  "locator": "Table 2, row 31 General government balance (sign reversed) (PDF p. 30)",
+  "revision": "projection",
+  "publisher": "gov"
+ },
+ {
+  "id": "general.deficitPctGdp.2027.forecast.gov",
+  "year": 2027,
+  "indicator": "deficitPctGdp",
+  "scope": "generalGovernment",
+  "status": "forecast",
+  "method": "esa2010",
+  "value": 4.9,
+  "unit": "pct",
+  "original": {
+   "value": "-4.9%",
+   "unit": "percent of GDP",
+   "currency": ""
+  },
+  "institution": "Pénzügyminisztérium",
+  "source": "pm-mtp-2027",
+  "locator": "Table 2, row 31 General government balance (sign reversed) (PDF p. 30)",
+  "revision": "projection",
+  "publisher": "gov"
+ },
+ {
+  "id": "general.deficit.2026.forecast.gov",
+  "year": 2026,
+  "indicator": "deficit",
+  "scope": "generalGovernment",
+  "status": "forecast",
+  "method": "esa2010",
+  "value": "6902429529243",
+  "unit": "HUF",
+  "original": {
+   "value": "-6 902 429,529",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "KSH / Magyar Kormány (EDP-jelentés)",
+  "source": "ksh-edp-2026-10",
+  "locator": "1. tábla, B.9, S.13 sor, 2026 („terv”) oszlop",
+  "revision": "projection",
+  "publisher": "gov",
+  "note": {
+   "hu": "A 2026. októberi EDP-jelentés kormányzati tervszáma. Az eredeti (−) előjelet megfordítottuk: a pozitív érték hiány.",
+   "en": "The government plan in the October 2026 EDP notification. The original (−) sign is reversed: positive means deficit."
+  }
+ }
+]

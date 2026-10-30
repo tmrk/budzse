@@ -1,0 +1,4202 @@
+[
+ {
+  "id": "central.deficit.2000.actual",
+  "year": 2000,
+  "indicator": "deficit",
+  "scope": "centralBudget",
+  "status": "actual",
+  "method": "cash",
+  "value": "367790300000",
+  "unit": "HUF",
+  "original": {
+   "value": "367 790,3",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0100075",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2000. évi költségvetésének végrehajtását – a 3. §-ban foglalt adósságtörlesztési kiadások, valamint a hitelfelvételek nélkül - a) 3 681 943,9 millió forint bevétellel, b) 4 049 734,2 millió forint kiadással, és c) 367 790,3 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.deficit.2000.original",
+  "year": 2000,
+  "indicator": "deficit",
+  "scope": "centralBudget",
+  "status": "original",
+  "method": "cash",
+  "value": "396231700000",
+  "unit": "HUF",
+  "original": {
+   "value": "396 231,7",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-99900125",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a 2000. évi központi költségvetés a) kiadási főösszegét – a 3. § szerinti hiteltörlesztési és államkötvény-visszavásárlási kiadások nélkül – 3 788 275,6 millió forintban, b) bevételi főösszegét – a 3. § szerinti hitelfelvételből és állampapírok értékesítéséből származó bevételek nélkül – 3 392 043,9 millió forintban, c) hiányát 396 231,7 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2000.revised",
+  "year": 2000,
+  "indicator": "deficit",
+  "scope": "centralBudget",
+  "status": "revised",
+  "method": "cash",
+  "value": "396231700000",
+  "unit": "HUF",
+  "original": {
+   "value": "396 231,7",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "consolidated-99900125",
+  "locator": "1. §",
+  "revision": "revised",
+  "evidence": "1. § Az Országgyűlés a 2000. évi központi költségvetés a) * kiadási főösszegét – a 3. § szerinti hiteltörlesztési és államkötvény-visszavásárlási kiadások nélkül 3 902 606,3 millió forintban, b) * bevételi főösszegét – a 3. § szerinti hitelfelvételből és állampapírok értékesítéséből származó bevételek nélkül – 3 506 374,6 millió forintban, c) hiányát 396 231,7 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2000.actual",
+  "year": 2000,
+  "indicator": "expenditure",
+  "scope": "centralBudget",
+  "status": "actual",
+  "method": "cash",
+  "value": "4049734200000",
+  "unit": "HUF",
+  "original": {
+   "value": "4 049 734,2",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0100075",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2000. évi költségvetésének végrehajtását – a 3. §-ban foglalt adósságtörlesztési kiadások, valamint a hitelfelvételek nélkül - a) 3 681 943,9 millió forint bevétellel, b) 4 049 734,2 millió forint kiadással, és c) 367 790,3 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.expenditure.2000.original",
+  "year": 2000,
+  "indicator": "expenditure",
+  "scope": "centralBudget",
+  "status": "original",
+  "method": "cash",
+  "value": "3788275600000",
+  "unit": "HUF",
+  "original": {
+   "value": "3 788 275,6",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-99900125",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a 2000. évi központi költségvetés a) kiadási főösszegét – a 3. § szerinti hiteltörlesztési és államkötvény-visszavásárlási kiadások nélkül – 3 788 275,6 millió forintban, b) bevételi főösszegét – a 3. § szerinti hitelfelvételből és állampapírok értékesítéséből származó bevételek nélkül – 3 392 043,9 millió forintban, c) hiányát 396 231,7 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2000.revised",
+  "year": 2000,
+  "indicator": "expenditure",
+  "scope": "centralBudget",
+  "status": "revised",
+  "method": "cash",
+  "value": "3902606300000",
+  "unit": "HUF",
+  "original": {
+   "value": "3 902 606,3",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "consolidated-99900125",
+  "locator": "1. §",
+  "revision": "revised",
+  "evidence": "1. § Az Országgyűlés a 2000. évi központi költségvetés a) * kiadási főösszegét – a 3. § szerinti hiteltörlesztési és államkötvény-visszavásárlási kiadások nélkül 3 902 606,3 millió forintban, b) * bevételi főösszegét – a 3. § szerinti hitelfelvételből és állampapírok értékesítéséből származó bevételek nélkül – 3 506 374,6 millió forintban, c) hiányát 396 231,7 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2000.actual",
+  "year": 2000,
+  "indicator": "revenue",
+  "scope": "centralBudget",
+  "status": "actual",
+  "method": "cash",
+  "value": "3681943900000",
+  "unit": "HUF",
+  "original": {
+   "value": "3 681 943,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0100075",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2000. évi költségvetésének végrehajtását – a 3. §-ban foglalt adósságtörlesztési kiadások, valamint a hitelfelvételek nélkül - a) 3 681 943,9 millió forint bevétellel, b) 4 049 734,2 millió forint kiadással, és c) 367 790,3 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.revenue.2000.original",
+  "year": 2000,
+  "indicator": "revenue",
+  "scope": "centralBudget",
+  "status": "original",
+  "method": "cash",
+  "value": "3392043900000",
+  "unit": "HUF",
+  "original": {
+   "value": "3 392 043,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-99900125",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a 2000. évi központi költségvetés a) kiadási főösszegét – a 3. § szerinti hiteltörlesztési és államkötvény-visszavásárlási kiadások nélkül – 3 788 275,6 millió forintban, b) bevételi főösszegét – a 3. § szerinti hitelfelvételből és állampapírok értékesítéséből származó bevételek nélkül – 3 392 043,9 millió forintban, c) hiányát 396 231,7 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2000.revised",
+  "year": 2000,
+  "indicator": "revenue",
+  "scope": "centralBudget",
+  "status": "revised",
+  "method": "cash",
+  "value": "3506374600000",
+  "unit": "HUF",
+  "original": {
+   "value": "3 506 374,6",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "consolidated-99900125",
+  "locator": "1. §",
+  "revision": "revised",
+  "evidence": "1. § Az Országgyűlés a 2000. évi központi költségvetés a) * kiadási főösszegét – a 3. § szerinti hiteltörlesztési és államkötvény-visszavásárlási kiadások nélkül 3 902 606,3 millió forintban, b) * bevételi főösszegét – a 3. § szerinti hitelfelvételből és állampapírok értékesítéséből származó bevételek nélkül – 3 506 374,6 millió forintban, c) hiányát 396 231,7 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2001.actual",
+  "year": 2001,
+  "indicator": "deficit",
+  "scope": "centralBudget",
+  "status": "actual",
+  "method": "cash",
+  "value": "402940800000",
+  "unit": "HUF",
+  "original": {
+   "value": "402 940,8",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0200040",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2001. és 2002. évi költségvetésének 2001. évi végrehajtását – a 3. §-ban foglalt adósságtörlesztési kiadások, valamint a hitelfelvételek nélkül – a) 4 067 962,8 millió forint bevétellel, b) 4 470 903,6 millió forint kiadással, és c) 402 940,8 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.deficit.2001.original",
+  "year": 2001,
+  "indicator": "deficit",
+  "scope": "centralBudget",
+  "status": "original",
+  "method": "cash",
+  "value": "481035900000",
+  "unit": "HUF",
+  "original": {
+   "value": "481 035,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0000133",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés a 2001. évi központi költségvetés a) kiadási főösszegét – a 3. § szerinti hiteltörlesztési és államkötvény-visszavásárlási kiadások nélkül – 4 322 440,5 millió forintban, b) bevételi főösszegét – a 3. § szerinti hitelfelvételből és állampapírok értékesítéséből származó bevételek nélkül – 3 841 404,6 millió forintban, c) hiányát 481 035,9 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2001.revised",
+  "year": 2001,
+  "indicator": "deficit",
+  "scope": "centralBudget",
+  "status": "revised",
+  "method": "cash",
+  "value": "481035900000",
+  "unit": "HUF",
+  "original": {
+   "value": "481 035,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "consolidated-a0000133",
+  "locator": "1. §",
+  "revision": "revised",
+  "evidence": "1. § (1) Az Országgyűlés a 2001. évi központi költségvetés a) * kiadási főösszegét – a 3. § szerinti hiteltörlesztési és államkötvény-visszavásárlási kiadások nélkül – 4 507 344,3 millió forintban, b) * bevételi főösszegét – a 3. § szerinti hitelfelvételből és állampapírok értékesítéséből származó bevételek nélkül – 4 026 308,4 millió forintban, c) hiányát 481 035,9 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2001.actual",
+  "year": 2001,
+  "indicator": "expenditure",
+  "scope": "centralBudget",
+  "status": "actual",
+  "method": "cash",
+  "value": "4470903600000",
+  "unit": "HUF",
+  "original": {
+   "value": "4 470 903,6",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0200040",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2001. és 2002. évi költségvetésének 2001. évi végrehajtását – a 3. §-ban foglalt adósságtörlesztési kiadások, valamint a hitelfelvételek nélkül – a) 4 067 962,8 millió forint bevétellel, b) 4 470 903,6 millió forint kiadással, és c) 402 940,8 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.expenditure.2001.original",
+  "year": 2001,
+  "indicator": "expenditure",
+  "scope": "centralBudget",
+  "status": "original",
+  "method": "cash",
+  "value": "4322440500000",
+  "unit": "HUF",
+  "original": {
+   "value": "4 322 440,5",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0000133",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés a 2001. évi központi költségvetés a) kiadási főösszegét – a 3. § szerinti hiteltörlesztési és államkötvény-visszavásárlási kiadások nélkül – 4 322 440,5 millió forintban, b) bevételi főösszegét – a 3. § szerinti hitelfelvételből és állampapírok értékesítéséből származó bevételek nélkül – 3 841 404,6 millió forintban, c) hiányát 481 035,9 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2001.revised",
+  "year": 2001,
+  "indicator": "expenditure",
+  "scope": "centralBudget",
+  "status": "revised",
+  "method": "cash",
+  "value": "4507344300000",
+  "unit": "HUF",
+  "original": {
+   "value": "4 507 344,3",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "consolidated-a0000133",
+  "locator": "1. §",
+  "revision": "revised",
+  "evidence": "1. § (1) Az Országgyűlés a 2001. évi központi költségvetés a) * kiadási főösszegét – a 3. § szerinti hiteltörlesztési és államkötvény-visszavásárlási kiadások nélkül – 4 507 344,3 millió forintban, b) * bevételi főösszegét – a 3. § szerinti hitelfelvételből és állampapírok értékesítéséből származó bevételek nélkül – 4 026 308,4 millió forintban, c) hiányát 481 035,9 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2001.actual",
+  "year": 2001,
+  "indicator": "revenue",
+  "scope": "centralBudget",
+  "status": "actual",
+  "method": "cash",
+  "value": "4067962800000",
+  "unit": "HUF",
+  "original": {
+   "value": "4 067 962,8",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0200040",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2001. és 2002. évi költségvetésének 2001. évi végrehajtását – a 3. §-ban foglalt adósságtörlesztési kiadások, valamint a hitelfelvételek nélkül – a) 4 067 962,8 millió forint bevétellel, b) 4 470 903,6 millió forint kiadással, és c) 402 940,8 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.revenue.2001.original",
+  "year": 2001,
+  "indicator": "revenue",
+  "scope": "centralBudget",
+  "status": "original",
+  "method": "cash",
+  "value": "3841404600000",
+  "unit": "HUF",
+  "original": {
+   "value": "3 841 404,6",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0000133",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés a 2001. évi központi költségvetés a) kiadási főösszegét – a 3. § szerinti hiteltörlesztési és államkötvény-visszavásárlási kiadások nélkül – 4 322 440,5 millió forintban, b) bevételi főösszegét – a 3. § szerinti hitelfelvételből és állampapírok értékesítéséből származó bevételek nélkül – 3 841 404,6 millió forintban, c) hiányát 481 035,9 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2001.revised",
+  "year": 2001,
+  "indicator": "revenue",
+  "scope": "centralBudget",
+  "status": "revised",
+  "method": "cash",
+  "value": "4026308400000",
+  "unit": "HUF",
+  "original": {
+   "value": "4 026 308,4",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "consolidated-a0000133",
+  "locator": "1. §",
+  "revision": "revised",
+  "evidence": "1. § (1) Az Országgyűlés a 2001. évi központi költségvetés a) * kiadási főösszegét – a 3. § szerinti hiteltörlesztési és államkötvény-visszavásárlási kiadások nélkül – 4 507 344,3 millió forintban, b) * bevételi főösszegét – a 3. § szerinti hitelfelvételből és állampapírok értékesítéséből származó bevételek nélkül – 4 026 308,4 millió forintban, c) hiányát 481 035,9 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2002.actual",
+  "year": 2002,
+  "indicator": "deficit",
+  "scope": "centralBudget",
+  "status": "actual",
+  "method": "cash",
+  "value": "1469610600000",
+  "unit": "HUF",
+  "original": {
+   "value": "1 469 610,6",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0300095",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2001. és 2002. évi költségvetésének 2002. évi végrehajtását – a 3. §-ban foglalt adósságtörlesztési kiadások, valamint a hitelfelvételek nélkül – a) 4 357 257,8 millió forint bevétellel, b) 5 826 868,4 millió forint kiadással, és c) 1 469 610,6 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.deficit.2002.original",
+  "year": 2002,
+  "indicator": "deficit",
+  "scope": "centralBudget",
+  "status": "original",
+  "method": "cash",
+  "value": "486081900000",
+  "unit": "HUF",
+  "original": {
+   "value": "486 081,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0000133",
+  "locator": "1. § (2) bekezdés",
+  "revision": "final",
+  "evidence": "(2) Az Országgyűlés a 2002. évi központi költségvetés a) kiadási főösszegét – a 3. § szerinti hiteltörlesztési és államkötvény-visszavásárlási kiadások nélkül – 4 556 251,4 millió forintban, b) bevételi főösszegét – a 3. § szerinti hitelfelvételből és állampapírok értékesítéséből származó bevételek nélkül – 4 070 169,5 millió forintban, c) hiányát 486 081,9 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2002.revised",
+  "year": 2002,
+  "indicator": "deficit",
+  "scope": "centralBudget",
+  "status": "revised",
+  "method": "cash",
+  "value": "1217997400000",
+  "unit": "HUF",
+  "original": {
+   "value": "1 217 997,4",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "consolidated-a0000133",
+  "locator": "1. § (2) bekezdés",
+  "revision": "revised",
+  "evidence": "(2) * Az Országgyűlés a 2002. évi központi költségvetés a) bevételi főösszegét – a 3. § szerinti hitelfelvételből és állampapírok értékesítéséből származó bevételek nélkül – 4 288 354,5 millió forintban, b) kiadási főösszegét – a 3. § szerinti hiteltörlesztési és államkötvény-visszavásárlási kiadások nélkül – 5 506 351,9 millió forintban, c) hiányát 1 217 997,4 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2002.actual",
+  "year": 2002,
+  "indicator": "expenditure",
+  "scope": "centralBudget",
+  "status": "actual",
+  "method": "cash",
+  "value": "5826868400000",
+  "unit": "HUF",
+  "original": {
+   "value": "5 826 868,4",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0300095",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2001. és 2002. évi költségvetésének 2002. évi végrehajtását – a 3. §-ban foglalt adósságtörlesztési kiadások, valamint a hitelfelvételek nélkül – a) 4 357 257,8 millió forint bevétellel, b) 5 826 868,4 millió forint kiadással, és c) 1 469 610,6 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.expenditure.2002.original",
+  "year": 2002,
+  "indicator": "expenditure",
+  "scope": "centralBudget",
+  "status": "original",
+  "method": "cash",
+  "value": "4556251400000",
+  "unit": "HUF",
+  "original": {
+   "value": "4 556 251,4",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0000133",
+  "locator": "1. § (2) bekezdés",
+  "revision": "final",
+  "evidence": "(2) Az Országgyűlés a 2002. évi központi költségvetés a) kiadási főösszegét – a 3. § szerinti hiteltörlesztési és államkötvény-visszavásárlási kiadások nélkül – 4 556 251,4 millió forintban, b) bevételi főösszegét – a 3. § szerinti hitelfelvételből és állampapírok értékesítéséből származó bevételek nélkül – 4 070 169,5 millió forintban, c) hiányát 486 081,9 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2002.revised",
+  "year": 2002,
+  "indicator": "expenditure",
+  "scope": "centralBudget",
+  "status": "revised",
+  "method": "cash",
+  "value": "5506351900000",
+  "unit": "HUF",
+  "original": {
+   "value": "5 506 351,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "consolidated-a0000133",
+  "locator": "1. § (2) bekezdés",
+  "revision": "revised",
+  "evidence": "(2) * Az Országgyűlés a 2002. évi központi költségvetés a) bevételi főösszegét – a 3. § szerinti hitelfelvételből és állampapírok értékesítéséből származó bevételek nélkül – 4 288 354,5 millió forintban, b) kiadási főösszegét – a 3. § szerinti hiteltörlesztési és államkötvény-visszavásárlási kiadások nélkül – 5 506 351,9 millió forintban, c) hiányát 1 217 997,4 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2002.actual",
+  "year": 2002,
+  "indicator": "revenue",
+  "scope": "centralBudget",
+  "status": "actual",
+  "method": "cash",
+  "value": "4357257800000",
+  "unit": "HUF",
+  "original": {
+   "value": "4 357 257,8",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0300095",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2001. és 2002. évi költségvetésének 2002. évi végrehajtását – a 3. §-ban foglalt adósságtörlesztési kiadások, valamint a hitelfelvételek nélkül – a) 4 357 257,8 millió forint bevétellel, b) 5 826 868,4 millió forint kiadással, és c) 1 469 610,6 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.revenue.2002.original",
+  "year": 2002,
+  "indicator": "revenue",
+  "scope": "centralBudget",
+  "status": "original",
+  "method": "cash",
+  "value": "4070169500000",
+  "unit": "HUF",
+  "original": {
+   "value": "4 070 169,5",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0000133",
+  "locator": "1. § (2) bekezdés",
+  "revision": "final",
+  "evidence": "(2) Az Országgyűlés a 2002. évi központi költségvetés a) kiadási főösszegét – a 3. § szerinti hiteltörlesztési és államkötvény-visszavásárlási kiadások nélkül – 4 556 251,4 millió forintban, b) bevételi főösszegét – a 3. § szerinti hitelfelvételből és állampapírok értékesítéséből származó bevételek nélkül – 4 070 169,5 millió forintban, c) hiányát 486 081,9 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2002.revised",
+  "year": 2002,
+  "indicator": "revenue",
+  "scope": "centralBudget",
+  "status": "revised",
+  "method": "cash",
+  "value": "4288354500000",
+  "unit": "HUF",
+  "original": {
+   "value": "4 288 354,5",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "consolidated-a0000133",
+  "locator": "1. § (2) bekezdés",
+  "revision": "revised",
+  "evidence": "(2) * Az Országgyűlés a 2002. évi központi költségvetés a) bevételi főösszegét – a 3. § szerinti hitelfelvételből és állampapírok értékesítéséből származó bevételek nélkül – 4 288 354,5 millió forintban, b) kiadási főösszegét – a 3. § szerinti hiteltörlesztési és államkötvény-visszavásárlási kiadások nélkül – 5 506 351,9 millió forintban, c) hiányát 1 217 997,4 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2003.actual",
+  "year": 2003,
+  "indicator": "deficit",
+  "scope": "centralBudget",
+  "status": "actual",
+  "method": "cash",
+  "value": "732419500000",
+  "unit": "HUF",
+  "original": {
+   "value": "732 419,5",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0400100",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2003. évi költségvetésének végrehajtását – a 3. §-ban foglalt adósságtörlesztési kiadások, valamint a hitelfelvételek nélkül – a) 4 938 219,9 millió forint bevétellel, b) 5 670 639,4 millió forint kiadással és c) 732 419,5 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.deficit.2003.original",
+  "year": 2003,
+  "indicator": "deficit",
+  "scope": "centralBudget",
+  "status": "original",
+  "method": "cash",
+  "value": "568971700000",
+  "unit": "HUF",
+  "original": {
+   "value": "568 971,7",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0200062",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a 2003. évi központi költségvetés a) kiadási főösszegét 5 310 575,4 millió forintban, b) bevételi főösszegét 4 741 603,7 millió forintban, c) hiányát 568 971,7 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2003.revised",
+  "year": 2003,
+  "indicator": "deficit",
+  "scope": "centralBudget",
+  "status": "revised",
+  "method": "cash",
+  "value": "568971700000",
+  "unit": "HUF",
+  "original": {
+   "value": "568 971,7",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "consolidated-a0200062",
+  "locator": "1. §",
+  "revision": "revised",
+  "evidence": "1. § * Az Országgyűlés a 2003. évi központi költségvetés a) kiadási főösszegét 5 373 628,2 millió forintban, b) bevételi főösszegét 4 804 656,5 millió forintban, c) hiányát 568 971,7 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2003.actual",
+  "year": 2003,
+  "indicator": "expenditure",
+  "scope": "centralBudget",
+  "status": "actual",
+  "method": "cash",
+  "value": "5670639400000",
+  "unit": "HUF",
+  "original": {
+   "value": "5 670 639,4",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0400100",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2003. évi költségvetésének végrehajtását – a 3. §-ban foglalt adósságtörlesztési kiadások, valamint a hitelfelvételek nélkül – a) 4 938 219,9 millió forint bevétellel, b) 5 670 639,4 millió forint kiadással és c) 732 419,5 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.expenditure.2003.original",
+  "year": 2003,
+  "indicator": "expenditure",
+  "scope": "centralBudget",
+  "status": "original",
+  "method": "cash",
+  "value": "5310575400000",
+  "unit": "HUF",
+  "original": {
+   "value": "5 310 575,4",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0200062",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a 2003. évi központi költségvetés a) kiadási főösszegét 5 310 575,4 millió forintban, b) bevételi főösszegét 4 741 603,7 millió forintban, c) hiányát 568 971,7 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2003.revised",
+  "year": 2003,
+  "indicator": "expenditure",
+  "scope": "centralBudget",
+  "status": "revised",
+  "method": "cash",
+  "value": "5373628200000",
+  "unit": "HUF",
+  "original": {
+   "value": "5 373 628,2",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "consolidated-a0200062",
+  "locator": "1. §",
+  "revision": "revised",
+  "evidence": "1. § * Az Országgyűlés a 2003. évi központi költségvetés a) kiadási főösszegét 5 373 628,2 millió forintban, b) bevételi főösszegét 4 804 656,5 millió forintban, c) hiányát 568 971,7 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2003.actual",
+  "year": 2003,
+  "indicator": "revenue",
+  "scope": "centralBudget",
+  "status": "actual",
+  "method": "cash",
+  "value": "4938219900000",
+  "unit": "HUF",
+  "original": {
+   "value": "4 938 219,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0400100",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2003. évi költségvetésének végrehajtását – a 3. §-ban foglalt adósságtörlesztési kiadások, valamint a hitelfelvételek nélkül – a) 4 938 219,9 millió forint bevétellel, b) 5 670 639,4 millió forint kiadással és c) 732 419,5 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.revenue.2003.original",
+  "year": 2003,
+  "indicator": "revenue",
+  "scope": "centralBudget",
+  "status": "original",
+  "method": "cash",
+  "value": "4741603700000",
+  "unit": "HUF",
+  "original": {
+   "value": "4 741 603,7",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0200062",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a 2003. évi központi költségvetés a) kiadási főösszegét 5 310 575,4 millió forintban, b) bevételi főösszegét 4 741 603,7 millió forintban, c) hiányát 568 971,7 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2003.revised",
+  "year": 2003,
+  "indicator": "revenue",
+  "scope": "centralBudget",
+  "status": "revised",
+  "method": "cash",
+  "value": "4804656500000",
+  "unit": "HUF",
+  "original": {
+   "value": "4 804 656,5",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "consolidated-a0200062",
+  "locator": "1. §",
+  "revision": "revised",
+  "evidence": "1. § * Az Országgyűlés a 2003. évi központi költségvetés a) kiadási főösszegét 5 373 628,2 millió forintban, b) bevételi főösszegét 4 804 656,5 millió forintban, c) hiányát 568 971,7 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2004.actual",
+  "year": 2004,
+  "indicator": "deficit",
+  "scope": "centralBudget",
+  "status": "actual",
+  "method": "cash",
+  "value": "904520900000",
+  "unit": "HUF",
+  "original": {
+   "value": "904 520,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0500118",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2004. évi költségvetésének végrehajtását – a 3. §-ban foglalt adósságtörlesztési kiadások, valamint a hitelfelvételek nélkül – a) 5 333 097,5 millió forint bevétellel, b) 6 237 618,4 millió forint kiadással, és c) 904 520,9 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.deficit.2004.original",
+  "year": 2004,
+  "indicator": "deficit",
+  "scope": "centralBudget",
+  "status": "original",
+  "method": "cash",
+  "value": "650925000000",
+  "unit": "HUF",
+  "original": {
+   "value": "650 925,0",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0300116",
+  "locator": "5. §",
+  "revision": "final",
+  "evidence": "5. § Az Országgyűlés a 2004. évi központi költségvetés a) kiadási főösszegét 6 132 434,5 millió forintban, b) bevételi főösszegét 5 481 509,5 millió forintban, c) hiányát 650 925,0 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2004.revised",
+  "year": 2004,
+  "indicator": "deficit",
+  "scope": "centralBudget",
+  "status": "revised",
+  "method": "cash",
+  "value": "686349200000",
+  "unit": "HUF",
+  "original": {
+   "value": "686 349,2",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "consolidated-a0300116",
+  "locator": "5. §",
+  "revision": "revised",
+  "evidence": "5. § * Az Országgyűlés a 2004. évi központi költségvetés a) kiadási főösszegét 6 174 565,7 millió forintban, b) bevételi főösszegét 5 488 216,5 millió forintban, c) hiányát 686 349,2 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2004.actual",
+  "year": 2004,
+  "indicator": "expenditure",
+  "scope": "centralBudget",
+  "status": "actual",
+  "method": "cash",
+  "value": "6237618400000",
+  "unit": "HUF",
+  "original": {
+   "value": "6 237 618,4",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0500118",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2004. évi költségvetésének végrehajtását – a 3. §-ban foglalt adósságtörlesztési kiadások, valamint a hitelfelvételek nélkül – a) 5 333 097,5 millió forint bevétellel, b) 6 237 618,4 millió forint kiadással, és c) 904 520,9 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.expenditure.2004.original",
+  "year": 2004,
+  "indicator": "expenditure",
+  "scope": "centralBudget",
+  "status": "original",
+  "method": "cash",
+  "value": "6132434500000",
+  "unit": "HUF",
+  "original": {
+   "value": "6 132 434,5",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0300116",
+  "locator": "5. §",
+  "revision": "final",
+  "evidence": "5. § Az Országgyűlés a 2004. évi központi költségvetés a) kiadási főösszegét 6 132 434,5 millió forintban, b) bevételi főösszegét 5 481 509,5 millió forintban, c) hiányát 650 925,0 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2004.revised",
+  "year": 2004,
+  "indicator": "expenditure",
+  "scope": "centralBudget",
+  "status": "revised",
+  "method": "cash",
+  "value": "6174565700000",
+  "unit": "HUF",
+  "original": {
+   "value": "6 174 565,7",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "consolidated-a0300116",
+  "locator": "5. §",
+  "revision": "revised",
+  "evidence": "5. § * Az Országgyűlés a 2004. évi központi költségvetés a) kiadási főösszegét 6 174 565,7 millió forintban, b) bevételi főösszegét 5 488 216,5 millió forintban, c) hiányát 686 349,2 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2004.actual",
+  "year": 2004,
+  "indicator": "revenue",
+  "scope": "centralBudget",
+  "status": "actual",
+  "method": "cash",
+  "value": "5333097500000",
+  "unit": "HUF",
+  "original": {
+   "value": "5 333 097,5",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0500118",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2004. évi költségvetésének végrehajtását – a 3. §-ban foglalt adósságtörlesztési kiadások, valamint a hitelfelvételek nélkül – a) 5 333 097,5 millió forint bevétellel, b) 6 237 618,4 millió forint kiadással, és c) 904 520,9 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.revenue.2004.original",
+  "year": 2004,
+  "indicator": "revenue",
+  "scope": "centralBudget",
+  "status": "original",
+  "method": "cash",
+  "value": "5481509500000",
+  "unit": "HUF",
+  "original": {
+   "value": "5 481 509,5",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0300116",
+  "locator": "5. §",
+  "revision": "final",
+  "evidence": "5. § Az Országgyűlés a 2004. évi központi költségvetés a) kiadási főösszegét 6 132 434,5 millió forintban, b) bevételi főösszegét 5 481 509,5 millió forintban, c) hiányát 650 925,0 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2004.revised",
+  "year": 2004,
+  "indicator": "revenue",
+  "scope": "centralBudget",
+  "status": "revised",
+  "method": "cash",
+  "value": "5488216500000",
+  "unit": "HUF",
+  "original": {
+   "value": "5 488 216,5",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "consolidated-a0300116",
+  "locator": "5. §",
+  "revision": "revised",
+  "evidence": "5. § * Az Országgyűlés a 2004. évi központi költségvetés a) kiadási főösszegét 6 174 565,7 millió forintban, b) bevételi főösszegét 5 488 216,5 millió forintban, c) hiányát 686 349,2 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2005.actual",
+  "year": 2005,
+  "indicator": "deficit",
+  "scope": "centralBudget",
+  "status": "actual",
+  "method": "cash",
+  "value": "547801500000",
+  "unit": "HUF",
+  "original": {
+   "value": "547 801,5",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0600099",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2005. évi költségvetésének végrehajtását – a 3. §-ban foglalt adósságtörlesztési kiadások, valamint a hitelfelvételek nélkül – a) 6 456 669,5 millió forint bevétellel, b) 7 004 471,0 millió forint kiadással, és c) 547 801,5 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.deficit.2005.original",
+  "year": 2005,
+  "indicator": "deficit",
+  "scope": "centralBudget",
+  "status": "original",
+  "method": "cash",
+  "value": "699735600000",
+  "unit": "HUF",
+  "original": {
+   "value": "699 735,6",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0400135",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a 2005. évi központi költségvetés a) kiadási főösszegét 6 582 893,4 millió forintban, b) bevételi főösszegét 5 883 157,8 millió forintban, c) hiányát 699 735,6 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2005.revised",
+  "year": 2005,
+  "indicator": "deficit",
+  "scope": "centralBudget",
+  "status": "revised",
+  "method": "cash",
+  "value": "813207400000",
+  "unit": "HUF",
+  "original": {
+   "value": "813 207,4",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "consolidated-a0400135",
+  "locator": "1. §",
+  "revision": "revised",
+  "evidence": "1. § * Az Országgyűlés a 2005. évi központi költségvetés a) kiadási főösszegét 6 696 365,2 millió forintban, b) bevételi főösszegét 5 883 157,8 millió forintban, c) hiányát 813 207,4 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2005.actual",
+  "year": 2005,
+  "indicator": "expenditure",
+  "scope": "centralBudget",
+  "status": "actual",
+  "method": "cash",
+  "value": "7004471000000",
+  "unit": "HUF",
+  "original": {
+   "value": "7 004 471,0",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0600099",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2005. évi költségvetésének végrehajtását – a 3. §-ban foglalt adósságtörlesztési kiadások, valamint a hitelfelvételek nélkül – a) 6 456 669,5 millió forint bevétellel, b) 7 004 471,0 millió forint kiadással, és c) 547 801,5 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.expenditure.2005.original",
+  "year": 2005,
+  "indicator": "expenditure",
+  "scope": "centralBudget",
+  "status": "original",
+  "method": "cash",
+  "value": "6582893400000",
+  "unit": "HUF",
+  "original": {
+   "value": "6 582 893,4",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0400135",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a 2005. évi központi költségvetés a) kiadási főösszegét 6 582 893,4 millió forintban, b) bevételi főösszegét 5 883 157,8 millió forintban, c) hiányát 699 735,6 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2005.revised",
+  "year": 2005,
+  "indicator": "expenditure",
+  "scope": "centralBudget",
+  "status": "revised",
+  "method": "cash",
+  "value": "6696365200000",
+  "unit": "HUF",
+  "original": {
+   "value": "6 696 365,2",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "consolidated-a0400135",
+  "locator": "1. §",
+  "revision": "revised",
+  "evidence": "1. § * Az Országgyűlés a 2005. évi központi költségvetés a) kiadási főösszegét 6 696 365,2 millió forintban, b) bevételi főösszegét 5 883 157,8 millió forintban, c) hiányát 813 207,4 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2005.actual",
+  "year": 2005,
+  "indicator": "revenue",
+  "scope": "centralBudget",
+  "status": "actual",
+  "method": "cash",
+  "value": "6456669500000",
+  "unit": "HUF",
+  "original": {
+   "value": "6 456 669,5",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0600099",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2005. évi költségvetésének végrehajtását – a 3. §-ban foglalt adósságtörlesztési kiadások, valamint a hitelfelvételek nélkül – a) 6 456 669,5 millió forint bevétellel, b) 7 004 471,0 millió forint kiadással, és c) 547 801,5 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.revenue.2005.original",
+  "year": 2005,
+  "indicator": "revenue",
+  "scope": "centralBudget",
+  "status": "original",
+  "method": "cash",
+  "value": "5883157800000",
+  "unit": "HUF",
+  "original": {
+   "value": "5 883 157,8",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0400135",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a 2005. évi központi költségvetés a) kiadási főösszegét 6 582 893,4 millió forintban, b) bevételi főösszegét 5 883 157,8 millió forintban, c) hiányát 699 735,6 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2005.revised",
+  "year": 2005,
+  "indicator": "revenue",
+  "scope": "centralBudget",
+  "status": "revised",
+  "method": "cash",
+  "value": "5883157800000",
+  "unit": "HUF",
+  "original": {
+   "value": "5 883 157,8",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "consolidated-a0400135",
+  "locator": "1. §",
+  "revision": "revised",
+  "evidence": "1. § * Az Országgyűlés a 2005. évi központi költségvetés a) kiadási főösszegét 6 696 365,2 millió forintban, b) bevételi főösszegét 5 883 157,8 millió forintban, c) hiányát 813 207,4 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2006.actual",
+  "year": 2006,
+  "indicator": "deficit",
+  "scope": "centralBudget",
+  "status": "actual",
+  "method": "cash",
+  "value": "1961631700000",
+  "unit": "HUF",
+  "original": {
+   "value": "1 961 631,7",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0700128",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2006. évi költségvetésének végrehajtását – a 3. §-ban foglalt adósságtörlesztési kiadások, valamint a hitelfelvételek nélkül – a) 6 549 197,8 millió forint bevétellel, b) 8 510 829,5 millió forint kiadással, és c) 1 961 631,7 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.deficit.2006.original",
+  "year": 2006,
+  "indicator": "deficit",
+  "scope": "centralBudget",
+  "status": "original",
+  "method": "cash",
+  "value": "1531000200000",
+  "unit": "HUF",
+  "original": {
+   "value": "1 531 000,2",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0500153",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a központi költségvetés 2006. évi a) kiadási főösszegét 7 496 676,1 millió forintban, b) bevételi főösszegét 5 965 675,9 millió forintban,; azaz ötmillió-kilencszázhatvanötezer-hatszázhetvenöt egész kilenctized millió forintban, c) hiányát 1 531 000,2 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2006.revised",
+  "year": 2006,
+  "indicator": "deficit",
+  "scope": "centralBudget",
+  "status": "revised",
+  "method": "cash",
+  "value": "1921312900000",
+  "unit": "HUF",
+  "original": {
+   "value": "1 921 312,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "consolidated-a0500153",
+  "locator": "1. §",
+  "revision": "revised",
+  "evidence": "1. § * Az Országgyűlés a 2006. évi központi költségvetés a) kiadási főösszegét 7 844 852,8 millió forintban, b) bevételi főösszegét 5 923 539,9 millió forintban, c) hiányát 1 921 312,9 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2006.actual",
+  "year": 2006,
+  "indicator": "expenditure",
+  "scope": "centralBudget",
+  "status": "actual",
+  "method": "cash",
+  "value": "8510829500000",
+  "unit": "HUF",
+  "original": {
+   "value": "8 510 829,5",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0700128",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2006. évi költségvetésének végrehajtását – a 3. §-ban foglalt adósságtörlesztési kiadások, valamint a hitelfelvételek nélkül – a) 6 549 197,8 millió forint bevétellel, b) 8 510 829,5 millió forint kiadással, és c) 1 961 631,7 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.expenditure.2006.original",
+  "year": 2006,
+  "indicator": "expenditure",
+  "scope": "centralBudget",
+  "status": "original",
+  "method": "cash",
+  "value": "7496676100000",
+  "unit": "HUF",
+  "original": {
+   "value": "7 496 676,1",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0500153",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a központi költségvetés 2006. évi a) kiadási főösszegét 7 496 676,1 millió forintban, b) bevételi főösszegét 5 965 675,9 millió forintban,; azaz ötmillió-kilencszázhatvanötezer-hatszázhetvenöt egész kilenctized millió forintban, c) hiányát 1 531 000,2 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2006.revised",
+  "year": 2006,
+  "indicator": "expenditure",
+  "scope": "centralBudget",
+  "status": "revised",
+  "method": "cash",
+  "value": "7844852800000",
+  "unit": "HUF",
+  "original": {
+   "value": "7 844 852,8",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "consolidated-a0500153",
+  "locator": "1. §",
+  "revision": "revised",
+  "evidence": "1. § * Az Országgyűlés a 2006. évi központi költségvetés a) kiadási főösszegét 7 844 852,8 millió forintban, b) bevételi főösszegét 5 923 539,9 millió forintban, c) hiányát 1 921 312,9 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2006.actual",
+  "year": 2006,
+  "indicator": "revenue",
+  "scope": "centralBudget",
+  "status": "actual",
+  "method": "cash",
+  "value": "6549197800000",
+  "unit": "HUF",
+  "original": {
+   "value": "6 549 197,8",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0700128",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2006. évi költségvetésének végrehajtását – a 3. §-ban foglalt adósságtörlesztési kiadások, valamint a hitelfelvételek nélkül – a) 6 549 197,8 millió forint bevétellel, b) 8 510 829,5 millió forint kiadással, és c) 1 961 631,7 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.revenue.2006.original",
+  "year": 2006,
+  "indicator": "revenue",
+  "scope": "centralBudget",
+  "status": "original",
+  "method": "cash",
+  "value": "5965675900000",
+  "unit": "HUF",
+  "original": {
+   "value": "5 965 675,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0500153",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a központi költségvetés 2006. évi a) kiadási főösszegét 7 496 676,1 millió forintban, b) bevételi főösszegét 5 965 675,9 millió forintban,; azaz ötmillió-kilencszázhatvanötezer-hatszázhetvenöt egész kilenctized millió forintban, c) hiányát 1 531 000,2 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2006.revised",
+  "year": 2006,
+  "indicator": "revenue",
+  "scope": "centralBudget",
+  "status": "revised",
+  "method": "cash",
+  "value": "5923539900000",
+  "unit": "HUF",
+  "original": {
+   "value": "5 923 539,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "consolidated-a0500153",
+  "locator": "1. §",
+  "revision": "revised",
+  "evidence": "1. § * Az Országgyűlés a 2006. évi központi költségvetés a) kiadási főösszegét 7 844 852,8 millió forintban, b) bevételi főösszegét 5 923 539,9 millió forintban, c) hiányát 1 921 312,9 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2007.actual",
+  "year": 2007,
+  "indicator": "deficit",
+  "scope": "centralBudget",
+  "status": "actual",
+  "method": "cash",
+  "value": "1398116700000",
+  "unit": "HUF",
+  "original": {
+   "value": "1 398 116,7",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0800078",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2007. évi költségvetésének végrehajtását – a 3. §-ban foglalt adósságtörlesztési kiadások, valamint a hitelfelvételek nélkül – a) 7 100 009,6 millió forint bevétellel, b) 8 498 126,3 millió forint kiadással és c) 1 398 116,7 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.deficit.2007.original",
+  "year": 2007,
+  "indicator": "deficit",
+  "scope": "centralBudget",
+  "status": "original",
+  "method": "cash",
+  "value": "1656485600000",
+  "unit": "HUF",
+  "original": {
+   "value": "1 656 485,6",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0600127",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés a központi költségvetés 2007. évi a) bevételi főösszegét 6 669 545,1 millió forintban, b) kiadási főösszegét 8 326 030,7 millió forintban, c) hiányát 1 656 485,6 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2007.actual",
+  "year": 2007,
+  "indicator": "expenditure",
+  "scope": "centralBudget",
+  "status": "actual",
+  "method": "cash",
+  "value": "8498126300000",
+  "unit": "HUF",
+  "original": {
+   "value": "8 498 126,3",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0800078",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2007. évi költségvetésének végrehajtását – a 3. §-ban foglalt adósságtörlesztési kiadások, valamint a hitelfelvételek nélkül – a) 7 100 009,6 millió forint bevétellel, b) 8 498 126,3 millió forint kiadással és c) 1 398 116,7 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.expenditure.2007.original",
+  "year": 2007,
+  "indicator": "expenditure",
+  "scope": "centralBudget",
+  "status": "original",
+  "method": "cash",
+  "value": "8326030700000",
+  "unit": "HUF",
+  "original": {
+   "value": "8 326 030,7",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0600127",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés a központi költségvetés 2007. évi a) bevételi főösszegét 6 669 545,1 millió forintban, b) kiadási főösszegét 8 326 030,7 millió forintban, c) hiányát 1 656 485,6 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2007.actual",
+  "year": 2007,
+  "indicator": "revenue",
+  "scope": "centralBudget",
+  "status": "actual",
+  "method": "cash",
+  "value": "7100009600000",
+  "unit": "HUF",
+  "original": {
+   "value": "7 100 009,6",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0800078",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2007. évi költségvetésének végrehajtását – a 3. §-ban foglalt adósságtörlesztési kiadások, valamint a hitelfelvételek nélkül – a) 7 100 009,6 millió forint bevétellel, b) 8 498 126,3 millió forint kiadással és c) 1 398 116,7 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.revenue.2007.original",
+  "year": 2007,
+  "indicator": "revenue",
+  "scope": "centralBudget",
+  "status": "original",
+  "method": "cash",
+  "value": "6669545100000",
+  "unit": "HUF",
+  "original": {
+   "value": "6 669 545,1",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0600127",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés a központi költségvetés 2007. évi a) bevételi főösszegét 6 669 545,1 millió forintban, b) kiadási főösszegét 8 326 030,7 millió forintban, c) hiányát 1 656 485,6 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2008.actual",
+  "year": 2008,
+  "indicator": "deficit",
+  "scope": "centralBudget",
+  "status": "actual",
+  "method": "cash",
+  "value": "869962900000",
+  "unit": "HUF",
+  "original": {
+   "value": "869 962,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0900129",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2008. évi költségvetésének végrehajtását – a 3–6. §-okban foglalt finanszírozási célú pénzügyi műveletek nélkül – a) 8 159 285,1 millió forint bevétellel, b) 9 029 248,0 millió forint kiadással és c) 869 962,9 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.deficit.2008.original",
+  "year": 2008,
+  "indicator": "deficit",
+  "scope": "centralBudget",
+  "status": "original",
+  "method": "cash",
+  "value": "1117596800000",
+  "unit": "HUF",
+  "original": {
+   "value": "1 117 596,8",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0700169",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a központi költségvetés 2008. évi a) bevételi főösszegét 7 899 542,1 millió forintban, b) kiadási főösszegét 9 017 138,9 millió forintban, c) hiányát 1 117 596,8 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2008.actual",
+  "year": 2008,
+  "indicator": "expenditure",
+  "scope": "centralBudget",
+  "status": "actual",
+  "method": "cash",
+  "value": "9029248000000",
+  "unit": "HUF",
+  "original": {
+   "value": "9 029 248,0",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0900129",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2008. évi költségvetésének végrehajtását – a 3–6. §-okban foglalt finanszírozási célú pénzügyi műveletek nélkül – a) 8 159 285,1 millió forint bevétellel, b) 9 029 248,0 millió forint kiadással és c) 869 962,9 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.expenditure.2008.original",
+  "year": 2008,
+  "indicator": "expenditure",
+  "scope": "centralBudget",
+  "status": "original",
+  "method": "cash",
+  "value": "9017138900000",
+  "unit": "HUF",
+  "original": {
+   "value": "9 017 138,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0700169",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a központi költségvetés 2008. évi a) bevételi főösszegét 7 899 542,1 millió forintban, b) kiadási főösszegét 9 017 138,9 millió forintban, c) hiányát 1 117 596,8 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2008.actual",
+  "year": 2008,
+  "indicator": "revenue",
+  "scope": "centralBudget",
+  "status": "actual",
+  "method": "cash",
+  "value": "8159285100000",
+  "unit": "HUF",
+  "original": {
+   "value": "8 159 285,1",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0900129",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2008. évi költségvetésének végrehajtását – a 3–6. §-okban foglalt finanszírozási célú pénzügyi műveletek nélkül – a) 8 159 285,1 millió forint bevétellel, b) 9 029 248,0 millió forint kiadással és c) 869 962,9 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.revenue.2008.original",
+  "year": 2008,
+  "indicator": "revenue",
+  "scope": "centralBudget",
+  "status": "original",
+  "method": "cash",
+  "value": "7899542100000",
+  "unit": "HUF",
+  "original": {
+   "value": "7 899 542,1",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0700169",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a központi költségvetés 2008. évi a) bevételi főösszegét 7 899 542,1 millió forintban, b) kiadási főösszegét 9 017 138,9 millió forintban, c) hiányát 1 117 596,8 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2009.actual",
+  "year": 2009,
+  "indicator": "deficit",
+  "scope": "centralBudget",
+  "status": "actual",
+  "method": "cash",
+  "value": "743718000000",
+  "unit": "HUF",
+  "original": {
+   "value": "743 718,0",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1000098",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2009. évi költségvetéséről szóló 2008. évi CII. törvény (a továbbiakban: Költségvetési Törvény) végrehajtását – a 3–6. §-okban foglalt finanszírozási célú pénzügyi műveletek nélkül – a) 8 324 226,2 millió forint bevétellel, b) 9 067 944,2 millió forint kiadással és c) 743 718,0 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.deficit.2009.original",
+  "year": 2009,
+  "indicator": "deficit",
+  "scope": "centralBudget",
+  "status": "original",
+  "method": "cash",
+  "value": "660791900000",
+  "unit": "HUF",
+  "original": {
+   "value": "660 791,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0800102",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a központi költségvetés 2009. évi a) bevételi főösszegét 8 300 171,5 millió forintban, b) kiadási főösszegét 8 960 963,4 millió forintban, c) hiányát 660 791,9 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2009.actual",
+  "year": 2009,
+  "indicator": "expenditure",
+  "scope": "centralBudget",
+  "status": "actual",
+  "method": "cash",
+  "value": "9067944200000",
+  "unit": "HUF",
+  "original": {
+   "value": "9 067 944,2",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1000098",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2009. évi költségvetéséről szóló 2008. évi CII. törvény (a továbbiakban: Költségvetési Törvény) végrehajtását – a 3–6. §-okban foglalt finanszírozási célú pénzügyi műveletek nélkül – a) 8 324 226,2 millió forint bevétellel, b) 9 067 944,2 millió forint kiadással és c) 743 718,0 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.expenditure.2009.original",
+  "year": 2009,
+  "indicator": "expenditure",
+  "scope": "centralBudget",
+  "status": "original",
+  "method": "cash",
+  "value": "8960963400000",
+  "unit": "HUF",
+  "original": {
+   "value": "8 960 963,4",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0800102",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a központi költségvetés 2009. évi a) bevételi főösszegét 8 300 171,5 millió forintban, b) kiadási főösszegét 8 960 963,4 millió forintban, c) hiányát 660 791,9 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2009.actual",
+  "year": 2009,
+  "indicator": "revenue",
+  "scope": "centralBudget",
+  "status": "actual",
+  "method": "cash",
+  "value": "8324226200000",
+  "unit": "HUF",
+  "original": {
+   "value": "8 324 226,2",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1000098",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2009. évi költségvetéséről szóló 2008. évi CII. törvény (a továbbiakban: Költségvetési Törvény) végrehajtását – a 3–6. §-okban foglalt finanszírozási célú pénzügyi műveletek nélkül – a) 8 324 226,2 millió forint bevétellel, b) 9 067 944,2 millió forint kiadással és c) 743 718,0 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.revenue.2009.original",
+  "year": 2009,
+  "indicator": "revenue",
+  "scope": "centralBudget",
+  "status": "original",
+  "method": "cash",
+  "value": "8300171500000",
+  "unit": "HUF",
+  "original": {
+   "value": "8 300 171,5",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0800102",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a központi költségvetés 2009. évi a) bevételi főösszegét 8 300 171,5 millió forintban, b) kiadási főösszegét 8 960 963,4 millió forintban, c) hiányát 660 791,9 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2010.actual",
+  "year": 2010,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "889474500000",
+  "unit": "HUF",
+  "original": {
+   "value": "889 474,5",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1100133",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2010. évi költségvetéséről szóló 2009. évi CXXX. törvény (a továbbiakban: Költségvetési Törvény) végrehajtását – a 4–7. §-okban foglalt finanszírozási célú pénzügyi műveletek nélkül – a) 13 168 448,1 millió forint bevétellel, b) 14 057 922,6 millió forint kiadással és c) 889 474,5 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.deficit.2010.original",
+  "year": 2010,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "870346200000",
+  "unit": "HUF",
+  "original": {
+   "value": "870 346,2",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0900130",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2010. évi a) bevételi főösszegét 12 662 680,6 millió forintban, b) kiadási főösszegét 13 533 026,8 millió forintban, c) hiányát 870 346,2 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2010.revised",
+  "year": 2010,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "revised",
+  "method": "cash",
+  "value": "864311100000",
+  "unit": "HUF",
+  "original": {
+   "value": "864 311,1",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1000097",
+  "locator": "módosító törvény, a főösszegeket megállapító szakasz",
+  "revision": "revised",
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2010. évi a) bevételi főösszegét 12 703 719,3 millió forintban, b) kiadási főösszegét 13 568 030,4 millió forintban, c) hiányát 864 311,1 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2010.actual",
+  "year": 2010,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "14057922600000",
+  "unit": "HUF",
+  "original": {
+   "value": "14 057 922,6",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1100133",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2010. évi költségvetéséről szóló 2009. évi CXXX. törvény (a továbbiakban: Költségvetési Törvény) végrehajtását – a 4–7. §-okban foglalt finanszírozási célú pénzügyi műveletek nélkül – a) 13 168 448,1 millió forint bevétellel, b) 14 057 922,6 millió forint kiadással és c) 889 474,5 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.expenditure.2010.original",
+  "year": 2010,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "13533026800000",
+  "unit": "HUF",
+  "original": {
+   "value": "13 533 026,8",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0900130",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2010. évi a) bevételi főösszegét 12 662 680,6 millió forintban, b) kiadási főösszegét 13 533 026,8 millió forintban, c) hiányát 870 346,2 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2010.revised",
+  "year": 2010,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "revised",
+  "method": "cash",
+  "value": "13568030400000",
+  "unit": "HUF",
+  "original": {
+   "value": "13 568 030,4",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1000097",
+  "locator": "módosító törvény, a főösszegeket megállapító szakasz",
+  "revision": "revised",
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2010. évi a) bevételi főösszegét 12 703 719,3 millió forintban, b) kiadási főösszegét 13 568 030,4 millió forintban, c) hiányát 864 311,1 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2010.actual",
+  "year": 2010,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "13168448100000",
+  "unit": "HUF",
+  "original": {
+   "value": "13 168 448,1",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1100133",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2010. évi költségvetéséről szóló 2009. évi CXXX. törvény (a továbbiakban: Költségvetési Törvény) végrehajtását – a 4–7. §-okban foglalt finanszírozási célú pénzügyi műveletek nélkül – a) 13 168 448,1 millió forint bevétellel, b) 14 057 922,6 millió forint kiadással és c) 889 474,5 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.revenue.2010.original",
+  "year": 2010,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "12662680600000",
+  "unit": "HUF",
+  "original": {
+   "value": "12 662 680,6",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a0900130",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2010. évi a) bevételi főösszegét 12 662 680,6 millió forintban, b) kiadási főösszegét 13 533 026,8 millió forintban, c) hiányát 870 346,2 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2010.revised",
+  "year": 2010,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "revised",
+  "method": "cash",
+  "value": "12703719300000",
+  "unit": "HUF",
+  "original": {
+   "value": "12 703 719,3",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1000097",
+  "locator": "módosító törvény, a főösszegeket megállapító szakasz",
+  "revision": "revised",
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2010. évi a) bevételi főösszegét 12 703 719,3 millió forintban, b) kiadási főösszegét 13 568 030,4 millió forintban, c) hiányát 864 311,1 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2011.actual",
+  "year": 2011,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "1741589800000",
+  "unit": "HUF",
+  "original": {
+   "value": "1 741 589,8",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1200155",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2011. évi költségvetéséről szóló 2010. évi CLXIX. törvény (a továbbiakban: Kötv.) végrehajtását – a 4–7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a) 13 222 642,6 millió forint bevétellel, b) 14 964 232,4 millió forint kiadással és c) 1 741 589,8 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.deficit.2011.original",
+  "year": 2011,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "687370300000",
+  "unit": "HUF",
+  "original": {
+   "value": "687 370,3",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1000169",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2011. évi a) bevételi főösszegét 13 151 248,0 millió forintban, b) kiadási főösszegét 13 838 618,3 millió forintban, c) hiányát 687 370,3 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2011.revised",
+  "year": 2011,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "revised",
+  "method": "cash",
+  "value": "1184249200000",
+  "unit": "HUF",
+  "original": {
+   "value": "1 184 249,2",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1100114",
+  "locator": "módosító törvény, a főösszegeket megállapító szakasz",
+  "revision": "revised",
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2011. évi a) bevételi főösszegét 12 970 820,9 millió forintban, b) kiadási főösszegét 14 155 070,1 millió forintban, c) hiányát 1 184 249,2 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2011.actual",
+  "year": 2011,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "14964232400000",
+  "unit": "HUF",
+  "original": {
+   "value": "14 964 232,4",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1200155",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2011. évi költségvetéséről szóló 2010. évi CLXIX. törvény (a továbbiakban: Kötv.) végrehajtását – a 4–7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a) 13 222 642,6 millió forint bevétellel, b) 14 964 232,4 millió forint kiadással és c) 1 741 589,8 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.expenditure.2011.original",
+  "year": 2011,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "13838618300000",
+  "unit": "HUF",
+  "original": {
+   "value": "13 838 618,3",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1000169",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2011. évi a) bevételi főösszegét 13 151 248,0 millió forintban, b) kiadási főösszegét 13 838 618,3 millió forintban, c) hiányát 687 370,3 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2011.revised",
+  "year": 2011,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "revised",
+  "method": "cash",
+  "value": "14155070100000",
+  "unit": "HUF",
+  "original": {
+   "value": "14 155 070,1",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1100114",
+  "locator": "módosító törvény, a főösszegeket megállapító szakasz",
+  "revision": "revised",
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2011. évi a) bevételi főösszegét 12 970 820,9 millió forintban, b) kiadási főösszegét 14 155 070,1 millió forintban, c) hiányát 1 184 249,2 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2011.actual",
+  "year": 2011,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "13222642600000",
+  "unit": "HUF",
+  "original": {
+   "value": "13 222 642,6",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1200155",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyar Köztársaság 2011. évi költségvetéséről szóló 2010. évi CLXIX. törvény (a továbbiakban: Kötv.) végrehajtását – a 4–7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a) 13 222 642,6 millió forint bevétellel, b) 14 964 232,4 millió forint kiadással és c) 1 741 589,8 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.revenue.2011.original",
+  "year": 2011,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "13151248000000",
+  "unit": "HUF",
+  "original": {
+   "value": "13 151 248,0",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1000169",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2011. évi a) bevételi főösszegét 13 151 248,0 millió forintban, b) kiadási főösszegét 13 838 618,3 millió forintban, c) hiányát 687 370,3 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2011.revised",
+  "year": 2011,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "revised",
+  "method": "cash",
+  "value": "12970820900000",
+  "unit": "HUF",
+  "original": {
+   "value": "12 970 820,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1100114",
+  "locator": "módosító törvény, a főösszegeket megállapító szakasz",
+  "revision": "revised",
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2011. évi a) bevételi főösszegét 12 970 820,9 millió forintban, b) kiadási főösszegét 14 155 070,1 millió forintban, c) hiányát 1 184 249,2 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2012.actual",
+  "year": 2012,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "598643300000",
+  "unit": "HUF",
+  "original": {
+   "value": "598 643,3",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1300193",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyarország 2012. évi központi költségvetéséről szóló 2011. évi CLXXXVIII. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4–7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a) 14 422 528,0 millió forint bevétellel, b) 15 021 171,3 millió forint kiadással és c) 598 643,3 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.deficit.2012.original",
+  "year": 2012,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "576160700000",
+  "unit": "HUF",
+  "original": {
+   "value": "576 160,7",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1100188",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "Az Országgyűlés Magyarország 2012. évi költségvetéséről a következő törvényt alkotja: I. Fejezet A KÖZPONTI ALRENDSZER KIADÁSAINAK ÉS BEVÉTELEINEK FŐÖSSZEGE, A HIÁNY MÉRTÉKE 1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2012. évi a) bevételi főösszegét 14 340 947,1 millió forintban, b) kiadási főösszegét 14 917 107,8 millió forintban, c) hiányát 576 160,7 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2012.revised",
+  "year": 2012,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "revised",
+  "method": "cash",
+  "value": "576160700000",
+  "unit": "HUF",
+  "original": {
+   "value": "576 160,7",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1200115",
+  "locator": "módosító törvény, a főösszegeket megállapító szakasz",
+  "revision": "revised",
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2012. évi a) bevételi főösszegét 14 437 120,2 millió forintban, b) kiadási főösszegét 15 013 280,9 millió forintban, c) hiányát 576 160,7 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2012.actual",
+  "year": 2012,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "15021171300000",
+  "unit": "HUF",
+  "original": {
+   "value": "15 021 171,3",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1300193",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyarország 2012. évi központi költségvetéséről szóló 2011. évi CLXXXVIII. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4–7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a) 14 422 528,0 millió forint bevétellel, b) 15 021 171,3 millió forint kiadással és c) 598 643,3 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.expenditure.2012.original",
+  "year": 2012,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "14917107800000",
+  "unit": "HUF",
+  "original": {
+   "value": "14 917 107,8",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1100188",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "Az Országgyűlés Magyarország 2012. évi költségvetéséről a következő törvényt alkotja: I. Fejezet A KÖZPONTI ALRENDSZER KIADÁSAINAK ÉS BEVÉTELEINEK FŐÖSSZEGE, A HIÁNY MÉRTÉKE 1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2012. évi a) bevételi főösszegét 14 340 947,1 millió forintban, b) kiadási főösszegét 14 917 107,8 millió forintban, c) hiányát 576 160,7 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2012.revised",
+  "year": 2012,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "revised",
+  "method": "cash",
+  "value": "15013280900000",
+  "unit": "HUF",
+  "original": {
+   "value": "15 013 280,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1200115",
+  "locator": "módosító törvény, a főösszegeket megállapító szakasz",
+  "revision": "revised",
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2012. évi a) bevételi főösszegét 14 437 120,2 millió forintban, b) kiadási főösszegét 15 013 280,9 millió forintban, c) hiányát 576 160,7 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2012.actual",
+  "year": 2012,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "14422528000000",
+  "unit": "HUF",
+  "original": {
+   "value": "14 422 528,0",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1300193",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyarország 2012. évi központi költségvetéséről szóló 2011. évi CLXXXVIII. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4–7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a) 14 422 528,0 millió forint bevétellel, b) 15 021 171,3 millió forint kiadással és c) 598 643,3 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.revenue.2012.original",
+  "year": 2012,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "14340947100000",
+  "unit": "HUF",
+  "original": {
+   "value": "14 340 947,1",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1100188",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "Az Országgyűlés Magyarország 2012. évi költségvetéséről a következő törvényt alkotja: I. Fejezet A KÖZPONTI ALRENDSZER KIADÁSAINAK ÉS BEVÉTELEINEK FŐÖSSZEGE, A HIÁNY MÉRTÉKE 1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2012. évi a) bevételi főösszegét 14 340 947,1 millió forintban, b) kiadási főösszegét 14 917 107,8 millió forintban, c) hiányát 576 160,7 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2012.revised",
+  "year": 2012,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "revised",
+  "method": "cash",
+  "value": "14437120200000",
+  "unit": "HUF",
+  "original": {
+   "value": "14 437 120,2",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1200115",
+  "locator": "módosító törvény, a főösszegeket megállapító szakasz",
+  "revision": "revised",
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2012. évi a) bevételi főösszegét 14 437 120,2 millió forintban, b) kiadási főösszegét 15 013 280,9 millió forintban, c) hiányát 576 160,7 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2013.actual",
+  "year": 2013,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "932790700000",
+  "unit": "HUF",
+  "original": {
+   "value": "932 790,7",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1400062",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyarország 2013. évi központi költségvetéséről szóló 2012. évi CCIV. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4–7. §-ában foglalt finanszírozási célú pénzügyi műveletek nélkül – a) 16 477 474,8 millió forint bevétellel, b) 17 410 265,5 millió forint kiadással és c) 932 790,7 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.deficit.2013.original",
+  "year": 2013,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "841834800000",
+  "unit": "HUF",
+  "original": {
+   "value": "841 834,8",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1200204",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2013. évi a) bevételi főösszegét 15 313 816,1 millió forintban, b) kiadási főösszegét 16 155 650,9 millió forintban, c) hiányát 841 834,8 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2013.revised",
+  "year": 2013,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "revised",
+  "method": "cash",
+  "value": "1050834800000",
+  "unit": "HUF",
+  "original": {
+   "value": "1 050 834,8",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1300144",
+  "locator": "módosító törvény, a főösszegeket megállapító szakasz",
+  "revision": "revised",
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2013. évi a) bevételi főösszegét 15 325 316,1 millió forintban, b) kiadási főösszegét 16 376 150,9 millió forintban, c) hiányát 1 050 834,8 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2013.actual",
+  "year": 2013,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "17410265500000",
+  "unit": "HUF",
+  "original": {
+   "value": "17 410 265,5",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1400062",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyarország 2013. évi központi költségvetéséről szóló 2012. évi CCIV. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4–7. §-ában foglalt finanszírozási célú pénzügyi műveletek nélkül – a) 16 477 474,8 millió forint bevétellel, b) 17 410 265,5 millió forint kiadással és c) 932 790,7 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.expenditure.2013.original",
+  "year": 2013,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "16155650900000",
+  "unit": "HUF",
+  "original": {
+   "value": "16 155 650,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1200204",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2013. évi a) bevételi főösszegét 15 313 816,1 millió forintban, b) kiadási főösszegét 16 155 650,9 millió forintban, c) hiányát 841 834,8 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2013.revised",
+  "year": 2013,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "revised",
+  "method": "cash",
+  "value": "16376150900000",
+  "unit": "HUF",
+  "original": {
+   "value": "16 376 150,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1300144",
+  "locator": "módosító törvény, a főösszegeket megállapító szakasz",
+  "revision": "revised",
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2013. évi a) bevételi főösszegét 15 325 316,1 millió forintban, b) kiadási főösszegét 16 376 150,9 millió forintban, c) hiányát 1 050 834,8 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2013.actual",
+  "year": 2013,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "16477474800000",
+  "unit": "HUF",
+  "original": {
+   "value": "16 477 474,8",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1400062",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyarország 2013. évi központi költségvetéséről szóló 2012. évi CCIV. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4–7. §-ában foglalt finanszírozási célú pénzügyi műveletek nélkül – a) 16 477 474,8 millió forint bevétellel, b) 17 410 265,5 millió forint kiadással és c) 932 790,7 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.revenue.2013.original",
+  "year": 2013,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "15313816100000",
+  "unit": "HUF",
+  "original": {
+   "value": "15 313 816,1",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1200204",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2013. évi a) bevételi főösszegét 15 313 816,1 millió forintban, b) kiadási főösszegét 16 155 650,9 millió forintban, c) hiányát 841 834,8 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2013.revised",
+  "year": 2013,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "revised",
+  "method": "cash",
+  "value": "15325316100000",
+  "unit": "HUF",
+  "original": {
+   "value": "15 325 316,1",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1300144",
+  "locator": "módosító törvény, a főösszegeket megállapító szakasz",
+  "revision": "revised",
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2013. évi a) bevételi főösszegét 15 325 316,1 millió forintban, b) kiadási főösszegét 16 376 150,9 millió forintban, c) hiányát 1 050 834,8 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2014.actual",
+  "year": 2014,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "803015000000",
+  "unit": "HUF",
+  "original": {
+   "value": "803 015,0",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1500172",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés a Magyarország 2014. évi központi költségvetéséről szóló 2013. évi CCXXX. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4. §–7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a központi alrendszer tekintetében a) 17 458 407,8 millió forint bevétellel, b) 18 261 422,8 millió forint kiadással és c) 803 015,0 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.deficit.2014.original",
+  "year": 2014,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "984637400000",
+  "unit": "HUF",
+  "original": {
+   "value": "984 637,4",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1300230",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2014. évi a) bevételi főösszegét 15 983 668,7 millió forintban, b) kiadási főösszegét 16 968 306,1 millió forintban, c) hiányát 984 637,4 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2014.revised",
+  "year": 2014,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "revised",
+  "method": "cash",
+  "value": "1151480800000",
+  "unit": "HUF",
+  "original": {
+   "value": "1 151 480,8",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1400084",
+  "locator": "módosító törvény, a főösszegeket megállapító szakasz",
+  "revision": "revised",
+  "evidence": "„(1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2014. évi a) bevételi főösszegét 15 983 668,7 millió forintban, b) kiadási főösszegét 17 135 149,5 millió forintban, c) hiányát 1 151 480,8 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2014.actual",
+  "year": 2014,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "18261422800000",
+  "unit": "HUF",
+  "original": {
+   "value": "18 261 422,8",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1500172",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés a Magyarország 2014. évi központi költségvetéséről szóló 2013. évi CCXXX. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4. §–7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a központi alrendszer tekintetében a) 17 458 407,8 millió forint bevétellel, b) 18 261 422,8 millió forint kiadással és c) 803 015,0 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.expenditure.2014.original",
+  "year": 2014,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "16968306100000",
+  "unit": "HUF",
+  "original": {
+   "value": "16 968 306,1",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1300230",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2014. évi a) bevételi főösszegét 15 983 668,7 millió forintban, b) kiadási főösszegét 16 968 306,1 millió forintban, c) hiányát 984 637,4 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2014.revised",
+  "year": 2014,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "revised",
+  "method": "cash",
+  "value": "17135149500000",
+  "unit": "HUF",
+  "original": {
+   "value": "17 135 149,5",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1400084",
+  "locator": "módosító törvény, a főösszegeket megállapító szakasz",
+  "revision": "revised",
+  "evidence": "„(1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2014. évi a) bevételi főösszegét 15 983 668,7 millió forintban, b) kiadási főösszegét 17 135 149,5 millió forintban, c) hiányát 1 151 480,8 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2014.actual",
+  "year": 2014,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "17458407800000",
+  "unit": "HUF",
+  "original": {
+   "value": "17 458 407,8",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1500172",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés a Magyarország 2014. évi központi költségvetéséről szóló 2013. évi CCXXX. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4. §–7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a központi alrendszer tekintetében a) 17 458 407,8 millió forint bevétellel, b) 18 261 422,8 millió forint kiadással és c) 803 015,0 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.revenue.2014.original",
+  "year": 2014,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "15983668700000",
+  "unit": "HUF",
+  "original": {
+   "value": "15 983 668,7",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1300230",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2014. évi a) bevételi főösszegét 15 983 668,7 millió forintban, b) kiadási főösszegét 16 968 306,1 millió forintban, c) hiányát 984 637,4 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2014.revised",
+  "year": 2014,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "revised",
+  "method": "cash",
+  "value": "15983668700000",
+  "unit": "HUF",
+  "original": {
+   "value": "15 983 668,7",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1400084",
+  "locator": "módosító törvény, a főösszegeket megállapító szakasz",
+  "revision": "revised",
+  "evidence": "„(1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2014. évi a) bevételi főösszegét 15 983 668,7 millió forintban, b) kiadási főösszegét 17 135 149,5 millió forintban, c) hiányát 1 151 480,8 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2015.actual",
+  "year": 2015,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "1237169800000",
+  "unit": "HUF",
+  "original": {
+   "value": "1 237 169,8",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1600122",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyarország 2015. évi központi költségvetéséről szóló 2014. évi C. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4–7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a központi alrendszer tekintetében a) 17 497 128,4 millió forint bevétellel, b) 18 734 298,2 millió forint kiadással és c) 1 237 169,8 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.deficit.2015.original",
+  "year": 2015,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "877404100000",
+  "unit": "HUF",
+  "original": {
+   "value": "877 404,1",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1400100",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2015. évi a) bevételi főösszegét 16 312 873,0 millió forintban, b) kiadási főösszegét 17 190 277,1 millió forintban, c) hiányát 877 404,1 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2015.revised",
+  "year": 2015,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "revised",
+  "method": "cash",
+  "value": "892404100000",
+  "unit": "HUF",
+  "original": {
+   "value": "892 404,1",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1500164",
+  "locator": "módosító törvény, a főösszegeket megállapító szakasz",
+  "revision": "revised",
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2015. évi a) bevételi főösszegét 16 445 724,5 millió forintban, b) kiadási főösszegét 17 338 128,6 millió forintban, c) hiányát 892 404,1 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2015.actual",
+  "year": 2015,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "18734298200000",
+  "unit": "HUF",
+  "original": {
+   "value": "18 734 298,2",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1600122",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyarország 2015. évi központi költségvetéséről szóló 2014. évi C. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4–7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a központi alrendszer tekintetében a) 17 497 128,4 millió forint bevétellel, b) 18 734 298,2 millió forint kiadással és c) 1 237 169,8 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.expenditure.2015.original",
+  "year": 2015,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "17190277100000",
+  "unit": "HUF",
+  "original": {
+   "value": "17 190 277,1",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1400100",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2015. évi a) bevételi főösszegét 16 312 873,0 millió forintban, b) kiadási főösszegét 17 190 277,1 millió forintban, c) hiányát 877 404,1 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2015.revised",
+  "year": 2015,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "revised",
+  "method": "cash",
+  "value": "17338128600000",
+  "unit": "HUF",
+  "original": {
+   "value": "17 338 128,6",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1500164",
+  "locator": "módosító törvény, a főösszegeket megállapító szakasz",
+  "revision": "revised",
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2015. évi a) bevételi főösszegét 16 445 724,5 millió forintban, b) kiadási főösszegét 17 338 128,6 millió forintban, c) hiányát 892 404,1 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2015.actual",
+  "year": 2015,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "17497128400000",
+  "unit": "HUF",
+  "original": {
+   "value": "17 497 128,4",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1600122",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyarország 2015. évi központi költségvetéséről szóló 2014. évi C. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4–7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a központi alrendszer tekintetében a) 17 497 128,4 millió forint bevétellel, b) 18 734 298,2 millió forint kiadással és c) 1 237 169,8 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.revenue.2015.original",
+  "year": 2015,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "16312873000000",
+  "unit": "HUF",
+  "original": {
+   "value": "16 312 873,0",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1400100",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2015. évi a) bevételi főösszegét 16 312 873,0 millió forintban, b) kiadási főösszegét 17 190 277,1 millió forintban, c) hiányát 877 404,1 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2015.revised",
+  "year": 2015,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "revised",
+  "method": "cash",
+  "value": "16445724500000",
+  "unit": "HUF",
+  "original": {
+   "value": "16 445 724,5",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1500164",
+  "locator": "módosító törvény, a főösszegeket megállapító szakasz",
+  "revision": "revised",
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2015. évi a) bevételi főösszegét 16 445 724,5 millió forintban, b) kiadási főösszegét 17 338 128,6 millió forintban, c) hiányát 892 404,1 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2016.actual",
+  "year": 2016,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "824991900000",
+  "unit": "HUF",
+  "original": {
+   "value": "824 991,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1700170",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyarország 2016. évi központi költségvetéséről szóló 2015. évi C. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4. §–7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a központi alrendszer tekintetében a) 18 229 923,4 millió forint bevétellel, b) 19 054 915,3 millió forint kiadással és c) 824 991,9 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.deficit.2016.original",
+  "year": 2016,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "761634500000",
+  "unit": "HUF",
+  "original": {
+   "value": "761 634,5",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1500100",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2016. évi a) bevételi főösszegét 15 800 364,6 millió forintban, b) kiadási főösszegét 16 561 999,1 millió forintban, c) hiányát 761 634,5 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2016.revised",
+  "year": 2016,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "revised",
+  "method": "cash",
+  "value": "761634500000",
+  "unit": "HUF",
+  "original": {
+   "value": "761 634,5",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1600076",
+  "locator": "módosító törvény, a főösszegeket megállapító szakasz",
+  "revision": "revised",
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2016. évi a) bevételi főösszegét 16 222 052,4 millió forintban, b) kiadási főösszegét 16 983 686,9 millió forintban, c) hiányát 761 634,5 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2016.actual",
+  "year": 2016,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "19054915300000",
+  "unit": "HUF",
+  "original": {
+   "value": "19 054 915,3",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1700170",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyarország 2016. évi központi költségvetéséről szóló 2015. évi C. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4. §–7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a központi alrendszer tekintetében a) 18 229 923,4 millió forint bevétellel, b) 19 054 915,3 millió forint kiadással és c) 824 991,9 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.expenditure.2016.original",
+  "year": 2016,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "16561999100000",
+  "unit": "HUF",
+  "original": {
+   "value": "16 561 999,1",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1500100",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2016. évi a) bevételi főösszegét 15 800 364,6 millió forintban, b) kiadási főösszegét 16 561 999,1 millió forintban, c) hiányát 761 634,5 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2016.revised",
+  "year": 2016,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "revised",
+  "method": "cash",
+  "value": "16983686900000",
+  "unit": "HUF",
+  "original": {
+   "value": "16 983 686,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1600076",
+  "locator": "módosító törvény, a főösszegeket megállapító szakasz",
+  "revision": "revised",
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2016. évi a) bevételi főösszegét 16 222 052,4 millió forintban, b) kiadási főösszegét 16 983 686,9 millió forintban, c) hiányát 761 634,5 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2016.actual",
+  "year": 2016,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "18229923400000",
+  "unit": "HUF",
+  "original": {
+   "value": "18 229 923,4",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1700170",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés a Magyarország 2016. évi központi költségvetéséről szóló 2015. évi C. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4. §–7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a központi alrendszer tekintetében a) 18 229 923,4 millió forint bevétellel, b) 19 054 915,3 millió forint kiadással és c) 824 991,9 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.revenue.2016.original",
+  "year": 2016,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "15800364600000",
+  "unit": "HUF",
+  "original": {
+   "value": "15 800 364,6",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1500100",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2016. évi a) bevételi főösszegét 15 800 364,6 millió forintban, b) kiadási főösszegét 16 561 999,1 millió forintban, c) hiányát 761 634,5 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2016.revised",
+  "year": 2016,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "revised",
+  "method": "cash",
+  "value": "16222052400000",
+  "unit": "HUF",
+  "original": {
+   "value": "16 222 052,4",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1600076",
+  "locator": "módosító törvény, a főösszegeket megállapító szakasz",
+  "revision": "revised",
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2016. évi a) bevételi főösszegét 16 222 052,4 millió forintban, b) kiadási főösszegét 16 983 686,9 millió forintban, c) hiányát 761 634,5 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2017.actual",
+  "year": 2017,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "1833415200000",
+  "unit": "HUF",
+  "original": {
+   "value": "1 833 415,2",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1800084",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés a Magyarország 2017. évi központi költségvetéséről szóló 2016. évi XC. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4. §–7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a központi alrendszer tekintetében a) 19 223 259,6 millió forint bevétellel, b) 21 056 674,8 millió forint kiadással és c) 1 833 415,2 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.deficit.2017.original",
+  "year": 2017,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "1166357100000",
+  "unit": "HUF",
+  "original": {
+   "value": "1 166 357,1",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1600090",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2017. évi a) bevételi főösszegét 17 431 347,9 millió forintban, b) kiadási főösszegét 18 597 705,0 millió forintban, c) hiányát 1 166 357,1 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2017.revised",
+  "year": 2017,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "revised",
+  "method": "cash",
+  "value": "1166357100000",
+  "unit": "HUF",
+  "original": {
+   "value": "1 166 357,1",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1700086",
+  "locator": "módosító törvény, a főösszegeket megállapító szakasz",
+  "revision": "revised",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2017. évi a) bevételi főösszegét 17 867 739,4 millió forintban, b) kiadási főösszegét 19 034 096,5 millió forintban, c) hiányát 1 166 357,1 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2017.actual",
+  "year": 2017,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "21056674800000",
+  "unit": "HUF",
+  "original": {
+   "value": "21 056 674,8",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1800084",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés a Magyarország 2017. évi központi költségvetéséről szóló 2016. évi XC. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4. §–7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a központi alrendszer tekintetében a) 19 223 259,6 millió forint bevétellel, b) 21 056 674,8 millió forint kiadással és c) 1 833 415,2 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.expenditure.2017.original",
+  "year": 2017,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "18597705000000",
+  "unit": "HUF",
+  "original": {
+   "value": "18 597 705,0",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1600090",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2017. évi a) bevételi főösszegét 17 431 347,9 millió forintban, b) kiadási főösszegét 18 597 705,0 millió forintban, c) hiányát 1 166 357,1 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2017.revised",
+  "year": 2017,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "revised",
+  "method": "cash",
+  "value": "19034096500000",
+  "unit": "HUF",
+  "original": {
+   "value": "19 034 096,5",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1700086",
+  "locator": "módosító törvény, a főösszegeket megállapító szakasz",
+  "revision": "revised",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2017. évi a) bevételi főösszegét 17 867 739,4 millió forintban, b) kiadási főösszegét 19 034 096,5 millió forintban, c) hiányát 1 166 357,1 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2017.actual",
+  "year": 2017,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "19223259600000",
+  "unit": "HUF",
+  "original": {
+   "value": "19 223 259,6",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1800084",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés a Magyarország 2017. évi központi költségvetéséről szóló 2016. évi XC. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4. §–7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a központi alrendszer tekintetében a) 19 223 259,6 millió forint bevétellel, b) 21 056 674,8 millió forint kiadással és c) 1 833 415,2 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.revenue.2017.original",
+  "year": 2017,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "17431347900000",
+  "unit": "HUF",
+  "original": {
+   "value": "17 431 347,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1600090",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2017. évi a) bevételi főösszegét 17 431 347,9 millió forintban, b) kiadási főösszegét 18 597 705,0 millió forintban, c) hiányát 1 166 357,1 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2017.revised",
+  "year": 2017,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "revised",
+  "method": "cash",
+  "value": "17867739400000",
+  "unit": "HUF",
+  "original": {
+   "value": "17 867 739,4",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1700086",
+  "locator": "módosító törvény, a főösszegeket megállapító szakasz",
+  "revision": "revised",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2017. évi a) bevételi főösszegét 17 867 739,4 millió forintban, b) kiadási főösszegét 19 034 096,5 millió forintban, c) hiányát 1 166 357,1 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2018.actual",
+  "year": 2018,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "1451590900000",
+  "unit": "HUF",
+  "original": {
+   "value": "1 451 590,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1900079",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés a Magyarország 2018. évi központi költségvetéséről szóló 2017. évi C. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4. § – 7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a központi alrendszer tekintetében a) 19 922 469,5 millió forint bevétellel, b) 21 374 060,4 millió forint kiadással és c) 1 451 590,9 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.deficit.2018.original",
+  "year": 2018,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "1360650200000",
+  "unit": "HUF",
+  "original": {
+   "value": "1 360 650,2",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1700100",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2018. évi a) bevételi főösszegét 18 751 458,2 millió forintban, b) kiadási főösszegét 20 112 108,4 millió forintban, c) hiányát 1 360 650,2 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2018.actual",
+  "year": 2018,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "21374060400000",
+  "unit": "HUF",
+  "original": {
+   "value": "21 374 060,4",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1900079",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés a Magyarország 2018. évi központi költségvetéséről szóló 2017. évi C. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4. § – 7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a központi alrendszer tekintetében a) 19 922 469,5 millió forint bevétellel, b) 21 374 060,4 millió forint kiadással és c) 1 451 590,9 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.expenditure.2018.original",
+  "year": 2018,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "20112108400000",
+  "unit": "HUF",
+  "original": {
+   "value": "20 112 108,4",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1700100",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2018. évi a) bevételi főösszegét 18 751 458,2 millió forintban, b) kiadási főösszegét 20 112 108,4 millió forintban, c) hiányát 1 360 650,2 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2018.actual",
+  "year": 2018,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "19922469500000",
+  "unit": "HUF",
+  "original": {
+   "value": "19 922 469,5",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1900079",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés a Magyarország 2018. évi központi költségvetéséről szóló 2017. évi C. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4. § – 7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a központi alrendszer tekintetében a) 19 922 469,5 millió forint bevétellel, b) 21 374 060,4 millió forint kiadással és c) 1 451 590,9 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.revenue.2018.original",
+  "year": 2018,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "18751458200000",
+  "unit": "HUF",
+  "original": {
+   "value": "18 751 458,2",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1700100",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2018. évi a) bevételi főösszegét 18 751 458,2 millió forintban, b) kiadási főösszegét 20 112 108,4 millió forintban, c) hiányát 1 360 650,2 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2019.actual",
+  "year": 2019,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "1127894200000",
+  "unit": "HUF",
+  "original": {
+   "value": "1 127 894,2",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2000117",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés a Magyarország 2019. évi központi költségvetéséről szóló 2018. évi L. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4. §–7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a központi alrendszer tekintetében a) 22 670 119,1 millió forint kiadással, b) 21 542 224,9 millió forint bevétellel és c) 1 127 894,2 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.deficit.2019.original",
+  "year": 2019,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "998433900000",
+  "unit": "HUF",
+  "original": {
+   "value": "998 433,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1800050",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2019. évi a) bevételi főösszegét 19 580 364,6 millió forintban, b) kiadási főösszegét 20 578 798,5 millió forintban, c) hiányát 998 433,9 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2019.actual",
+  "year": 2019,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "22670119100000",
+  "unit": "HUF",
+  "original": {
+   "value": "22 670 119,1",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2000117",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés a Magyarország 2019. évi központi költségvetéséről szóló 2018. évi L. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4. §–7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a központi alrendszer tekintetében a) 22 670 119,1 millió forint kiadással, b) 21 542 224,9 millió forint bevétellel és c) 1 127 894,2 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.expenditure.2019.original",
+  "year": 2019,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "20578798500000",
+  "unit": "HUF",
+  "original": {
+   "value": "20 578 798,5",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1800050",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2019. évi a) bevételi főösszegét 19 580 364,6 millió forintban, b) kiadási főösszegét 20 578 798,5 millió forintban, c) hiányát 998 433,9 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2019.actual",
+  "year": 2019,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "21542224900000",
+  "unit": "HUF",
+  "original": {
+   "value": "21 542 224,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2000117",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés a Magyarország 2019. évi központi költségvetéséről szóló 2018. évi L. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4. §–7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a központi alrendszer tekintetében a) 22 670 119,1 millió forint kiadással, b) 21 542 224,9 millió forint bevétellel és c) 1 127 894,2 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.revenue.2019.original",
+  "year": 2019,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "19580364600000",
+  "unit": "HUF",
+  "original": {
+   "value": "19 580 364,6",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1800050",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2019. évi a) bevételi főösszegét 19 580 364,6 millió forintban, b) kiadási főösszegét 20 578 798,5 millió forintban, c) hiányát 998 433,9 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2020.actual",
+  "year": 2020,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "5311318000000",
+  "unit": "HUF",
+  "original": {
+   "value": "5 311 318,0",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2100116",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés a Magyarország 2020. évi központi költségvetéséről szóló 2019. évi LXXI. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4. §–7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a központi alrendszer tekintetében a) 28 332 078,3 millió forint kiadással, b) 23 020 760,3 millió forint bevétellel és c) 5 311 318,0 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.deficit.2020.original",
+  "year": 2020,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "367010100000",
+  "unit": "HUF",
+  "original": {
+   "value": "367 010,1",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1900071",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2020. évi a) kiadási főösszegét 21 792 993,4 millió forintban, b) bevételi főösszegét 21 425 983,3 millió forintban, c) hiányát 367 010,1 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2020.actual",
+  "year": 2020,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "28332078300000",
+  "unit": "HUF",
+  "original": {
+   "value": "28 332 078,3",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2100116",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés a Magyarország 2020. évi központi költségvetéséről szóló 2019. évi LXXI. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4. §–7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a központi alrendszer tekintetében a) 28 332 078,3 millió forint kiadással, b) 23 020 760,3 millió forint bevétellel és c) 5 311 318,0 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.expenditure.2020.original",
+  "year": 2020,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "21792993400000",
+  "unit": "HUF",
+  "original": {
+   "value": "21 792 993,4",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1900071",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2020. évi a) kiadási főösszegét 21 792 993,4 millió forintban, b) bevételi főösszegét 21 425 983,3 millió forintban, c) hiányát 367 010,1 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2020.actual",
+  "year": 2020,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "23020760300000",
+  "unit": "HUF",
+  "original": {
+   "value": "23 020 760,3",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2100116",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés a Magyarország 2020. évi központi költségvetéséről szóló 2019. évi LXXI. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4. §–7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a központi alrendszer tekintetében a) 28 332 078,3 millió forint kiadással, b) 23 020 760,3 millió forint bevétellel és c) 5 311 318,0 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.revenue.2020.original",
+  "year": 2020,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "21425983300000",
+  "unit": "HUF",
+  "original": {
+   "value": "21 425 983,3",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1900071",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2020. évi a) kiadási főösszegét 21 792 993,4 millió forintban, b) bevételi főösszegét 21 425 983,3 millió forintban, c) hiányát 367 010,1 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2021.actual",
+  "year": 2021,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "4773938900000",
+  "unit": "HUF",
+  "original": {
+   "value": "4 773 938,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2200072",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés a Magyarország 2021. évi központi költségvetéséről szóló 2020. évi XC. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4–7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a központi alrendszer tekintetében a) 29 875 862,7 millió forint kiadással, b) 25 101 923,8 millió forint bevétellel, és c) 4 773 938,9 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.deficit.2021.original",
+  "year": 2021,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "1491223700000",
+  "unit": "HUF",
+  "original": {
+   "value": "1 491 223,7",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2000090",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2021. évi a) kiadási főösszegét 23 465 402,0 millió forintban, b) bevételi főösszegét 21 974 178,3 millió forintban, c) hiányát 1 491 223,7 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2021.revised",
+  "year": 2021,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "revised",
+  "method": "cash",
+  "value": "2287728700000",
+  "unit": "HUF",
+  "original": {
+   "value": "2 287 728,7",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2100044",
+  "locator": "módosító törvény, a főösszegeket megállapító szakasz",
+  "revision": "revised",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2021. évi a) kiadási főösszegét 25 052 196,8 millió forintban, b) bevételi főösszegét 22 764 468,1 millió forintban, c) hiányát 2 287 728,7 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2021.actual",
+  "year": 2021,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "29875862700000",
+  "unit": "HUF",
+  "original": {
+   "value": "29 875 862,7",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2200072",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés a Magyarország 2021. évi központi költségvetéséről szóló 2020. évi XC. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4–7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a központi alrendszer tekintetében a) 29 875 862,7 millió forint kiadással, b) 25 101 923,8 millió forint bevétellel, és c) 4 773 938,9 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.expenditure.2021.original",
+  "year": 2021,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "23465402000000",
+  "unit": "HUF",
+  "original": {
+   "value": "23 465 402,0",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2000090",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2021. évi a) kiadási főösszegét 23 465 402,0 millió forintban, b) bevételi főösszegét 21 974 178,3 millió forintban, c) hiányát 1 491 223,7 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2021.revised",
+  "year": 2021,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "revised",
+  "method": "cash",
+  "value": "25052196800000",
+  "unit": "HUF",
+  "original": {
+   "value": "25 052 196,8",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2100044",
+  "locator": "módosító törvény, a főösszegeket megállapító szakasz",
+  "revision": "revised",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2021. évi a) kiadási főösszegét 25 052 196,8 millió forintban, b) bevételi főösszegét 22 764 468,1 millió forintban, c) hiányát 2 287 728,7 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2021.actual",
+  "year": 2021,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "25101923800000",
+  "unit": "HUF",
+  "original": {
+   "value": "25 101 923,8",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2200072",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés a Magyarország 2021. évi központi költségvetéséről szóló 2020. évi XC. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4–7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a központi alrendszer tekintetében a) 29 875 862,7 millió forint kiadással, b) 25 101 923,8 millió forint bevétellel, és c) 4 773 938,9 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.revenue.2021.original",
+  "year": 2021,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "21974178300000",
+  "unit": "HUF",
+  "original": {
+   "value": "21 974 178,3",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2000090",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2021. évi a) kiadási főösszegét 23 465 402,0 millió forintban, b) bevételi főösszegét 21 974 178,3 millió forintban, c) hiányát 1 491 223,7 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2021.revised",
+  "year": 2021,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "revised",
+  "method": "cash",
+  "value": "22764468100000",
+  "unit": "HUF",
+  "original": {
+   "value": "22 764 468,1",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2100044",
+  "locator": "módosító törvény, a főösszegeket megállapító szakasz",
+  "revision": "revised",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2021. évi a) kiadási főösszegét 25 052 196,8 millió forintban, b) bevételi főösszegét 22 764 468,1 millió forintban, c) hiányát 2 287 728,7 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2022.actual",
+  "year": 2022,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "4672086700000",
+  "unit": "HUF",
+  "original": {
+   "value": "4 672 086,7",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2300073",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés a Magyarország 2022. évi központi költségvetéséről szóló 2021. évi XC. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4–7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a központi alrendszer tekintetében a) 34 565 086,6 millió forint kiadással, b) 29 892 999,9 millió forint bevétellel, és c) 4 672 086,7 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.deficit.2022.original",
+  "year": 2022,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "3152653000000",
+  "unit": "HUF",
+  "original": {
+   "value": "3 152 653,0",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2100090",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2022. évi a) kiadási főösszegét 28 546 456,1 millió forintban, b) bevételi főösszegét 25 393 803,1 millió forintban, c) hiányát 3 152 653,0 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2022.actual",
+  "year": 2022,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "34565086600000",
+  "unit": "HUF",
+  "original": {
+   "value": "34 565 086,6",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2300073",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés a Magyarország 2022. évi központi költségvetéséről szóló 2021. évi XC. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4–7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a központi alrendszer tekintetében a) 34 565 086,6 millió forint kiadással, b) 29 892 999,9 millió forint bevétellel, és c) 4 672 086,7 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.expenditure.2022.original",
+  "year": 2022,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "28546456100000",
+  "unit": "HUF",
+  "original": {
+   "value": "28 546 456,1",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2100090",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2022. évi a) kiadási főösszegét 28 546 456,1 millió forintban, b) bevételi főösszegét 25 393 803,1 millió forintban, c) hiányát 3 152 653,0 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2022.actual",
+  "year": 2022,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "29892999900000",
+  "unit": "HUF",
+  "original": {
+   "value": "29 892 999,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2300073",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés a Magyarország 2022. évi központi költségvetéséről szóló 2021. évi XC. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4–7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a központi alrendszer tekintetében a) 34 565 086,6 millió forint kiadással, b) 29 892 999,9 millió forint bevétellel, és c) 4 672 086,7 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.revenue.2022.original",
+  "year": 2022,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "25393803100000",
+  "unit": "HUF",
+  "original": {
+   "value": "25 393 803,1",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2100090",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2022. évi a) kiadási főösszegét 28 546 456,1 millió forintban, b) bevételi főösszegét 25 393 803,1 millió forintban, c) hiányát 3 152 653,0 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2023.actual",
+  "year": 2023,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "4435472000000",
+  "unit": "HUF",
+  "original": {
+   "value": "4 435 472,0",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2400048",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés a Magyarország 2023. évi központi költségvetéséről szóló 2022. évi XXV. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4–7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a központi alrendszer tekintetében a) 41 267 392,8 millió forint kiadással, b) 36 831 920,8 millió forint bevétellel, és c) 4 435 472,0 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.deficit.2023.original",
+  "year": 2023,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "2352145700000",
+  "unit": "HUF",
+  "original": {
+   "value": "2 352 145,7",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2200025",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2023. évi a) kiadási főösszegét 33 425 828,9 millió forintban, b) bevételi főösszegét 31 073 683,2 millió forintban, c) hiányát 2 352 145,7 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2023.revised",
+  "year": 2023,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "revised",
+  "method": "cash",
+  "value": "3400234800000",
+  "unit": "HUF",
+  "original": {
+   "value": "3 400 234,8",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "consolidated-a2200025",
+  "locator": "1. §",
+  "revision": "revised",
+  "evidence": "1. § * (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2023. évi a) kiadási főösszegét 39 776 144,4 millió forintban, b) bevételi főösszegét 36 375 909,6 millió forintban, c) hiányát 3 400 234,8 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2023.actual",
+  "year": 2023,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "41267392800000",
+  "unit": "HUF",
+  "original": {
+   "value": "41 267 392,8",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2400048",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés a Magyarország 2023. évi központi költségvetéséről szóló 2022. évi XXV. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4–7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a központi alrendszer tekintetében a) 41 267 392,8 millió forint kiadással, b) 36 831 920,8 millió forint bevétellel, és c) 4 435 472,0 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.expenditure.2023.original",
+  "year": 2023,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "33425828900000",
+  "unit": "HUF",
+  "original": {
+   "value": "33 425 828,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2200025",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2023. évi a) kiadási főösszegét 33 425 828,9 millió forintban, b) bevételi főösszegét 31 073 683,2 millió forintban, c) hiányát 2 352 145,7 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2023.revised",
+  "year": 2023,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "revised",
+  "method": "cash",
+  "value": "39776144400000",
+  "unit": "HUF",
+  "original": {
+   "value": "39 776 144,4",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "consolidated-a2200025",
+  "locator": "1. §",
+  "revision": "revised",
+  "evidence": "1. § * (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2023. évi a) kiadási főösszegét 39 776 144,4 millió forintban, b) bevételi főösszegét 36 375 909,6 millió forintban, c) hiányát 3 400 234,8 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2023.actual",
+  "year": 2023,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "36831920800000",
+  "unit": "HUF",
+  "original": {
+   "value": "36 831 920,8",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2400048",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés a Magyarország 2023. évi központi költségvetéséről szóló 2022. évi XXV. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4–7. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a központi alrendszer tekintetében a) 41 267 392,8 millió forint kiadással, b) 36 831 920,8 millió forint bevétellel, és c) 4 435 472,0 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.revenue.2023.original",
+  "year": 2023,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "31073683200000",
+  "unit": "HUF",
+  "original": {
+   "value": "31 073 683,2",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2200025",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2023. évi a) kiadási főösszegét 33 425 828,9 millió forintban, b) bevételi főösszegét 31 073 683,2 millió forintban, c) hiányát 2 352 145,7 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2023.revised",
+  "year": 2023,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "revised",
+  "method": "cash",
+  "value": "36375909600000",
+  "unit": "HUF",
+  "original": {
+   "value": "36 375 909,6",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "consolidated-a2200025",
+  "locator": "1. §",
+  "revision": "revised",
+  "evidence": "1. § * (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2023. évi a) kiadási főösszegét 39 776 144,4 millió forintban, b) bevételi főösszegét 36 375 909,6 millió forintban, c) hiányát 3 400 234,8 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2024.actual",
+  "year": 2024,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "3948291100000",
+  "unit": "HUF",
+  "original": {
+   "value": "3 948 291,1",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2500085",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés a Magyarország 2024. évi központi költségvetéséről szóló 2023. évi LV. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4–6. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a központi alrendszer tekintetében a) 42 039 530,5 millió forint kiadással, b) 38 091 239,4 millió forint bevétellel, és c) 3 948 291,1 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.deficit.2024.original",
+  "year": 2024,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "2514785900000",
+  "unit": "HUF",
+  "original": {
+   "value": "2 514 785,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2300055",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2024. évi a) kiadási főösszegét 40 755 101,1 millió forintban, b) bevételi főösszegét 38 240 315,2 millió forintban, c) hiányát 2 514 785,9 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2024.actual",
+  "year": 2024,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "42039530500000",
+  "unit": "HUF",
+  "original": {
+   "value": "42 039 530,5",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2500085",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés a Magyarország 2024. évi központi költségvetéséről szóló 2023. évi LV. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4–6. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a központi alrendszer tekintetében a) 42 039 530,5 millió forint kiadással, b) 38 091 239,4 millió forint bevétellel, és c) 3 948 291,1 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.expenditure.2024.original",
+  "year": 2024,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "40755101100000",
+  "unit": "HUF",
+  "original": {
+   "value": "40 755 101,1",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2300055",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2024. évi a) kiadási főösszegét 40 755 101,1 millió forintban, b) bevételi főösszegét 38 240 315,2 millió forintban, c) hiányát 2 514 785,9 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2024.actual",
+  "year": 2024,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "38091239400000",
+  "unit": "HUF",
+  "original": {
+   "value": "38 091 239,4",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2500085",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés a Magyarország 2024. évi központi költségvetéséről szóló 2023. évi LV. törvény (a továbbiakban: Kvtv.) végrehajtását – a 4–6. §-ban foglalt finanszírozási célú pénzügyi műveletek nélkül – a központi alrendszer tekintetében a) 42 039 530,5 millió forint kiadással, b) 38 091 239,4 millió forint bevétellel, és c) 3 948 291,1 millió forint hiánnyal hagyja jóvá."
+ },
+ {
+  "id": "central.revenue.2024.original",
+  "year": 2024,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "38240315200000",
+  "unit": "HUF",
+  "original": {
+   "value": "38 240 315,2",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2300055",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2024. évi a) kiadási főösszegét 40 755 101,1 millió forintban, b) bevételi főösszegét 38 240 315,2 millió forintban, c) hiányát 2 514 785,9 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2025.original",
+  "year": 2025,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "4122989900000",
+  "unit": "HUF",
+  "original": {
+   "value": "4 122 989,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2400090",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2025. évi a) kiadási főösszegét 42 851 823,1 millió forintban, b) bevételi főösszegét 38 728 833,2 millió forintban, c) hiányát 4 122 989,9 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2025.original",
+  "year": 2025,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "42851823100000",
+  "unit": "HUF",
+  "original": {
+   "value": "42 851 823,1",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2400090",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2025. évi a) kiadási főösszegét 42 851 823,1 millió forintban, b) bevételi főösszegét 38 728 833,2 millió forintban, c) hiányát 4 122 989,9 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2025.original",
+  "year": 2025,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "38728833200000",
+  "unit": "HUF",
+  "original": {
+   "value": "38 728 833,2",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2400090",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2025. évi a) kiadási főösszegét 42 851 823,1 millió forintban, b) bevételi főösszegét 38 728 833,2 millió forintban, c) hiányát 4 122 989,9 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2026.original",
+  "year": 2026,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "4218534600000",
+  "unit": "HUF",
+  "original": {
+   "value": "4 218 534,6",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2500069",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2026. évi a) kiadási főösszegét 43 781 310,5 millió forintban, b) bevételi főösszegét 39 562 775,9 millió forintban, c) hiányát 4 218 534,6 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.deficit.2026.revised",
+  "year": 2026,
+  "indicator": "deficit",
+  "scope": "centralSubsystem",
+  "status": "revised",
+  "method": "cash",
+  "value": "7110123100000",
+  "unit": "HUF",
+  "original": {
+   "value": "7 110 123,1",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "consolidated-a2500069",
+  "locator": "1. §",
+  "revision": "revised",
+  "evidence": "1. § * Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2026. évi a) kiadási főösszegét 49 025 644,9 millió forintban, b) bevételi főösszegét 41 915 521,8 millió forintban, c) hiányát 7 110 123,1 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2026.original",
+  "year": 2026,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "43781310500000",
+  "unit": "HUF",
+  "original": {
+   "value": "43 781 310,5",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2500069",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2026. évi a) kiadási főösszegét 43 781 310,5 millió forintban, b) bevételi főösszegét 39 562 775,9 millió forintban, c) hiányát 4 218 534,6 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.expenditure.2026.revised",
+  "year": 2026,
+  "indicator": "expenditure",
+  "scope": "centralSubsystem",
+  "status": "revised",
+  "method": "cash",
+  "value": "49025644900000",
+  "unit": "HUF",
+  "original": {
+   "value": "49 025 644,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "consolidated-a2500069",
+  "locator": "1. §",
+  "revision": "revised",
+  "evidence": "1. § * Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2026. évi a) kiadási főösszegét 49 025 644,9 millió forintban, b) bevételi főösszegét 41 915 521,8 millió forintban, c) hiányát 7 110 123,1 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2026.original",
+  "year": 2026,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "39562775900000",
+  "unit": "HUF",
+  "original": {
+   "value": "39 562 775,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2500069",
+  "locator": "1. §",
+  "revision": "final",
+  "evidence": "1. § (1) Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2026. évi a) kiadási főösszegét 43 781 310,5 millió forintban, b) bevételi főösszegét 39 562 775,9 millió forintban, c) hiányát 4 218 534,6 millió forintban állapítja meg"
+ },
+ {
+  "id": "central.revenue.2026.revised",
+  "year": 2026,
+  "indicator": "revenue",
+  "scope": "centralSubsystem",
+  "status": "revised",
+  "method": "cash",
+  "value": "41915521800000",
+  "unit": "HUF",
+  "original": {
+   "value": "41 915 521,8",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "consolidated-a2500069",
+  "locator": "1. §",
+  "revision": "revised",
+  "evidence": "1. § * Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2026. évi a) kiadási főösszegét 49 025 644,9 millió forintban, b) bevételi főösszegét 41 915 521,8 millió forintban, c) hiányát 7 110 123,1 millió forintban állapítja meg"
+ }
+]

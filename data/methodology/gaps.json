@@ -1,0 +1,119 @@
+[
+ {
+  "id": "oda-2000-2002",
+  "indicator": "oda",
+  "years": "2000–2002",
+  "reason": {
+   "hu": "Az OECD DAC1 Magyarországra 2003-tól közöl ODA-adatot. Korábbi, hivatalos, teljes körű magyar ODA-számot nem találtunk.",
+   "en": "OECD DAC1 reports ODA for Hungary from 2003. We found no official, complete Hungarian ODA figure for earlier years."
+  },
+  "searched": {
+   "hu": "OECD Data Explorer DAC1 (2000-től lekérdezve), a nefe.kormany.hu statisztikai oldala, OECD Development Co-operation Profiles.",
+   "en": "OECD Data Explorer DAC1 (queried from 2000), the nefe.kormany.hu statistics page, OECD Development Co-operation Profiles."
+  }
+ },
+ {
+  "id": "oda-net-2025",
+  "indicator": "oda",
+  "years": "2025",
+  "reason": {
+   "hu": "A 2025-ös nettó folyósítás, a kétoldalú és a többoldalú bontás még nem jelent meg. Az OECD szerint a részletes adatok 2026 decemberében várhatók. Csak az előzetes támogatási egyenérték ismert.",
+   "en": "Net disbursements and the bilateral and multilateral split for 2025 are not yet published. The OECD expects detailed data in December 2026. Only the preliminary grant equivalent is known."
+  },
+  "searched": {
+   "hu": "OECD DAC1, OECD-profil Magyarországról (2026. június).",
+   "en": "OECD DAC1, OECD profile of Hungary (June 2026)."
+  }
+ },
+ {
+  "id": "oda-plan",
+  "indicator": "oda",
+  "years": "2000–2027",
+  "reason": {
+   "hu": "A költségvetési törvények nem tartalmaznak teljes ODA-előirányzatot. Egyes minisztériumi soroknak (például a Hungary Helps) nem felel meg a teljes ODA, ezért nem tüntetünk fel tervet.",
+   "en": "Budget acts contain no total ODA figure. Single ministry lines such as Hungary Helps do not match total ODA, so no plan is shown."
+  },
+  "searched": {
+   "hu": "A 2000–2026-os költségvetési törvények főösszegi részei, nefe.kormany.hu.",
+   "en": "The main-sum sections of the 2000–2026 budget acts, nefe.kormany.hu."
+  }
+ },
+ {
+  "id": "oda-forecast",
+  "indicator": "oda",
+  "years": "2026–2027",
+  "reason": {
+   "hu": "Hivatalos, teljes körű ODA-előrejelzést nem találtunk.",
+   "en": "We found no official, complete ODA forecast."
+  },
+  "searched": {
+   "hu": "A Pénzügyminisztérium középtávú programja, OECD-profil.",
+   "en": "The Ministry of Finance medium-term programme, OECD profile."
+  }
+ },
+ {
+  "id": "central-revised-gaps",
+  "indicator": "deficit",
+  "years": "2007–2009, 2018, 2019, 2022, 2024, 2025",
+  "reason": {
+   "hu": "Ezekre az évekre nem találtunk a főösszegeket megváltoztató törvényi módosítást. 2022-ben a módosítások veszélyhelyzeti kormányrendeletekkel történtek, ezeket a Büdzsé nem mutatja módosított törvényként.",
+   "en": "For these years we found no statutory amendment that changed the main sums. In 2022 changes were made by emergency government decree, and Büdzsé does not treat those as an amended act."
+  },
+  "searched": {
+   "hu": "Az Országgyűlés jogszabálytárának törvénylistája és a törvények hatályos szövege.",
+   "en": "The act listings in Parliament's law collection and the consolidated texts."
+  }
+ },
+ {
+  "id": "central-actual-future",
+  "indicator": "deficit",
+  "years": "2026–2027",
+  "reason": {
+   "hu": "Az évek még nem zárultak le. 2026-ra csak az első kilenc hónap kincstári teljesítése ismert.",
+   "en": "These years have not ended. For 2026 only Treasury execution for the first nine months is known."
+  },
+  "searched": {
+   "hu": "Magyar Államkincstár, 2026. szeptemberi mérleg.",
+   "en": "Hungarian State Treasury, September 2026 balance."
+  }
+ },
+ {
+  "id": "central-original-2027",
+  "indicator": "deficit",
+  "years": "2027",
+  "reason": {
+   "hu": "2027-re még nincs elfogadott költségvetési törvény. A tervezet számai sajtóközlésből származnak, mert az Országgyűlés honlapja automatizált eszközzel nem volt elérhető.",
+   "en": "No budget act has been adopted for 2027. The draft's figures come from press reports because Parliament's website could not be reached with automated tools."
+  },
+  "searched": {
+   "hu": "parlament.hu (CAPTCHA), kormany.hu költségvetési oldalak, a Költségvetési Tanács véleményének sajtóközlései.",
+   "en": "parlament.hu (CAPTCHA), kormany.hu budget pages, press reports of the Fiscal Council opinion."
+  }
+ },
+ {
+  "id": "general-plan-early",
+  "indicator": "deficit",
+  "years": "2000–2020",
+  "reason": {
+   "hu": "Forintban megadott, tervezéskori ESA-hiánybecslést 2021-től találtunk. 2017–2020-ra csak a GDP-arányos hiánycél ismert, korábbra egyik sem.",
+   "en": "Budget-time ESA deficit estimates in forints were found from 2021. For 2017–2020 only the target as a share of GDP is known, and for earlier years neither."
+  },
+  "searched": {
+   "hu": "Az Állami Számvevőszék véleményei a KSH honlapján (2017–2026). A korábbi javaslatok az Országgyűlés honlapján automatizált eszközzel nem voltak elérhetők.",
+   "en": "State Audit Office opinions on the KSH website (2017–2026). Earlier bills on Parliament's website could not be reached with automated tools."
+  }
+ },
+ {
+  "id": "gdp-plan-early",
+  "indicator": "gdp",
+  "years": "2000–2016, 2027",
+  "reason": {
+   "hu": "Tervezéskori GDP-feltevést 2017–2026-ra találtunk. 2027-re a kormány előrejelzése szerepel.",
+   "en": "Budget-time GDP assumptions were found for 2017–2026. For 2027 the government forecast is shown instead."
+  },
+  "searched": {
+   "hu": "Az Állami Számvevőszék véleményei, a Pénzügyminisztérium középtávú programja.",
+   "en": "State Audit Office opinions, the Ministry of Finance medium-term programme."
+  }
+ }
+]

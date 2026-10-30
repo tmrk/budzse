@@ -1,0 +1,39 @@
+{
+  "name": "budzse",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "license": "MIT",
+  "description": "Interactive, fully sourced exploration of Hungary's public finances, 2000-2027.",
+  "scripts": {
+    "dev": "npm run data && vite",
+    "data": "node scripts/transform/build-dataset.mjs",
+    "data:validate": "node scripts/validate/validate-dataset.mjs",
+    "data:fetch": "node scripts/fetch/fetch-statistics.mjs",
+    "data:acts": "node scripts/fetch/fetch-acts.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "build": "npm run data && npm run data:validate && tsc --noEmit && vite build && node scripts/transform/static-routes.mjs",
+    "preview": "vite preview --port 4173"
+  },
+  "dependencies": {
+    "@fontsource-variable/bricolage-grotesque": "^5.3.0",
+    "@fontsource-variable/public-sans": "^5.3.0",
+    "echarts": "^6.1.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "jsdom": "^30.1.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
+  }
+}

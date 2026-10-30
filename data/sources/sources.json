@@ -1,0 +1,260 @@
+{
+ "eurostat-gov": {
+  "id": "eurostat-gov",
+  "institution": {
+   "hu": "Eurostat",
+   "en": "Eurostat"
+  },
+  "title": "Government revenue, expenditure and main aggregates (gov_10a_main)",
+  "url": "https://ec.europa.eu/eurostat/databrowser/view/gov_10a_main/default/table?lang=en",
+  "publicationDate": "2026-10-21",
+  "type": "dataset",
+  "licence": "Eurostat copyright notice: reuse with attribution"
+ },
+ "eurostat-gdp": {
+  "id": "eurostat-gdp",
+  "institution": {
+   "hu": "Eurostat (a KSH adatai alapján)",
+   "en": "Eurostat (based on KSH data)"
+  },
+  "title": "GDP and main components (nama_10_gdp)",
+  "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table?lang=en",
+  "publicationDate": "2026-10-22",
+  "type": "dataset",
+  "licence": "Eurostat copyright notice: reuse with attribution"
+ },
+ "oecd-dac1": {
+  "id": "oecd-dac1",
+  "institution": {
+   "hu": "OECD",
+   "en": "OECD"
+  },
+  "title": "DAC1: Flows by provider (ODA+OOF+Private), Hungary",
+  "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDisseminateFinalDMZ&df[id]=DSD_DAC1%40DF_DAC1&df[ag]=OECD.DCD.FSD",
+  "publicationDate": null,
+  "type": "dataset",
+  "licence": "OECD terms: CC BY 4.0"
+ },
+ "oecd-profile-2026": {
+  "id": "oecd-profile-2026",
+  "institution": {
+   "hu": "OECD",
+   "en": "OECD"
+  },
+  "title": "Development Co-operation Profiles: Hungary",
+  "url": "https://www.oecd.org/en/publications/development-co-operation-profiles_04b376d7-en/hungary_3e20e63e-en.html",
+  "publicationDate": "2026-06-16",
+  "type": "report",
+  "licence": "CC BY 4.0"
+ },
+ "ksh-cpi-annual": {
+  "id": "ksh-cpi-annual",
+  "institution": {
+   "hu": "Központi Statisztikai Hivatal",
+   "en": "Hungarian Central Statistical Office (KSH)"
+  },
+  "title": "STADAT 1.1.1.2. Consumer price index by aggregate groups of consumption [previous year = 100.0%]",
+  "url": "https://www.ksh.hu/stadat_files/ara/en/ara0002.html",
+  "publicationDate": "2026-01-13",
+  "type": "dataset"
+ },
+ "ksh-cpi-monthly": {
+  "id": "ksh-cpi-monthly",
+  "institution": {
+   "hu": "Központi Statisztikai Hivatal",
+   "en": "Hungarian Central Statistical Office (KSH)"
+  },
+  "title": "STADAT 1.2.1.2. The consumer price index by main consumption groups, monthly",
+  "url": "https://www.ksh.hu/stadat_files/ara/en/ara0040.html",
+  "publicationDate": "2026-10-07",
+  "type": "dataset"
+ },
+ "ksh-edp-2026-10": {
+  "id": "ksh-edp-2026-10",
+  "institution": {
+   "hu": "Központi Statisztikai Hivatal",
+   "en": "Hungarian Central Statistical Office (KSH)"
+  },
+  "title": "Jelentés a kormányzati szektor egyenlegéről és adósságáról (2026. évi II. EDP-jelentés), 1. tábla",
+  "url": "https://www.ksh.hu/gyorstajekoztatok/krm/edp_magyar_20261021.xls",
+  "publicationDate": "2026-10-21",
+  "type": "report"
+ },
+ "ec-ameco-2026-spring": {
+  "id": "ec-ameco-2026-spring",
+  "institution": {
+   "hu": "Európai Bizottság",
+   "en": "European Commission"
+  },
+  "title": "AMECO, Spring 2026 Economic Forecast (Hungary)",
+  "url": "https://economy-finance.ec.europa.eu/economic-research-and-databases/economic-databases/ameco-database_en",
+  "publicationDate": "2026-05-21",
+  "type": "dataset",
+  "licence": "European Commission reuse policy, attribution"
+ },
+ "mnb-rates": {
+  "id": "mnb-rates",
+  "institution": {
+   "hu": "Magyar Nemzeti Bank",
+   "en": "Magyar Nemzeti Bank"
+  },
+  "title": "Official exchange rates web service (arfolyamok.asmx), USD daily fixings",
+  "url": "https://www.mnb.hu/arfolyamok",
+  "publicationDate": null,
+  "type": "dataset"
+ },
+ "mak-2025-final": {
+  "id": "mak-2025-final",
+  "institution": {
+   "hu": "Magyar Államkincstár",
+   "en": "Hungarian State Treasury"
+  },
+  "title": "A központi alrendszer 2025. évi zárszámadási költségvetési mérlege",
+  "url": "https://www.allamkincstar.gov.hu/pfile/file?path=/Koltsegvetes/Kozponti_alrendszer_-_Merlegek/a-kozponti-alrendszer-koltsegvetesi-merlege/merleg-2025.-evbalance-sheets-2025/a-kozponti-alrendszer-2025.-evi-zarszamadasi-koltsegvetesi-merlege&inline=true",
+  "publicationDate": "2026-08-03",
+  "type": "report"
+ },
+ "mak-2026-09": {
+  "id": "mak-2026-09",
+  "institution": {
+   "hu": "Magyar Államkincstár",
+   "en": "Hungarian State Treasury"
+  },
+  "title": "A központi kormányzat előzetes mérlege, 2026. szeptember (Mérleg 2026.09. hó)",
+  "url": "https://www.allamkincstar.gov.hu/pfile/file?path=/Koltsegvetes/Kozponti_alrendszer_-_Merlegek/a-kozponti-alrendszer-koltsegvetesi-merlege/merleg-2026.evbalance-sheets-2026/merleg-2026.09.-ho&inline=true",
+  "publicationDate": null,
+  "type": "report"
+ },
+ "pm-mtp-2027": {
+  "id": "pm-mtp-2027",
+  "institution": {
+   "hu": "Pénzügyminisztérium",
+   "en": "Ministry of Finance"
+  },
+  "title": "Medium-Term Economic Policy and Fiscal Program 2027–2030",
+  "url": "https://cdn.kormany.hu/uploads/sheets/9/94/94a/94a7dc1fc92d83d4d950c4d9d619b37.pdf",
+  "publicationDate": "2026-10-28",
+  "type": "report"
+ },
+ "press-2027-draft": {
+  "id": "press-2027-draft",
+  "institution": {
+   "hu": "Világgazdaság (a Költségvetési Tanács véleményét ismerteti)",
+   "en": "Világgazdaság (reporting the Fiscal Council opinion)"
+  },
+  "title": "A Költségvetési Tanács véleménye a 2027-es költségvetés tervezetéről (sajtóközlés)",
+  "url": "https://www.vg.hu/vilaggazdasag-magyar-gazdasag/2026/10/koltsegvetesi-tanacs-budzse-2027-velemeny",
+  "publicationDate": null,
+  "type": "secondary"
+ },
+ "asz-2017": {
+  "id": "asz-2017",
+  "institution": {
+   "hu": "Állami Számvevőszék",
+   "en": "State Audit Office of Hungary"
+  },
+  "title": "Vélemény Magyarország 2017. évi központi költségvetéséről szóló törvényjavaslatról",
+  "url": "https://www.ksh.hu/docs/bemutatkozas/hun/kozerdeku/asz_velemeny_2017.pdf",
+  "publicationDate": "2016-05",
+  "type": "report"
+ },
+ "asz-2018": {
+  "id": "asz-2018",
+  "institution": {
+   "hu": "Állami Számvevőszék",
+   "en": "State Audit Office of Hungary"
+  },
+  "title": "Vélemény Magyarország 2018. évi központi költségvetéséről szóló törvényjavaslatról",
+  "url": "https://www.ksh.hu/docs/bemutatkozas/hun/kozerdeku/asz_velemeny_2018.pdf",
+  "publicationDate": "2017-05",
+  "type": "report"
+ },
+ "asz-2019": {
+  "id": "asz-2019",
+  "institution": {
+   "hu": "Állami Számvevőszék",
+   "en": "State Audit Office of Hungary"
+  },
+  "title": "Vélemény Magyarország 2019. évi központi költségvetéséről szóló törvényjavaslatról",
+  "url": "https://www.ksh.hu/docs/bemutatkozas/hun/kozerdeku/asz_velemeny_2019.pdf",
+  "publicationDate": "2018-06",
+  "type": "report"
+ },
+ "asz-2020": {
+  "id": "asz-2020",
+  "institution": {
+   "hu": "Állami Számvevőszék",
+   "en": "State Audit Office of Hungary"
+  },
+  "title": "Vélemény Magyarország 2020. évi központi költségvetéséről szóló törvényjavaslatról",
+  "url": "https://www.ksh.hu/docs/bemutatkozas/hun/kozerdeku/asz_velemeny_2020.pdf",
+  "publicationDate": "2019-06",
+  "type": "report"
+ },
+ "asz-2021": {
+  "id": "asz-2021",
+  "institution": {
+   "hu": "Állami Számvevőszék",
+   "en": "State Audit Office of Hungary"
+  },
+  "title": "Vélemény Magyarország 2021. évi központi költségvetéséről szóló törvényjavaslatról",
+  "url": "https://www.ksh.hu/docs/bemutatkozas/hun/kozerdeku/asz_velemeny_2021.pdf",
+  "publicationDate": null,
+  "type": "report"
+ },
+ "asz-2022": {
+  "id": "asz-2022",
+  "institution": {
+   "hu": "Állami Számvevőszék",
+   "en": "State Audit Office of Hungary"
+  },
+  "title": "Vélemény Magyarország 2022. évi központi költségvetéséről szóló törvényjavaslatról",
+  "url": "https://www.ksh.hu/docs/bemutatkozas/hun/kozerdeku/asz_velemeny_2022.pdf",
+  "publicationDate": null,
+  "type": "report"
+ },
+ "asz-2023": {
+  "id": "asz-2023",
+  "institution": {
+   "hu": "Állami Számvevőszék",
+   "en": "State Audit Office of Hungary"
+  },
+  "title": "Vélemény Magyarország 2023. évi központi költségvetéséről szóló törvényjavaslatról",
+  "url": "https://www.ksh.hu/docs/bemutatkozas/hun/kozerdeku/asz_velemeny_2023.pdf",
+  "publicationDate": null,
+  "type": "report"
+ },
+ "asz-2024": {
+  "id": "asz-2024",
+  "institution": {
+   "hu": "Állami Számvevőszék",
+   "en": "State Audit Office of Hungary"
+  },
+  "title": "Vélemény Magyarország 2024. évi központi költségvetéséről szóló törvényjavaslatról",
+  "url": "https://www.ksh.hu/docs/bemutatkozas/hun/kozerdeku/asz_velemeny_2024.pdf",
+  "publicationDate": null,
+  "type": "report"
+ },
+ "asz-2025": {
+  "id": "asz-2025",
+  "institution": {
+   "hu": "Állami Számvevőszék",
+   "en": "State Audit Office of Hungary"
+  },
+  "title": "Vélemény Magyarország 2025. évi központi költségvetéséről szóló törvényjavaslatról",
+  "url": "https://www.ksh.hu/docs/bemutatkozas/hun/kozerdeku/asz_velemeny_2025.pdf",
+  "publicationDate": null,
+  "type": "report"
+ },
+ "asz-2026": {
+  "id": "asz-2026",
+  "institution": {
+   "hu": "Állami Számvevőszék",
+   "en": "State Audit Office of Hungary"
+  },
+  "title": "Vélemény Magyarország 2026. évi központi költségvetéséről szóló törvényjavaslatról",
+  "url": "https://www.ksh.hu/docs/bemutatkozas/hun/kozerdeku/asz_velemeny_2026.pdf",
+  "publicationDate": "2025-05",
+  "type": "report"
+ }
+}

@@ -1,0 +1,114 @@
+{
+ "accessed": "2026-10-30",
+ "url": "https://www.mnb.hu/arfolyamok.asmx",
+ "annual": {
+  "2000": {
+   "tradingDays": 251,
+   "usdHufAverage": 282.2696
+  },
+  "2001": {
+   "tradingDays": 244,
+   "usdHufAverage": 286.5543
+  },
+  "2002": {
+   "tradingDays": 247,
+   "usdHufAverage": 257.9204
+  },
+  "2003": {
+   "tradingDays": 250,
+   "usdHufAverage": 224.4378
+  },
+  "2004": {
+   "tradingDays": 254,
+   "usdHufAverage": 202.6303
+  },
+  "2005": {
+   "tradingDays": 253,
+   "usdHufAverage": 199.6641
+  },
+  "2006": {
+   "tradingDays": 252,
+   "usdHufAverage": 210.5077
+  },
+  "2007": {
+   "tradingDays": 245,
+   "usdHufAverage": 183.8312
+  },
+  "2008": {
+   "tradingDays": 251,
+   "usdHufAverage": 171.7992
+  },
+  "2009": {
+   "tradingDays": 251,
+   "usdHufAverage": 202.2596
+  },
+  "2010": {
+   "tradingDays": 254,
+   "usdHufAverage": 208.1474
+  },
+  "2011": {
+   "tradingDays": 253,
+   "usdHufAverage": 200.9447
+  },
+  "2012": {
+   "tradingDays": 246,
+   "usdHufAverage": 225.3664
+  },
+  "2013": {
+   "tradingDays": 248,
+   "usdHufAverage": 223.702
+  },
+  "2014": {
+   "tradingDays": 250,
+   "usdHufAverage": 232.5205
+  },
+  "2015": {
+   "tradingDays": 251,
+   "usdHufAverage": 279.4577
+  },
+  "2016": {
+   "tradingDays": 253,
+   "usdHufAverage": 281.4401
+  },
+  "2017": {
+   "tradingDays": 251,
+   "usdHufAverage": 274.2747
+  },
+  "2018": {
+   "tradingDays": 244,
+   "usdHufAverage": 270.2525
+  },
+  "2019": {
+   "tradingDays": 247,
+   "usdHufAverage": 290.6538
+  },
+  "2020": {
+   "tradingDays": 252,
+   "usdHufAverage": 307.9287
+  },
+  "2021": {
+   "tradingDays": 253,
+   "usdHufAverage": 303.2862
+  },
+  "2022": {
+   "tradingDays": 252,
+   "usdHufAverage": 373.1179
+  },
+  "2023": {
+   "tradingDays": 251,
+   "usdHufAverage": 353.2525
+  },
+  "2024": {
+   "tradingDays": 248,
+   "usdHufAverage": 365.2418
+  },
+  "2025": {
+   "tradingDays": 249,
+   "usdHufAverage": 353.1983
+  },
+  "2026": {
+   "tradingDays": 207,
+   "usdHufAverage": 318.6357
+  }
+ }
+}

@@ -1,0 +1,1 @@
+{ "name": "Büdzsé", "short_name": "Büdzsé", "start_url": "/budzse/", "scope": "/budzse/", "display": "standalone", "background_color": "#0b4a4a", "theme_color": "#0b4a4a", "icons": [ { "src": "/budzse/icon-192.png", "sizes": "192x192", "type": "image/png" }, { "src": "/budzse/icon-512.png", "sizes": "512x512", "type": "image/png" } ] }
