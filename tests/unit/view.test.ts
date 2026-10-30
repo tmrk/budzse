@@ -54,14 +54,20 @@ describe('language routing', () => {
   });
 
   it('lets an explicit path win over the saved preference', () => {
-    expect(resolveLang('/budzse/en/', 'hu')).toBe('en');
-    expect(resolveLang('/budzse/hu/', 'en')).toBe('hu');
+    expect(resolveLang('/budzse/en/', 'hu', 'Europe/Budapest')).toBe('en');
+    expect(resolveLang('/budzse/hu/', 'en', 'America/New_York')).toBe('hu');
   });
 
-  it('uses the saved preference at the root, otherwise Hungarian', () => {
-    expect(resolveLang('/budzse/', 'en')).toBe('en');
-    expect(resolveLang('/budzse/', null)).toBe('hu');
-    expect(resolveLang('/budzse/', 'xx')).toBe('hu');
+  it('uses the saved preference at the root, over the time zone', () => {
+    expect(resolveLang('/budzse/', 'en', 'Europe/Budapest')).toBe('en');
+    expect(resolveLang('/budzse/', 'hu', 'America/New_York')).toBe('hu');
+  });
+
+  it('otherwise uses Hungarian in Hungary and English anywhere else', () => {
+    expect(resolveLang('/budzse/', null, 'Europe/Budapest')).toBe('hu');
+    expect(resolveLang('/budzse/', 'xx', 'Europe/Budapest')).toBe('hu');
+    expect(resolveLang('/budzse/', null, 'Europe/Vienna')).toBe('en');
+    expect(resolveLang('/budzse/', null, 'UTC')).toBe('en');
   });
 
   it('builds paths under the deployment base', () => {

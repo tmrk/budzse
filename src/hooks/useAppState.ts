@@ -13,6 +13,8 @@ export function readSavedLang(): string | null {
   }
 }
 
+const deviceTimeZone = () => Intl.DateTimeFormat().resolvedOptions().timeZone;
+
 function saveLang(lang: Lang) {
   try {
     localStorage.setItem(LANG_KEY, lang);
@@ -25,10 +27,11 @@ function applyDocumentLang(lang: Lang, m: Messages) {
   document.documentElement.lang = lang;
   document.title = m.meta.title;
   document.querySelector('meta[name="description"]')?.setAttribute('content', m.meta.description);
+  document.querySelector('link[rel="canonical"]')?.setAttribute('href', `https://tmrk.github.io/budzse/${lang}/`);
 }
 
 export function useAppState() {
-  const [lang, setLangState] = useState<Lang>(() => resolveLang(location.pathname, readSavedLang()));
+  const [lang, setLangState] = useState<Lang>(() => resolveLang(location.pathname, readSavedLang(), deviceTimeZone()));
   const [view, setViewState] = useState<ViewState>(() => parseQuery(location.search, DEFAULT_VIEW));
   const messages = MESSAGES[lang];
   const latest = useRef(view);
@@ -38,7 +41,7 @@ export function useAppState() {
 
   useEffect(() => {
     const onPop = () => {
-      const fromPath = resolveLang(location.pathname, readSavedLang());
+      const fromPath = resolveLang(location.pathname, readSavedLang(), deviceTimeZone());
       setLangState(fromPath);
       setViewState(parseQuery(location.search, DEFAULT_VIEW));
     };

@@ -4,7 +4,7 @@ A free, interactive exploration of Hungary's public finances from 2000 to 2027.
 
 Explore government revenue, expenditure, deficits, GDP and official development assistance. Compare budgeted and actual figures, adjust historical values for inflation, and inspect the official source behind every number.
 
-Available in Hungarian and English.
+Available in Hungarian and English. The address without a language opens in Hungarian on a device set to Hungary's time zone and in English elsewhere, until the visitor chooses.
 
 [Open Büdzsé](https://tmrk.github.io/budzse/)
 

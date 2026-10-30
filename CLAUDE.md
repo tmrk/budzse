@@ -32,6 +32,7 @@ Every displayed number needs a traceable source or a documented calculation from
 - Hover may change colour, never geometry. Selected options keep the weight of unselected ones, and folds, notes and readouts reserve their space. Tests cover this: hover every control, switch every option, sweep every year.
 - A missing figure always goes through `Missing`: same place and baseline as the number, and a documented gap opens its reason in the source sheet. Do not add a new placeholder style or a bare dash.
 - `container-type` turns off subgrid on the same element. The hero's columns share rows through subgrid, so the containers are their children.
+- The language: an explicit `/hu/` or `/en/`, then the saved choice, then the device's time zone (`Europe/Budapest` is Hungarian, anywhere else English). This is the closest a static site gets to the visitor's country without sending their address to a third party. `index.html` applies it before first paint and `resolveLang` in the app, so keep the two in step.
 - Google Analytics loads only after the visitor allows it, and withdrawing removes its cookies. A page view is a load or a language change, never a year or a measure, so the stream's "Page changes based on browser history events" setting must stay off in the Analytics admin. E2E tests stub Google, so they never count as visits.
 
 ## Deployment

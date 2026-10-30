@@ -11,6 +11,8 @@ export default defineConfig({
   use: {
     baseURL: 'http://localhost:4173',
     trace: 'off',
+    // The root's language follows the device's time zone, so runs do not depend on the machine's.
+    timezoneId: 'Europe/Budapest',
     storageState: { cookies: [], origins: [{ origin: 'http://localhost:4173', localStorage: [{ name: 'budzse-analytics', value: 'denied' }] }] },
   },
   webServer: {

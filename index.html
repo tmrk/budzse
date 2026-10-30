@@ -62,13 +62,18 @@
     <script>
       // Runs before first paint so the saved theme and language never flash the wrong state.
       (function () {
+        var saved = null;
         try {
           var t = localStorage.getItem('budzse-theme');
           if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
-          var m = /\/(hu|en)\/?$/.exec(location.pathname);
-          var l = m ? m[1] : localStorage.getItem('budzse-lang');
-          if (l === 'en' || l === 'hu') document.documentElement.lang = l;
+          saved = localStorage.getItem('budzse-lang');
         } catch (e) {}
+        // The same order as resolveLang in src/lib/view.ts.
+        var m = /\/(hu|en)\/?$/.exec(location.pathname);
+        var l = m ? m[1] : saved === 'en' || saved === 'hu' ? saved : Intl.DateTimeFormat().resolvedOptions().timeZone === 'Europe/Budapest' ? 'hu' : 'en';
+        document.documentElement.lang = l;
+        // Hungarian keeps the root. English gets its own address, without a reload.
+        if (l === 'en' && location.pathname === '/budzse/') history.replaceState(null, '', '/budzse/en/' + location.search + location.hash);
       })();
     </script>
   </head>

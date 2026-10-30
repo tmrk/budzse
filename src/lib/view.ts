@@ -76,7 +76,11 @@ export function pathForLang(pathname: string, lang: Lang): string {
   return `${dir.endsWith('/') ? dir : `${dir}/`}${lang}/`;
 }
 
-/** An explicit /hu or /en wins, then the saved preference, then Hungarian. */
-export function resolveLang(pathname: string, saved: string | null): Lang {
-  return langFromPath(pathname) ?? (saved === 'en' || saved === 'hu' ? saved : 'hu');
+/**
+ * An explicit /hu or /en wins, then the saved preference, then the device's time zone: Hungarian in
+ * Hungary, English elsewhere. A static site cannot see the country, and this stays on the device.
+ * The script in index.html applies the same order before first paint.
+ */
+export function resolveLang(pathname: string, saved: string | null, timeZone: string): Lang {
+  return langFromPath(pathname) ?? (saved === 'en' || saved === 'hu' ? saved : timeZone === 'Europe/Budapest' ? 'hu' : 'en');
 }

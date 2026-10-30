@@ -1,5 +1,9 @@
 # Recent changes
 
+## 2026-10-30: language follows the visitor's time zone
+
+The address without a language now opens in Hungarian on a device set to Hungary's time zone, and moves to `/en/` elsewhere, without a reload. A language link and a saved choice still win. The source sheet slides in and out, and open dropdown lists keep to the theme's colours.
+
 ## 2026-10-30: Google Analytics, with consent
 
 The app now asks whether it may use Google Analytics. Nothing is sent to Google and no analytics cookie is set before a yes, and advertising features stay off. The Cookie settings button in the footer changes the answer, and withdrawing removes the cookies. A page load or a language change counts as a page view. The API and citation pages carry no analytics.

@@ -109,6 +109,63 @@ test.describe('language', () => {
     await expect(lens(page, 'forint')).toHaveText('Forints');
   });
 
+  test.describe('outside Hungary', () => {
+    test.use({ timezoneId: 'Europe/Vienna' });
+
+    test('the root becomes the English page without a reload, and keeps the link', async ({ page }) => {
+      const documents: string[] = [];
+      page.on('request', (r) => {
+        if (r.resourceType() === 'document') documents.push(r.url());
+      });
+      await page.goto('/budzse/?y=2012');
+      await ready(page);
+      await expect(page).toHaveURL(/\/budzse\/en\/\?y=2012$/);
+      await expect(page.locator('html')).toHaveAttribute('lang', 'en');
+      await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://tmrk.github.io/budzse/en/');
+      await expect(lens(page, 'forint')).toHaveText('Forints');
+      await expect(page.getByTestId('year-select')).toHaveValue('2012');
+      expect(documents).toHaveLength(1);
+    });
+
+    test('a link to the Hungarian page stays Hungarian', async ({ page }) => {
+      await page.goto('/budzse/hu/');
+      await ready(page);
+      await expect(page).toHaveURL(/\/budzse\/hu\/$/);
+      await expect(lens(page, 'forint')).toHaveText('Forintban');
+    });
+
+    test('choosing Hungarian lasts, at the root too', async ({ page }) => {
+      await page.goto('/budzse/');
+      await ready(page);
+      await page.getByTestId('lang-hu').click();
+      await page.goto('/budzse/');
+      await ready(page);
+      await expect(page).toHaveURL(/\/budzse\/$/);
+      await expect(lens(page, 'forint')).toHaveText('Forintban');
+    });
+
+    test('an unknown path still loads the app, in English', async ({ page }) => {
+      await page.goto('/budzse/nincs-ilyen');
+      await ready(page);
+      await expect(lens(page, 'forint')).toHaveText('Forints');
+    });
+  });
+
+  test('in Hungary the root stays the Hungarian page', async ({ page }) => {
+    await page.goto('/budzse/?y=2012');
+    await ready(page);
+    await expect(page).toHaveURL(/\/budzse\/\?y=2012$/);
+    await expect(page.locator('html')).toHaveAttribute('lang', 'hu');
+    await expect(lens(page, 'forint')).toHaveText('Forintban');
+  });
+
+  test('switching language moves the canonical address too', async ({ page }) => {
+    await page.goto('/budzse/hu/');
+    await ready(page);
+    await page.getByTestId('lang-en').click();
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://tmrk.github.io/budzse/en/');
+  });
+
   test('Hungarian keeps its accents and suffix agreement', async ({ page }) => {
     await page.goto('/budzse/hu/?y=2026&real=1');
     await ready(page);
@@ -355,8 +412,7 @@ test.describe('sources, comparisons and exports', () => {
       await page.getByTestId('ledger-deficit').click();
       await expect(dialog, how).toHaveAttribute('data-slide-in', 'true');
       await dialog.evaluate((d) => Promise.all(d.getAnimations().map((a) => a.finished)));
-      const box = (await dialog.boundingBox())!;
-      expect(box.x + box.width, how).toBe(page.viewportSize()!.width);
+      expect(await dialog.evaluate((d) => getComputedStyle(d).transform), how).toBe('none');
       await dialog.evaluate((d) => {
         delete d.dataset.slideOut;
         delete d.dataset.slideIn;
