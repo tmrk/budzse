@@ -895,5 +895,534 @@
    "hu": "A 2026. októberi EDP-jelentés kormányzati tervszáma. Az eredeti (−) előjelet megfordítottuk: a pozitív érték hiány.",
    "en": "The government plan in the October 2026 EDP notification. The original (−) sign is reversed: positive means deficit."
   }
+ },
+ {
+  "id": "hungaryHelpsAgency.2019.actual",
+  "year": 2019,
+  "indicator": "hungaryHelpsAgency",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "39900000",
+  "unit": "HUF",
+  "original": {
+   "value": "39,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2000117",
+  "locator": "1. melléklet, XI. MINISZTERELNÖKSÉG fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Ügynökség Nonprofit Zrt. szakmai feladatainak ellátása” sor, Működési kiadás oszlop (a törvényszöveg 2. oldala)",
+  "revision": "final",
+  "note": {
+   "hu": "A költségvetés készpénzszemléletű sora, nem az OECD-nek jelentett ODA része.",
+   "en": "A cash budget line, not part of the ODA reported to the OECD."
+  }
+ },
+ {
+  "id": "hungaryHelpsProgram.2019.actual",
+  "year": 2019,
+  "indicator": "hungaryHelpsProgram",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "1588000000",
+  "unit": "HUF",
+  "original": {
+   "value": "1 588,0",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2000117",
+  "locator": "1. melléklet, XI. MINISZTERELNÖKSÉG fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Program” sor, Működési kiadás oszlop (a törvényszöveg 2. oldala)",
+  "revision": "final",
+  "note": {
+   "hu": "A költségvetés készpénzszemléletű sora, nem az OECD-nek jelentett ODA része.",
+   "en": "A cash budget line, not part of the ODA reported to the OECD."
+  }
+ },
+ {
+  "id": "hungaryHelpsAgency.2020.actual",
+  "year": 2020,
+  "indicator": "hungaryHelpsAgency",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "377700000",
+  "unit": "HUF",
+  "original": {
+   "value": "377,7",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2100116",
+  "locator": "1. melléklet, XI. MINISZTERELNÖKSÉG fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Ügynökség Nonprofit Zrt. szakmai feladatainak ellátása” sor, Működési kiadás oszlop (a törvényszöveg 2. oldala)",
+  "revision": "final",
+  "note": {
+   "hu": "A költségvetés készpénzszemléletű sora, nem az OECD-nek jelentett ODA része.",
+   "en": "A cash budget line, not part of the ODA reported to the OECD."
+  }
+ },
+ {
+  "id": "hungaryHelpsAgency.2020.original",
+  "year": 2020,
+  "indicator": "hungaryHelpsAgency",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "300000000",
+  "unit": "HUF",
+  "original": {
+   "value": "300,0",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1900071",
+  "locator": "1. melléklet, XI. MINISZTERELNÖKSÉG fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Ügynökség Nonprofit Zrt. szakmai feladatainak ellátása” sor, Működési kiadás oszlop (a törvényszöveg 2. oldala)",
+  "revision": "final",
+  "note": {
+   "hu": "A költségvetés készpénzszemléletű sora, nem az OECD-nek jelentett ODA része.",
+   "en": "A cash budget line, not part of the ODA reported to the OECD."
+  }
+ },
+ {
+  "id": "hungaryHelpsProgram.2020.actual",
+  "year": 2020,
+  "indicator": "hungaryHelpsProgram",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "5695400000",
+  "unit": "HUF",
+  "original": {
+   "value": "5 695,4",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2100116",
+  "locator": "1. melléklet, XI. MINISZTERELNÖKSÉG fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Program” sor, Működési kiadás oszlop (a törvényszöveg 2. oldala)",
+  "revision": "final",
+  "note": {
+   "hu": "A költségvetés készpénzszemléletű sora, nem az OECD-nek jelentett ODA része.",
+   "en": "A cash budget line, not part of the ODA reported to the OECD."
+  }
+ },
+ {
+  "id": "hungaryHelpsProgram.2020.original",
+  "year": 2020,
+  "indicator": "hungaryHelpsProgram",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "3000000000",
+  "unit": "HUF",
+  "original": {
+   "value": "3 000,0",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a1900071",
+  "locator": "1. melléklet, XI. MINISZTERELNÖKSÉG fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Program” sor, Működési kiadás oszlop (a törvényszöveg 2. oldala)",
+  "revision": "final",
+  "note": {
+   "hu": "A költségvetés készpénzszemléletű sora, nem az OECD-nek jelentett ODA része.",
+   "en": "A cash budget line, not part of the ODA reported to the OECD."
+  }
+ },
+ {
+  "id": "hungaryHelpsProgram.2021.actual",
+  "year": 2021,
+  "indicator": "hungaryHelpsProgram",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "11176000000",
+  "unit": "HUF",
+  "original": {
+   "value": "11 176,0",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2200072",
+  "locator": "1. melléklet, XI. MINISZTERELNÖKSÉG fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Programhoz kapcsolódó támogatások” sor, Működési kiadás oszlop (a törvényszöveg 2. oldala)",
+  "revision": "final",
+  "note": {
+   "hu": "A költségvetés készpénzszemléletű sora, nem az OECD-nek jelentett ODA része.",
+   "en": "A cash budget line, not part of the ODA reported to the OECD."
+  }
+ },
+ {
+  "id": "hungaryHelpsProgram.2021.original",
+  "year": 2021,
+  "indicator": "hungaryHelpsProgram",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "3800000000",
+  "unit": "HUF",
+  "original": {
+   "value": "3 800,0",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2000090",
+  "locator": "1. melléklet, XI. MINISZTERELNÖKSÉG fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Programhoz kapcsolódó támogatások” sor, Működési kiadás oszlop (a törvényszöveg 2. oldala)",
+  "revision": "final",
+  "note": {
+   "hu": "A költségvetés készpénzszemléletű sora, nem az OECD-nek jelentett ODA része.",
+   "en": "A cash budget line, not part of the ODA reported to the OECD."
+  }
+ },
+ {
+  "id": "hungaryHelpsAgency.2022.actual",
+  "year": 2022,
+  "indicator": "hungaryHelpsAgency",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "774100000",
+  "unit": "HUF",
+  "original": {
+   "value": "774,1",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2300073",
+  "locator": "1. melléklet, XVIII. KÜLGAZDASÁGI ÉS KÜLÜGYMINISZTÉRIUM fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Ügynökség Nonprofit Zrt. szakmai feladatainak ellátása” sor, Működési kiadás oszlop (a törvényszöveg 3. oldala)",
+  "revision": "final",
+  "note": {
+   "hu": "A költségvetés készpénzszemléletű sora, nem az OECD-nek jelentett ODA része.",
+   "en": "A cash budget line, not part of the ODA reported to the OECD."
+  }
+ },
+ {
+  "id": "hungaryHelpsProgram.2022.actual",
+  "year": 2022,
+  "indicator": "hungaryHelpsProgram",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "9652000000",
+  "unit": "HUF",
+  "original": {
+   "value": "6 113,9 + 3 538,1",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2300073",
+  "locator": "1. melléklet, XVIII. KÜLGAZDASÁGI ÉS KÜLÜGYMINISZTÉRIUM fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Programhoz kapcsolódó támogatások” sor, Működési kiadás + Felhalmozási kiadás oszlop (a törvényszöveg 3. oldala)",
+  "revision": "final",
+  "note": {
+   "hu": "A költségvetés készpénzszemléletű sora, nem az OECD-nek jelentett ODA része.",
+   "en": "A cash budget line, not part of the ODA reported to the OECD."
+  }
+ },
+ {
+  "id": "hungaryHelpsProgram.2022.original",
+  "year": 2022,
+  "indicator": "hungaryHelpsProgram",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "3220000000",
+  "unit": "HUF",
+  "original": {
+   "value": "3 220,0",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2100090",
+  "locator": "1. melléklet, XI. MINISZTERELNÖKSÉG fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Programhoz kapcsolódó támogatások” sor, Működési kiadás oszlop (a törvényszöveg 2. oldala)",
+  "revision": "final",
+  "note": {
+   "hu": "A költségvetés készpénzszemléletű sora, nem az OECD-nek jelentett ODA része.",
+   "en": "A cash budget line, not part of the ODA reported to the OECD."
+  }
+ },
+ {
+  "id": "hungaryHelpsAgency.2023.actual",
+  "year": 2023,
+  "indicator": "hungaryHelpsAgency",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "1840900000",
+  "unit": "HUF",
+  "original": {
+   "value": "1 614,0 + 226,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2400048",
+  "locator": "1. melléklet, XVIII. KÜLGAZDASÁGI ÉS KÜLÜGYMINISZTÉRIUM fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Ügynökség Nonprofit Zrt. szakmai feladatainak ellátása” sor, Működési kiadás + Felhalmozási kiadás oszlop (a törvényszöveg 3. oldala)",
+  "revision": "final",
+  "note": {
+   "hu": "A költségvetés készpénzszemléletű sora, nem az OECD-nek jelentett ODA része.",
+   "en": "A cash budget line, not part of the ODA reported to the OECD."
+  }
+ },
+ {
+  "id": "hungaryHelpsAgency.2023.original",
+  "year": 2023,
+  "indicator": "hungaryHelpsAgency",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "340000000",
+  "unit": "HUF",
+  "original": {
+   "value": "340,0",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2200025",
+  "locator": "1. melléklet, XVIII. KÜLGAZDASÁGI ÉS KÜLÜGYMINISZTÉRIUM fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Ügynökség Nonprofit Zrt. szakmai feladatainak ellátása” sor, Működési kiadás oszlop (a törvényszöveg 3. oldala)",
+  "revision": "final",
+  "note": {
+   "hu": "A költségvetés készpénzszemléletű sora, nem az OECD-nek jelentett ODA része.",
+   "en": "A cash budget line, not part of the ODA reported to the OECD."
+  }
+ },
+ {
+  "id": "hungaryHelpsProgram.2023.actual",
+  "year": 2023,
+  "indicator": "hungaryHelpsProgram",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "6983800000",
+  "unit": "HUF",
+  "original": {
+   "value": "6 398,6 + 585,2",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2400048",
+  "locator": "1. melléklet, XVIII. KÜLGAZDASÁGI ÉS KÜLÜGYMINISZTÉRIUM fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Programhoz kapcsolódó támogatások” sor, Működési kiadás + Felhalmozási kiadás oszlop (a törvényszöveg 3. oldala)",
+  "revision": "final",
+  "note": {
+   "hu": "A költségvetés készpénzszemléletű sora, nem az OECD-nek jelentett ODA része.",
+   "en": "A cash budget line, not part of the ODA reported to the OECD."
+  }
+ },
+ {
+  "id": "hungaryHelpsProgram.2023.original",
+  "year": 2023,
+  "indicator": "hungaryHelpsProgram",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "2880000000",
+  "unit": "HUF",
+  "original": {
+   "value": "2 880,0",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2200025",
+  "locator": "1. melléklet, XVIII. KÜLGAZDASÁGI ÉS KÜLÜGYMINISZTÉRIUM fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Programhoz kapcsolódó támogatások” sor, Működési kiadás oszlop (a törvényszöveg 3. oldala)",
+  "revision": "final",
+  "note": {
+   "hu": "A költségvetés készpénzszemléletű sora, nem az OECD-nek jelentett ODA része.",
+   "en": "A cash budget line, not part of the ODA reported to the OECD."
+  }
+ },
+ {
+  "id": "hungaryHelpsAgency.2024.actual",
+  "year": 2024,
+  "indicator": "hungaryHelpsAgency",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "547900000",
+  "unit": "HUF",
+  "original": {
+   "value": "537,4 + 10,5",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2500085",
+  "locator": "1. melléklet, XVIII. KÜLGAZDASÁGI ÉS KÜLÜGYMINISZTÉRIUM fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Ügynökség Nonprofit Zrt. szakmai feladatainak ellátása” sor, Működési kiadás + Felhalmozási kiadás oszlop (a törvényszöveg 3. oldala)",
+  "revision": "final",
+  "note": {
+   "hu": "A költségvetés készpénzszemléletű sora, nem az OECD-nek jelentett ODA része.",
+   "en": "A cash budget line, not part of the ODA reported to the OECD."
+  }
+ },
+ {
+  "id": "hungaryHelpsAgency.2024.original",
+  "year": 2024,
+  "indicator": "hungaryHelpsAgency",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "512000000",
+  "unit": "HUF",
+  "original": {
+   "value": "512,0",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2300055",
+  "locator": "1. melléklet, XVIII. KÜLGAZDASÁGI ÉS KÜLÜGYMINISZTÉRIUM fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Ügynökség Nonprofit Zrt. szakmai feladatainak ellátása” sor, Működési kiadás oszlop (a törvényszöveg 3. oldala)",
+  "revision": "final",
+  "note": {
+   "hu": "A költségvetés készpénzszemléletű sora, nem az OECD-nek jelentett ODA része.",
+   "en": "A cash budget line, not part of the ODA reported to the OECD."
+  }
+ },
+ {
+  "id": "hungaryHelpsProgram.2024.actual",
+  "year": 2024,
+  "indicator": "hungaryHelpsProgram",
+  "scope": "centralSubsystem",
+  "status": "actual",
+  "method": "cash",
+  "value": "5570300000",
+  "unit": "HUF",
+  "original": {
+   "value": "5 570,3",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2500085",
+  "locator": "1. melléklet, XVIII. KÜLGAZDASÁGI ÉS KÜLÜGYMINISZTÉRIUM fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Programhoz kapcsolódó támogatások” sor, Működési kiadás oszlop (a törvényszöveg 3. oldala)",
+  "revision": "final",
+  "note": {
+   "hu": "A költségvetés készpénzszemléletű sora, nem az OECD-nek jelentett ODA része.",
+   "en": "A cash budget line, not part of the ODA reported to the OECD."
+  }
+ },
+ {
+  "id": "hungaryHelpsProgram.2024.original",
+  "year": 2024,
+  "indicator": "hungaryHelpsProgram",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "2506600000",
+  "unit": "HUF",
+  "original": {
+   "value": "2 506,6",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2300055",
+  "locator": "1. melléklet, XVIII. KÜLGAZDASÁGI ÉS KÜLÜGYMINISZTÉRIUM fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Programhoz kapcsolódó támogatások” sor, Működési kiadás oszlop (a törvényszöveg 3. oldala)",
+  "revision": "final",
+  "note": {
+   "hu": "A költségvetés készpénzszemléletű sora, nem az OECD-nek jelentett ODA része.",
+   "en": "A cash budget line, not part of the ODA reported to the OECD."
+  }
+ },
+ {
+  "id": "hungaryHelpsAgency.2025.original",
+  "year": 2025,
+  "indicator": "hungaryHelpsAgency",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "1643000000",
+  "unit": "HUF",
+  "original": {
+   "value": "1 643,0",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2400090",
+  "locator": "1. melléklet, XVIII. KÜLGAZDASÁGI ÉS KÜLÜGYMINISZTÉRIUM fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Ügynökség Nonprofit Zrt. szakmai feladatainak ellátása” sor, Működési kiadás oszlop (a törvényszöveg 3. oldala)",
+  "revision": "final",
+  "note": {
+   "hu": "A költségvetés készpénzszemléletű sora, nem az OECD-nek jelentett ODA része.",
+   "en": "A cash budget line, not part of the ODA reported to the OECD."
+  }
+ },
+ {
+  "id": "hungaryHelpsProgram.2025.original",
+  "year": 2025,
+  "indicator": "hungaryHelpsProgram",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "2383300000",
+  "unit": "HUF",
+  "original": {
+   "value": "2 383,3",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2400090",
+  "locator": "1. melléklet, XVIII. KÜLGAZDASÁGI ÉS KÜLÜGYMINISZTÉRIUM fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Programhoz kapcsolódó támogatások” sor, Működési kiadás oszlop (a törvényszöveg 3. oldala)",
+  "revision": "final",
+  "note": {
+   "hu": "A költségvetés készpénzszemléletű sora, nem az OECD-nek jelentett ODA része.",
+   "en": "A cash budget line, not part of the ODA reported to the OECD."
+  }
+ },
+ {
+  "id": "hungaryHelpsAgency.2026.original",
+  "year": 2026,
+  "indicator": "hungaryHelpsAgency",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "1643000000",
+  "unit": "HUF",
+  "original": {
+   "value": "1 643,0",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2500069",
+  "locator": "1. melléklet, XVIII. KÜLGAZDASÁGI ÉS KÜLÜGYMINISZTÉRIUM fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Ügynökség Nonprofit Zrt. szakmai feladatainak ellátása” sor, Működési kiadás oszlop (a törvényszöveg 4. oldala)",
+  "revision": "final",
+  "note": {
+   "hu": "A költségvetés készpénzszemléletű sora, nem az OECD-nek jelentett ODA része.",
+   "en": "A cash budget line, not part of the ODA reported to the OECD."
+  }
+ },
+ {
+  "id": "hungaryHelpsProgram.2026.original",
+  "year": 2026,
+  "indicator": "hungaryHelpsProgram",
+  "scope": "centralSubsystem",
+  "status": "original",
+  "method": "cash",
+  "value": "2149900000",
+  "unit": "HUF",
+  "original": {
+   "value": "2 149,9",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Országgyűlés",
+  "source": "act-a2500069",
+  "locator": "1. melléklet, XVIII. KÜLGAZDASÁGI ÉS KÜLÜGYMINISZTÉRIUM fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Programhoz kapcsolódó támogatások” sor, Működési kiadás oszlop (a törvényszöveg 4. oldala)",
+  "revision": "final",
+  "note": {
+   "hu": "A költségvetés készpénzszemléletű sora, nem az OECD-nek jelentett ODA része.",
+   "en": "A cash budget line, not part of the ODA reported to the OECD."
+  }
  }
 ]

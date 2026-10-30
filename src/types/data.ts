@@ -14,6 +14,8 @@ export type Indicator =
   | 'odaBilateral'
   | 'odaMultilateral'
   | 'odaPctGni'
+  | 'hungaryHelpsProgram'
+  | 'hungaryHelpsAgency'
   | 'revenuePctGdp'
   | 'expenditurePctGdp'
   | 'deficitPctGdp'

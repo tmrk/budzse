@@ -4,7 +4,7 @@ import { AppContext, type AppContextValue } from './components/context';
 import { LensControl, ScopeControl } from './components/Controls';
 import Hero, { YearStepper } from './components/Hero';
 import MoneyChart from './components/MoneyChart';
-import { AidSection, EconomySection, PlanSection } from './components/Sections';
+import { AidSection, EconomySection, HelpsSection, PlanSection } from './components/Sections';
 import SourceDialog from './components/SourceDialog';
 import { figure } from './components/figures';
 import { useAppState } from './hooks/useAppState';
@@ -122,6 +122,7 @@ export default function App() {
             <PlanSection />
             <EconomySection />
             <AidSection />
+            <HelpsSection />
             <Archive />
           </main>
           <SourceDialog target={target} onClose={() => setTarget(null)} />

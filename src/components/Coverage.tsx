@@ -20,6 +20,8 @@ export default function Coverage() {
     { label: m.coverage.rows.gdpPlan, years: rule((o) => o.indicator === 'gdp' && o.status === 'planned') },
     { label: m.coverage.rows.odaNet, years: rule((o) => o.indicator === 'oda') },
     { label: m.coverage.rows.odaGe, years: rule((o) => o.indicator === 'odaGe') },
+    { label: m.coverage.rows.helpsProgram, years: rule((o) => o.indicator === 'hungaryHelpsProgram') },
+    { label: m.coverage.rows.helpsAgency, years: rule((o) => o.indicator === 'hungaryHelpsAgency') },
     { label: m.coverage.rows.cpiActual, years: rule((o) => o.indicator === 'cpi' && o.status === 'actual') },
     { label: m.coverage.rows.cpiForecast, years: rule((o) => o.indicator === 'cpi' && o.status === 'forecast') },
   ];

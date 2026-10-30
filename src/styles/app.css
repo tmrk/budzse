@@ -284,6 +284,8 @@ a { color: inherit; text-underline-offset: 3px; text-decoration-thickness: 1px; 
 .bar-ink.chosen { fill: var(--ink); }
 .bar-ink.open:not(.chosen) { fill: none; stroke: var(--bar-ink); stroke-width: 1; stroke-dasharray: 2 2; }
 .bar-ink.open.chosen { fill: none; stroke: var(--ink); stroke-width: 1.5; }
+.bar-agency { fill: var(--c-in); }
+.bar-agency.open { fill: none; stroke: var(--c-in); stroke-width: 1; stroke-dasharray: 2 2; }
 .gap-now { stroke: var(--c-out); stroke-width: 5; }
 .gap-now.open { stroke-width: 3; }
 .plan-tick { stroke: var(--ink); stroke-width: 2.5; stroke-linecap: butt; }

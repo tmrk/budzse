@@ -115,5 +115,44 @@
    "hu": "Az Állami Számvevőszék véleményei, a Pénzügyminisztérium középtávú programja.",
    "en": "State Audit Office opinions, the Ministry of Finance medium-term programme."
   }
+ },
+ {
+  "id": "hungary-helps-program",
+  "indicator": "hungaryHelpsProgram",
+  "years": "2000–2018, 2027",
+  "reason": {
+   "hu": "2019 előtt nincs a Hungary Helps nevet viselő költségvetési sor. Az üldözött keresztények segítésének korábbi sorait nem nevezzük át utólag. A 2027-es költségvetés törvényszövegét még nem tudtuk elolvasni.",
+   "en": "No budget line carries the Hungary Helps name before 2019. We do not relabel the earlier lines for helping persecuted Christians. The text of the 2027 budget act could not yet be read."
+  },
+  "searched": {
+   "hu": "A 2017–2026-os költségvetési és a 2017–2024-es zárszámadási törvények mellékletei (mkogy.jogtar.hu).",
+   "en": "The annexes of the 2017–2026 budget acts and the 2017–2024 final-accounts acts (mkogy.jogtar.hu)."
+  }
+ },
+ {
+  "id": "hungary-helps-agency",
+  "indicator": "hungaryHelpsAgency",
+  "years": "2000–2018, 2021, 2027",
+  "reason": {
+   "hu": "Az ügynökség 2019-ben jött létre. 2021-ben a zárszámadási törvényben nincs külön sora, ezért nincs adat, nem nulla. A 2021-es és a 2022-es eredeti törvényben sincs ilyen sor. A 2027-es törvényszöveget még nem tudtuk elolvasni.",
+   "en": "The agency was created in 2019. The 2021 final-accounts act has no separate line for it, so there is no data, not zero. The original 2021 and 2022 acts have no such line either. The text of the 2027 act could not yet be read."
+  },
+  "searched": {
+   "hu": "A 2019–2026-os költségvetési és a 2019–2024-es zárszámadási törvények mellékletei. Az ügynökség országgyűlési beszámolói (parlament.hu) automatizált eszközzel nem érhetők el.",
+   "en": "The annexes of the 2019–2026 budget acts and the 2019–2024 final-accounts acts. The agency's reports to Parliament (parlament.hu) cannot be reached with automated tools."
+  }
+ },
+ {
+  "id": "hungary-helps-oda-share",
+  "indicator": "hungaryHelpsProgram",
+  "years": "2019–2026",
+  "reason": {
+   "hu": "Nem közlünk arányt az ODA-n belül. Hivatalos forrás nem adja meg, és az OECD-adatok a Hungary Helpst nem különítik el; a költségvetési sor készpénzszemléletű, az ODA az OECD DAC szabályai szerinti.",
+   "en": "We state no share of ODA. No official source gives one and OECD data do not separate Hungary Helps; the budget line is cash based, while ODA follows OECD DAC rules."
+  },
+  "searched": {
+   "hu": "OECD CRS projektszintű adatok (2014–2024), OECD DAC szakértői értékelés (2023), Hungary Helps Ügynökség 2024-es kiegészítő melléklete.",
+   "en": "OECD CRS project-level data (2014–2024), OECD DAC peer review (2023), Hungary Helps Agency 2024 supplementary notes."
+  }
  }
 ]

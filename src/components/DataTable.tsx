@@ -9,7 +9,7 @@ import type { Indicator, Status } from '../types/data';
 import { useApp } from './context';
 import { figure, statusLabel } from './figures';
 
-const INDICATORS: Indicator[] = ['revenue', 'expenditure', 'deficit', 'gdp', 'oda', 'odaGe', 'odaBilateral', 'odaMultilateral', 'odaPctGni', 'gni', 'realGdpGrowth', 'cpi', 'revenuePctGdp', 'expenditurePctGdp', 'deficitPctGdp'];
+const INDICATORS: Indicator[] = ['revenue', 'expenditure', 'deficit', 'gdp', 'oda', 'odaGe', 'odaBilateral', 'odaMultilateral', 'odaPctGni', 'hungaryHelpsProgram', 'hungaryHelpsAgency', 'gni', 'realGdpGrowth', 'cpi', 'revenuePctGdp', 'expenditurePctGdp', 'deficitPctGdp'];
 const STATUSES: Status[] = ['actual', 'original', 'revised', 'planned', 'draft', 'ytd', 'forecast'];
 
 export default function DataTable() {

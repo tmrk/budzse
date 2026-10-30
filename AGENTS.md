@@ -3,7 +3,7 @@
 ## Structure
 
 - `src/lib/`: pure logic. `measure.ts` (values, scopes, comparisons), `cpi.ts`, `format.ts`, `view.ts` (state, URL, language routing), `csv.ts`
-- `src/components/`: `Hero` (the sum), `MoneyChart`, `Sections` (plan, economy, aid), `YearFigures`, `Archive`, `Timeline` (the frame every chart uses)
+- `src/components/`: `Hero` (the sum), `MoneyChart`, `Sections` (plan, economy, aid, Hungary Helps), `YearFigures`, `Archive`, `Timeline` (the frame every chart uses)
 - `src/charts/geometry.ts`: pure scale and path helpers. `src/hooks/`, `src/styles/app.css`, `src/i18n/{hu,en}.ts`
 - `data/raw/`: snapshots from `scripts/fetch/fetch-statistics.mjs`
 - `data/observations/central-budget.json`: generated from legal acts by `scripts/fetch/fetch-acts.mjs`

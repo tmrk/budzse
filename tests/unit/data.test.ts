@@ -51,6 +51,19 @@ describe('verified historical figures', () => {
     expect(obs('odaGe.2024.actual').value).toBe(69_357_040_000);
   });
 
+  it('Hungary Helps lines from the final-accounts acts', () => {
+    expect(obs('hungaryHelpsProgram.2021.actual').value).toBe(11_176_000_000);
+    expect(obs('hungaryHelpsProgram.2022.actual').value).toBe(9_652_000_000);
+    expect(obs('hungaryHelpsAgency.2023.actual').value).toBe(1_840_900_000);
+    expect(obs('hungaryHelpsAgency.2024.actual').value).toBe(547_900_000);
+    expect(obs('hungaryHelpsProgram.2026.original').value).toBe(2_149_900_000);
+  });
+
+  it('leaves a missing Hungary Helps agency line empty, never zero', () => {
+    expect(dataset.observations.filter((o) => o.indicator === 'hungaryHelpsAgency' && o.year === 2021)).toEqual([]);
+    expect(dataset.observations.filter((o) => o.indicator.startsWith('hungaryHelps') && o.year < 2019)).toEqual([]);
+  });
+
   it('keeps the ODA reporting gap of 2000-2002 empty', () => {
     expect(dataset.observations.filter((o) => o.indicator === 'oda' && o.year < 2003)).toEqual([]);
   });

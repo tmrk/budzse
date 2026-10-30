@@ -1,5 +1,9 @@
 # Recent changes
 
+## 2026-10-30: Hungary Helps
+
+A new section shows the two budget lines that carry the Hungary Helps name, the programme's grants and the agency's running costs, from the budget and final-accounts acts. They are cash lines, so the section shows them beside net ODA and states no share of it: no official source gives one and OECD data do not separate Hungary Helps.
+
 ## 2026-10-30: calmer second pass
 
 The page no longer moves while sweeping through the years: each section has fixed words beside it and a fixed readout above its chart. The hero has one chart with the chosen year's gap drawn solid. Removed: the comparison-year dropdown (the sum now always compares with the year before), the coverage bar, the deficit strip under the main chart, copy link, and repeated year headings. The load animation is gone too, as a full-page capture could restart it and blank the chart. "Every figure for a year" moved into the archive. Missing-data reasons moved from the sections to a tooltip and the coverage list.

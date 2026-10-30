@@ -359,6 +359,19 @@ test.describe('sources, comparisons and exports', () => {
     await expect(page.getByTestId('source-dialog')).toContainText('Secondary citation');
   });
 
+  test('Hungary Helps shows both budget lines beside net ODA, and a missing line stays missing', async ({ page }) => {
+    await page.goto('/budzse/en/?y=2023');
+    await ready(page);
+    await expect(page.getByTestId('helps-program')).toHaveText('HUF 6.98 billion');
+    await expect(page.getByTestId('helps-agency')).toHaveText('HUF 1.84 billion');
+    await expect(page.getByTestId('helps-oda')).toHaveText('HUF 90.6 billion');
+    await page.getByTestId('year-select').selectOption('2021');
+    await expect(page.getByTestId('helps-program')).toHaveText('HUF 11.2 billion');
+    await expect(page.getByTestId('helps').locator('.no-data')).toHaveAttribute('title', /no separate line/);
+    await page.getByTestId('year-select').selectOption('2025');
+    await expect(page.getByTestId('helps').locator('.readout-item').first()).toContainText('plan');
+  });
+
   test('missing data says so instead of showing zero', async ({ page }) => {
     await page.goto('/budzse/en/?y=2001');
     await ready(page);
@@ -469,7 +482,7 @@ test.describe('layout and accessibility', () => {
         const measure = () =>
           page.evaluate(() => {
             const top = (s: string) => Math.round((document.querySelector(s)!.getBoundingClientRect().top + window.scrollY) * 10) / 10;
-            return [document.documentElement.scrollHeight, top('[data-testid="chart"]'), top('[data-testid="plan-chart"]'), top('[data-testid="economy"]'), top('[data-testid="aid-chart"]'), top('.archive')].join();
+            return [document.documentElement.scrollHeight, top('[data-testid="chart"]'), top('[data-testid="plan-chart"]'), top('[data-testid="economy"]'), top('[data-testid="aid-chart"]'), top('[data-testid="helps-chart"]'), top('.archive')].join();
           });
         const seen = new Map<string, string>();
         for (let y = 2000; y <= 2027; y++) {

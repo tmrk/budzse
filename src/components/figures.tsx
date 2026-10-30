@@ -70,6 +70,8 @@ export interface ReadoutItem {
   accent?: boolean;
   /** Why a figure is missing, for anyone who points at the gap. */
   reason?: string;
+  /** What kind of figure this is, when it is not an outcome. */
+  tag?: string;
 }
 
 /**
@@ -89,7 +91,7 @@ export function Readout({ items }: { items: ReadoutItem[] }) {
             ) : i.measured && i.obs ? (
               <>
                 <SourceButton obs={i.obs} measured={i.measured} what={i.label} testId={i.testId}>{figure(i.measured, lang)}</SourceButton>
-                {i.measured.estimated && <em className="estimate">{m.chart.estimated}</em>}
+                {(i.tag || i.measured.estimated) && <em className="estimate">{[i.tag, i.measured.estimated && m.chart.estimated].filter(Boolean).join(', ')}</em>}
               </>
             ) : (
               <span className="no-data" title={i.reason}>{i.text === null ? '–' : m.year.noData}</span>

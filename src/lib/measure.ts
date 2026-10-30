@@ -120,6 +120,13 @@ export function observationsFor(data: Dataset, year: number, scope: AnalyticalSc
     .sort((a, b) => STATUS_RANK.indexOf(a.status) - STATUS_RANK.indexOf(b.status));
 }
 
+/** The two Hungary Helps budget lines for one year, both of one status, or a line is left out rather than mixed. */
+export function helpsFor(data: Dataset, year: number): { program?: Observation; agency?: Observation } {
+  const program = bestObservation(data, 'hungaryHelpsProgram', year, 'central');
+  const agency = bestObservation(data, 'hungaryHelpsAgency', year, 'central', program?.status);
+  return { program, agency };
+}
+
 /** Published percentages (growth, inflation) stand as they are in every lens. */
 export const asPublished = (o: Observation): Measured => ({ obs: o, value: o.value, unit: o.unit, estimated: o.status === 'forecast' });
 
@@ -226,7 +233,7 @@ export interface TableFilter {
   to: number;
 }
 
-const TABLE_INDICATORS: Indicator[] = ['revenue', 'expenditure', 'deficit', 'gdp', 'oda', 'odaGe', 'odaBilateral', 'odaMultilateral', 'odaPctGni', 'revenuePctGdp', 'expenditurePctGdp', 'deficitPctGdp', 'realGdpGrowth', 'cpi', 'gni'];
+const TABLE_INDICATORS: Indicator[] = ['revenue', 'expenditure', 'deficit', 'gdp', 'oda', 'odaGe', 'odaBilateral', 'odaMultilateral', 'odaPctGni', 'hungaryHelpsProgram', 'hungaryHelpsAgency', 'revenuePctGdp', 'expenditurePctGdp', 'deficitPctGdp', 'realGdpGrowth', 'cpi', 'gni'];
 
 export function tableRows(data: Dataset, v: Pick<ViewState, 'scope' | 'real' | 'ref'>, f: TableFilter): Measured[] {
   const rows: Measured[] = [];

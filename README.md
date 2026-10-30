@@ -7,3 +7,7 @@ Explore government revenue, expenditure, deficits, GDP and official development 
 Available in Hungarian and English.
 
 [Open Büdzsé](https://tmrk.github.io/budzse/)
+
+## About this project
+
+This is a personal project I made for myself, so that I can easily oversee and understand some of these numbers about my home country. It is not official, but all the sources are referenced.

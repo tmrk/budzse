@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { asPublished, bestObservation, compareMeasured, compatibility, figureRows, ledgerFor, ledgerRows, measure, overshoot, planVersusActual, planYears, tableRows } from '../../src/lib/measure';
+import { asPublished, bestObservation, compareMeasured, compatibility, figureRows, helpsFor, ledgerFor, ledgerRows, measure, overshoot, planVersusActual, planYears, tableRows } from '../../src/lib/measure';
 import { DEFAULT_VIEW, type ViewState } from '../../src/lib/view';
 import { dataset, obs } from './helpers';
 
@@ -228,5 +228,29 @@ describe('scope switching', () => {
 describe('part-year figures', () => {
   it('are not shown as a share of annual GDP', () => {
     expect(measure(dataset, obs('central.deficit.2026.ytd'), v({ relative: true }))).toBeNull();
+  });
+});
+
+describe('helpsFor', () => {
+  it('prefers the outcome and reads both lines at one status', () => {
+    const { program, agency } = helpsFor(dataset, 2023);
+    expect(program?.id).toBe('hungaryHelpsProgram.2023.actual');
+    expect(agency?.id).toBe('hungaryHelpsAgency.2023.actual');
+  });
+
+  it('falls back to the original act when no outcome exists yet', () => {
+    const { program, agency } = helpsFor(dataset, 2025);
+    expect(program?.status).toBe('original');
+    expect(agency?.status).toBe('original');
+  });
+
+  it('leaves out a line the act does not have', () => {
+    const { program, agency } = helpsFor(dataset, 2021);
+    expect(program?.status).toBe('actual');
+    expect(agency).toBeUndefined();
+  });
+
+  it('has nothing before the name appears in a budget', () => {
+    expect(helpsFor(dataset, 2018)).toEqual({ program: undefined, agency: undefined });
   });
 });

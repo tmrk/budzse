@@ -91,6 +91,14 @@ for (let y = 2000; y <= LAST_FULL_YEAR; y++) {
 for (let y = 2003; y <= 2024; y++) if (!has(`oda.${y}.actual`)) fail(`Missing ODA ${y}`);
 for (let y = 2000; y <= 2002; y++) if (has(`oda.${y}.actual`)) fail(`ODA ${y} appeared: update the gap register`);
 
+for (let y = 2019; y <= 2024; y++) if (!has(`hungaryHelpsProgram.${y}.actual`)) fail(`Missing Hungary Helps programme ${y}`);
+for (const o of d.observations) {
+  if (!o.indicator.startsWith('hungaryHelps')) continue;
+  if (o.year < 2019) fail(`${o.id}: no line carries the name before 2019`);
+  if (o.scope !== 'centralSubsystem' || o.method !== 'cash') fail(`${o.id}: must be a cash line of the central subsystem`);
+  if (!d.sources[o.source]?.url.startsWith('https://mkogy.jogtar.hu/')) fail(`${o.id}: must come from a promulgated act`);
+}
+
 // CPI: consecutive years, plausible indices, chain equal to the product of published indices.
 const cpi = d.cpi.annual;
 cpi.forEach((r, i) => {
@@ -128,7 +136,7 @@ for (const x of d.fxCheck) {
 }
 
 // Magnitude guard against million/billion slips.
-const range = { revenue: [2e12, 6e13], expenditure: [3e12, 6e13], gdp: [1e13, 1.2e14], oda: [1e9, 5e11], odaGe: [1e9, 5e11] };
+const range = { revenue: [2e12, 6e13], expenditure: [3e12, 6e13], gdp: [1e13, 1.2e14], oda: [1e9, 5e11], odaGe: [1e9, 5e11], hungaryHelpsProgram: [1e8, 5e10], hungaryHelpsAgency: [1e7, 1e10] };
 for (const o of d.observations) {
   const r = range[o.indicator];
   if (r && (o.value < r[0] || o.value > r[1])) fail(`${o.id}: ${o.value} outside plausible range`);
@@ -164,6 +172,8 @@ const rows = [
   ['GDP: forecast', (y) => has(`gdp.${y}.forecast.gov`)],
   ['ODA: net disbursements', (y) => has(`oda.${y}.actual`)],
   ['ODA: grant equivalent', (y) => has(`odaGe.${y}.actual`)],
+  ['Hungary Helps: programme', (y) => has(`hungaryHelpsProgram.${y}.actual`) || has(`hungaryHelpsProgram.${y}.original`)],
+  ['Hungary Helps: agency', (y) => has(`hungaryHelpsAgency.${y}.actual`) || has(`hungaryHelpsAgency.${y}.original`)],
   ['CPI: KSH', (y) => has(`cpi.${y}.actual`)],
   ['CPI: forecast', (y) => has(`cpi.${y}.forecast.gov`)],
 ];
