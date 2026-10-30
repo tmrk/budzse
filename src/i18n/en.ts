@@ -6,7 +6,8 @@ export const en: typeof hu = {
     description: 'Government revenue, expenditure, deficits, GDP and development aid from 2000 to 2027. Budgeted and actual figures, adjusted for inflation, with the official source behind every number.',
   },
   app: {
-    tagline: "Hungary's public finances, 2000 to 2027. Every number opens its source.",
+    tagline: "Hungary's public finances, 2000–2027",
+    hint: 'Choose a year on any chart. Every underlined number opens its source.',
     latest: 'Latest data',
     loading: 'Loading data…',
     loadError: 'The data file did not load. Check your connection, then reload the page.',
@@ -50,6 +51,7 @@ export const en: typeof hu = {
     points: 'pts',
     cover: (n: string) => `Every 100 forints spent were matched by ${n} forints of revenue.`,
     scopeWarning: 'The 2010 change of scope means these two years cannot be compared.',
+    notComparable: 'not comparable',
   },
   plan: {
     title: 'Plan and reality',
@@ -59,6 +61,7 @@ export const en: typeof hu = {
     planMark: 'Plan',
     outcome: { actual: 'Actual', revised: 'Amended plan', draft: 'Draft' },
     difference: 'Difference',
+    noOutcome: 'No outcome yet',
   },
   economy: {
     title: 'The economy',
@@ -87,6 +90,8 @@ export const en: typeof hu = {
     agency: 'Agency',
     oda: 'Net ODA',
     ratio: 'Against net ODA',
+    noRatio: 'Not calculated',
+    noRatioReason: 'Calculated only for years with both a final account and a net ODA figure.',
     budgeted: 'plan',
     inOda: 'All net ODA, with Hungary Helps inside it',
     split: 'The two lines on their own scale',
@@ -225,6 +230,9 @@ export const en: typeof hu = {
     relativeFormula: 'Share = value / GDP × 100',
     cpiSource: 'Source of the CPI factor',
     usd: 'Original USD amount',
+    gapTitle: 'Why this figure is missing',
+    gapYears: 'Years affected',
+    gapReason: 'Reason',
   },
   coverage: {
     title: "What the data covers, and what's missing",

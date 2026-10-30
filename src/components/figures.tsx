@@ -2,7 +2,7 @@ import { indicatorName, statusName, type Messages } from '../i18n';
 import { axisScale, formatDate, formatHuf, formatNumber, formatPct, formatSigned } from '../lib/format';
 import type { PriceReference } from '../lib/cpi';
 import type { Measured } from '../lib/measure';
-import type { Dataset, Indicator, Lang, Observation } from '../types/data';
+import type { Dataset, Gap, Indicator, Lang, Observation } from '../types/data';
 import { useApp } from './context';
 
 export function figure(m: Measured, lang: Lang): string {
@@ -58,6 +58,17 @@ export function SourceButton({ obs, measured, what, value, testId, className, ch
   );
 }
 
+/**
+ * The one way a figure says it is missing, on the same baseline a number would sit on.
+ * A documented gap opens its reason, just as a number opens its source.
+ */
+export function Missing({ gap, text, title }: { gap?: Gap; text?: string; title?: string }) {
+  const { m, lang, explain } = useApp();
+  const label = text ?? m.year.noData;
+  if (!gap) return <span className="no-data" title={title}>{label}</span>;
+  return <button type="button" className="no-data has-reason" title={gap.reason[lang]} onClick={() => explain(gap)}>{label}</button>;
+}
+
 export interface ReadoutItem {
   key: string;
   label: string;
@@ -67,9 +78,11 @@ export interface ReadoutItem {
   testId?: string;
   /** A calculated figure with no single source of its own. */
   text?: string | null;
-  accent?: boolean;
-  /** Why a figure is missing, for anyone who points at the gap. */
-  reason?: string;
+  /** Why a figure is missing, documented in the gaps list. */
+  gap?: Gap;
+  /** What to say instead of "No data", when that would not be the honest reason. */
+  empty?: string;
+  emptyTitle?: string;
   /** What kind of figure this is, when it is not an outcome. */
   tag?: string;
 }
@@ -83,18 +96,19 @@ export function Readout({ items }: { items: ReadoutItem[] }) {
   return (
     <dl className="readout" style={{ '--n': items.length } as React.CSSProperties}>
       {items.map((i) => (
-        <div key={i.key} className={i.accent ? 'readout-item accent' : 'readout-item'}>
-          <dt>{i.swatch}{i.label}</dt>
+        <div key={i.key} className="readout-item">
+          <dt>
+            {i.swatch}
+            <span>{i.label}</span>
+            {(i.tag || i.measured?.estimated) && i.measured && <em className="estimate">{[i.tag, i.measured.estimated && m.chart.estimated].filter(Boolean).join(', ')}</em>}
+          </dt>
           <dd>
             {i.text ? (
               <strong>{i.text}</strong>
             ) : i.measured && i.obs ? (
-              <>
-                <SourceButton obs={i.obs} measured={i.measured} what={i.label} testId={i.testId}>{figure(i.measured, lang)}</SourceButton>
-                {(i.tag || i.measured.estimated) && <em className="estimate">{[i.tag, i.measured.estimated && m.chart.estimated].filter(Boolean).join(', ')}</em>}
-              </>
+              <SourceButton obs={i.obs} measured={i.measured} what={i.label} testId={i.testId}>{figure(i.measured, lang)}</SourceButton>
             ) : (
-              <span className="no-data" title={i.reason}>{i.text === null ? '–' : m.year.noData}</span>
+              <Missing gap={i.gap} text={i.empty} title={i.emptyTitle} />
             )}
           </dd>
         </div>

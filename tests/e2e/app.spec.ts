@@ -392,7 +392,24 @@ test.describe('sources, comparisons and exports', () => {
     await page.getByTestId('year-select').selectOption('2025');
     await expect(page.getByTestId('helps').locator('.readout-item').first()).toContainText('plan');
     await expect(page.getByTestId('helps-oda')).toHaveText('HUF 114 billion');
-    await expect(page.getByTestId('helps').locator('.readout-item').nth(3)).toContainText('–');
+    await expect(page.getByTestId('helps').locator('.readout-item').nth(3)).toContainText('Not calculated');
+  });
+
+  test('a missing figure opens its reason, as a number opens its source', async ({ page }) => {
+    await page.goto('/budzse/en/?y=2001');
+    await ready(page);
+    await page.getByTestId('aid').locator('.no-data').first().click();
+    const dialog = page.getByTestId('source-dialog');
+    await expect(dialog).toContainText('Why this figure is missing');
+    await expect(dialog).toContainText('OECD DAC1 reports ODA for Hungary from 2003');
+    await page.keyboard.press('Escape');
+    await expect(dialog).toBeHidden();
+  });
+
+  test('a year with no outcome says so rather than leaving a dash', async ({ page }) => {
+    await page.goto('/budzse/en/?y=2027');
+    await ready(page);
+    await expect(page.getByTestId('plan').locator('.readout-item').nth(2)).toContainText('No outcome yet');
   });
 
   test('missing data says so instead of showing zero', async ({ page }) => {
@@ -423,7 +440,7 @@ test.describe('sources, comparisons and exports', () => {
   test('comparison refuses to subtract across the 2010 break', async ({ page }) => {
     await page.goto('/budzse/en/?y=2010&s=c');
     await ready(page);
-    await expect(page.locator('.ledger-row .delta').first()).toHaveText('–');
+    await expect(page.locator('.ledger-row .delta').first()).toHaveText('not comparable');
     await expect(page.locator('.ledger-row .delta').first()).toHaveAttribute('title', /cannot be compared/);
     await page.getByTestId('scope-general').click();
     await expect(page.locator('.ledger-row .delta').first()).toContainText('%');
@@ -518,6 +535,81 @@ test.describe('layout and accessibility', () => {
       await ctx.close();
     });
   }
+
+  // Pointing at something may colour it. It may never move it or anything else.
+  test('hovering any control moves nothing', async ({ page, isMobile }) => {
+    test.skip(isMobile, 'Pointer behaviour');
+    await page.goto('/budzse/en/?s=c&y=2010');
+    await ready(page);
+    await page.locator('details').evaluateAll((all) => all.forEach((d) => ((d as HTMLDetailsElement).open = true)));
+    const layout = () =>
+      page.evaluate(() =>
+        [document.documentElement.scrollHeight, ...[...document.querySelectorAll('main button:not(.table-scroll *), main a, main summary, main select, .timeline, .chapter, .ledger-row > *, .readout-item > *')].map((el) => {
+          const r = el.getBoundingClientRect();
+          return `${Math.round((r.left + scrollX) * 10)},${Math.round((r.top + scrollY) * 10)},${Math.round(r.width * 10)},${Math.round(r.height * 10)}`;
+        })].join('|'),
+      );
+    const before = await layout();
+    const targets = page.locator('main button:not(.table-scroll *):visible, main summary:visible, main select:visible, header button:visible');
+    const count = await targets.count();
+    expect(count).toBeGreaterThan(40);
+    for (let i = 0; i < count; i++) {
+      await targets.nth(i).hover({ force: true });
+      expect(await layout(), `hovering target ${i}`).toBe(before);
+    }
+  });
+
+  test('choosing an option does not move the options beside it', async ({ page, isMobile }) => {
+    test.skip(isMobile, 'Desktop layout');
+    await page.goto('/budzse/en/');
+    await ready(page);
+    const edges = () => page.locator('[data-testid^="lens-"], [data-testid^="scope-"]').evaluateAll((all) => all.map((el) => { const r = el.getBoundingClientRect(); return [r.left, r.width]; }));
+    const before = await edges();
+    await lens(page, 'share').click();
+    expect(await edges()).toEqual(before);
+    await page.getByTestId('scope-central').click();
+    expect(await edges()).toEqual(before);
+  });
+
+  test('switching scope or measure leaves the page below where it was', async ({ page, isMobile }) => {
+    test.skip(isMobile, 'Desktop layout');
+    await page.goto('/budzse/en/');
+    await ready(page);
+    const tops = () => page.evaluate(() => ['[data-testid="chart"]', '[data-testid="plan"]', '[data-testid="plan-chart"]', '[data-testid="economy"]', '[data-testid="aid"]', '[data-testid="helps"]', '.archive'].map((s) => document.querySelector(s)!.getBoundingClientRect().top + scrollY));
+    const before = await tops();
+    await lens(page, 'real').click();
+    await expect(page.getByTestId('reference')).toBeVisible();
+    expect(await tops()).toEqual(before);
+    await page.getByTestId('scope-central').click();
+    expect(await tops()).toEqual(before);
+    await lens(page, 'share').click();
+    expect(await tops()).toEqual(before);
+  });
+
+  test('the descriptor sits on one line in the bar, beside the name', async ({ page, isMobile }) => {
+    test.skip(isMobile, 'On phones it has its own line below the bar');
+    for (const path of ['/budzse/hu/', '/budzse/en/']) {
+      await page.goto(path);
+      await ready(page);
+      const tagline = page.locator('header.bar .tagline');
+      await expect(tagline).toBeVisible();
+      const box = (await tagline.boundingBox())!;
+      const bar = (await page.locator('header.bar').boundingBox())!;
+      expect(box.height).toBeLessThan(24);
+      expect(box.y).toBeGreaterThanOrEqual(bar.y);
+      expect(box.y + box.height).toBeLessThanOrEqual(bar.y + bar.height);
+      await expect(page.locator('.tagline-flow')).toBeHidden();
+    }
+  });
+
+  test('the year and the controls share a row, and the sum starts level with the chart', async ({ page, isMobile }) => {
+    test.skip(isMobile, 'Desktop layout');
+    await page.goto('/budzse/en/');
+    await ready(page);
+    const ledger = (await page.getByTestId('ledger').boundingBox())!;
+    const chart = (await page.getByTestId('chart').boundingBox())!;
+    expect(Math.abs(ledger.y - chart.y)).toBeLessThanOrEqual(1);
+  });
 
   test('pointing across a chart lower down leaves the scroll position alone', async ({ page, isMobile }) => {
     test.skip(isMobile, 'Pointer behaviour');

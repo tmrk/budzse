@@ -5,19 +5,19 @@ import { LensControl, ScopeControl } from './components/Controls';
 import Hero, { YearStepper } from './components/Hero';
 import MoneyChart from './components/MoneyChart';
 import { AidSection, EconomySection, HelpsSection, PlanSection } from './components/Sections';
-import SourceDialog from './components/SourceDialog';
+import SourceDialog, { type SourceTarget } from './components/SourceDialog';
 import { figure } from './components/figures';
 import { useAppState } from './hooks/useAppState';
 import { useTheme, type ThemeChoice } from './hooks/useTheme';
 import { ledgerRows, type Measured } from './lib/measure';
-import type { Dataset, Lang, Observation } from './types/data';
+import type { Dataset, Gap, Lang, Observation } from './types/data';
 
 const NEXT_THEME: Record<ThemeChoice, ThemeChoice> = { auto: 'light', light: 'dark', dark: 'auto' };
 
-function TopBar({ barRef, lang, setLang, m, theme, setTheme, scrolled, children }: { barRef?: React.Ref<HTMLElement>; lang: Lang; setLang: (l: Lang) => void; m: AppContextValue['m']; theme: ThemeChoice; setTheme: (t: ThemeChoice) => void; scrolled: boolean; children?: React.ReactNode }) {
+function TopBar({ barRef, lang, setLang, m, theme, setTheme, children }: { barRef?: React.Ref<HTMLElement>; lang: Lang; setLang: (l: Lang) => void; m: AppContextValue['m']; theme: ThemeChoice; setTheme: (t: ThemeChoice) => void; children?: React.ReactNode }) {
   const themeName = theme === 'auto' ? m.app.themeAuto : theme === 'light' ? m.app.themeLight : m.app.themeDark;
   return (
-    <header ref={barRef} className={scrolled ? 'bar scrolled' : 'bar'}>
+    <header ref={barRef} className="bar">
       <div className="bar-inner">
         <h1 className="wordmark">Büdzsé</h1>
         <div className="bar-tools">{children}</div>
@@ -42,16 +42,13 @@ function TopBar({ barRef, lang, setLang, m, theme, setTheme, scrolled, children 
   );
 }
 
-function Tagline({ m }: { m: AppContextValue['m'] }) {
-  return <p className="tagline">{m.app.tagline}</p>;
-}
 
 export default function App() {
   const { lang, setLang, view, setView, messages: m } = useAppState();
   const { choice, setChoice } = useTheme();
   const [data, setData] = useState<Dataset | null>(null);
   const [failed, setFailed] = useState(false);
-  const [target, setTarget] = useState<{ obs: Observation; measured?: Measured | null } | null>(null);
+  const [target, setTarget] = useState<SourceTarget | null>(null);
   const [preview, setPreview] = useState<number | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const barRef = useRef<HTMLElement>(null);
@@ -71,9 +68,10 @@ export default function App() {
   }, []);
 
   const inspect = useCallback((obs: Observation, measured?: Measured | null) => setTarget({ obs, measured }), []);
+  const explain = useCallback((gap: Gap) => setTarget({ gap }), []);
 
   const year = preview ?? view.year;
-  const ctx = useMemo<AppContextValue | null>(() => (data ? { data, lang, m, view, setView, year, setPreview, inspect } : null), [data, lang, m, view, setView, year, inspect]);
+  const ctx = useMemo<AppContextValue | null>(() => (data ? { data, lang, m, view, setView, year, setPreview, inspect, explain } : null), [data, lang, m, view, setView, year, inspect, explain]);
   const rows = useMemo(() => (data ? ledgerRows(data, view.scope, view) : []), [data, view.scope, view.real, view.ref, view.relative]);
 
   // As soon as the big year has passed under the bar, the bar takes over showing and changing it.
@@ -95,15 +93,17 @@ export default function App() {
       <a className="skip" href="#data-table" onClick={() => document.querySelector<HTMLDetailsElement>('#data-table')?.setAttribute('open', '')}>{m.app.skip}</a>
       {ctx ? (
         <AppContext.Provider value={ctx}>
-          <TopBar barRef={barRef} lang={lang} setLang={setLang} m={m} theme={choice} setTheme={setChoice} scrolled={scrolled}>
-            {scrolled && (
+          <TopBar barRef={barRef} lang={lang} setLang={setLang} m={m} theme={choice} setTheme={setChoice}>
+            {scrolled ? (
               <>
                 <YearStepper testId="bar-steps" compact />
                 <LensControl compact />
               </>
+            ) : (
+              <p className="tagline">{m.app.tagline}</p>
             )}
           </TopBar>
-          <Tagline m={m} />
+          <p className="tagline tagline-flow">{m.app.tagline}</p>
           <main>
             <section className="hero" aria-label={m.hero.title}>
               <Hero rows={rows} />
@@ -114,6 +114,7 @@ export default function App() {
                 </div>
                 <MoneyChart rows={rows} summary={summary} />
                 <div className="hero-notes">
+                  <p className="hint" data-testid="hint">{m.app.hint}</p>
                   <p className="fine" data-testid="scope-help">{view.scope === 'general' ? m.controls.scopeHelpGeneral : m.controls.scopeHelpCentral}</p>
                   {view.real && <p className="fine">{m.chart.realNote}</p>}
                 </div>
@@ -129,8 +130,10 @@ export default function App() {
         </AppContext.Provider>
       ) : (
         <>
-          <TopBar lang={lang} setLang={setLang} m={m} theme={choice} setTheme={setChoice} scrolled={false} />
-          <Tagline m={m} />
+          <TopBar lang={lang} setLang={setLang} m={m} theme={choice} setTheme={setChoice}>
+            <p className="tagline">{m.app.tagline}</p>
+          </TopBar>
+          <p className="tagline tagline-flow">{m.app.tagline}</p>
           {failed ? (
             <p className="status-line" role="alert">
               {m.app.loadError} <button type="button" className="text-button" onClick={() => location.reload()}>{m.app.retry}</button>
@@ -142,7 +145,13 @@ export default function App() {
       )}
       <footer className="footer">
         <p>{m.app.footerNeutral}</p>
-        <p>{m.app.footerLicence} <a href="https://github.com/tmrk/budzse">{m.app.footerCode}</a>{' · '}<a href={`${import.meta.env.BASE_URL}${lang}/api/`} data-testid="api-link">{m.app.footerApi}</a></p>
+        <div className="footer-side">
+          <p>{m.app.footerLicence}</p>
+          <p className="footer-links">
+            <a href="https://github.com/tmrk/budzse">{m.app.footerCode}</a>
+            <a href={`${import.meta.env.BASE_URL}${lang}/api/`} data-testid="api-link">{m.app.footerApi}</a>
+          </p>
+        </div>
       </footer>
     </div>
   );

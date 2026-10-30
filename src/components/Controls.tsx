@@ -19,7 +19,20 @@ export function LensControl({ compact }: { compact?: boolean }) {
   const lens = lensOf(view);
   const annualRefs = data.cpi.annual.filter((r) => r.status === 'actual').map((r) => r.year).reverse();
   return (
-    <div className="lens">
+    <div className="control lens">
+      {!compact && (lens === 'real' ? (
+        <label className="quiet-select">
+          <span className="sr-only">{m.controls.reference}</span>
+          <select value={String(view.ref)} onChange={(e) => setView({ ref: e.target.value === 'latest' ? 'latest' : Number(e.target.value) })} data-testid="reference">
+            <option value="latest">{m.controls.referenceLatest(formatDate(data.cpi.latestMonth.month, lang))}</option>
+            {annualRefs.map((y) => (
+              <option key={y} value={y}>{m.controls.referenceYear(y)}</option>
+            ))}
+          </select>
+        </label>
+      ) : (
+        <span className="control-label" aria-hidden="true">{m.controls.lens}</span>
+      ))}
       <Segmented<Lens>
         label={m.controls.lens}
         testId={compact ? 'bar-lens' : 'lens'}
@@ -31,17 +44,6 @@ export function LensControl({ compact }: { compact?: boolean }) {
           { value: 'share', label: m.controls.lensShare },
         ]}
       />
-      {lens === 'real' && !compact && (
-        <label className="quiet-select">
-          <span className="sr-only">{m.controls.reference}</span>
-          <select value={String(view.ref)} onChange={(e) => setView({ ref: e.target.value === 'latest' ? 'latest' : Number(e.target.value) })} data-testid="reference">
-            <option value="latest">{m.controls.referenceLatest(formatDate(data.cpi.latestMonth.month, lang))}</option>
-            {annualRefs.map((y) => (
-              <option key={y} value={y}>{m.controls.referenceYear(y)}</option>
-            ))}
-          </select>
-        </label>
-      )}
     </div>
   );
 }
@@ -49,15 +51,18 @@ export function LensControl({ compact }: { compact?: boolean }) {
 export function ScopeControl() {
   const { view, setView, m } = useApp();
   return (
-    <Segmented<AnalyticalScope>
-      label={m.controls.scope}
-      testId="scope"
-      value={view.scope}
-      onChange={(scope) => setView({ scope })}
-      options={[
-        { value: 'general', label: m.controls.scopeGeneral },
-        { value: 'central', label: m.controls.scopeCentral },
-      ]}
-    />
+    <div className="control">
+      <span className="control-label" aria-hidden="true">{m.controls.scope}</span>
+      <Segmented<AnalyticalScope>
+        label={m.controls.scope}
+        testId="scope"
+        value={view.scope}
+        onChange={(scope) => setView({ scope })}
+        options={[
+          { value: 'general', label: m.controls.scopeGeneral },
+          { value: 'central', label: m.controls.scopeCentral },
+        ]}
+      />
+    </div>
   );
 }

@@ -36,11 +36,11 @@ export default function YearFigures() {
                       <td key={k} className="num">
                         {c?.measured ? (
                           <>
-                            <SourceButton obs={c.obs} measured={c.measured} what={label} testId={`source-${c.obs.id}`}>{figure(c.measured, lang)}</SourceButton>
                             {c.measured.estimated && <em className="estimate">{m.chart.estimated}</em>}
+                            <SourceButton obs={c.obs} measured={c.measured} what={label} testId={`source-${c.obs.id}`}>{figure(c.measured, lang)}</SourceButton>
                           </>
                         ) : (
-                          <span aria-label={m.year.noData}>–</span>
+                          <span className="dash" title={m.year.noData} aria-label={m.year.noData}>–</span>
                         )}
                       </td>
                     );

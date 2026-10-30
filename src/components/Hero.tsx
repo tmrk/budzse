@@ -4,7 +4,7 @@ import { FIRST_YEAR, LAST_YEAR } from '../lib/view';
 import { statusName } from '../i18n';
 import { YEARS } from '../charts/geometry';
 import { useApp } from './context';
-import { priceBasis, SourceButton } from './figures';
+import { gapFor, Missing, priceBasis, SourceButton } from './figures';
 
 function Chevron({ back }: { back?: boolean }) {
   return (
@@ -43,9 +43,9 @@ function Digits({ text }: { text: string }) {
 /** Change on the year before. A change of scope leaves a dash, never a false difference. */
 function Delta({ current, base }: { current: Measured | null; base: Measured | null }) {
   const { lang, m } = useApp();
-  if (!current || !base) return <span className="delta" />;
+  if (!current || !base) return <span className="delta">–</span>;
   const c = compareMeasured(base, current);
-  if (c.compatibility !== 'ok' || c.absolute === null) return <span className="delta" title={m.hero.scopeWarning}>–</span>;
+  if (c.compatibility !== 'ok' || c.absolute === null) return <span className="delta not-comparable" title={m.hero.scopeWarning}>{m.hero.notComparable}</span>;
   const text = current.unit === 'pct' ? formatSigned(`${formatNumber(Math.abs(c.absolute), lang, 1)} ${m.hero.points}`, c.absolute < 0) : c.percent !== null ? formatSigned(formatPct(Math.abs(c.percent), lang), c.percent < 0) : '';
   return <span className="delta">{text}</span>;
 }
@@ -73,7 +73,10 @@ export default function Hero({ rows }: { rows: LedgerRow[] }) {
       <div className="year-line">
         <label className="year-big">
           <span className="sr-only">{m.year.select}</span>
-          <span aria-hidden="true"><Digits text={String(year)} /></span>
+          <span className="year-digits" aria-hidden="true"><Digits text={String(year)} /></span>
+          <svg className="year-caret" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+            <path d="M2 4.500 7 9.500l5-5" fill="none" stroke="currentColor" strokeWidth="2" />
+          </svg>
           <select value={year} onChange={(e) => setView({ year: Number(e.target.value) })} data-testid="year-select">
             {YEARS.map((y) => (
               <option key={y} value={y}>{y}</option>
@@ -83,11 +86,14 @@ export default function Hero({ rows }: { rows: LedgerRow[] }) {
         <div className="year-side">
           <YearStepper testId="year-steps" />
           {row && (
-            <span className={row.status === 'actual' ? 'stamp' : 'stamp open'} key={row.status} data-testid="stamp">
-              {statusName(m, row.status)}
-            </span>
+            <p className={row.status === 'actual' ? 'status' : 'status open'}>
+              <i className="status-dot" aria-hidden="true" />
+              <span className="status-text">
+                <span className="stamp" data-testid="stamp">{statusName(m, row.status)}</span>
+                {qualifier && <span className="stamp-note" data-testid="stamp-note">{qualifier}</span>}
+              </span>
+            </p>
           )}
-          {qualifier && <span className="stamp-note" data-testid="stamp-note">{qualifier}</span>}
         </div>
       </div>
 
@@ -104,19 +110,19 @@ export default function Hero({ rows }: { rows: LedgerRow[] }) {
           {lines.map(([key, label, x]) => (
             <div className={`ledger-row ${key}`} key={key}>
               <span className="ledger-label"><i className={`mark mark-${key}`} aria-hidden="true" />{label}</span>
-              {x ? <SourceButton obs={x.obs} measured={x} what={label} value={`${text(x)} ${unit}`} testId={`ledger-${key}`} className="ledger-num"><Digits text={text(x)} /></SourceButton> : <span className="no-data">{m.year.noData}</span>}
+              {x ? <SourceButton obs={x.obs} measured={x} what={label} value={`${text(x)} ${unit}`} testId={`ledger-${key}`} className="ledger-num"><Digits text={text(x)} /></SourceButton> : <Missing gap={gapFor(data, key, year)} />}
               <Delta current={x} base={base ? base[key] : null} />
             </div>
           ))}
           <div className="ledger-row deficit">
             <span className="ledger-label"><i className="mark mark-gap" aria-hidden="true" />{surplus ? m.hero.surplus : m.hero.deficit}</span>
-            {row.deficit ? <SourceButton obs={row.deficit.obs} measured={row.deficit} what={surplus ? m.hero.surplus : m.hero.deficit} value={`${text(row.deficit)} ${unit}`} testId="ledger-deficit" className="ledger-num"><Digits text={text(row.deficit)} /></SourceButton> : <span className="no-data">{m.year.noData}</span>}
+            {row.deficit ? <SourceButton obs={row.deficit.obs} measured={row.deficit} what={surplus ? m.hero.surplus : m.hero.deficit} value={`${text(row.deficit)} ${unit}`} testId="ledger-deficit" className="ledger-num"><Digits text={text(row.deficit)} /></SourceButton> : <Missing gap={gapFor(data, 'deficit', year)} />}
             <Delta current={row.deficit} base={base ? base.deficit : null} />
           </div>
           {covered !== null && <p className="cover" data-testid="cover">{m.hero.cover(formatNumber(covered, lang))}</p>}
         </div>
       ) : (
-        <p className="no-data">{m.year.noData}</p>
+        <p className="ledger-empty"><Missing /></p>
       )}
     </div>
   );

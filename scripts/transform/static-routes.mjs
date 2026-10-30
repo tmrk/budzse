@@ -14,7 +14,7 @@ const assets = readdirSync(join(dist, 'assets'));
 const asset = (re) => assets.find((f) => re.test(f));
 const preload = [
   ['font', asset(/^big-shoulders-display-latin-wght-normal.*\.woff2$/), 'font/woff2'],
-  ['font', asset(/^newsreader-latin-opsz-normal.*\.woff2$/), 'font/woff2'],
+  ['font', asset(/^source-sans-3-latin-wght-normal.*\.woff2$/), 'font/woff2'],
 ]
   .filter(([, f]) => f)
   .map(([as, f, type]) => `<link rel="preload" as="${as}" type="${type}" href="/budzse/assets/${f}" crossorigin />`);
@@ -22,18 +22,18 @@ preload.push('<link rel="preload" as="fetch" href="/budzse/data/budzse.json" cro
 const html = built.replace('</head>', `    ${preload.join('\n    ')}\n  </head>`);
 
 // A static first paint: the top bar is real HTML, so people see it before any JavaScript runs.
-const shell = (tagline) => `<div class="page"><header class="bar"><div class="bar-inner"><p class="wordmark">Büdzsé</p></div></header><p class="tagline">${tagline}</p><div class="status-line"></div></div>`;
+const shell = (tagline) => `<div class="page"><header class="bar"><div class="bar-inner"><p class="wordmark">Büdzsé</p><div class="bar-tools"><p class="tagline">${tagline}</p></div></div></header><p class="tagline tagline-flow">${tagline}</p><div class="status-line"></div></div>`;
 
 const META = {
   hu: {
     title: 'Büdzsé – Magyarország közpénzügyei 2000–2027',
     description: 'Bevételek, kiadások, hiány, GDP és fejlesztési támogatás 2000-től 2027-ig. Terv és tény, inflációval korrigálva, minden szám mögött a hivatalos forrással.',
-    tagline: 'Magyarország közpénzügyei, 2000–2027. Minden számra kattintva látszik a forrása.',
+    tagline: 'Magyarország közpénzügyei, 2000–2027',
   },
   en: {
     title: "Büdzsé – Hungary's public finances 2000–2027",
     description: 'Government revenue, expenditure, deficits, GDP and development aid from 2000 to 2027. Budgeted and actual figures, adjusted for inflation, with the official source behind every number.',
-    tagline: "Hungary's public finances, 2000 to 2027. Every number opens its source.",
+    tagline: "Hungary's public finances, 2000–2027",
   },
 };
 

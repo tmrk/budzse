@@ -3,7 +3,7 @@ import { indicatorName, methodName, revisionName, scopeName } from '../i18n';
 import { formatDate, formatExactHuf, formatNumber, formatPct } from '../lib/format';
 import { cpiYear } from '../lib/cpi';
 import type { Measured } from '../lib/measure';
-import type { Observation } from '../types/data';
+import type { Gap, Observation } from '../types/data';
 import { useApp } from './context';
 import { statusLabel } from './figures';
 
@@ -16,7 +16,9 @@ function Row({ label, children }: { label: string; children: React.ReactNode }) 
   );
 }
 
-export default function SourceDialog({ target, onClose }: { target: { obs: Observation; measured?: Measured | null } | null; onClose: () => void }) {
+export type SourceTarget = { obs: Observation; measured?: Measured | null; gap?: undefined } | { gap: Gap; obs?: undefined; measured?: undefined };
+
+export default function SourceDialog({ target, onClose }: { target: SourceTarget | null; onClose: () => void }) {
   const { data, lang, m } = useApp();
   const dialog = useRef<HTMLDialogElement>(null);
 
@@ -34,9 +36,23 @@ export default function SourceDialog({ target, onClose }: { target: { obs: Obser
   const refLabel = ref === 'latest' ? formatDate(data.cpi.latestMonth.month, lang) : ref ? String(ref) : '';
   const cpiOrigin = o ? cpiYear(data.cpi, o.year) : undefined;
   const cpiSrc = cpiOrigin ? data.sources[cpiOrigin.source] : undefined;
+  const gap = target?.gap;
 
   return (
     <dialog ref={dialog} className="source-dialog" onClose={onClose} onClick={(e) => e.target === dialog.current && onClose()} aria-labelledby="source-title" data-testid="source-dialog">
+      {gap && (
+        <div className="source-inner">
+          <header>
+            <h2 id="source-title">{m.source.gapTitle}</h2>
+            <button type="button" className="close" onClick={onClose} aria-label={m.source.close}>×</button>
+          </header>
+          <dl>
+            <Row label={m.source.gapYears}>{gap.years}</Row>
+            <Row label={m.source.gapReason}>{gap.reason[lang]}</Row>
+            <Row label={m.coverage.searched}>{gap.searched[lang]}</Row>
+          </dl>
+        </div>
+      )}
       {o && src && (
         <div className="source-inner">
           <header>
@@ -98,7 +114,9 @@ export default function SourceDialog({ target, onClose }: { target: { obs: Obser
             )}
             {o.secondary && <Row label={m.source.note}><span className="notice-inline">{m.source.secondary}</span></Row>}
           </dl>
-          <a className="button" href={src.url} target="_blank" rel="noopener noreferrer">{m.source.open}</a>
+          <div className="source-foot">
+            <a className="button" href={src.url} target="_blank" rel="noopener noreferrer">{m.source.open}</a>
+          </div>
         </div>
       )}
     </dialog>

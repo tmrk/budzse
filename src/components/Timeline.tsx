@@ -91,6 +91,8 @@ export default function Timeline({ scales: s, hostRef, ticks, tickLabel, label, 
     : { role: 'img', 'aria-label': label };
   const cursor = s.x(year);
   const labelled = YEARS.filter((y) => y % 5 === 0 && Math.abs(s.x(y) - cursor) > 30);
+  // Steps aside rather than run through the cursor. Hiding it cannot move anything.
+  const futureClear = futureLabel !== undefined && cursor < s.width - 14 - futureLabel.length * 6.5;
 
   return (
     <div
@@ -114,7 +116,7 @@ export default function Timeline({ scales: s, hostRef, ticks, tickLabel, label, 
           {futureFrom !== undefined && (
             <g>
               <rect className="future" x={s.x(futureFrom) - s.band / 2} y={0} width={s.width - s.x(futureFrom) + s.band / 2} height={s.bottom} />
-              {futureLabel && s.width > 480 && year < futureFrom && <text className="future-label" x={s.width - 6} y={14} textAnchor="end">{futureLabel}</text>}
+              {futureClear && s.width > 480 && <text className="future-label" x={s.width - 6} y={14} textAnchor="end">{futureLabel}</text>}
             </g>
           )}
           {ticks.map((t) => (

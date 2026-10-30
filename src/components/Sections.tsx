@@ -2,23 +2,26 @@ import { useId, useMemo } from 'react';
 import { isPhone, linePath, makeScales, niceAxis, runsOf, type Point, YEARS } from '../charts/geometry';
 import { statusName } from '../i18n';
 import { asPublished, bestObservation, helpsFor, helpsRatio, measure, overshoot, planVersusActual, planYears, type Measured } from '../lib/measure';
-import type { Indicator, Method, Observation } from '../types/data';
+import type { Gap, Indicator, Method, Observation } from '../types/data';
 import { useApp } from './context';
 import Timeline, { Bars, Hatch, useChartWidth, useTween } from './Timeline';
 import { formatPct } from '../lib/format';
-import { axisLabel, figure, gapFor, priceBasis, Readout, signedDifference, SourceButton } from './figures';
+import { axisLabel, figure, gapFor, Missing, priceBasis, Readout, signedDifference, SourceButton } from './figures';
 
 /** A title and a sentence that never change, beside a chart that does. */
-function Section({ id, title, lead, intro, basis, children }: { id: string; title: string; lead?: string; intro: string; basis?: string; children: React.ReactNode }) {
+function Section({ id, title, lead, intro, basis, notes, children }: { id: string; title: string; lead?: string; intro: string; basis?: string; notes?: React.ReactNode; children: React.ReactNode }) {
   return (
     <section className="chapter" aria-labelledby={`${id}-title`} data-testid={id}>
       <div className="chapter-side">
         <h2 id={`${id}-title`}>{title}</h2>
         {lead && <p className="lead">{lead}</p>}
         <p className="lede">{intro}</p>
-        {basis && <p className="fine basis">{basis}</p>}
       </div>
       <div className="chapter-chart">{children}</div>
+      <div className="chapter-notes">
+        {basis && <p className="fine">{basis}</p>}
+        {notes}
+      </div>
     </section>
   );
 }
@@ -54,9 +57,9 @@ export function PlanSection() {
     <Section id="plan" title={m.plan.title} lead={m.plan.lead(stats.over, stats.total)} intro={m.plan.intro} basis={view.real ? priceBasis(data, view.ref, m, lang) : view.relative ? m.hero.unitShare : undefined}>
       <Readout
         items={[
-          { key: 'plan', label: m.plan.planMark, swatch: <i className="mark mark-plan" aria-hidden="true" />, measured: planM, obs: shown?.plan, testId: 'plan-plan', reason: gapFor(data, 'deficit', year)?.reason[lang] },
+          { key: 'plan', label: m.plan.planMark, swatch: <i className="mark mark-plan" aria-hidden="true" />, measured: planM, obs: shown?.plan, testId: 'plan-plan', gap: gapFor(data, 'deficit', year) },
           { key: 'outcome', label: outcomeLabel, swatch: <i className="mark mark-gap" aria-hidden="true" />, measured: outcomeM, obs: shown?.outcome, testId: 'plan-outcome' },
-          { key: 'diff', label: m.plan.difference, text: diff && planM && actualM ? signedDifference(actualM.value - planM.value, actualM.unit, lang, m.hero.points) : null, accent: true },
+          { key: 'diff', label: m.plan.difference, text: diff && planM && actualM ? signedDifference(actualM.value - planM.value, actualM.unit, lang, m.hero.points) : null, empty: shown?.actual ? undefined : m.plan.noOutcome },
         ]}
       />
       <Timeline scales={s} hostRef={hostRef} ticks={ticks} tickLabel={axisLabel(ticks, lang, view.relative ? 'pct' : 'HUF')} label={m.plan.chart} axis zeroLine breakLabel={m.chart.scopeBreakLabel} futureFrom={years.find((y) => y.year >= 2010 && !y.actual)?.year} futureLabel={m.chart.projected} testId="plan-chart">
@@ -78,7 +81,7 @@ function strip(data: ReturnType<typeof useApp>['data'], indicator: Indicator, re
   });
 }
 
-function EconomyStrip({ values, title, label, height, axis, unit, obs, measured, testId }: { values: { year: number; value: number; settled: boolean }[]; title: string; label: string; height: number; axis?: boolean; unit: 'HUF' | 'pct'; obs?: Observation; measured: Measured | null; testId: string }) {
+function EconomyStrip({ values, title, label, height, axis, unit, obs, measured, gap, testId }: { values: { year: number; value: number; settled: boolean }[]; title: string; label: string; height: number; axis?: boolean; unit: 'HUF' | 'pct'; obs?: Observation; measured: Measured | null; gap?: Gap; testId: string }) {
   const { lang, year, m } = useApp();
   const [hostRef, width] = useChartWidth();
   const nums = values.map((v) => v.value);
@@ -91,8 +94,8 @@ function EconomyStrip({ values, title, label, height, axis, unit, obs, measured,
       <div className="strip-head">
         <span>{title}</span>
         <span className="strip-value">
+          {obs && measured ? <SourceButton obs={obs} measured={measured} what={title} testId={testId}>{figure(measured, lang)}</SourceButton> : <Missing gap={gap} />}
           {obs && obs.status !== 'actual' && <em className="estimate">{statusName(m, obs.status).toLowerCase()}</em>}
-          {obs && measured ? <SourceButton obs={obs} measured={measured} what={title} testId={testId}>{figure(measured, lang)}</SourceButton> : <span className="no-data">{m.year.noData}</span>}
         </span>
       </div>
       <Timeline scales={s} hostRef={hostRef} ticks={shown} tickLabel={axisLabel(shown, lang, unit)} label={label} axis={axis}>
@@ -114,12 +117,21 @@ export function EconomySection() {
   const cpiObs = bestObservation(data, 'cpi', year, 'general');
   const phone = isPhone();
   return (
-    <Section id="economy" title={m.economy.title} intro={m.economy.intro} basis={view.real ? priceBasis(data, view.ref, m, lang) : undefined}>
-      <EconomyStrip values={gdp} title={m.economy.gdp} label={m.economy.chartGdp} height={phone ? 76 : 96} unit="HUF" obs={gdpObs} measured={gdpObs ? measure(data, gdpObs, forintMode) : null} testId="economy-gdp" />
-      <EconomyStrip values={growth} title={m.economy.growth} label={m.economy.chartGrowth} height={phone ? 76 : 96} unit="pct" obs={growthObs} measured={growthObs ? asPublished(growthObs) : null} testId="economy-growth" />
-      <EconomyStrip values={inflation} title={m.economy.inflation} label={m.economy.chartInflation} height={phone ? 102 : 122} axis unit="pct" obs={cpiObs} measured={cpiObs ? asPublished(cpiObs) : null} testId="economy-cpi" />
-      {view.real && <p className="fine" data-testid="gdp-real-note">{m.chart.gdpReal}</p>}
-      {view.relative && <p className="fine">{m.economy.alwaysForint}</p>}
+    <Section
+      id="economy"
+      title={m.economy.title}
+      intro={m.economy.intro}
+      basis={view.real ? priceBasis(data, view.ref, m, lang) : undefined}
+      notes={
+        <>
+          {view.real && <p className="fine" data-testid="gdp-real-note">{m.chart.gdpReal}</p>}
+          {view.relative && <p className="fine">{m.economy.alwaysForint}</p>}
+        </>
+      }
+    >
+      <EconomyStrip values={gdp} title={m.economy.gdp} label={m.economy.chartGdp} height={phone ? 76 : 96} unit="HUF" obs={gdpObs} measured={gdpObs ? measure(data, gdpObs, forintMode) : null} gap={gapFor(data, 'gdp', year)} testId="economy-gdp" />
+      <EconomyStrip values={growth} title={m.economy.growth} label={m.economy.chartGrowth} height={phone ? 76 : 96} unit="pct" obs={growthObs} measured={growthObs ? asPublished(growthObs) : null} gap={gapFor(data, 'realGdpGrowth', year)} testId="economy-growth" />
+      <EconomyStrip values={inflation} title={m.economy.inflation} label={m.economy.chartInflation} height={phone ? 102 : 122} axis unit="pct" obs={cpiObs} measured={cpiObs ? asPublished(cpiObs) : null} gap={gapFor(data, 'cpi', year)} testId="economy-cpi" />
     </Section>
   );
 }
@@ -127,8 +139,10 @@ export function EconomySection() {
 const METHOD_LABEL: Record<Method, 'net' | 'grant' | null> = { dacNet: 'net', dacGrantEquivalent: 'grant', cash: null, esa2010: null, nationalAccounts: null, cpiAnnualAverage: null };
 
 /** Sits above a line's highest point, reading back along it, where nothing else is drawn. */
-function SeriesLabel({ points, text }: { points: Point[]; text: string }) {
+function SeriesLabel({ points, text, cursor }: { points: Point[]; text: string; cursor: number }) {
   const [x, y] = points.reduce((top, p) => (p[1] < top[1] ? p : top), points[0]);
+  // Steps aside while the cursor runs through it.
+  if (cursor < x + 4 && cursor > x - text.length * 7.5 - 4) return null;
   return <text className="line-label" x={x} y={y - 10} textAnchor="end">{text}</text>;
 }
 
@@ -164,7 +178,7 @@ export function AidSection() {
   const netObs = find('oda');
   const grantObs = find('odaGe');
   const shareObs = find('odaPctGni');
-  const reason = gapFor(data, 'oda', year)?.reason[lang];
+  const gap = gapFor(data, 'oda', year);
   const labelFor = (kind: 'net' | 'grant' | null) => (view.relative ? (kind === 'net' ? m.aid.shareNet : m.aid.shareGrant) : kind === 'net' ? m.aid.net : m.aid.grant);
   const chosen = drawn.flatMap((d) => d.run.flatMap((p, i) => (p.year === year ? [{ x: d.points[i][0], y: d.points[i][1], kind: d.kind }] : [])));
 
@@ -173,10 +187,10 @@ export function AidSection() {
       <Readout
         items={
           view.relative
-            ? [{ key: 'share', label: shareObs?.method === 'dacGrantEquivalent' ? m.aid.shareGrant : m.aid.shareNet, measured: shareObs ? asPublished(shareObs) : null, obs: shareObs, testId: 'aid-share', reason }]
+            ? [{ key: 'share', label: shareObs?.method === 'dacGrantEquivalent' ? m.aid.shareGrant : m.aid.shareNet, measured: shareObs ? asPublished(shareObs) : null, obs: shareObs, testId: 'aid-share', gap }]
             : [
-                { key: 'net', label: m.aid.net, swatch: <i className="mark mark-in" aria-hidden="true" />, measured: netObs ? measure(data, netObs, mode) : null, obs: netObs, testId: 'aid-net', reason },
-                { key: 'grant', label: m.aid.grant, swatch: <i className="mark mark-ink" aria-hidden="true" />, measured: grantObs ? measure(data, grantObs, mode) : null, obs: grantObs, testId: 'aid-grant', reason },
+                { key: 'net', label: m.aid.net, swatch: <i className="mark mark-in" aria-hidden="true" />, measured: netObs ? measure(data, netObs, mode) : null, obs: netObs, testId: 'aid-net', gap },
+                { key: 'grant', label: m.aid.grant, swatch: <i className="mark mark-ink" aria-hidden="true" />, measured: grantObs ? measure(data, grantObs, mode) : null, obs: grantObs, testId: 'aid-grant', gap },
               ]
         }
       />
@@ -184,7 +198,7 @@ export function AidSection() {
         {drawn.map((d) => (
           <g key={`${d.kind}${d.run[0].year}`}>
             {d.points.length > 1 ? <path className={d.kind === 'net' ? 'line line-in' : 'line line-ink'} d={linePath(d.points)} /> : <circle className={d.kind === 'net' ? 'tick-dot line-in' : 'tick-dot line-ink'} cx={d.points[0][0]} cy={d.points[0][1]} r={3} />}
-            {d.points.length > 4 && !phone && <SeriesLabel points={d.kind === 'net' ? d.points.slice(0, Math.ceil(d.points.length / 2)) : d.points} text={labelFor(d.kind)} />}
+            {d.points.length > 4 && !phone && <SeriesLabel points={d.kind === 'net' ? d.points.slice(0, Math.ceil(d.points.length / 2)) : d.points} text={labelFor(d.kind)} cursor={s.x(year)} />}
           </g>
         ))}
         {chosen.map((c) => (
@@ -228,7 +242,7 @@ function HelpsInOda({ stacks, oda, height }: { stacks: HelpsStack[]; oda: { year
   return (
     <div className="strip">
       <div className="strip-head"><span>{m.helps.inOda}</span></div>
-      <Timeline scales={s} hostRef={hostRef} ticks={shown} tickLabel={axisLabel(shown, lang, 'HUF')} label={m.helps.chartInOda} testId="helps-oda-chart">
+      <Timeline scales={s} hostRef={hostRef} ticks={shown} tickLabel={axisLabel(shown, lang, 'HUF')} label={m.helps.chartInOda} futureFrom={stacks.find((b) => !b.settled)?.year} testId="helps-oda-chart">
         <line className="zero" x1={0} x2={s.width} y1={s.y(0)} y2={s.y(0)} />
         <Bars scales={s} values={oda} hatch="" tone="oda" year={year} />
         <HelpsBars scales={s} stacks={stacks} year={year} />
@@ -272,19 +286,28 @@ export function HelpsSection() {
   const tagOf = (o?: Observation) => (o && o.status !== 'actual' ? m.helps.budgeted : undefined);
 
   return (
-    <Section id="helps" title={m.helps.title} intro={m.helps.intro} basis={view.real ? priceBasis(data, view.ref, m, lang) : undefined}>
+    <Section
+      id="helps"
+      title={m.helps.title}
+      intro={m.helps.intro}
+      basis={view.real ? priceBasis(data, view.ref, m, lang) : undefined}
+      notes={
+        <>
+          <p className="fine" data-testid="helps-note">{m.helps.note}</p>
+          {view.relative && <p className="fine">{m.helps.alwaysForint}</p>}
+        </>
+      }
+    >
       <Readout
         items={[
-          { key: 'program', label: m.helps.program, swatch: <i className="mark mark-ink" aria-hidden="true" />, measured: of(program), obs: program, tag: tagOf(program), testId: 'helps-program', reason: gapFor(data, 'hungaryHelpsProgram', year)?.reason[lang] },
-          { key: 'agency', label: m.helps.agency, swatch: <i className="mark mark-in" aria-hidden="true" />, measured: of(agency), obs: agency, tag: tagOf(agency), testId: 'helps-agency', reason: gapFor(data, 'hungaryHelpsAgency', year)?.reason[lang] },
-          { key: 'oda', label: m.helps.oda, swatch: <i className="mark mark-oda" aria-hidden="true" />, measured: of(odaObs), obs: odaObs, testId: 'helps-oda', reason: gapFor(data, 'oda', year)?.reason[lang] },
-          { key: 'ratio', label: m.helps.ratio, text: ratio === null ? null : formatPct(ratio, lang, 1) },
+          { key: 'program', label: m.helps.program, swatch: <i className="mark mark-ink" aria-hidden="true" />, measured: of(program), obs: program, tag: tagOf(program), testId: 'helps-program', gap: gapFor(data, 'hungaryHelpsProgram', year) },
+          { key: 'agency', label: m.helps.agency, swatch: <i className="mark mark-in" aria-hidden="true" />, measured: of(agency), obs: agency, tag: tagOf(agency), testId: 'helps-agency', gap: gapFor(data, 'hungaryHelpsAgency', year) },
+          { key: 'oda', label: m.helps.oda, swatch: <i className="mark mark-oda" aria-hidden="true" />, measured: of(odaObs), obs: odaObs, testId: 'helps-oda', gap: gapFor(data, 'oda', year) },
+          { key: 'ratio', label: m.helps.ratio, text: ratio === null ? null : formatPct(ratio, lang, 1), empty: m.helps.noRatio, emptyTitle: m.helps.noRatioReason },
         ]}
       />
       <HelpsInOda stacks={stacks} oda={oda} height={phone ? 110 : 130} />
       <HelpsSplit stacks={stacks} height={phone ? 150 : 190} />
-      <p className="fine" data-testid="helps-note">{m.helps.note}</p>
-      {view.relative && <p className="fine">{m.helps.alwaysForint}</p>}
     </Section>
   );
 }

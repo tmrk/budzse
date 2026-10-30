@@ -1,5 +1,15 @@
 # Recent changes
 
+## 2026-10-30: typography and clarity pass
+
+Text is now set in Source Sans 3, replacing Newsreader, because its tabular figures keep numbers still through the years. Big Shoulders stays for the name, the year, the sum and section titles. The descriptor under the name is now one line beside it, and a plain instruction sits under the main chart.
+
+The two main controls now say what they do ("What to count", "How to measure") and look like choices. The year has a visible dropdown mark, and the rotated stamp became a filled or hollow dot matching the chart's outcome and non-outcome dots. The sum is one size, so decimal points line up and the subtraction can be read, and it closes with an accounting double rule. The year lines up with the controls, and the sum with the chart.
+
+Placeholders are one system: "No data" sits where the number would, and a documented gap opens its reason in the source sheet. A bare dash gave way to "not comparable" across the 2010 break, "No outcome yet" and "Not calculated". Orange left the plan difference and the not-final labels, where it broke its own rule.
+
+Nothing moves on hover or on choosing an option now, and notes moved beside the charts so switching a measure leaves the page where it was.
+
 ## 2026-10-30: data API
 
 The dataset now also publishes a static JSON API, a permanent page for every observation, and `llms.txt`. An agent can start from the public site, without JavaScript, and cite a figure with its original source. The chart is unchanged apart from a footer link to the guide.

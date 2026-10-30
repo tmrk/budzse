@@ -86,6 +86,14 @@ export interface CpiYear {
   locator: string;
 }
 
+export interface Gap {
+  id: string;
+  indicator: Indicator | 'oda';
+  years: string;
+  reason: Localized;
+  searched: Localized;
+}
+
 export interface Dataset {
   generatedAt: string;
   coverageYears: [number, number];
@@ -101,7 +109,7 @@ export interface Dataset {
       source: string;
     };
   };
-  gaps: { id: string; indicator: Indicator | 'oda'; years: string; reason: Localized; searched: Localized }[];
+  gaps: Gap[];
   breaks: { year: number; scope: 'central'; note: Localized }[];
   fxCheck: { year: number; oecdImplied: number; mnbAverage: number; differencePct: number }[];
   latestUpdate: { label: string; date: string }[];

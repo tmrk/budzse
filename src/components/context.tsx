@@ -2,7 +2,7 @@ import { createContext, useContext } from 'react';
 import type { Messages } from '../i18n';
 import type { Measured } from '../lib/measure';
 import type { ViewState } from '../lib/view';
-import type { Dataset, Lang, Observation } from '../types/data';
+import type { Dataset, Gap, Lang, Observation } from '../types/data';
 
 export interface AppContextValue {
   data: Dataset;
@@ -14,6 +14,8 @@ export interface AppContextValue {
   year: number;
   setPreview: (year: number | null) => void;
   inspect: (obs: Observation, measured?: Measured | null) => void;
+  /** Opens the same sheet as a number, for a figure that is missing and why. */
+  explain: (gap: Gap) => void;
 }
 
 export const AppContext = createContext<AppContextValue | null>(null);

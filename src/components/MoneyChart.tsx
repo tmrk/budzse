@@ -38,8 +38,11 @@ export default function MoneyChart({ rows, summary }: { rows: LedgerRow[]; summa
 
   const futureFrom = open[0]?.year;
   const current = filled.find((r) => r.year === year);
-  const labelYear = phone ? 2008 : 2006;
-  const labelRow = filled.find((r) => r.year === labelYear);
+  // On a phone the central view's labels would otherwise cross the 2009-2010 break.
+  const labelYear = phone ? (view.scope === 'central' ? 2005 : 2008) : 2006;
+  // Steps aside while the cursor runs through a label. Hiding it cannot move anything.
+  const labelWidth = Math.max(m.hero.expenditure.length, m.hero.revenue.length) * 7.5;
+  const labelRow = Math.abs(s.x(year) - s.x(labelYear)) > labelWidth / 2 + 4 ? filled.find((r) => r.year === labelYear) : undefined;
 
   return (
     <Timeline

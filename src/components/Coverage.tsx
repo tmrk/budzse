@@ -57,7 +57,9 @@ export default function Coverage() {
       <ul className="gaps">
         {data.gaps.map((g) => (
           <li key={g.id}>
-            <strong>{g.years}.</strong> {g.reason[lang]} <span className="fine">{m.coverage.searched}: {g.searched[lang]}</span>
+            <strong>{g.years}</strong>
+            <p>{g.reason[lang]}</p>
+            <p className="fine">{m.coverage.searched}: {g.searched[lang]}</p>
           </li>
         ))}
       </ul>

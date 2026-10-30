@@ -1,7 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import '@fontsource-variable/big-shoulders-display';
-import '@fontsource-variable/newsreader/opsz.css';
+import '@fontsource-variable/source-sans-3';
 import App from './App';
 import './styles/app.css';
 

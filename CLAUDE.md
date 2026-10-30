@@ -28,7 +28,10 @@ Every displayed number needs a traceable source or a documented calculation from
 - Orange means one thing: the gap between money in and money out. The hatch is its mark. Do not reuse either for anything else.
 - The ledger shows one figure set per year (`ledgerFor`), all from one status and publisher. A part-year figure never stands for a year.
 - Nothing may change height when the year changes. Sweeping a chart must not move the page or the chart under a finger, so readouts have fixed items and values never wrap. A test sweeps all 28 years and fails on any movement.
-- Big Shoulders has no tabular figures; hero numbers use fixed digit cells (`Digits`). Any new display face must render ő and ű correctly: check, because some do not.
+- Two typefaces with fixed jobs. Big Shoulders: the name, the year, the sum, section titles. It has no tabular figures, so hero numbers use fixed digit cells (`Digits`). Source Sans 3: everything else, tabular by default, so readouts hold still through the years. Any new face must render ő and ű correctly: check, because some do not.
+- Hover may change colour, never geometry. Selected options keep the weight of unselected ones, and folds, notes and readouts reserve their space. Tests cover this: hover every control, switch every option, sweep every year.
+- A missing figure always goes through `Missing`: same place and baseline as the number, and a documented gap opens its reason in the source sheet. Do not add a new placeholder style or a bare dash.
+- `container-type` turns off subgrid on the same element. The hero's columns share rows through subgrid, so the containers are their children.
 
 ## Deployment
 

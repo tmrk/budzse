@@ -6,7 +6,8 @@ export const hu = {
     description: 'Bevételek, kiadások, hiány, GDP és fejlesztési támogatás 2000-től 2027-ig. Terv és tény, inflációval korrigálva, minden szám mögött a hivatalos forrással.',
   },
   app: {
-    tagline: 'Magyarország közpénzügyei, 2000–2027. Minden számra kattintva látszik a forrása.',
+    tagline: 'Magyarország közpénzügyei, 2000–2027',
+    hint: 'Az évet bármelyik grafikonon kiválaszthatja. Minden aláhúzott szám megnyitja a forrását.',
     latest: 'Legfrissebb adat',
     loading: 'Adatok betöltése…',
     loadError: 'Az adatfájl nem töltődött be. Ellenőrizze a kapcsolatot, majd töltse újra az oldalt.',
@@ -50,6 +51,7 @@ export const hu = {
     points: 'pont',
     cover: (n: string) => `100 forint kiadásra ${n} forint bevétel jutott.`,
     scopeWarning: 'A 2010-es számbavétel-váltás miatt ez a két év nem vethető össze.',
+    notComparable: 'nem összevethető',
   },
   plan: {
     title: 'Terv és valóság',
@@ -59,6 +61,7 @@ export const hu = {
     planMark: 'Terv',
     outcome: { actual: 'Tény', revised: 'Módosított terv', draft: 'Tervezet' },
     difference: 'Eltérés',
+    noOutcome: 'Még nincs tény',
   },
   economy: {
     title: 'A gazdaság',
@@ -87,6 +90,8 @@ export const hu = {
     agency: 'Ügynökség',
     oda: 'Nettó ODA',
     ratio: 'A nettó ODA-hoz képest',
+    noRatio: 'Nem számolható',
+    noRatioReason: 'Csak olyan évre számoljuk, amelyre van zárszámadási és nettó ODA-adat is.',
     budgeted: 'terv',
     inOda: 'A teljes nettó ODA és benne a Hungary Helps',
     split: 'A két sor külön skálán',
@@ -224,6 +229,9 @@ export const hu = {
     adjustedFormula: (ref: string, factor: string) => `Korrigált érték = névleges érték × CPI(${ref}) / CPI(év) = névleges × ${factor}`,
     relativeFormula: 'Arány = érték / GDP × 100',
     cpiSource: 'A CPI-szorzó forrása',
+    gapTitle: 'Miért hiányzik ez a szám',
+    gapYears: 'Érintett évek',
+    gapReason: 'Ok',
     usd: 'Eredeti USD-összeg',
   },
   coverage: {

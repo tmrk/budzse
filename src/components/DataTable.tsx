@@ -89,8 +89,8 @@ export default function DataTable() {
                   <td>{indicatorName(m, r.obs.indicator)}</td>
                   <td>{statusLabel(r.obs, m)}</td>
                   <td className="num">
-                    {r.unit === 'HUF' ? formatExactHuf(r.value, lang) : figure(r, lang)}
                     {r.estimated && <em className="estimate">{m.table.estimated}</em>}
+                    {r.unit === 'HUF' ? formatExactHuf(r.value, lang) : figure(r, lang)}
                   </td>
                   <td>{scopeName(m, r.obs.scope)}</td>
                   <td>{methodName(m, r.obs.method)}</td>
@@ -103,7 +103,7 @@ export default function DataTable() {
           </table>
         </div>
       ) : (
-        <p className="no-data">{m.table.empty}</p>
+        <p className="table-empty">{m.table.empty}</p>
       )}
     </details>
   );
