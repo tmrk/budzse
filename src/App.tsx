@@ -142,7 +142,7 @@ export default function App() {
       )}
       <footer className="footer">
         <p>{m.app.footerNeutral}</p>
-        <p>{m.app.footerLicence} <a href="https://github.com/tmrk/budzse">{m.app.footerCode}</a></p>
+        <p>{m.app.footerLicence} <a href="https://github.com/tmrk/budzse">{m.app.footerCode}</a>{' · '}<a href={`${import.meta.env.BASE_URL}${lang}/api/`} data-testid="api-link">{m.app.footerApi}</a></p>
       </footer>
     </div>
   );

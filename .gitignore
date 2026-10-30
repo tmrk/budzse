@@ -7,3 +7,10 @@ playwright-report/
 *.log
 .env*
 .claude/
+
+# Generated from public/data/budzse.json by scripts/transform/build-api.mjs. Do not edit.
+/public/api/
+/public/llms.txt
+/public/llms-full.txt
+/public/hu/
+/public/en/

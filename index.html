@@ -14,6 +14,47 @@
     <link rel="alternate" hreflang="hu" href="https://tmrk.github.io/budzse/hu/" />
     <link rel="alternate" hreflang="en" href="https://tmrk.github.io/budzse/en/" />
     <link rel="alternate" hreflang="x-default" href="https://tmrk.github.io/budzse/" />
+    <link rel="describedby" href="https://tmrk.github.io/budzse/llms.txt" type="text/plain" title="llms.txt" />
+    <link rel="alternate" type="application/json" href="https://tmrk.github.io/budzse/api/v1/index.json" title="Büdzsé data API" />
+    <link rel="help" href="https://tmrk.github.io/budzse/hu/api/" hreflang="hu" title="Adatok és API" />
+    <link rel="help" href="https://tmrk.github.io/budzse/en/api/" hreflang="en" title="Data and API" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "@id": "https://tmrk.github.io/budzse/#dataset",
+        "name": "Büdzsé",
+        "alternateName": ["Hungary's public finances 2000–2027", "Magyarország közpénzügyei 2000–2027"],
+        "description": "Sourced observations of Hungarian government revenue, expenditure, deficit, GDP, inflation and official development assistance from 2000 to 2027. Budgets, outturns, part-year figures and forecasts are separate. Money values are nominal. Büdzsé is an independent compilation, not the publisher of the statistics.",
+        "url": "https://tmrk.github.io/budzse/",
+        "identifier": "https://tmrk.github.io/budzse/api/v1/index.json",
+        "isAccessibleForFree": true,
+        "inLanguage": ["hu", "en"],
+        "temporalCoverage": "2000/2027",
+        "spatialCoverage": { "@type": "Country", "name": "Hungary" },
+        "creator": {
+          "@type": "Organization",
+          "name": "Büdzsé",
+          "url": "https://tmrk.github.io/budzse/",
+          "description": "Independent, non-governmental compilation of official sources."
+        },
+        "license": "https://tmrk.github.io/budzse/api/v1/metadata.json",
+        "distribution": [
+          {
+            "@type": "DataDownload",
+            "encodingFormat": "application/json",
+            "contentUrl": "https://tmrk.github.io/budzse/data/budzse.json",
+            "name": "Full dataset"
+          },
+          {
+            "@type": "DataDownload",
+            "encodingFormat": "application/json",
+            "contentUrl": "https://tmrk.github.io/budzse/api/v1/index.json",
+            "name": "API catalog"
+          }
+        ]
+      }
+    </script>
     <meta property="og:title" content="Büdzsé – Magyarország közpénzügyei 2000–2027" />
     <meta property="og:description" content="Bevételek, kiadások, hiány, GDP és fejlesztési támogatás 2000-től 2027-ig, minden szám mögött a hivatalos forrással." />
     <meta property="og:type" content="website" />
@@ -33,7 +74,10 @@
   </head>
   <body>
     <div id="root"><!--shell--></div>
-    <noscript>A Büdzsé interaktív grafikonjához JavaScript szükséges. Büdzsé's interactive chart needs JavaScript.</noscript>
+    <noscript>
+      <p>A Büdzsé interaktív grafikonjához JavaScript szükséges. Az adatok enélkül is olvashatók: <a href="/budzse/hu/api/">Adatok és API</a>, <a href="/budzse/api/v1/index.json">API</a>, <a href="/budzse/llms.txt">llms.txt</a>.</p>
+      <p>Büdzsé's interactive chart needs JavaScript. The data is readable without it: <a href="/budzse/en/api/">Data and API</a>, <a href="/budzse/api/v1/index.json">API</a>, <a href="/budzse/llms.txt">llms.txt</a>.</p>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -21,6 +21,7 @@ export const en: typeof hu = {
     footerCode: 'Source code and data on GitHub',
     footerLicence: "Code is MIT licensed. Data may be used under each original publisher's terms.",
     footerNeutral: 'Büdzsé is an independent, non-governmental project. It shows official data without commentary.',
+    footerApi: 'Data and API',
   },
   controls: {
     scope: 'What to count',

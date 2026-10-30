@@ -1,5 +1,9 @@
 # Recent changes
 
+## 2026-10-30: data API
+
+The dataset now also publishes a static JSON API, a permanent page for every observation, and `llms.txt`. An agent can start from the public site, without JavaScript, and cite a figure with its original source. The chart is unchanged apart from a footer link to the guide.
+
 ## 2026-10-30: newest figures for 2026 and 2027
 
 The whole-state figures for 2026 and 2027 now show the government's October forecast instead of the Commission's spring one, which predates the change of government: the 2026 deficit is HUF 6,902 billion rather than 5,671, and the 2027 deficit HUF 4,790 billion rather than 5,581. Revenue and expenditure are calculated from the government's shares of GDP and marked as such. The Commission's forecast stays listed under every figure for the year.

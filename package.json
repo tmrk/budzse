@@ -6,7 +6,8 @@
   "license": "MIT",
   "description": "Interactive, fully sourced exploration of Hungary's public finances, 2000-2027.",
   "scripts": {
-    "dev": "npm run data && vite",
+    "dev": "npm run data && npm run data:api && vite",
+    "data:api": "node scripts/transform/build-api.mjs",
     "data": "node scripts/transform/build-dataset.mjs",
     "data:validate": "node scripts/validate/validate-dataset.mjs",
     "data:fetch": "node scripts/fetch/fetch-statistics.mjs",
@@ -14,7 +15,7 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:e2e": "playwright test",
-    "build": "npm run data && npm run data:validate && tsc --noEmit && vite build && node scripts/transform/static-routes.mjs",
+    "build": "npm run data && npm run data:validate && npm run data:api && tsc --noEmit && vite build && node scripts/transform/static-routes.mjs",
     "preview": "vite preview --port 4173"
   },
   "dependencies": {

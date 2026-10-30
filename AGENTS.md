@@ -10,11 +10,12 @@
 - `data/observations/manual-transcriptions.json`: hand-verified figures from PDFs and workbooks
 - `data/sources/`: source registry. `data/methodology/gaps.json`: documented gaps. `data/COVERAGE.md`: generated
 - `scripts/transform/build-dataset.mjs` compiles everything into `public/data/budzse.json`; `scripts/validate/validate-dataset.mjs` enforces the rules
+- `scripts/transform/build-api.mjs` (`npm run data:api`, after validation) writes the static API, `llms.txt` and citation pages from that file. `public/api/`, `public/llms.txt`, `public/llms-full.txt`, `public/hu/` and `public/en/` are generated and not committed
 - `tests/unit/`, `tests/e2e/`
 
 ## Commands
 
-`npm ci`, `npm run dev`, `npm run build`, `npm test`, `npm run test:e2e` (after build), `npm run data:validate`.
+`npm ci`, `npm run dev`, `npm run build`, `npm test`, `npm run test:e2e` (after build), `npm run data:validate`, `npm run data:api`.
 
 ## Data integrity
 

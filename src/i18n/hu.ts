@@ -21,6 +21,7 @@ export const hu = {
     footerCode: 'Forráskód és adatok a GitHubon',
     footerLicence: 'A kód MIT-licencű. Az adatok az eredeti közzétevők feltételei szerint használhatók.',
     footerNeutral: 'A Büdzsé független, nem kormányzati projekt: hivatalos adatokat mutat, értékelést nem fűz hozzájuk.',
+    footerApi: 'Adatok és API',
   },
   controls: {
     scope: 'Mit számolunk',
