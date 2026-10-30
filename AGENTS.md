@@ -3,7 +3,8 @@
 ## Structure
 
 - `src/lib/`: pure logic. `measure.ts` (values, scopes, comparisons), `cpi.ts`, `format.ts`, `view.ts` (state, URL, language routing), `csv.ts`
-- `src/components/`, `src/charts/`, `src/hooks/`, `src/styles/app.css`, `src/i18n/{hu,en}.ts`
+- `src/components/`: `Hero` (the sum), `MoneyChart`, `Sections` (plan, economy, aid), `YearFigures`, `Archive`, `Timeline` (the frame every chart uses)
+- `src/charts/geometry.ts`: pure scale and path helpers. `src/hooks/`, `src/styles/app.css`, `src/i18n/{hu,en}.ts`
 - `data/raw/`: snapshots from `scripts/fetch/fetch-statistics.mjs`
 - `data/observations/central-budget.json`: generated from legal acts by `scripts/fetch/fetch-acts.mjs`
 - `data/observations/manual-transcriptions.json`: hand-verified figures from PDFs and workbooks
@@ -33,4 +34,4 @@ All visible text lives in `src/i18n/`; `hu.ts` is the type source, so `en.ts` mu
 
 ## Testing and extending
 
-Run unit tests, typecheck and e2e before pushing. Add tests for new calculations and controls. Check phone (375px) and desktop screenshots. No analytics, trackers, accounts, paid services or runtime calls to statistics APIs. Keep the site fully static; do not break `/budzse/`, `/budzse/hu/`, `/budzse/en/` (see `scripts/transform/static-routes.mjs`).
+Run unit tests, typecheck and e2e before pushing. Add tests for new calculations and controls. Check phone (375px) and desktop screenshots. Keep the page's controls to three: year, what to count, how to measure. A new question gets a section with its own chart, not a new switch. No analytics, trackers, accounts, paid services or runtime calls to statistics APIs. Keep the site fully static; do not break `/budzse/`, `/budzse/hu/`, `/budzse/en/` (see `scripts/transform/static-routes.mjs`).

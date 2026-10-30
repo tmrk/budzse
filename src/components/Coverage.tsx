@@ -24,10 +24,10 @@ export default function Coverage() {
     { label: m.coverage.rows.cpiForecast, years: rule((o) => o.indicator === 'cpi' && o.status === 'forecast') },
   ];
   return (
-    <section className="coverage" aria-labelledby="coverage-title" data-testid="coverage">
-      <h2 id="coverage-title">{m.coverage.title}</h2>
+    <details className="fold" data-testid="coverage">
+      <summary>{m.coverage.title}</summary>
       <p className="lede">{m.coverage.intro}</p>
-      <div className="coverage-scroll" tabIndex={0} role="region" aria-labelledby="coverage-title">
+      <div className="coverage-scroll" tabIndex={0} role="region" aria-label={m.coverage.title}>
         <table className="coverage-grid">
           <thead>
             <tr>
@@ -59,6 +59,6 @@ export default function Coverage() {
           </li>
         ))}
       </ul>
-    </section>
+    </details>
   );
 }

@@ -14,8 +14,6 @@ function saved(): ThemeChoice {
 
 export function useTheme() {
   const [choice, setChoice] = useState<ThemeChoice>(saved);
-  // Bumps whenever the painted colours may have changed, so the canvas chart can re-read them.
-  const [version, setVersion] = useState(0);
 
   useEffect(() => {
     const root = document.documentElement;
@@ -27,15 +25,7 @@ export function useTheme() {
     } catch {
       /* Storage is only a convenience here. */
     }
-    setVersion((v) => v + 1);
   }, [choice]);
 
-  useEffect(() => {
-    const mq = window.matchMedia('(prefers-color-scheme: dark)');
-    const onChange = () => setVersion((v) => v + 1);
-    mq.addEventListener('change', onChange);
-    return () => mq.removeEventListener('change', onChange);
-  }, []);
-
-  return { choice, setChoice: useCallback((c: ThemeChoice) => setChoice(c), []), version };
+  return { choice, setChoice: useCallback((c: ThemeChoice) => setChoice(c), []) };
 }

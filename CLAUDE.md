@@ -23,7 +23,10 @@ Every displayed number needs a traceable source or a documented calculation from
 - CPI-adjusted GDP is not real GDP. Percentages are not deflated. Part-year figures have no GDP share.
 - Forecast-year CPI makes adjusted values estimates; `measure()` flags them.
 - `parlament.hu` shows a CAPTCHA to automation and `njt.hu` resets connections from some networks. Do not try to bypass. The 2027 draft figures are `secondary: true` for this reason: replace them with the official bill or act when it can be read.
-- ECharts draws on canvas, so colours come from CSS variables via `readTheme`; keep light and dark tokens in `src/styles/app.css` in step.
+- Charts are hand-written SVG (`src/components/Timeline.tsx`, `src/charts/geometry.ts`), and every chart shares one x scale. Colours are CSS variables; keep light and dark tokens in `src/styles/app.css` in step, and run the palette through a CVD check when changing them.
+- Orange means one thing: the gap between money in and money out. The hatch is its mark. Do not reuse either for anything else.
+- The ledger shows one figure set per year (`ledgerFor`), all from one status and publisher. A part-year figure never stands for a year.
+- Big Shoulders has no tabular figures; hero numbers use fixed digit cells (`Digits`). Any new display face must render ő and ű correctly: check, because some do not.
 
 ## Deployment
 

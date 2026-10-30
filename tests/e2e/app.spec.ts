@@ -3,21 +3,24 @@ import { expect, test, type Page } from '@playwright/test';
 import { readFileSync } from 'node:fs';
 
 const ready = async (page: Page) => {
-  await expect(page.getByTestId('year-panel')).toBeVisible();
-  await expect(page.getByTestId('chart')).toBeVisible();
+  await expect(page.getByTestId('ledger')).toBeVisible();
+  await expect(page.locator('[data-testid="chart"] svg')).toBeVisible();
 };
-const openMore = async (page: Page) => {
-  const more = page.locator('details.more');
-  if (!(await more.evaluate((d: HTMLDetailsElement) => d.open))) await more.locator('summary').click();
+const openFold = async (page: Page, testId: string) => {
+  const fold = page.getByTestId(testId);
+  if (!(await fold.evaluate((d: HTMLDetailsElement) => d.open))) await fold.locator('summary').first().click();
 };
-const yearPanel = (page: Page) => page.getByTestId('year-panel');
+// Setting the attribute, because emulated mobile pans the visual viewport during a scripted scroll
+// and Playwright's hit check then misreads a click. A real tap works: see the tap test below.
+const openEverything = (page: Page) => page.locator('details').evaluateAll((all) => all.forEach((d) => ((d as HTMLDetailsElement).open = true)));
+const lens = (page: Page, name: 'forint' | 'real' | 'share') => page.getByTestId(`lens-${name}`).first();
 
 test.describe('routing on the production build', () => {
   test('root defaults to Hungarian', async ({ page }) => {
     await page.goto('/budzse/');
     await ready(page);
     await expect(page.locator('html')).toHaveAttribute('lang', 'hu');
-    await expect(page.getByTestId('preset-overview')).toHaveText('Áttekintés');
+    await expect(lens(page, 'forint')).toHaveText('Forintban');
   });
 
   test('/hu/ serves Hungarian directly', async ({ page }) => {
@@ -32,7 +35,7 @@ test.describe('routing on the production build', () => {
     expect(res?.status()).toBe(200);
     await ready(page);
     await expect(page.locator('html')).toHaveAttribute('lang', 'en');
-    await expect(page.getByTestId('preset-overview')).toHaveText('Overview');
+    await expect(lens(page, 'forint')).toHaveText('Forints');
     await expect(page).toHaveTitle(/Hungary/);
   });
 
@@ -45,14 +48,19 @@ test.describe('routing on the production build', () => {
   });
 
   test('deep links restore the configuration', async ({ page }) => {
-    await page.goto('/budzse/en/?s=g&m=def,oda&real=1&ref=2020&y=2012&from=2005&to=2020');
+    await page.goto('/budzse/en/?s=c&real=1&ref=2020&y=2012&vs=2015');
     await ready(page);
     await expect(page.getByTestId('year-select')).toHaveValue('2012');
-    await expect(page.getByTestId('inflation')).toBeChecked();
+    await expect(lens(page, 'real')).toHaveAttribute('aria-pressed', 'true');
     await expect(page.getByTestId('reference')).toHaveValue('2020');
-    await expect(page.getByTestId('metric-deficit')).toHaveAttribute('aria-pressed', 'true');
-    await expect(page.getByTestId('metric-revenue')).toHaveAttribute('aria-pressed', 'false');
-    await expect(page.getByTestId('scope').getByRole('button', { name: /General government/ })).toHaveAttribute('aria-pressed', 'true');
+    await expect(page.getByTestId('versus')).toHaveValue('2015');
+    await expect(page.getByTestId('scope-central')).toHaveAttribute('aria-pressed', 'true');
+  });
+
+  test('links from the earlier version still open', async ({ page }) => {
+    await page.goto('/budzse/en/?m=def,oda&v=both&from=2005&to=2020&x=1&y=2012');
+    await ready(page);
+    await expect(page.getByTestId('year-select')).toHaveValue('2012');
   });
 
   test('unknown paths still load the app', async ({ page }) => {
@@ -63,17 +71,17 @@ test.describe('routing on the production build', () => {
 
 test.describe('language', () => {
   test('switching does not reload and preserves state', async ({ page }) => {
-    await page.goto('/budzse/hu/?y=2015&real=1&ref=2020&m=def,oda');
+    await page.goto('/budzse/hu/?y=2015&real=1&ref=2020&s=c');
     await ready(page);
     await page.evaluate(() => ((window as unknown as { __marker: number }).__marker = 42));
     await page.getByTestId('lang-en').click();
     await expect(page).toHaveURL(/\/budzse\/en\/\?/);
-    await expect(page.getByTestId('preset-overview')).toHaveText('Overview');
+    await expect(lens(page, 'forint')).toHaveText('Forints');
     expect(await page.evaluate(() => (window as unknown as { __marker: number }).__marker)).toBe(42);
     await expect(page.getByTestId('year-select')).toHaveValue('2015');
-    await expect(page.getByTestId('inflation')).toBeChecked();
+    await expect(lens(page, 'real')).toHaveAttribute('aria-pressed', 'true');
     await expect(page.getByTestId('reference')).toHaveValue('2020');
-    await expect(page.getByTestId('metric-oda')).toHaveAttribute('aria-pressed', 'true');
+    await expect(page.getByTestId('scope-central')).toHaveAttribute('aria-pressed', 'true');
     await expect(page.locator('html')).toHaveAttribute('lang', 'en');
   });
 
@@ -81,102 +89,64 @@ test.describe('language', () => {
     await page.goto('/budzse/hu/');
     await ready(page);
     await page.getByTestId('lang-en').click();
-    await expect(page.getByTestId('preset-overview')).toHaveText('Overview');
+    await expect(lens(page, 'forint')).toHaveText('Forints');
     await page.goto('/budzse/');
     await ready(page);
-    await expect(page.getByTestId('preset-overview')).toHaveText('Overview');
+    await expect(lens(page, 'forint')).toHaveText('Forints');
     await page.goto('/budzse/hu/');
     await ready(page);
-    await expect(page.getByTestId('preset-overview')).toHaveText('Áttekintés');
+    await expect(lens(page, 'forint')).toHaveText('Forintban');
   });
 
   test('back and forward move between languages', async ({ page }) => {
     await page.goto('/budzse/hu/');
     await ready(page);
     await page.getByTestId('lang-en').click();
-    await expect(page.getByTestId('preset-overview')).toHaveText('Overview');
+    await expect(lens(page, 'forint')).toHaveText('Forints');
     await page.goBack();
-    await expect(page.getByTestId('preset-overview')).toHaveText('Áttekintés');
+    await expect(lens(page, 'forint')).toHaveText('Forintban');
     await expect(page).toHaveURL(/\/budzse\/hu\//);
     await page.goForward();
-    await expect(page.getByTestId('preset-overview')).toHaveText('Overview');
+    await expect(lens(page, 'forint')).toHaveText('Forints');
+  });
+
+  test('Hungarian keeps its accents and suffix agreement', async ({ page }) => {
+    await page.goto('/budzse/hu/?y=2026&vs=2025&real=1');
+    await ready(page);
+    await expect(page.getByTestId('versus').locator('option:checked')).toHaveText('2025-höz képest');
+    await expect(page.getByTestId('price-basis')).toHaveText('2025-ös áron');
+    await expect(page.getByTestId('methodology')).toContainText('Módszertan');
   });
 });
 
-test.describe('chart controls', () => {
-  test('metric chips toggle and reach the URL', async ({ page }) => {
-    await page.goto('/budzse/en/');
+test.describe('the year', () => {
+  test('the sum shows the outcome and adds up on the screen', async ({ page }) => {
+    await page.goto('/budzse/en/?y=2020&s=c');
     await ready(page);
-    await page.getByTestId('metric-gdp').click();
-    await expect(page.getByTestId('metric-gdp')).toHaveAttribute('aria-pressed', 'true');
-    await expect(page).toHaveURL(/m=[^&]*gdp/);
-    await page.getByTestId('metric-gdp').click();
-    await expect(page).not.toHaveURL(/gdp/);
+    await expect(page.getByTestId('ledger-revenue')).toHaveText('23.02');
+    await expect(page.getByTestId('ledger-expenditure')).toHaveText('28.33');
+    await expect(page.getByTestId('ledger-deficit')).toHaveText('5.31');
+    await expect(page.getByTestId('ledger')).toContainText('HUF trillion');
+    await expect(page.getByTestId('stamp')).toHaveText('Actual');
   });
 
-  test('removing every metric shows an instruction instead of an empty chart', async ({ page }) => {
-    await page.goto('/budzse/en/?m=def');
+  test('a year without an outcome says what it shows instead', async ({ page }) => {
+    await page.goto('/budzse/en/?y=2026&s=c');
     await ready(page);
-    await page.getByTestId('metric-deficit').click();
-    await expect(page.getByText('Choose at least one indicator')).toBeVisible();
+    await expect(page.getByTestId('stamp')).toHaveText('Amended budget act');
+    await expect(page.getByTestId('ledger-deficit')).toHaveText('7.11');
+    await page.goto('/budzse/en/?y=2027&s=c');
+    await ready(page);
+    await expect(page.getByTestId('stamp')).toHaveText('Draft bill');
+    await page.goto('/budzse/en/?y=2026');
+    await ready(page);
+    await expect(page.getByTestId('stamp')).toContainText('European Commission');
   });
 
-  test('planned, actual and both views change the legend', async ({ page }) => {
-    await page.goto('/budzse/en/');
+  test('revenue covered per 100 forints follows the year', async ({ page }) => {
+    await page.goto('/budzse/en/?y=2020&s=c');
     await ready(page);
-    const legend = page.locator('.legend');
-    await expect(legend).toContainText('Actual');
-    await expect(legend).not.toContainText('Original budget act');
-    await page.getByTestId('planview').getByRole('button', { name: 'Budgeted and actual' }).click();
-    await expect(legend).toContainText('Original budget act');
-    await page.getByTestId('planview').getByRole('button', { name: 'Budgeted', exact: true }).click();
-    await expect(legend).not.toContainText(/^Actual/);
-    await expect(legend).toContainText('Original budget act');
-  });
-
-  test('inflation switch changes figures immediately and keeps nominal visible', async ({ page }) => {
-    await page.goto('/budzse/en/?y=2010');
-    await ready(page);
-    const panel = yearPanel(page);
-    await expect(panel).toContainText('HUF 13.2 trillion');
-    await page.getByTestId('inflation').check({ force: true });
-    await expect(page).toHaveURL(/real=1/);
-    await expect(panel).toContainText('(nominal)');
-    await expect(panel.locator('.value-num').first()).not.toHaveText('HUF 13.2 trillion');
-    await page.getByTestId('reference').selectOption('2010');
-    await expect(panel.locator('.value-num').first()).toHaveText('HUF 13.2 trillion');
-    await expect(page).toHaveURL(/ref=2010/);
-  });
-
-  test('latest month is available as a price level', async ({ page }) => {
-    await page.goto('/budzse/en/?real=1');
-    await ready(page);
-    await page.getByTestId('reference').selectOption('latest');
-    await expect(page).toHaveURL(/ref=latest/);
-    await expect(page.getByTestId('reference')).toContainText('September 2026');
-  });
-
-  test('forecast-year values are marked as estimates when adjusted', async ({ page }) => {
-    await page.goto('/budzse/en/?real=1&y=2027&s=g');
-    await ready(page);
-    await expect(yearPanel(page).locator('.estimate').first()).toHaveText('estimate');
-  });
-
-  test('CPI-adjusted GDP carries the real-GDP warning', async ({ page }) => {
-    await page.goto('/budzse/en/?real=1&m=gdp');
-    await ready(page);
-    await expect(page.getByTestId('gdp-real-note')).toContainText('not official real GDP');
-  });
-
-  test('scope switch changes the figures for one year', async ({ page }) => {
-    await page.goto('/budzse/en/?y=2020');
-    await ready(page);
-    await expect(yearPanel(page)).toContainText('Central subsystem');
-    await expect(yearPanel(page)).toContainText('HUF 5.31 trillion');
-    await page.getByTestId('scope').getByRole('button', { name: /General government/ }).click();
-    await expect(yearPanel(page)).toContainText('General government');
-    await expect(yearPanel(page)).toContainText('HUF 3.65 trillion');
-    await expect(page).toHaveURL(/s=g/);
+    await expect(page.getByTestId('cover')).toContainText('81 forints');
   });
 
   test('year selection works through the select and the steppers', async ({ page }) => {
@@ -184,20 +154,41 @@ test.describe('chart controls', () => {
     await ready(page);
     await page.getByTestId('year-select').selectOption('2008');
     await expect(page).toHaveURL(/y=2008/);
-    await yearPanel(page).getByRole('button', { name: 'Next year' }).click();
+    await page.getByTestId('year-steps').getByRole('button', { name: 'Next year' }).click();
     await expect(page.getByTestId('year-select')).toHaveValue('2009');
   });
 
-  test('clicking the chart selects a year', async ({ page, isMobile }) => {
+  test('pointing previews a year, leaving returns, clicking keeps it', async ({ page, isMobile }) => {
     test.skip(isMobile, 'Covered by the tap test');
-    await page.goto('/budzse/en/?m=rev');
+    await page.goto('/budzse/en/?y=2025');
     await ready(page);
     const box = (await page.getByTestId('chart').boundingBox())!;
-    await page.mouse.click(box.x + box.width * 0.5, box.y + box.height * 0.5);
-    await expect(page).toHaveURL(/y=\d{4}/);
+    const at = (year: number) => box.x + box.width * ((year - 2000 + 0.5) / 28);
+    await page.mouse.move(at(2010), box.y + 100);
+    await expect(page.getByTestId('year-select')).toHaveValue('2010');
+    await expect(page).toHaveURL(/y=2025/);
+    await page.mouse.move(box.x + 50, box.y - 300);
+    await expect(page.getByTestId('year-select')).toHaveValue('2025');
+    await page.mouse.click(at(2012), box.y + 100);
+    await expect(page).toHaveURL(/y=2012/);
+    await page.mouse.move(box.x + 50, box.y - 300);
+    await expect(page.getByTestId('year-select')).toHaveValue('2012');
   });
 
-  test('tapping the chart updates the readout', async ({ browser }) => {
+  test('every chart on the page follows the same year', async ({ page, isMobile }) => {
+    test.skip(isMobile, 'Pointer behaviour');
+    await page.goto('/budzse/en/?y=2025');
+    await ready(page);
+    const chart = page.getByTestId('plan-chart');
+    await chart.scrollIntoViewIfNeeded();
+    const box = (await chart.boundingBox())!;
+    await page.mouse.click(box.x + box.width * ((2020 - 2000 + 0.5) / 28), box.y + 40);
+    await expect(page).toHaveURL(/y=2020/);
+    await expect(page.getByTestId('plan')).toContainText('2020');
+    await expect(page.getByTestId('economy')).toContainText('-4.3%');
+  });
+
+  test('tapping the chart updates the sum', async ({ browser }) => {
     const ctx = await browser.newContext({ viewport: { width: 375, height: 700 }, hasTouch: true, isMobile: true });
     const page = await ctx.newPage();
     await page.goto('/budzse/hu/');
@@ -206,54 +197,114 @@ test.describe('chart controls', () => {
     await page.touchscreen.tap(box.x + box.width * 0.45, box.y + 150);
     await expect(page).toHaveURL(/y=\d{4}/);
     const year = new URL(page.url()).searchParams.get('y');
-    await expect(page.getByTestId('readout')).toContainText(year!);
+    await expect(page.getByTestId('year-select')).toHaveValue(year!);
     await ctx.close();
   });
 
-  test('range selects constrain the table and the URL', async ({ page }) => {
+  test('the bar takes over the year once it has scrolled away', async ({ page }) => {
+    await page.goto('/budzse/en/?y=2020');
+    await ready(page);
+    await expect(page.getByTestId('bar-steps')).toHaveCount(0);
+    await page.getByTestId('aid').scrollIntoViewIfNeeded();
+    await expect(page.getByTestId('bar-steps')).toBeVisible();
+    await page.getByTestId('bar-steps').getByRole('button', { name: 'Previous year' }).click();
+    await expect(page).toHaveURL(/y=2019/);
+    await expect(page.getByTestId('bar-steps')).toContainText('2019');
+  });
+
+  test('history can undo a choice', async ({ page }) => {
     await page.goto('/budzse/en/');
     await ready(page);
-    await openMore(page);
-    await page.getByTestId('from').selectOption('2010');
-    await page.getByTestId('to').selectOption('2012');
-    await expect(page).toHaveURL(/from=2010&to=2012/);
-    await expect(page.getByTestId('table-section').locator('tbody th').first()).toHaveText('2010');
-    await expect(page.getByTestId('table-section').locator('tbody th').last()).toHaveText('2012');
-  });
-
-  test('reset restores the defaults', async ({ page }) => {
-    await page.goto('/budzse/en/?s=g&real=1&y=2010&m=oda');
-    await ready(page);
-    await openMore(page);
-    await page.getByTestId('reset').click();
-    await expect(page).toHaveURL(/\/budzse\/en\/$/);
-    await expect(page.getByTestId('metric-revenue')).toHaveAttribute('aria-pressed', 'true');
-  });
-
-  test('exact mode writes out all digits', async ({ page }) => {
-    await page.goto('/budzse/en/?y=2020&x=1');
-    await ready(page);
-    await expect(yearPanel(page)).toContainText('HUF 5,311,318,000,000');
-  });
-
-  test('presets apply and history can undo them', async ({ page }) => {
-    await page.goto('/budzse/en/');
-    await ready(page);
-    await page.getByTestId('preset-oda').click();
-    await expect(page.getByTestId('metric-oda')).toHaveAttribute('aria-pressed', 'true');
-    await expect(page.getByTestId('metric-revenue')).toHaveAttribute('aria-pressed', 'false');
+    await lens(page, 'share').click();
+    await expect(page).toHaveURL(/pct=1/);
     await page.goBack();
-    await expect(page.getByTestId('metric-revenue')).toHaveAttribute('aria-pressed', 'true');
+    await expect(lens(page, 'forint')).toHaveAttribute('aria-pressed', 'true');
     await page.goForward();
-    await expect(page.getByTestId('metric-oda')).toHaveAttribute('aria-pressed', 'true');
+    await expect(lens(page, 'share')).toHaveAttribute('aria-pressed', 'true');
+  });
+});
+
+test.describe('lens and scope', () => {
+  test('today\'s prices change the figures, and the price level is named', async ({ page }) => {
+    await page.goto('/budzse/en/?y=2010&s=c');
+    await ready(page);
+    const revenue = page.getByTestId('ledger-revenue');
+    await expect(revenue).toHaveText('13.17');
+    await lens(page, 'real').click();
+    await expect(page).toHaveURL(/real=1/);
+    await expect(revenue).not.toHaveText('13.17');
+    await expect(page.getByTestId('price-basis')).toHaveText('at 2025 prices');
+    await page.getByTestId('reference').selectOption('2010');
+    await expect(revenue).toHaveText('13.17');
+    await expect(page).toHaveURL(/ref=2010/);
+  });
+
+  test('the lens is one choice, so inflation and shares cannot both be on', async ({ page }) => {
+    await page.goto('/budzse/en/?real=1');
+    await ready(page);
+    await lens(page, 'share').click();
+    await expect(page).toHaveURL(/pct=1/);
+    await expect(page).not.toHaveURL(/real=1/);
+    await expect(page.getByTestId('reference')).toHaveCount(0);
+    await expect(page.getByTestId('ledger')).toContainText('% of GDP');
+    await expect(page.getByTestId('ledger-deficit')).toHaveText('4.7%');
+  });
+
+  test('latest month is available as a price level', async ({ page }) => {
+    await page.goto('/budzse/en/?real=1');
+    await ready(page);
+    await page.getByTestId('reference').selectOption('latest');
+    await expect(page).toHaveURL(/ref=latest/);
+    await expect(page.getByTestId('reference')).toContainText('September 2026');
+    await expect(page.getByTestId('price-basis')).toContainText('September 2026');
+  });
+
+  test('forecast-year values are marked as estimates when adjusted', async ({ page }) => {
+    await page.goto('/budzse/en/?real=1&y=2027');
+    await ready(page);
+    await expect(page.locator('.year-side .estimate')).toHaveText('estimate');
+  });
+
+  test('CPI-adjusted GDP carries the real-GDP warning', async ({ page }) => {
+    await page.goto('/budzse/en/?real=1');
+    await ready(page);
+    await expect(page.getByTestId('gdp-real-note')).toContainText('not official real GDP');
+  });
+
+  test('scope switch changes the figures for one year and explains itself', async ({ page }) => {
+    await page.goto('/budzse/en/?y=2020');
+    await ready(page);
+    await expect(page.getByTestId('ledger-deficit')).toHaveText('3.65');
+    await expect(page.getByTestId('scope-help')).toContainText('ESA 2010');
+    await page.getByTestId('scope-central').click();
+    await expect(page.getByTestId('ledger-deficit')).toHaveText('5.31');
+    await expect(page.getByTestId('scope-help')).toContainText('cash');
+    await expect(page).toHaveURL(/s=c/);
+  });
+
+  test('the central view breaks at 2010 and says why', async ({ page }) => {
+    await page.goto('/budzse/en/?s=c');
+    await ready(page);
+    await expect(page.getByText('the jump between 2009 and 2010 is not real growth')).toBeVisible();
+    await expect(page.locator('[data-testid="chart"] path.line-in')).toHaveCount(3);
+  });
+
+  test('the plan section stays on the budget acts whatever the scope', async ({ page }) => {
+    await page.goto('/budzse/en/?y=2020');
+    await ready(page);
+    const plan = page.getByTestId('plan');
+    await expect(plan).toContainText('20 of 26');
+    await expect(plan).toContainText('HUF 5.31 trillion');
+    await expect(plan).toContainText('HUF 367 billion');
+    await expect(plan).toContainText('+HUF 4.94 trillion');
   });
 });
 
 test.describe('sources, comparisons and exports', () => {
   test('every figure opens its provenance', async ({ page }) => {
-    await page.goto('/budzse/en/?y=2020');
+    await page.goto('/budzse/en/?y=2020&s=c');
     await ready(page);
-    await page.getByTestId('source-central.deficit.2020.actual').click();
+    await page.getByTestId('ledger-deficit').click();
     const dialog = page.getByTestId('source-dialog');
     await expect(dialog).toBeVisible();
     await expect(dialog).toContainText('HUF 5,311,318,000,000');
@@ -265,68 +316,122 @@ test.describe('sources, comparisons and exports', () => {
     await expect(dialog).toBeHidden();
   });
 
-  test('adjusted figures explain the CPI factor', async ({ page }) => {
-    await page.goto('/budzse/en/?y=2010&real=1');
+  test('section figures open their provenance too', async ({ page }) => {
+    await page.goto('/budzse/en/?y=2020');
     await ready(page);
-    await page.getByTestId('source-central.revenue.2010.actual').click();
+    for (const id of ['plan-actual', 'economy-gdp', 'economy-growth', 'economy-cpi', 'aid-net']) {
+      await page.getByTestId(id).click();
+      await expect(page.getByTestId('source-dialog')).toBeVisible();
+      await page.keyboard.press('Escape');
+      await expect(page.getByTestId('source-dialog')).toBeHidden();
+    }
+  });
+
+  test('all versions of a year are listed and traceable', async ({ page }) => {
+    await page.goto('/budzse/en/?y=2026&s=c');
+    await ready(page);
+    await openFold(page, 'year-figures');
+    const table = page.getByTestId('year-figures');
+    await expect(table).toContainText('Original budget act');
+    await expect(table).toContainText('Amended budget act');
+    await expect(table).toContainText('Year to date');
+    await page.getByTestId('source-central.deficit.2026.ytd').click();
+    await expect(page.getByTestId('source-dialog')).toContainText('Treasury');
+  });
+
+  test('adjusted figures explain the CPI factor', async ({ page }) => {
+    await page.goto('/budzse/en/?y=2010&real=1&s=c');
+    await ready(page);
+    await page.getByTestId('ledger-revenue').click();
     const dialog = page.getByTestId('source-dialog');
     await expect(dialog).toContainText('CPI(2025) / CPI(year)');
     await expect(dialog.getByRole('link', { name: /Consumer price index/ })).toHaveAttribute('href', /ksh\.hu/);
   });
 
   test('secondary citations are disclosed', async ({ page }) => {
-    await page.goto('/budzse/en/?y=2027');
+    await page.goto('/budzse/en/?y=2027&s=c');
     await ready(page);
-    await page.getByTestId('source-central.deficit.2027.draft').click();
+    await page.getByTestId('ledger-deficit').click();
     await expect(page.getByTestId('source-dialog')).toContainText('Secondary citation');
   });
 
   test('missing data says so instead of showing zero', async ({ page }) => {
-    await page.goto('/budzse/en/?y=2001&m=oda');
+    await page.goto('/budzse/en/?y=2001');
     await ready(page);
-    const panel = yearPanel(page);
-    await expect(panel).toContainText('No verified data');
-    await expect(panel).toContainText('OECD DAC1 reports ODA for Hungary from 2003');
+    const aid = page.getByTestId('aid');
+    await expect(aid).toContainText('No verified data');
+    await expect(aid).toContainText('OECD DAC1 reports ODA for Hungary from 2003');
   });
 
-  test('comparison shows differences across compatible years', async ({ page }) => {
-    await page.goto('/budzse/en/?ca=2010&cb=2025');
+  test('net aid and grant-equivalent aid are never joined', async ({ page }) => {
+    await page.goto('/budzse/en/?pct=1');
     await ready(page);
-    const c = page.getByTestId('compare-result');
-    await expect(c).toContainText('Difference');
-    await expect(c).toContainText('Change');
+    await expect(page.locator('[data-testid="aid-chart"] path.line')).toHaveCount(2);
+    await page.goto('/budzse/en/');
+    await ready(page);
+    await expect(page.locator('[data-testid="aid-chart"] path.line')).toHaveCount(2);
+  });
+
+  test('the sum compares with the year before by default', async ({ page }) => {
+    await page.goto('/budzse/en/?y=2020');
+    await ready(page);
+    await expect(page.getByTestId('versus').locator('option:checked')).toHaveText('against 2019');
+    await expect(page.getByTestId('ledger')).toContainText('%');
     await expect(page.getByTestId('compare-warning')).toHaveCount(0);
   });
 
   test('comparison refuses to subtract across the 2010 break', async ({ page }) => {
-    await page.goto('/budzse/en/?ca=2009&cb=2010');
+    await page.goto('/budzse/en/?y=2010&s=c&vs=2009');
     await ready(page);
-    await expect(page.getByTestId('compare-warning')).toContainText('different scopes');
-    await expect(page.getByTestId('compare-result')).not.toContainText('Difference');
+    await expect(page.getByTestId('compare-warning')).toContainText('cannot be compared');
+    await expect(page.locator('.ledger-row .delta').first()).toHaveText('–');
+    await page.getByTestId('scope-general').click();
+    await expect(page.getByTestId('compare-warning')).toHaveCount(0);
   });
 
-  test('comparison selections stay in the URL', async ({ page }) => {
+  test('comparison selection stays in the URL', async ({ page }) => {
     await page.goto('/budzse/en/');
     await ready(page);
-    await page.getByTestId('compare-indicator').selectOption('oda');
-    await page.getByTestId('compare-a-year').selectOption('2015');
-    await page.getByTestId('compare-b-year').selectOption('2024');
-    await expect(page).toHaveURL(/ci=oda/);
-    await expect(page).toHaveURL(/ca=2015/);
-    await expect(page).toHaveURL(/cb=2024/);
+    await page.getByTestId('versus').selectOption('2015');
+    await expect(page).toHaveURL(/vs=2015/);
   });
 
   test('table filters work', async ({ page }) => {
     await page.goto('/budzse/en/');
     await ready(page);
+    await openFold(page, 'table-section');
     await page.getByTestId('table-indicator').selectOption('oda');
     await page.getByTestId('table-status').selectOption('actual');
     await expect(page.getByTestId('table-count')).toHaveText('22 figures');
   });
 
-  test('CSV export carries the filtered rows and citations', async ({ page }) => {
-    await page.goto('/budzse/en/?from=2020&to=2021&m=def');
+  test('range selects constrain the table', async ({ page }) => {
+    await page.goto('/budzse/en/');
     await ready(page);
+    await openFold(page, 'table-section');
+    await page.getByTestId('from').selectOption('2010');
+    await page.getByTestId('to').selectOption('2012');
+    await expect(page.getByTestId('table-section').locator('tbody th').first()).toHaveText('2010');
+    await expect(page.getByTestId('table-section').locator('tbody th').last()).toHaveText('2012');
+  });
+
+  test('the skip link reaches the table', async ({ page, isMobile }) => {
+    test.skip(isMobile, 'Keyboard on desktop');
+    await page.goto('/budzse/en/');
+    await ready(page);
+    await page.keyboard.press('Tab');
+    await expect(page.locator('.skip')).toBeFocused();
+    await page.keyboard.press('Enter');
+    await expect(page.getByTestId('table-section').locator('tbody th').first()).toBeVisible();
+  });
+
+  test('CSV export carries the filtered rows and citations', async ({ page }) => {
+    await page.goto('/budzse/en/?s=c');
+    await ready(page);
+    await openFold(page, 'table-section');
+    await page.getByTestId('table-indicator').selectOption('deficit');
+    await page.getByTestId('from').selectOption('2020');
+    await page.getByTestId('to').selectOption('2021');
     const [download] = await Promise.all([page.waitForEvent('download'), page.getByTestId('csv').click()]);
     expect(download.suggestedFilename()).toContain('budzse-central-2020-2021');
     const text = readFileSync(await download.path(), 'utf8');
@@ -355,11 +460,11 @@ test.describe('sources, comparisons and exports', () => {
 });
 
 test.describe('layout and accessibility', () => {
-  for (const width of [375, 390, 768, 1440]) {
+  for (const width of [320, 375, 390, 768, 1100, 1440]) {
     test(`no horizontal page overflow at ${width}px`, async ({ browser }) => {
       const ctx = await browser.newContext({ viewport: { width, height: 800 } });
       const page = await ctx.newPage();
-      for (const q of ['', '?m=rev,exp,def,gdp,oda&v=both&rev=1', '?x=1&y=2020', '?real=1&s=g']) {
+      for (const q of ['', '?s=c&y=2026', '?pct=1&y=2027', '?real=1&ref=latest&y=2000']) {
         await page.goto(`/budzse/hu/${q}`);
         await ready(page);
         const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
@@ -369,13 +474,48 @@ test.describe('layout and accessibility', () => {
     });
   }
 
+  for (const width of [320, 375, 1100, 1440]) {
+    test(`the sum never overlaps itself at ${width}px`, async ({ browser }) => {
+      const ctx = await browser.newContext({ viewport: { width, height: 800 } });
+      const page = await ctx.newPage();
+      for (const path of ['/budzse/en/?y=2023&s=c', '/budzse/hu/?y=2023&real=1']) {
+        await page.goto(path);
+        await ready(page);
+        const clashes = await page.evaluate(() =>
+          [...document.querySelectorAll('.ledger-row')].flatMap((row) => {
+            const parts = [...row.children].map((c) => c.getBoundingClientRect()).filter((r) => r.width > 0);
+            return parts.slice(1).flatMap((r, i) => (r.left < parts[i].right - 0.5 ? [row.className] : []));
+          }),
+        );
+        expect(clashes, path).toEqual([]);
+      }
+      await ctx.close();
+    });
+  }
+
+  test('a fold below open folds still opens with a real tap', async ({ browser }) => {
+    const ctx = await browser.newContext({ viewport: { width: 375, height: 667 }, hasTouch: true, isMobile: true });
+    const page = await ctx.newPage();
+    await page.goto('/budzse/hu/');
+    await ready(page);
+    for (const id of ['year-figures', 'table-section', 'coverage']) await page.getByTestId(id).evaluate((d: HTMLDetailsElement) => (d.open = true));
+    const at = await page.getByTestId('methodology').locator('summary').first().evaluate((s) => {
+      window.scrollTo(0, s.getBoundingClientRect().top + window.scrollY - 300);
+      const r = s.getBoundingClientRect();
+      return { x: r.left + r.width / 2, y: r.top + r.height / 2 };
+    });
+    await page.touchscreen.tap(at.x, at.y);
+    await expect(page.getByTestId('methodology')).toHaveJSProperty('open', true);
+    await ctx.close();
+  });
+
   test('the chart appears on the first phone screen', async ({ browser }) => {
     const ctx = await browser.newContext({ viewport: { width: 375, height: 667 }, hasTouch: true, isMobile: true });
     const page = await ctx.newPage();
     await page.goto('/budzse/hu/');
     await ready(page);
     const box = (await page.getByTestId('chart').boundingBox())!;
-    expect(box.y).toBeLessThan(420);
+    expect(box.y).toBeLessThan(480);
     await ctx.close();
   });
 
@@ -385,7 +525,7 @@ test.describe('layout and accessibility', () => {
     await page.goto('/budzse/hu/');
     await ready(page);
     const small = await page.evaluate(() =>
-      [...document.querySelectorAll('.presets button, .chip, .segmented-row button, .lang-switch button, .theme-button, .year-step')]
+      [...document.querySelectorAll('.segmented button, .lang-switch button, .theme-button, .step')]
         .map((el) => [el.className || el.textContent, el.getBoundingClientRect().height] as const)
         .filter(([, h]) => h < 38),
     );
@@ -394,8 +534,10 @@ test.describe('layout and accessibility', () => {
   });
 
   test('axe finds no serious violations', async ({ page }) => {
-    await page.goto('/budzse/hu/?y=2020&v=both');
+    await page.goto('/budzse/hu/?y=2020&s=c');
     await ready(page);
+    await openEverything(page);
+    await expect(page.getByTestId('table-section').locator('tbody th').first()).toBeVisible();
     const results = await new AxeBuilder({ page }).analyze();
     const serious = results.violations.filter((v) => v.impact === 'serious' || v.impact === 'critical');
     expect(serious.map((v) => `${v.id}: ${v.nodes.map((n) => n.target).join(' | ')}`)).toEqual([]);
@@ -404,35 +546,60 @@ test.describe('layout and accessibility', () => {
   test('axe finds no serious violations in dark mode', async ({ browser }) => {
     const ctx = await browser.newContext({ colorScheme: 'dark', viewport: { width: 390, height: 800 } });
     const page = await ctx.newPage();
-    await page.goto('/budzse/en/?real=1&s=g');
+    await page.goto('/budzse/en/?real=1&y=2027');
     await ready(page);
+    await openEverything(page);
+    await expect(page.getByTestId('table-section').locator('tbody th').first()).toBeVisible();
     const results = await new AxeBuilder({ page }).analyze();
     const serious = results.violations.filter((v) => v.impact === 'serious' || v.impact === 'critical');
     expect(serious.map((v) => `${v.id}: ${v.nodes.map((n) => n.target).join(' | ')}`)).toEqual([]);
     await ctx.close();
   });
 
-  test('controls are keyboard reachable with visible focus', async ({ page, isMobile }) => {
+  test('the source sheet passes axe in both themes', async ({ browser }) => {
+    for (const colorScheme of ['light', 'dark'] as const) {
+      const ctx = await browser.newContext({ colorScheme, viewport: { width: 1200, height: 800 } });
+      const page = await ctx.newPage();
+      await page.goto('/budzse/en/?y=2027&s=c');
+      await ready(page);
+      await page.getByTestId('ledger-deficit').click();
+      await expect(page.getByTestId('source-dialog')).toBeVisible();
+      const results = await new AxeBuilder({ page }).include('[data-testid="source-dialog"]').analyze();
+      const serious = results.violations.filter((v) => v.impact === 'serious' || v.impact === 'critical');
+      expect(serious.map((v) => v.id), colorScheme).toEqual([]);
+      await ctx.close();
+    }
+  });
+
+  test('the chart is a keyboard slider with visible focus', async ({ page, isMobile }) => {
     test.skip(isMobile, 'Keyboard on desktop');
     await page.goto('/budzse/en/');
     await ready(page);
-    await page.keyboard.press('Tab');
-    await expect(page.locator('.skip')).toBeFocused();
-    await page.getByTestId('metric-gdp').focus();
-    const outline = await page.getByTestId('metric-gdp').evaluate((el) => getComputedStyle(el).outlineStyle);
-    expect(outline).not.toBe('none');
-    await page.getByTestId('chart').focus();
+    const chart = page.getByTestId('chart');
+    await expect(chart).toHaveAttribute('role', 'slider');
+    await expect(chart).toHaveAttribute('aria-valuenow', '2025');
+    await chart.focus();
     await page.keyboard.press('ArrowLeft');
     await expect(page.getByTestId('year-select')).toHaveValue('2024');
+    await expect(chart).toHaveAttribute('aria-valuenow', '2024');
+    await page.keyboard.press('Home');
+    await expect(page.getByTestId('year-select')).toHaveValue('2000');
+    await page.keyboard.press('End');
+    await expect(page.getByTestId('year-select')).toHaveValue('2027');
+    await page.getByTestId('lens-real').focus();
+    const outline = await page.getByTestId('lens-real').evaluate((el) => getComputedStyle(el).outlineStyle);
+    expect(outline).not.toBe('none');
   });
 
-  test('reduced motion disables chart animation', async ({ browser }) => {
+  test('reduced motion stops the load animation and the stamp', async ({ browser }) => {
     const ctx = await browser.newContext({ reducedMotion: 'reduce' });
     const page = await ctx.newPage();
     await page.goto('/budzse/en/');
     await ready(page);
-    const transition = await page.locator('.switch-track').first().evaluate((el) => getComputedStyle(el).transitionDuration);
-    expect(['0s', '0ms']).toContain(transition);
+    for (const selector of ['.stamp', '[data-testid="chart"] svg']) {
+      const duration = await page.locator(selector).evaluate((el) => parseFloat(getComputedStyle(el).animationDuration));
+      expect(duration, selector).toBeLessThan(0.01);
+    }
     await ctx.close();
   });
 

@@ -88,3 +88,13 @@ export function huYearAdjective(year: number): string {
   const tens = Math.floor(year / 10) % 10;
   return `${year}-${last ? HU_DIGIT[last] : HU_TENS[tens]}`;
 }
+
+const HU_ALLATIVE_DIGIT = ['', 'hez', 'höz', 'hoz', 'hez', 'höz', 'hoz', 'hez', 'hoz', 'hez'];
+const HU_ALLATIVE_TENS = ['hez', 'hez', 'hoz', 'hoz', 'hez', 'hez', 'hoz', 'hez', 'hoz', 'hez'];
+
+/** "to the year", with vowel harmony: 2024-hez, 2025-höz, 2026-hoz, 2020-hoz. */
+export function huYearAllative(year: number): string {
+  const last = year % 10;
+  const tens = Math.floor(year / 10) % 10;
+  return `${year}-${last ? HU_ALLATIVE_DIGIT[last] : HU_ALLATIVE_TENS[tens]}`;
+}

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { buildPanels, bestObservation, compareMeasured, compatibility, measure, planVersusActual, statusVisible, tableRows } from '../../src/lib/measure';
+import { asPublished, bestObservation, compareMeasured, compatibility, figureRows, ledgerFor, ledgerRows, measure, overshoot, planVersusActual, planYears, tableRows } from '../../src/lib/measure';
 import { DEFAULT_VIEW, type ViewState } from '../../src/lib/view';
 import { dataset, obs } from './helpers';
 
@@ -92,61 +92,115 @@ describe('compatibility', () => {
   });
 });
 
-describe('statusVisible', () => {
-  const on = { view: 'actual' as const, revised: false, forecasts: true };
+describe('the ledger', () => {
+  const nominal = { real: false, ref: 2025, relative: false } as const;
 
-  it('hides plans in the actual view but keeps future revised and draft figures', () => {
-    expect(statusVisible(obs('central.deficit.2020.original'), on, 2025)).toBe(false);
-    expect(statusVisible(obs('central.deficit.2026.revised'), on, 2025)).toBe(true);
-    expect(statusVisible(obs('central.deficit.2027.draft'), on, 2025)).toBe(true);
+  it('covers every year in both scopes', () => {
+    for (const scope of ['central', 'general'] as const) expect(ledgerRows(dataset, scope, nominal).map((r) => r.year)).toHaveLength(28);
   });
 
-  it('hides outcomes in the plan view', () => {
-    expect(statusVisible(obs('central.deficit.2020.actual'), { ...on, view: 'plan' }, 2025)).toBe(false);
-    expect(statusVisible(obs('central.deficit.2020.original'), { ...on, view: 'plan' }, 2025)).toBe(true);
+  it('prefers the outcome', () => {
+    const row = ledgerFor(dataset, 2020, 'central', nominal)!;
+    expect(row.status).toBe('actual');
+    expect(row.deficit!.value).toBe(5_311_318_000_000);
   });
 
-  it('hides all projections when forecasts are switched off', () => {
-    const off = { ...on, forecasts: false };
-    expect(statusVisible(obs('central.deficit.2027.draft'), off, 2025)).toBe(false);
-    expect(statusVisible(obs('central.deficit.2026.ytd'), off, 2025)).toBe(false);
-    expect(statusVisible(obs('general.deficit.2027.forecast.ec'), off, 2025)).toBe(false);
-  });
-});
-
-describe('buildPanels', () => {
-  it('gives ODA its own panel so it never shares a GDP-sized axis', () => {
-    const panels = buildPanels(dataset, v({ metrics: ['gdp', 'oda', 'deficit'] }));
-    expect(panels.map((p) => p.id)).toEqual(['level', 'deficit', 'oda']);
-    expect(panels[0].series.some((s) => s.indicator.startsWith('oda'))).toBe(false);
+  it('never lets a part-year figure stand for a year', () => {
+    const row = ledgerFor(dataset, 2026, 'central', nominal)!;
+    expect(row.status).toBe('revised');
+    expect(row.deficit!.value).toBe(7_110_123_100_000);
   });
 
-  it('splits central lines at the 2010 scope change', () => {
-    const [level] = buildPanels(dataset, v({ metrics: ['revenue'], forecasts: false }));
-    const actual = level.series.filter((s) => s.status === 'actual');
-    expect(actual).toHaveLength(2);
-    expect(actual[0].points.at(-1)!.year).toBe(2009);
-    expect(actual[1].points[0].year).toBe(2010);
+  it('marks 2027 central figures as the draft they are', () => {
+    expect(ledgerFor(dataset, 2027, 'central', nominal)!.status).toBe('draft');
   });
 
-  it('leaves the ODA gap as a gap', () => {
-    const [oda] = buildPanels(dataset, v({ metrics: ['oda'] }));
-    const years = oda.series.flatMap((s) => s.points.map((p) => p.year));
-    expect(Math.min(...years)).toBe(2003);
+  it('takes all three figures from one publisher, so the sum on screen is a sum in the source', () => {
+    for (const scope of ['central', 'general'] as const) {
+      for (const r of ledgerRows(dataset, scope, nominal)) {
+        const [a, b, c] = [r.revenue!.obs, r.expenditure!.obs, r.deficit!.obs];
+        expect([a.status, a.publisher]).toEqual([b.status, b.publisher]);
+        expect([a.status, a.publisher]).toEqual([c.status, c.publisher]);
+        expect(a.scope).toBe(c.scope);
+      }
+    }
+    // The government publishes a 2026 deficit but no forint revenue, so its figure cannot join the EC's.
+    expect(ledgerFor(dataset, 2026, 'general', nominal)!.publisher).toBe('ec');
+  });
+
+  it('adds up to within rounding in the source', () => {
+    for (const scope of ['central', 'general'] as const) {
+      for (const r of ledgerRows(dataset, scope, nominal)) {
+        const gap = r.expenditure!.value - r.revenue!.value;
+        expect(Math.abs(gap - r.deficit!.value) / r.expenditure!.value).toBeLessThan(0.01);
+      }
+    }
   });
 
   it('never plots a zero', () => {
     for (const relative of [false, true]) {
-      const panels = buildPanels(dataset, v({ metrics: ['revenue', 'expenditure', 'deficit', 'gdp', 'oda'], view: 'both', relative }));
-      for (const p of panels) for (const s of p.series) for (const pt of s.points) expect(pt.measured.value).not.toBe(0);
+      for (const r of ledgerRows(dataset, 'general', { ...nominal, relative })) {
+        for (const x of [r.revenue, r.expenditure, r.deficit]) expect(x?.value).not.toBe(0);
+      }
     }
   });
+});
 
-  it('prefers a published share over a calculated one for the same year and publisher', () => {
-    const panels = buildPanels(dataset, v({ scope: 'general', metrics: ['deficit'], relative: true }));
-    const gov2026 = panels[0].series.filter((s) => s.publisher === 'gov').flatMap((s) => s.points).filter((p) => p.year === 2026);
-    expect(gov2026).toHaveLength(1);
-    expect(gov2026[0].measured.value).toBe(7.5);
+describe('plan and reality', () => {
+  const years = planYears(dataset);
+
+  it('reads only the central budget, whatever the scope switch says', () => {
+    for (const y of years) for (const o of y.all) expect(['centralBudget', 'centralSubsystem']).toContain(o.scope);
+  });
+
+  it('counts only completed years that have both a plan and an outcome', () => {
+    const { over, total } = overshoot(years);
+    expect(total).toBe(26);
+    expect(over).toBe(20);
+  });
+
+  it('uses the amended act and then the draft where no outcome exists', () => {
+    expect(years.find((y) => y.year === 2026)!.outcome!.status).toBe('revised');
+    expect(years.find((y) => y.year === 2027)!.outcome!.status).toBe('draft');
+    expect(years.find((y) => y.year === 2027)!.plan).toBeUndefined();
+  });
+});
+
+describe('every figure of a year', () => {
+  const mode = { real: false, ref: 2025, relative: false } as const;
+
+  it('lists the act, the amendment and the part-year figure for 2026', () => {
+    const rows = figureRows(dataset, 2026, 'central', mode);
+    expect(rows.map((r) => r.obs.status).sort()).toEqual(['original', 'revised', 'ytd']);
+  });
+
+  it('gives a part-year figure no share of GDP', () => {
+    const ytd = figureRows(dataset, 2026, 'central', { ...mode, relative: true }).find((r) => r.obs.status === 'ytd')!;
+    expect(ytd.cells.deficit!.measured).toBeNull();
+  });
+
+  it('prefers a published share over a calculated one', () => {
+    const gov = figureRows(dataset, 2026, 'general', { ...mode, relative: true }).find((r) => r.obs.publisher === 'gov')!;
+    expect(gov.cells.deficit!.measured!.value).toBe(7.5);
+    expect(gov.cells.revenue!.measured!.value).toBe(43.7);
+  });
+
+  it('leaves a figure missing rather than filling it', () => {
+    const gov = figureRows(dataset, 2026, 'general', mode).find((r) => r.obs.publisher === 'gov')!;
+    expect(gov.cells.revenue).toBeNull();
+    expect(gov.cells.deficit!.measured!.value).toBe(obs('general.deficit.2026.forecast.gov').value);
+  });
+});
+
+describe('published percentages', () => {
+  it('stand as published and flag forecasts', () => {
+    expect(asPublished(obs('odaPctGni.2020.actual')).estimated).toBe(false);
+    expect(asPublished(obs('odaPctGni.2020.actual')).value).toBe(obs('odaPctGni.2020.actual').value);
+  });
+
+  it('change method in 2018, so they must never be drawn as one line', () => {
+    expect(obs('odaPctGni.2017.actual').method).toBe('dacNet');
+    expect(obs('odaPctGni.2018.actual').method).toBe('dacGrantEquivalent');
   });
 });
 
@@ -160,13 +214,13 @@ describe('scope switching', () => {
   });
 
   it('keeps table rows within the chosen scope', () => {
-    const rows = tableRows(dataset, v({ scope: 'general', metrics: ['deficit'] }), { indicator: 'selected', status: 'all' });
+    const rows = tableRows(dataset, v({ scope: 'general' }), { indicator: 'deficit', status: 'all', from: 2000, to: 2027 });
     expect(rows.length).toBeGreaterThan(20);
     expect(rows.every((r) => r.obs.scope === 'generalGovernment')).toBe(true);
   });
 
   it('filters table rows by period and status', () => {
-    const rows = tableRows(dataset, v({ from: 2010, to: 2012, metrics: ['revenue'] }), { indicator: 'selected', status: 'actual' });
+    const rows = tableRows(dataset, v({}), { indicator: 'revenue', status: 'actual', from: 2010, to: 2012 });
     expect(rows.map((r) => r.obs.year)).toEqual([2010, 2011, 2012]);
   });
 });

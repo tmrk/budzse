@@ -10,6 +10,9 @@ export interface AppContextValue {
   m: Messages;
   view: ViewState;
   setView: (patch: Partial<ViewState>, mode?: 'push' | 'replace') => void;
+  /** The year on screen: a hovered year while scrubbing, otherwise the chosen one. */
+  year: number;
+  setPreview: (year: number | null) => void;
   inspect: (obs: Observation, measured?: Measured | null) => void;
 }
 

@@ -13,30 +13,27 @@ const built = readFileSync(join(dist, 'index.html'), 'utf8');
 const assets = readdirSync(join(dist, 'assets'));
 const asset = (re) => assets.find((f) => re.test(f));
 const preload = [
-  ['font', asset(/^public-sans-latin-wght-normal.*\.woff2$/), 'font/woff2'],
-  ['font', asset(/^bricolage-grotesque-latin-wght-normal.*\.woff2$/), 'font/woff2'],
+  ['font', asset(/^big-shoulders-display-latin-wght-normal.*\.woff2$/), 'font/woff2'],
+  ['font', asset(/^newsreader-latin-opsz-normal.*\.woff2$/), 'font/woff2'],
 ]
   .filter(([, f]) => f)
   .map(([as, f, type]) => `<link rel="preload" as="${as}" type="${type}" href="/budzse/assets/${f}" crossorigin />`);
 preload.push('<link rel="preload" as="fetch" href="/budzse/data/budzse.json" crossorigin />');
-for (const f of [asset(/^ChartView.*\.js$/), asset(/^echarts.*\.js$/)]) {
-  if (f) preload.push(`<link rel="modulepreload" href="/budzse/assets/${f}" />`);
-}
 const html = built.replace('</head>', `    ${preload.join('\n    ')}\n  </head>`);
 
-// A static first paint: the masthead is real HTML, so people see it before any JavaScript runs.
-const shell = (tagline) => `<div class="page"><header class="masthead"><div class="masthead-top"><p class="wordmark" style="margin:0"><span aria-hidden="true">B<span class="wordmark-u">u<i class="dot dot-a"></i><i class="dot dot-b"></i></span>dzsé</span></p></div><div class="masthead-body"><p class="tagline">${tagline}</p></div></header><div class="status-line"></div></div>`;
+// A static first paint: the top bar is real HTML, so people see it before any JavaScript runs.
+const shell = (tagline) => `<div class="page"><header class="bar"><div class="bar-inner"><p class="wordmark">Büdzsé</p></div></header><p class="tagline">${tagline}</p><div class="status-line"></div></div>`;
 
 const META = {
   hu: {
     title: 'Büdzsé – Magyarország közpénzügyei 2000–2027',
     description: 'Bevételek, kiadások, hiány, GDP és fejlesztési támogatás 2000-től 2027-ig. Terv és tény, inflációval korrigálva, minden szám mögött a hivatalos forrással.',
-    tagline: 'Mennyi pénze volt az államnak, és mire volt elég? Magyarország közpénzügyei 2000-től 2027-ig, minden szám mögött a hivatalos forrással.',
+    tagline: 'Magyarország közpénzügyei, 2000–2027. Minden szám mögött a hivatalos forrás.',
   },
   en: {
     title: "Büdzsé – Hungary's public finances 2000–2027",
     description: 'Government revenue, expenditure, deficits, GDP and development aid from 2000 to 2027. Budgeted and actual figures, adjusted for inflation, with the official source behind every number.',
-    tagline: "How much money did the Hungarian state have, and what did it cover? Hungary's public finances from 2000 to 2027, with the official source behind every number.",
+    tagline: "Hungary's public finances, 2000 to 2027. The official source behind every number.",
   },
 };
 

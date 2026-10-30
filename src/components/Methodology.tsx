@@ -3,8 +3,8 @@ import { useApp } from './context';
 export default function Methodology() {
   const { m } = useApp();
   return (
-    <section className="methodology" aria-labelledby="method-title" data-testid="methodology">
-      <h2 id="method-title">{m.methodology.title}</h2>
+    <details className="fold" data-testid="methodology">
+      <summary>{m.methodology.title}</summary>
       <p className="lede">{m.methodology.intro}</p>
       <div className="method-list">
         {m.methodology.sections.map((s) => (
@@ -16,6 +16,6 @@ export default function Methodology() {
           </details>
         ))}
       </div>
-    </section>
+    </details>
   );
 }

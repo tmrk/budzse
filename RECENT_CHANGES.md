@@ -1,5 +1,13 @@
 # Recent changes
 
+## 2026-10-30: interface overhaul
+
+One timeline and one selected year now drive the whole page. The first screen is the year's sum: revenue, expenditure, deficit. Controls went from about twenty to three, and the default view is the whole state (ESA), which has no series break. ECharts is gone in favour of hand-written SVG. New type (Big Shoulders, Newsreader) and a two-ink palette.
+
+Fixed along the way: the share-of-GNI line joined net and grant-equivalent ODA across their 2018 method change; the two are now separate lines.
+
+Retired URL parameters (`m`, `v`, `rev`, `f`, `x`, `from`, `to`, `ci`, `ca`, `cb`) are ignored, so old links still open. A link with no `s` now means the whole state rather than the central budget.
+
 ## 2026-10-30: first release
 
 Dataset of central budget acts 2000-2026, final accounts 2000-2024, Treasury 2025 and Jan-Sep 2026, Eurostat 2000-2025, OECD DAC 2003-2025, KSH CPI, EC Spring 2026 forecast and the Ministry of Finance 2027-2030 programme.

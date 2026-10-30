@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { MESSAGES } from '../../src/i18n';
-import { activePreset, DEFAULT_VIEW, langFromPath, parseQuery, pathForLang, PRESETS, resolveLang, toQuery } from '../../src/lib/view';
+import { DEFAULT_VIEW, langFromPath, lensOf, lensPatch, parseQuery, pathForLang, resolveLang, toQuery, type ViewState } from '../../src/lib/view';
 import { toCsv } from '../../src/lib/csv';
 import { measure } from '../../src/lib/measure';
 import { dataset, obs } from './helpers';
@@ -11,24 +11,38 @@ describe('URL state', () => {
   });
 
   it('round-trips a full configuration', () => {
-    const v = { ...DEFAULT_VIEW, scope: 'general' as const, metrics: ['gdp', 'oda'] as const as never, view: 'both' as const, real: true, ref: 'latest' as const, from: 2005, to: 2020, year: 2012, relative: true, exact: true, revised: true, forecasts: false, compare: { indicator: 'oda' as const, a: 2015, b: 2024 } };
+    const v: ViewState = { scope: 'central', real: true, ref: 'latest', relative: false, year: 2012, versus: 2015 };
     expect(parseQuery(toQuery(v))).toEqual(v);
+    const w: ViewState = { ...DEFAULT_VIEW, relative: true, year: 2000 };
+    expect(parseQuery(toQuery(w))).toEqual(w);
   });
 
   it('ignores malformed values', () => {
-    const v = parseQuery('?y=abc&from=1500&to=3000&m=nope&v=weird&s=x&ci=foo');
+    const v = parseQuery('?y=abc&s=x&vs=&ref=');
     expect(v.year).toBe(DEFAULT_VIEW.year);
-    expect(v.from).toBe(2000);
-    expect(v.to).toBe(2027);
-    expect(v.metrics).toEqual(DEFAULT_VIEW.metrics);
-    expect(v.view).toBe(DEFAULT_VIEW.view);
-    expect(v.scope).toBe('central');
-    expect(v.compare.indicator).toBe('revenue');
+    expect(v.scope).toBe(DEFAULT_VIEW.scope);
+    expect(v.ref).toBe(DEFAULT_VIEW.ref);
   });
 
-  it('swaps a reversed range', () => {
-    const v = parseQuery('?from=2020&to=2010');
-    expect([v.from, v.to]).toEqual([2010, 2020]);
+  it('clamps years to the range the data covers', () => {
+    expect(parseQuery('?y=1500').year).toBe(2000);
+    expect(parseQuery('?y=3000').year).toBe(2027);
+  });
+
+  it('ignores the parameters of retired controls', () => {
+    expect(parseQuery('?m=oda&v=both&from=2010&to=2012&x=1')).toEqual(DEFAULT_VIEW);
+  });
+
+  it('cannot end up in two lenses at once', () => {
+    const v = parseQuery('?real=1&pct=1');
+    expect(lensOf(v)).toBe('share');
+    expect(v.real).toBe(false);
+  });
+});
+
+describe('lens', () => {
+  it('maps to the two flags measure() reads', () => {
+    for (const l of ['forint', 'real', 'share'] as const) expect(lensOf(lensPatch(l))).toBe(l);
   });
 });
 
@@ -54,14 +68,6 @@ describe('language routing', () => {
     expect(pathForLang('/budzse/hu/', 'en')).toBe('/budzse/en/');
     expect(pathForLang('/budzse/', 'en')).toBe('/budzse/en/');
     expect(pathForLang('/budzse/en', 'hu')).toBe('/budzse/hu/');
-  });
-});
-
-describe('presets', () => {
-  it('recognises each preset', () => {
-    for (const k of Object.keys(PRESETS) as (keyof typeof PRESETS)[]) {
-      expect(activePreset({ ...DEFAULT_VIEW, ...PRESETS[k] })).toBe(k);
-    }
   });
 });
 

@@ -1,6 +1,6 @@
 import type { Dataset, FiscalScope, Indicator, Observation, Status } from '../types/data';
 import { deflator, type PriceReference } from './cpi';
-import type { AnalyticalScope, MetricKey, ViewState } from './view';
+import { FIRST_YEAR, LAST_YEAR, type AnalyticalScope, type ViewState } from './view';
 
 export const SCOPES_OF: Record<AnalyticalScope, FiscalScope[]> = {
   central: ['centralBudget', 'centralSubsystem'],
@@ -13,31 +13,6 @@ export function inScope(o: Observation, scope: AnalyticalScope): boolean {
   return FISCAL.includes(o.indicator) || o.indicator.endsWith('PctGdp')
     ? SCOPES_OF[scope].includes(o.scope)
     : true;
-}
-
-export function lastActualYear(data: Dataset, indicator: Indicator, scope: AnalyticalScope): number {
-  const years = data.observations.filter((o) => o.indicator === indicator && o.status === 'actual' && inScope(o, scope)).map((o) => o.year);
-  return years.length ? Math.max(...years) : 0;
-}
-
-/** Which statuses the planned/actual switch lets through. */
-export function statusVisible(o: Observation, v: Pick<ViewState, 'view' | 'revised' | 'forecasts'>, lastActual: number): boolean {
-  const future = o.year > lastActual;
-  const planned: Status[] = ['original', 'planned'];
-  switch (o.status) {
-    case 'actual':
-      return v.view !== 'plan';
-    case 'ytd':
-      return v.view !== 'plan' && v.forecasts;
-    case 'forecast':
-      return v.forecasts;
-    case 'draft':
-      return v.forecasts;
-    case 'revised':
-      return v.revised || (future && v.forecasts);
-    default:
-      return planned.includes(o.status) && v.view !== 'actual';
-  }
 }
 
 export function gdpDenominator(data: Dataset, o: Observation): Observation | undefined {
@@ -90,113 +65,6 @@ export function measure(data: Dataset, o: Observation, v: Pick<ViewState, 'real'
     estimated: d.estimated,
     deflation: { factor: d.factor, reference: v.ref },
   };
-}
-
-export interface ChartPoint {
-  year: number;
-  measured: Measured;
-}
-
-export interface ChartSeries {
-  key: string;
-  metric: MetricKey | 'odaGe' | 'odaBilateral' | 'odaMultilateral';
-  indicator: Indicator;
-  status: Status;
-  publisher?: 'ec' | 'gov';
-  points: ChartPoint[];
-}
-
-export interface ChartPanel {
-  id: 'level' | 'deficit' | 'oda';
-  metrics: MetricKey[];
-  unit: 'HUF' | 'pct';
-  series: ChartSeries[];
-}
-
-const PANEL_OF: Record<MetricKey, ChartPanel['id']> = {
-  revenue: 'level',
-  expenditure: 'level',
-  gdp: 'level',
-  deficit: 'deficit',
-  oda: 'oda',
-};
-
-/** Consecutive years only: a gap in the data must read as a gap, and so must a change of scope. */
-function splitRuns(points: ChartPoint[]): ChartPoint[][] {
-  const runs: ChartPoint[][] = [];
-  for (const p of [...points].sort((a, b) => a.year - b.year)) {
-    const run = runs[runs.length - 1];
-    const prev = run?.[run.length - 1];
-    if (prev && prev.year === p.year - 1 && prev.measured.obs.scope === p.measured.obs.scope) run.push(p);
-    else runs.push([p]);
-  }
-  return runs;
-}
-
-function seriesFor(data: Dataset, indicator: Indicator, metric: ChartSeries['metric'], v: ViewState): ChartSeries[] {
-  const lastActual = lastActualYear(data, indicator, v.scope);
-  const groups = new Map<string, ChartPoint[]>();
-  const meta = new Map<string, Pick<ChartSeries, 'status' | 'publisher'>>();
-  for (const o of data.observations) {
-    if (o.indicator !== indicator || !inScope(o, v.scope) || !statusVisible(o, v, lastActual)) continue;
-    const m = measure(data, o, v);
-    if (!m) continue;
-    const k = `${o.status}:${o.publisher ?? ''}`;
-    if (!groups.has(k)) {
-      groups.set(k, []);
-      meta.set(k, { status: o.status, publisher: o.publisher });
-    }
-    groups.get(k)!.push({ year: o.year, measured: m });
-  }
-  const out: ChartSeries[] = [];
-  for (const [k, pts] of groups) {
-    splitRuns(pts).forEach((points, i) => {
-      out.push({ key: `${indicator}:${k}:${i}`, metric, indicator, ...meta.get(k)!, points });
-    });
-  }
-  return out;
-}
-
-const PCT_INDICATOR: Partial<Record<Indicator, Indicator>> = {
-  revenue: 'revenuePctGdp',
-  expenditure: 'expenditurePctGdp',
-  deficit: 'deficitPctGdp',
-};
-
-export function buildPanels(data: Dataset, v: ViewState): ChartPanel[] {
-  const panels = new Map<ChartPanel['id'], ChartPanel>();
-  const add = (id: ChartPanel['id'], metric: MetricKey, series: ChartSeries[]) => {
-    if (!panels.has(id)) panels.set(id, { id, metrics: [], unit: v.relative ? 'pct' : 'HUF', series: [] });
-    const p = panels.get(id)!;
-    p.metrics.push(metric);
-    p.series.push(...series);
-  };
-  for (const metric of v.metrics) {
-    if (metric === 'oda') {
-      if (v.relative) {
-        add('oda', 'oda', seriesFor(data, 'odaPctGni', 'oda', v));
-      } else {
-        add('oda', 'oda', [...seriesFor(data, 'oda', 'oda', v), ...seriesFor(data, 'odaGe', 'odaGe', v)]);
-      }
-      continue;
-    }
-    if (metric === 'gdp' && v.relative) continue;
-    const series = seriesFor(data, metric, metric, v);
-    const pct = v.relative ? PCT_INDICATOR[metric] : undefined;
-    if (pct) {
-      // A published share beats one we would calculate for the same year and publisher.
-      const reported = seriesFor(data, pct, metric, v);
-      const taken = new Set(reported.flatMap((s) => s.points.map((p) => `${s.status}:${s.publisher ?? ''}:${p.year}`)));
-      const kept = series
-        .map((s) => ({ ...s, points: s.points.filter((p) => !taken.has(`${s.status}:${s.publisher ?? ''}:${p.year}`)) }))
-        .filter((s) => s.points.length);
-      add(PANEL_OF[metric], metric, [...kept, ...reported]);
-      continue;
-    }
-    add(PANEL_OF[metric], metric, series);
-  }
-  const order: ChartPanel['id'][] = ['level', 'deficit', 'oda'];
-  return order.map((id) => panels.get(id)).filter((p): p is ChartPanel => Boolean(p));
 }
 
 export interface PlanActualDiff {
@@ -252,21 +120,121 @@ export function observationsFor(data: Dataset, year: number, scope: AnalyticalSc
     .sort((a, b) => STATUS_RANK.indexOf(a.status) - STATUS_RANK.indexOf(b.status));
 }
 
+/** Published percentages (growth, inflation) stand as they are in every lens. */
+export const asPublished = (o: Observation): Measured => ({ obs: o, value: o.value, unit: o.unit, estimated: o.status === 'forecast' });
+
+type Mode = Pick<ViewState, 'real' | 'ref' | 'relative'>;
+
+export interface LedgerRow {
+  year: number;
+  status: Status;
+  publisher?: 'ec' | 'gov';
+  revenue: Measured | null;
+  expenditure: Measured | null;
+  deficit: Measured | null;
+}
+
+/**
+ * The one set of figures that stands for a year. All three come from the same status and publisher,
+ * so the sum on screen is a sum in the source. A part-year figure can never stand for a year.
+ */
+const LEDGER_RANK: Status[] = ['actual', 'revised', 'draft', 'forecast', 'original', 'planned'];
+
+export function ledgerFor(data: Dataset, year: number, scope: AnalyticalScope, mode: Mode): LedgerRow | null {
+  const rows = data.observations.filter((o) => o.year === year && inScope(o, scope) && FISCAL.includes(o.indicator));
+  for (const status of LEDGER_RANK) {
+    for (const publisher of ['gov', 'ec', undefined] as const) {
+      const pick = (i: Indicator) => rows.find((o) => o.indicator === i && o.status === status && o.publisher === publisher);
+      const [r, e, d] = [pick('revenue'), pick('expenditure'), pick('deficit')];
+      if (r && e && d) return { year, status, publisher, revenue: measure(data, r, mode), expenditure: measure(data, e, mode), deficit: measure(data, d, mode) };
+    }
+  }
+  return null;
+}
+
+export function ledgerRows(data: Dataset, scope: AnalyticalScope, mode: Mode): LedgerRow[] {
+  const rows: LedgerRow[] = [];
+  for (let y = FIRST_YEAR; y <= LAST_YEAR; y++) {
+    const row = ledgerFor(data, y, scope, mode);
+    if (row) rows.push(row);
+  }
+  return rows;
+}
+
+export interface PlanYear {
+  year: number;
+  plan?: Observation;
+  actual?: Observation;
+  /** What stands in for the outcome before one exists: the amended act, then the draft bill. */
+  outcome?: Observation;
+  all: Observation[];
+}
+
+/** The deficit in the budget acts. Only the central figures are law, so this ignores the scope switch. */
+export function planYears(data: Dataset): PlanYear[] {
+  const years: PlanYear[] = [];
+  for (let y = FIRST_YEAR; y <= LAST_YEAR; y++) {
+    const all = observationsFor(data, y, 'central', 'deficit');
+    const of = (s: Status) => all.find((o) => o.status === s);
+    years.push({ year: y, plan: of('original'), actual: of('actual'), outcome: of('actual') ?? of('revised') ?? of('draft'), all });
+  }
+  return years;
+}
+
+/** How often the outcome exceeded the act as first adopted, counting only years that have both. */
+export function overshoot(years: PlanYear[]): { over: number; total: number } {
+  const diffs = years.map((y) => planVersusActual(y.plan, y.actual)).filter((d): d is PlanActualDiff => d !== null);
+  return { over: diffs.filter((d) => d.absolute > 0).length, total: diffs.length };
+}
+
+const PCT_INDICATOR: Partial<Record<Indicator, Indicator>> = {
+  revenue: 'revenuePctGdp',
+  expenditure: 'expenditurePctGdp',
+  deficit: 'deficitPctGdp',
+};
+
+export interface FigureRow {
+  key: string;
+  obs: Observation;
+  cells: Record<'revenue' | 'expenditure' | 'deficit', { obs: Observation; measured: Measured | null } | null>;
+}
+
+/** Every figure a year has, one row per status and publisher. In the share lens a published share beats a calculated one. */
+export function figureRows(data: Dataset, year: number, scope: AnalyticalScope, mode: Mode): FigureRow[] {
+  const kinds = ['revenue', 'expenditure', 'deficit'] as const;
+  const inYear = data.observations.filter((o) => o.year === year && inScope(o, scope) && kinds.some((k) => o.indicator === k || o.indicator === PCT_INDICATOR[k]));
+  const keys = [...new Set(inYear.map((o) => `${o.status}:${o.publisher ?? ''}`))];
+  const rows = keys.map((key): FigureRow => {
+    const group = inYear.filter((o) => `${o.status}:${o.publisher ?? ''}` === key);
+    const cell = (k: (typeof kinds)[number]) => {
+      const forint = group.find((o) => o.indicator === k);
+      const share = group.find((o) => o.indicator === PCT_INDICATOR[k]);
+      const obs = mode.relative ? (share ?? forint) : forint;
+      return obs ? { obs, measured: measure(data, obs, mode) } : null;
+    };
+    return { key, obs: group[0], cells: { revenue: cell('revenue'), expenditure: cell('expenditure'), deficit: cell('deficit') } };
+  });
+  return rows
+    .filter((r) => kinds.some((k) => r.cells[k]))
+    .sort((a, b) => STATUS_RANK.indexOf(a.obs.status) - STATUS_RANK.indexOf(b.obs.status) || (a.obs.publisher === 'gov' ? -1 : 1));
+}
+
 export interface TableFilter {
-  indicator: Indicator | 'selected';
+  indicator: Indicator | 'all';
   status: Status | 'all';
+  from: number;
+  to: number;
 }
 
 const TABLE_INDICATORS: Indicator[] = ['revenue', 'expenditure', 'deficit', 'gdp', 'oda', 'odaGe', 'odaBilateral', 'odaMultilateral', 'odaPctGni', 'revenuePctGdp', 'expenditurePctGdp', 'deficitPctGdp', 'realGdpGrowth', 'cpi', 'gni'];
 
-export function tableRows(data: Dataset, v: ViewState, f: TableFilter): Measured[] {
-  const selected = new Set<Indicator>(v.metrics.flatMap((m) => (m === 'oda' ? (['oda', 'odaGe'] as Indicator[]) : [m])));
+export function tableRows(data: Dataset, v: Pick<ViewState, 'scope' | 'real' | 'ref'>, f: TableFilter): Measured[] {
   const rows: Measured[] = [];
   for (const o of data.observations) {
-    if (o.year < v.from || o.year > v.to || !inScope(o, v.scope)) continue;
-    if (f.indicator === 'selected' ? !selected.has(o.indicator) : o.indicator !== f.indicator) continue;
+    if (o.year < f.from || o.year > f.to || !inScope(o, v.scope)) continue;
+    if (f.indicator !== 'all' && o.indicator !== f.indicator) continue;
     if (f.status !== 'all' && o.status !== f.status) continue;
-    const m = o.unit === 'pct' ? { obs: o, value: o.value, unit: 'pct' as const, estimated: o.status === 'forecast' } : measure(data, o, { real: v.real, ref: v.ref, relative: false });
+    const m = o.unit === 'pct' ? asPublished(o) : measure(data, o, { real: v.real, ref: v.ref, relative: false });
     if (m) rows.push(m);
   }
   return rows.sort(

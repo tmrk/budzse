@@ -1,5 +1,4 @@
 import type { FiscalScope, Indicator, Lang, Method, Revision, Status } from '../types/data';
-import type { PresetKey } from '../lib/view';
 import { en } from './en';
 import { hu } from './hu';
 
@@ -11,4 +10,3 @@ export const statusName = (m: Messages, s: Status) => m.statuses[s];
 export const scopeName = (m: Messages, s: FiscalScope) => m.scopes[s];
 export const methodName = (m: Messages, x: Method) => m.methods[x];
 export const revisionName = (m: Messages, r: Revision) => m.revisions[r];
-export const presetName = (m: Messages, p: PresetKey) => m.presets[p];
