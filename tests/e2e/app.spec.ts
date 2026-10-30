@@ -330,6 +330,58 @@ test.describe('sources, comparisons and exports', () => {
     await expect(dialog).toBeHidden();
   });
 
+  test('the sheet slides in, and slides out with its content however it is dismissed', async ({ page, isMobile }) => {
+    await page.goto('/budzse/en/?y=2020');
+    await ready(page);
+    const dialog = page.getByTestId('source-dialog');
+    // Recorded as it happens, because the slide is over before a later check could see it.
+    await dialog.evaluate((d: HTMLDialogElement) => {
+      const sliding = () => String(d.getAnimations().some((a) => (a as CSSTransition).transitionProperty === 'transform'));
+      new MutationObserver(() => {
+        if (d.open) d.dataset.slideIn = sliding();
+      }).observe(d, { attributes: true, attributeFilter: ['open'] });
+      d.addEventListener('close', () => {
+        d.dataset.slideOut = sliding();
+        d.dataset.contentLeaving = String(d.textContent!.length > 100);
+      });
+    });
+    const dismissals: [string, () => Promise<void>][] = [
+      ['the close button', () => dialog.locator('.close').click()],
+      ['Escape', () => page.keyboard.press('Escape')],
+    ];
+    // On a phone the sheet fills the screen, so there is no outside to tap.
+    if (!isMobile) dismissals.push(['a click outside', () => page.mouse.click(5, 300)]);
+    for (const [how, dismiss] of dismissals) {
+      await page.getByTestId('ledger-deficit').click();
+      await expect(dialog, how).toHaveAttribute('data-slide-in', 'true');
+      await dialog.evaluate((d) => Promise.all(d.getAnimations().map((a) => a.finished)));
+      const box = (await dialog.boundingBox())!;
+      expect(box.x + box.width, how).toBe(page.viewportSize()!.width);
+      await dialog.evaluate((d) => {
+        delete d.dataset.slideOut;
+        delete d.dataset.slideIn;
+      });
+      await dismiss();
+      await expect(dialog, how).toHaveAttribute('data-slide-out', 'true');
+      await expect(dialog, how).toHaveAttribute('data-content-leaving', 'true');
+      await expect(dialog, how).toBeHidden();
+    }
+  });
+
+  test('reduced motion opens and closes the sheet without the slide', async ({ browser }) => {
+    const ctx = await browser.newContext({ reducedMotion: 'reduce' });
+    const page = await ctx.newPage();
+    await page.goto('/budzse/en/?y=2020');
+    await ready(page);
+    const dialog = page.getByTestId('source-dialog');
+    await page.getByTestId('ledger-deficit').click();
+    await expect(dialog).toBeVisible();
+    expect(await dialog.evaluate((d) => parseFloat(getComputedStyle(d).transitionDuration))).toBeLessThan(0.01);
+    await page.keyboard.press('Escape');
+    await expect(dialog).toBeHidden();
+    await ctx.close();
+  });
+
   test('section figures open their provenance too', async ({ page }) => {
     await page.goto('/budzse/en/?y=2020');
     await ready(page);
@@ -784,6 +836,33 @@ test.describe('layout and accessibility', () => {
     await ready(page);
     expect(await page.locator('[data-testid="chart"] svg').evaluate((el) => getComputedStyle(el).animationName)).toBe('none');
   });
+
+  // An open list is drawn by the browser, so its colours are checked where the page sets them.
+  for (const [name, colorScheme, theme] of [['system dark', 'dark', null], ['dark chosen on a light system', 'light', 'dark'], ['light', 'light', null]] as const) {
+    test(`every dropdown list is readable in ${name}`, async ({ browser }) => {
+      const ctx = await browser.newContext({ colorScheme });
+      const page = await ctx.newPage();
+      if (theme) await page.addInitScript((t) => localStorage.setItem('budzse-theme', t), theme);
+      await page.goto('/budzse/en/?real=1');
+      await ready(page);
+      await openEverything(page);
+      await expect(page.getByTestId('reference')).toBeVisible();
+      const lists = await page.evaluate(() => {
+        const token = (name: string) => {
+          const probe = document.createElement('i');
+          probe.style.color = `var(${name})`;
+          document.body.append(probe);
+          const value = getComputedStyle(probe).color;
+          probe.remove();
+          return value;
+        };
+        const expected = `${token('--paper')} on ${token('--ink')}`;
+        return { expected, found: [...new Set([...document.querySelectorAll('option')].map((o) => `${getComputedStyle(o).backgroundColor} on ${getComputedStyle(o).color}`))] };
+      });
+      expect(lists.found).toEqual([lists.expected]);
+      await ctx.close();
+    });
+  }
 
   test('the theme button cycles and persists', async ({ page }) => {
     await page.goto('/budzse/en/');

@@ -29,14 +29,18 @@ export default function SourceDialog({ target, onClose }: { target: SourceTarget
     if (!target && d.open) d.close();
   }, [target]);
 
-  const o = target?.obs;
-  const measured = target?.measured;
+  // Closing clears the target, and the sheet keeps its content while it slides out.
+  const shown = useRef(target);
+  if (target) shown.current = target;
+
+  const o = shown.current?.obs;
+  const measured = shown.current?.measured;
   const src = o ? data.sources[o.source] : null;
   const ref = measured?.deflation?.reference;
   const refLabel = ref === 'latest' ? formatDate(data.cpi.latestMonth.month, lang) : ref ? String(ref) : '';
   const cpiOrigin = o ? cpiYear(data.cpi, o.year) : undefined;
   const cpiSrc = cpiOrigin ? data.sources[cpiOrigin.source] : undefined;
-  const gap = target?.gap;
+  const gap = shown.current?.gap;
 
   return (
     <dialog ref={dialog} className="source-dialog" onClose={onClose} onClick={(e) => e.target === dialog.current && onClose()} aria-labelledby="source-title" data-testid="source-dialog">
