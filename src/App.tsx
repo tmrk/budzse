@@ -6,7 +6,6 @@ import Hero, { YearStepper } from './components/Hero';
 import MoneyChart from './components/MoneyChart';
 import { AidSection, EconomySection, PlanSection } from './components/Sections';
 import SourceDialog from './components/SourceDialog';
-import YearFigures from './components/YearFigures';
 import { figure } from './components/figures';
 import { useAppState } from './hooks/useAppState';
 import { useTheme, type ThemeChoice } from './hooks/useTheme';
@@ -54,7 +53,6 @@ export default function App() {
   const [failed, setFailed] = useState(false);
   const [target, setTarget] = useState<{ obs: Observation; measured?: Measured | null } | null>(null);
   const [preview, setPreview] = useState<number | null>(null);
-  const [shareState, setShareState] = useState<'idle' | 'ok' | 'failed'>('idle');
   const [scrolled, setScrolled] = useState(false);
   const heroEnd = useRef<HTMLDivElement>(null);
 
@@ -73,15 +71,6 @@ export default function App() {
   }, []);
 
   const inspect = useCallback((obs: Observation, measured?: Measured | null) => setTarget({ obs, measured }), []);
-  const onShare = useCallback(async () => {
-    try {
-      await navigator.clipboard.writeText(location.href);
-      setShareState('ok');
-    } catch {
-      setShareState('failed');
-    }
-    window.setTimeout(() => setShareState('idle'), 2500);
-  }, []);
 
   const year = preview ?? view.year;
   const ctx = useMemo<AppContextValue | null>(() => (data ? { data, lang, m, view, setView, year, setPreview, inspect } : null), [data, lang, m, view, setView, year, inspect]);
@@ -99,7 +88,6 @@ export default function App() {
 
   const row = rows.find((r) => r.year === year);
   const summary = row ? m.chart.aria(m.chart.summary(year, [row.revenue, row.expenditure, row.deficit].flatMap((x) => (x ? [figure(x, lang)] : [])).join(', '))) : m.year.noData;
-  const anyEstimate = rows.some((r) => r.deficit?.estimated);
 
   return (
     <div className="page">
@@ -126,20 +114,11 @@ export default function App() {
                 <MoneyChart rows={rows} summary={summary} />
                 <div className="hero-notes">
                   <p className="fine" data-testid="scope-help">{view.scope === 'general' ? m.controls.scopeHelpGeneral : m.controls.scopeHelpCentral}</p>
-                  {view.scope === 'central' && <p className="fine">{m.chart.scopeBreak}</p>}
                   {view.real && <p className="fine">{m.chart.realNote}</p>}
-                  {view.real && anyEstimate && <p className="fine">{m.chart.estimatedNote}</p>}
-                  <p className="fine hint-chart">
-                    {m.chart.hint}{' '}
-                    <button type="button" className="text-button" onClick={onShare} data-testid="share">
-                      {shareState === 'ok' ? m.controls.shared : shareState === 'failed' ? m.controls.shareFailed : m.controls.share}
-                    </button>
-                  </p>
                 </div>
               </div>
             </section>
             <div ref={heroEnd} className="hero-end" />
-            <YearFigures />
             <PlanSection />
             <EconomySection />
             <AidSection />

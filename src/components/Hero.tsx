@@ -1,11 +1,10 @@
 import { axisScale, formatNumber, formatPct, formatSigned } from '../lib/format';
 import { compareMeasured, type LedgerRow, type Measured } from '../lib/measure';
 import { FIRST_YEAR, LAST_YEAR } from '../lib/view';
-import { useId } from 'react';
+import { statusName } from '../i18n';
 import { YEARS } from '../charts/geometry';
 import { useApp } from './context';
-import { Hatch } from './Timeline';
-import { priceBasis, SourceButton, statusLabel } from './figures';
+import { priceBasis, SourceButton } from './figures';
 
 function Chevron({ back }: { back?: boolean }) {
   return (
@@ -41,21 +40,20 @@ function Digits({ text }: { text: string }) {
   );
 }
 
-function Delta({ current, base, points }: { current: Measured | null; base: Measured | null; points: string }) {
-  const { lang } = useApp();
+/** Change on the year before. A change of scope leaves a dash, never a false difference. */
+function Delta({ current, base }: { current: Measured | null; base: Measured | null }) {
+  const { lang, m } = useApp();
   if (!current || !base) return <span className="delta" />;
   const c = compareMeasured(base, current);
-  if (c.compatibility !== 'ok' || c.absolute === null) return <span className="delta">–</span>;
-  const text = current.unit === 'pct' ? formatSigned(`${formatNumber(Math.abs(c.absolute), lang, 1)} ${points}`, c.absolute < 0) : c.percent !== null ? formatSigned(formatPct(Math.abs(c.percent), lang), c.percent < 0) : '';
+  if (c.compatibility !== 'ok' || c.absolute === null) return <span className="delta" title={m.hero.scopeWarning}>–</span>;
+  const text = current.unit === 'pct' ? formatSigned(`${formatNumber(Math.abs(c.absolute), lang, 1)} ${m.hero.points}`, c.absolute < 0) : c.percent !== null ? formatSigned(formatPct(Math.abs(c.percent), lang), c.percent < 0) : '';
   return <span className="delta">{text}</span>;
 }
 
 export default function Hero({ rows }: { rows: LedgerRow[] }) {
   const { data, view, setView, year, m, lang } = useApp();
-  const hatch = useId();
   const row = rows.find((r) => r.year === year);
-  const versus = view.versus !== null && view.versus !== year ? view.versus : year > FIRST_YEAR ? year - 1 : null;
-  const base = versus !== null ? rows.find((r) => r.year === versus) : undefined;
+  const base = rows.find((r) => r.year === year - 1);
   const lines = row ? ([
     ['revenue', m.hero.revenue, row.revenue],
     ['expenditure', m.hero.expenditure, row.expenditure],
@@ -67,8 +65,8 @@ export default function Hero({ rows }: { rows: LedgerRow[] }) {
   const unit = share ? m.hero.unitShare : m.hero.unitForint(name);
   const surplus = (row?.deficit?.value ?? 0) < 0;
   const covered = row?.revenue && row.expenditure ? (row.revenue.value / row.expenditure.value) * 100 : null;
-  const warning = row?.deficit && base?.deficit ? compareMeasured(base.deficit, row.deficit).compatibility : 'ok';
   const estimated = row && [row.revenue, row.expenditure, row.deficit].some((x) => x?.estimated);
+  const qualifier = [row?.publisher && m.publishers[row.publisher], estimated && m.chart.estimated].filter(Boolean).join(', ');
 
   return (
     <div className="ledger-side">
@@ -85,11 +83,11 @@ export default function Hero({ rows }: { rows: LedgerRow[] }) {
         <div className="year-side">
           <YearStepper testId="year-steps" />
           {row && (
-            <span className={row.status === 'actual' ? 'stamp' : 'stamp open'} key={`${row.status}${row.publisher ?? ''}`} data-testid="stamp">
-              {statusLabel(row, m)}
+            <span className={row.status === 'actual' ? 'stamp' : 'stamp open'} key={row.status} data-testid="stamp">
+              {statusName(m, row.status)}
             </span>
           )}
-          {estimated && <em className="estimate">{m.chart.estimated}</em>}
+          {qualifier && <span className="stamp-note" data-testid="stamp-note">{qualifier}</span>}
         </div>
       </div>
 
@@ -101,49 +99,25 @@ export default function Hero({ rows }: { rows: LedgerRow[] }) {
               {unit}
               {view.real && <span className="ledger-basis" data-testid="price-basis">{priceBasis(data, view.ref, m, lang)}</span>}
             </span>
-            <label className="quiet-select versus">
-              <span className="sr-only">{m.hero.versusLabel}</span>
-              <select value={versus ?? ''} onChange={(e) => setView({ versus: e.target.value ? Number(e.target.value) : null })} data-testid="versus">
-                {versus === null && <option value="">{m.hero.versusNone}</option>}
-                {YEARS.filter((y) => y !== year).map((y) => (
-                  <option key={y} value={y}>{m.hero.versus(y)}</option>
-                ))}
-              </select>
-            </label>
+            <span className="ledger-versus">{m.hero.previous}</span>
           </div>
           {lines.map(([key, label, x]) => (
             <div className={`ledger-row ${key}`} key={key}>
               <span className="ledger-label"><i className={`mark mark-${key}`} aria-hidden="true" />{label}</span>
               {x ? <SourceButton obs={x.obs} measured={x} what={label} value={`${text(x)} ${unit}`} testId={`ledger-${key}`} className="ledger-num"><Digits text={text(x)} /></SourceButton> : <span className="no-data">{m.year.noData}</span>}
-              <Delta current={x} base={base ? base[key] : null} points={m.hero.points} />
+              <Delta current={x} base={base ? base[key] : null} />
             </div>
           ))}
           <div className="ledger-row deficit">
-            <span className="ledger-label">{surplus ? m.hero.surplus : m.hero.deficit}</span>
+            <span className="ledger-label"><i className="mark mark-gap" aria-hidden="true" />{surplus ? m.hero.surplus : m.hero.deficit}</span>
             {row.deficit ? <SourceButton obs={row.deficit.obs} measured={row.deficit} what={surplus ? m.hero.surplus : m.hero.deficit} value={`${text(row.deficit)} ${unit}`} testId="ledger-deficit" className="ledger-num"><Digits text={text(row.deficit)} /></SourceButton> : <span className="no-data">{m.year.noData}</span>}
-            <Delta current={row.deficit} base={base ? base.deficit : null} points={m.hero.points} />
+            <Delta current={row.deficit} base={base ? base.deficit : null} />
           </div>
+          {covered !== null && <p className="cover" data-testid="cover">{m.hero.cover(formatNumber(covered, lang))}</p>}
         </div>
       ) : (
         <p className="no-data">{m.year.noData}</p>
       )}
-
-      {warning !== 'ok' && (
-        <p className="warning" data-testid="compare-warning">{warning === 'scope' ? m.hero.scopeWarning : m.hero.methodWarning}</p>
-      )}
-
-      {covered !== null && (
-        <figure className="cover" data-testid="cover">
-          <svg width="100%" height="14" aria-hidden="true">
-            <defs><Hatch id={hatch} pitch={4} /></defs>
-            <rect className="cover-out" x="0" y="0" width="100%" height="14" style={{ fill: `url(#${hatch})` }} />
-            <rect className="cover-in" x="0" y="0" width={`${Math.min(100, covered)}%`} height="14" />
-          </svg>
-          <figcaption>{m.hero.cover(formatNumber(covered, lang))}</figcaption>
-        </figure>
-      )}
-      <p className="fine hint">{m.hero.sourceHint}</p>
     </div>
   );
 }
-

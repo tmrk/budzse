@@ -26,6 +26,7 @@ Every displayed number needs a traceable source or a documented calculation from
 - Charts are hand-written SVG (`src/components/Timeline.tsx`, `src/charts/geometry.ts`), and every chart shares one x scale. Colours are CSS variables; keep light and dark tokens in `src/styles/app.css` in step, and run the palette through a CVD check when changing them.
 - Orange means one thing: the gap between money in and money out. The hatch is its mark. Do not reuse either for anything else.
 - The ledger shows one figure set per year (`ledgerFor`), all from one status and publisher. A part-year figure never stands for a year.
+- Nothing may change height when the year changes. Sweeping a chart must not move the page or the chart under a finger, so readouts have fixed items and values never wrap. A test sweeps all 28 years and fails on any movement.
 - Big Shoulders has no tabular figures; hero numbers use fixed digit cells (`Digits`). Any new display face must render ő and ű correctly: check, because some do not.
 
 ## Deployment

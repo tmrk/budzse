@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { axisScale, formatExactHuf, formatHuf, formatPct, formatSignedHuf, huYearAdjective, huYearAllative } from '../../src/lib/format';
+import { axisScale, formatExactHuf, formatHuf, formatPct, formatSignedHuf, huYearAdjective } from '../../src/lib/format';
 
 const nb = (s: string) => s.replace(/[  ]/g, ' ');
 
@@ -52,22 +52,5 @@ describe('huYearAdjective', () => {
     expect(huYearAdjective(2025)).toBe('2025-ös');
     expect(huYearAdjective(2026)).toBe('2026-os');
     expect(huYearAdjective(2018)).toBe('2018-as');
-  });
-});
-
-describe('huYearAllative', () => {
-  it('follows vowel harmony', () => {
-    expect(huYearAllative(2000)).toBe('2000-hez');
-    expect(huYearAllative(2010)).toBe('2010-hez');
-    expect(huYearAllative(2020)).toBe('2020-hoz');
-    expect(huYearAllative(2021)).toBe('2021-hez');
-    expect(huYearAllative(2022)).toBe('2022-höz');
-    expect(huYearAllative(2023)).toBe('2023-hoz');
-    expect(huYearAllative(2024)).toBe('2024-hez');
-    expect(huYearAllative(2025)).toBe('2025-höz');
-    expect(huYearAllative(2026)).toBe('2026-hoz');
-    expect(huYearAllative(2027)).toBe('2027-hez');
-    expect(huYearAllative(2018)).toBe('2018-hoz');
-    expect(huYearAllative(2019)).toBe('2019-hez');
   });
 });

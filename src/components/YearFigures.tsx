@@ -12,11 +12,11 @@ export default function YearFigures() {
     ['deficit', m.hero.deficit],
   ] as const;
   return (
-    <details className="year-figures" data-testid="year-figures">
+    <details className="fold" data-testid="year-figures">
       <summary>{m.figures.title(year)}</summary>
       <p className="fine">{m.figures.note}</p>
       {rows.length > 0 && (
-        <div className="scroll-x" tabIndex={0} role="region" aria-label={m.figures.title(year)}>
+        <div className="scroll-x year-figures-table" tabIndex={0} role="region" aria-label={m.figures.title(year)}>
           <table>
             <thead>
               <tr>

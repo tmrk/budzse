@@ -11,14 +11,14 @@ describe('URL state', () => {
   });
 
   it('round-trips a full configuration', () => {
-    const v: ViewState = { scope: 'central', real: true, ref: 'latest', relative: false, year: 2012, versus: 2015 };
+    const v: ViewState = { scope: 'central', real: true, ref: 'latest', relative: false, year: 2012 };
     expect(parseQuery(toQuery(v))).toEqual(v);
     const w: ViewState = { ...DEFAULT_VIEW, relative: true, year: 2000 };
     expect(parseQuery(toQuery(w))).toEqual(w);
   });
 
   it('ignores malformed values', () => {
-    const v = parseQuery('?y=abc&s=x&vs=&ref=');
+    const v = parseQuery('?y=abc&s=x&ref=');
     expect(v.year).toBe(DEFAULT_VIEW.year);
     expect(v.scope).toBe(DEFAULT_VIEW.scope);
     expect(v.ref).toBe(DEFAULT_VIEW.ref);
@@ -30,7 +30,7 @@ describe('URL state', () => {
   });
 
   it('ignores the parameters of retired controls', () => {
-    expect(parseQuery('?m=oda&v=both&from=2010&to=2012&x=1')).toEqual(DEFAULT_VIEW);
+    expect(parseQuery('?m=oda&v=both&from=2010&to=2012&x=1&vs=2015')).toEqual(DEFAULT_VIEW);
   });
 
   it('cannot end up in two lenses at once', () => {

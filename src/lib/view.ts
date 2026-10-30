@@ -15,8 +15,6 @@ export interface ViewState {
   ref: PriceReference;
   relative: boolean;
   year: number;
-  /** The year the ledger compares with. Null means the year before. */
-  versus: number | null;
 }
 
 export const DEFAULT_VIEW: ViewState = {
@@ -25,7 +23,6 @@ export const DEFAULT_VIEW: ViewState = {
   ref: DEFAULT_REF,
   relative: false,
   year: 2025,
-  versus: null,
 };
 
 export const lensOf = (v: Pick<ViewState, 'real' | 'relative'>): Lens => (v.relative ? 'share' : v.real ? 'real' : 'forint');
@@ -50,7 +47,6 @@ export function parseQuery(search: string, base: ViewState = DEFAULT_VIEW): View
     ref: ref === 'latest' ? 'latest' : ref ? parseYear(ref, base.ref === 'latest' ? DEFAULT_REF : base.ref) : base.ref,
     relative,
     year: parseYear(q.get('y'), base.year),
-    versus: q.has('vs') ? parseYear(q.get('vs'), base.versus ?? FIRST_YEAR) : base.versus,
   };
 }
 
@@ -63,7 +59,6 @@ export function toQuery(v: ViewState): string {
   if (v.ref !== d.ref) q.set('ref', String(v.ref));
   if (v.relative !== d.relative) q.set('pct', v.relative ? '1' : '0');
   if (v.year !== d.year) q.set('y', String(v.year));
-  if (v.versus !== d.versus && v.versus !== null) q.set('vs', String(v.versus));
   const s = q.toString();
   return s ? `?${s}` : '';
 }

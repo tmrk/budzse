@@ -58,26 +58,45 @@ export function SourceButton({ obs, measured, what, value, testId, className, ch
   );
 }
 
-/** A label, a number and whatever qualifies it: the row every section's readout is made of. */
-export function FigureRow({ label, measured, obs, testId, note, swatch, estimated }: { label: string; measured: Measured | null; obs?: Observation; testId?: string; note?: React.ReactNode; swatch?: React.ReactNode; estimated: string }) {
+export interface ReadoutItem {
+  key: string;
+  label: string;
+  swatch?: React.ReactNode;
+  measured?: Measured | null;
+  obs?: Observation;
+  testId?: string;
+  /** A calculated figure with no single source of its own. */
+  text?: string | null;
+  accent?: boolean;
+  /** Why a figure is missing, for anyone who points at the gap. */
+  reason?: string;
+}
+
+/**
+ * The numbers above a chart. The items are the same whatever the year, and a value never wraps,
+ * so moving through the years can never change the height of the page.
+ */
+export function Readout({ items }: { items: ReadoutItem[] }) {
   const { lang, m } = useApp();
   return (
-    <div className="figure">
-      <dt>
-        {swatch}
-        {label}
-      </dt>
-      <dd>
-        {measured && obs ? (
-          <>
-            <SourceButton obs={obs} measured={measured} what={label} testId={testId}>{figure(measured, lang)}</SourceButton>
-            {measured.estimated && <em className="estimate">{estimated}</em>}
-          </>
-        ) : (
-          <span className="no-data">{m.year.noData}</span>
-        )}
-      </dd>
-      {note && <dd className="figure-note">{note}</dd>}
-    </div>
+    <dl className="readout" style={{ '--n': items.length } as React.CSSProperties}>
+      {items.map((i) => (
+        <div key={i.key} className={i.accent ? 'readout-item accent' : 'readout-item'}>
+          <dt>{i.swatch}{i.label}</dt>
+          <dd>
+            {i.text ? (
+              <strong>{i.text}</strong>
+            ) : i.measured && i.obs ? (
+              <>
+                <SourceButton obs={i.obs} measured={i.measured} what={i.label} testId={i.testId}>{figure(i.measured, lang)}</SourceButton>
+                {i.measured.estimated && <em className="estimate">{m.chart.estimated}</em>}
+              </>
+            ) : (
+              <span className="no-data" title={i.reason}>{i.text === null ? '–' : m.year.noData}</span>
+            )}
+          </dd>
+        </div>
+      ))}
+    </dl>
   );
 }

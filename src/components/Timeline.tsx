@@ -1,4 +1,4 @@
-import { useEffect, useId, useLayoutEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { yearAt, YEARS, type Scales } from '../charts/geometry';
 import { FIRST_YEAR, LAST_YEAR } from '../lib/view';
 import { useApp } from './context';
@@ -70,14 +70,12 @@ interface TimelineProps {
   /** The first year that is not an outcome, shaded through to the end. */
   futureFrom?: number;
   futureLabel?: string;
-  title?: string;
   testId?: string;
   children: React.ReactNode;
 }
 
-export default function Timeline({ scales: s, hostRef, ticks, tickLabel, label, slider, axis, zeroLine, breakLabel, futureFrom, futureLabel, title, testId, children }: TimelineProps) {
+export default function Timeline({ scales: s, hostRef, ticks, tickLabel, label, slider, axis, zeroLine, breakLabel, futureFrom, futureLabel, testId, children }: TimelineProps) {
   const { view, setView, year, setPreview, m } = useApp();
-  const titleId = useId();
   const pick = (e: React.PointerEvent<HTMLDivElement>) => {
     const r = e.currentTarget.getBoundingClientRect();
     return yearAt(e.clientX - r.left, r.width);
@@ -131,10 +129,9 @@ export default function Timeline({ scales: s, hostRef, ticks, tickLabel, label, 
           {year !== view.year && <line className="pin" x1={s.x(view.year)} x2={s.x(view.year)} y1={0} y2={s.bottom} />}
           {children}
           <line className="cursor" x1={cursor} x2={cursor} y1={0} y2={s.bottom} />
-          {ticks.filter((t) => !title || s.y(t) > s.top + 12).map((t) => (
+          {ticks.map((t) => (
             <text key={t} className="tick" x={0} y={s.y(t) - 4}>{tickLabel(t)}</text>
           ))}
-          {title && <text id={titleId} className="strip-title" x={0} y={14}>{title}</text>}
           {axis && (
             <g>
               {labelled.map((y) => (

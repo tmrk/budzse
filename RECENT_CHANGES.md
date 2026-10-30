@@ -1,5 +1,9 @@
 # Recent changes
 
+## 2026-10-30: calmer second pass
+
+The page no longer moves while sweeping through the years: each section has fixed words beside it and a fixed readout above its chart. The hero has one chart with the chosen year's gap drawn solid. Removed: the comparison-year dropdown (the sum now always compares with the year before), the coverage bar, the deficit strip under the main chart, copy link, and repeated year headings. The load animation is gone too, as a full-page capture could restart it and blank the chart. "Every figure for a year" moved into the archive. Missing-data reasons moved from the sections to a tooltip and the coverage list.
+
 ## 2026-10-30: interface overhaul
 
 One timeline and one selected year now drive the whole page. The first screen is the year's sum: revenue, expenditure, deficit. Controls went from about twenty to three, and the default view is the whole state (ESA), which has no series break. ECharts is gone in favour of hand-written SVG. New type (Big Shoulders, Newsreader) and a two-ink palette.

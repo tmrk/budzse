@@ -28,12 +28,12 @@ const META = {
   hu: {
     title: 'Büdzsé – Magyarország közpénzügyei 2000–2027',
     description: 'Bevételek, kiadások, hiány, GDP és fejlesztési támogatás 2000-től 2027-ig. Terv és tény, inflációval korrigálva, minden szám mögött a hivatalos forrással.',
-    tagline: 'Magyarország közpénzügyei, 2000–2027. Minden szám mögött a hivatalos forrás.',
+    tagline: 'Magyarország közpénzügyei, 2000–2027. Minden számra kattintva látszik a forrása.',
   },
   en: {
     title: "Büdzsé – Hungary's public finances 2000–2027",
     description: 'Government revenue, expenditure, deficits, GDP and development aid from 2000 to 2027. Budgeted and actual figures, adjusted for inflation, with the official source behind every number.',
-    tagline: "Hungary's public finances, 2000 to 2027. The official source behind every number.",
+    tagline: "Hungary's public finances, 2000 to 2027. Every number opens its source.",
   },
 };
 
