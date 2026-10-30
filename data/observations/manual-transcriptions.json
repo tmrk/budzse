@@ -16,7 +16,7 @@
   "institution": "Magyar Államkincstár",
   "source": "mak-2025-final",
   "locator": "„Bevétel” sor, „2025. évi teljesítés” oszlop",
-  "revision": "final",
+  "revision": "preliminary",
   "note": {
    "hu": "A 2025. évi zárszámadási törvény a kutatás idején még nem volt kihirdetve, ezért a Kincstár zárszámadási mérlege a forrás.",
    "en": "The 2025 final-accounts act had not been promulgated at the time of research, so the source is the Treasury final-accounts balance."
@@ -39,7 +39,7 @@
   "institution": "Magyar Államkincstár",
   "source": "mak-2025-final",
   "locator": "„Kiadás” sor, „2025. évi teljesítés” oszlop",
-  "revision": "final",
+  "revision": "preliminary",
   "note": {
    "hu": "A 2025. évi zárszámadási törvény a kutatás idején még nem volt kihirdetve, ezért a Kincstár zárszámadási mérlege a forrás.",
    "en": "The 2025 final-accounts act had not been promulgated at the time of research, so the source is the Treasury final-accounts balance."
@@ -62,7 +62,7 @@
   "institution": "Magyar Államkincstár",
   "source": "mak-2025-final",
   "locator": "Egyenlegek: központi költségvetés −5 305 798,8; elkülönített alapok +7 178,5; TB-alapok −247 778,5",
-  "revision": "final",
+  "revision": "preliminary",
   "note": {
    "hu": "A Kincstár egyenlegei negatív előjellel szerepelnek; itt hiányként, pozitív előjellel. Egyezik a kiadás és a bevétel különbségével.",
    "en": "The Treasury shows balances with a negative sign; here it is a deficit with a positive sign. It equals expenditure minus revenue."

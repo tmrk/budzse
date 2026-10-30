@@ -76,7 +76,8 @@ for (const [item, indicator] of [['TR', 'revenue'], ['TE', 'expenditure'], ['B9'
       institution: 'Eurostat',
       source: 'eurostat-gov',
       locator: `na_item=${item}, sector=S13, unit=MIO_NAC, geo=HU, time=${year}`,
-      revision: cell.flag === 'p' ? 'preliminary' : 'final',
+      // Eurostat flags nothing here, but the October 2026 EDP report marks 2024-25 as preliminary.
+      revision: cell.flag === 'p' || year >= 2024 ? 'preliminary' : 'final',
       ...(item === 'B9'
         ? { note: { hu: 'Az Eurostat B.9 (nettó hitelnyújtás) előjelét megfordítottuk: a pozitív érték hiány.', en: 'The sign of Eurostat B.9 (net lending) is reversed: positive means deficit.' } }
         : {}),

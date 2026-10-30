@@ -86,6 +86,19 @@ describe('classification rules', () => {
   });
 });
 
+describe('revision state', () => {
+  it('marks recent ESA years as preliminary, as the EDP report does', () => {
+    expect(obs('general.deficit.2023.actual').revision).toBe('final');
+    expect(obs('general.deficit.2024.actual').revision).toBe('preliminary');
+    expect(obs('general.deficit.2025.actual').revision).toBe('preliminary');
+  });
+
+  it('marks the 2025 Treasury balance as preliminary until an act confirms it', () => {
+    expect(obs('central.deficit.2025.actual').revision).toBe('preliminary');
+    expect(obs('central.deficit.2024.actual').revision).toBe('final');
+  });
+});
+
 describe('provenance', () => {
   it('gives every observation a registered source, locator and original value', () => {
     for (const o of dataset.observations) {
