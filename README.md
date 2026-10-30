@@ -14,6 +14,10 @@ The figures can be read without the chart and without JavaScript. Start at the [
 
 Each observation has a permanent URL. The stored money value is nominal. A budget, an outturn, a part-year figure and a forecast are different records. Cite the original publisher together with the Büdzsé URL.
 
+## Privacy
+
+The app asks before using Google Analytics. Without a yes, nothing is sent to Google and no analytics cookie is set. Advertising features are off, and the Cookie settings button in the footer changes the answer at any time. The API and citation pages carry no analytics.
+
 ## About this project
 
 This is a personal project I made for myself, so that I can easily oversee and understand some of these numbers about my home country. It is not official, but all the sources are referenced.

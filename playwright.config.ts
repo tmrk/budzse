@@ -6,7 +6,13 @@ export default defineConfig({
   timeout: 30_000,
   fullyParallel: true,
   reporter: [['list']],
-  use: { baseURL: 'http://localhost:4173', trace: 'off' },
+  // Visitors have already answered the cookie question, so the banner does not cover what other tests
+  // click. The tests of the banner itself start from empty storage.
+  use: {
+    baseURL: 'http://localhost:4173',
+    trace: 'off',
+    storageState: { cookies: [], origins: [{ origin: 'http://localhost:4173', localStorage: [{ name: 'budzse-analytics', value: 'denied' }] }] },
+  },
   webServer: {
     command: 'node tests/e2e/static-server.mjs',
     port: 4173,

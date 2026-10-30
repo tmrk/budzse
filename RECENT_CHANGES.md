@@ -1,5 +1,9 @@
 # Recent changes
 
+## 2026-10-30: Google Analytics, with consent
+
+The app now asks whether it may use Google Analytics. Nothing is sent to Google and no analytics cookie is set before a yes, and advertising features stay off. The Cookie settings button in the footer changes the answer, and withdrawing removes the cookies. A page load or a language change counts as a page view. The API and citation pages carry no analytics.
+
 ## 2026-10-30: typography and clarity pass
 
 Text is now set in Source Sans 3, replacing Newsreader, because its tabular figures keep numbers still through the years. Big Shoulders stays for the name, the year, the sum and section titles. The descriptor under the name is now one line beside it, and a plain instruction sits under the main chart.

@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import Archive from './components/Archive';
+import ConsentBanner from './components/ConsentBanner';
 import { AppContext, type AppContextValue } from './components/context';
 import { LensControl, ScopeControl } from './components/Controls';
 import Hero, { YearStepper } from './components/Hero';
@@ -7,6 +8,7 @@ import MoneyChart from './components/MoneyChart';
 import { AidSection, EconomySection, HelpsSection, PlanSection } from './components/Sections';
 import SourceDialog, { type SourceTarget } from './components/SourceDialog';
 import { figure } from './components/figures';
+import { useAnalytics } from './hooks/useAnalytics';
 import { useAppState } from './hooks/useAppState';
 import { useTheme, type ThemeChoice } from './hooks/useTheme';
 import { ledgerRows, type Measured } from './lib/measure';
@@ -46,6 +48,7 @@ function TopBar({ barRef, lang, setLang, m, theme, setTheme, children }: { barRe
 export default function App() {
   const { lang, setLang, view, setView, messages: m } = useAppState();
   const { choice, setChoice } = useTheme();
+  const consent = useAnalytics(lang, m.meta.title);
   const [data, setData] = useState<Dataset | null>(null);
   const [failed, setFailed] = useState(false);
   const [target, setTarget] = useState<SourceTarget | null>(null);
@@ -150,9 +153,11 @@ export default function App() {
           <p className="footer-links">
             <a href="https://github.com/tmrk/budzse">{m.app.footerCode}</a>
             <a href={`${import.meta.env.BASE_URL}${lang}/api/`} data-testid="api-link">{m.app.footerApi}</a>
+            <button type="button" className="text-button" onClick={consent.reopen} data-testid="consent-open">{m.consent.settings}</button>
           </p>
         </div>
       </footer>
+      {consent.asking && <ConsentBanner lang={lang} m={m} focus={consent.reopened} onChoose={consent.choose} />}
     </div>
   );
 }

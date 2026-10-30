@@ -24,6 +24,14 @@ export const hu = {
     footerNeutral: 'A Büdzsé független, nem kormányzati projekt: hivatalos adatokat mutat, értékelést nem fűz hozzájuk.',
     footerApi: 'Adatok és API',
   },
+  consent: {
+    title: 'Sütik',
+    text: 'Engedélyével a Google Analytics sütikkel méri az oldal látogatottságát. Az adatokat a Google kezeli, akár az EU-n kívül is. Hirdetésre nem használjuk őket. A döntését később a lábléc Sütibeállítások gombjával módosíthatja.',
+    more: 'A Google adatkezelése',
+    allow: 'Engedélyezem',
+    decline: 'Elutasítom',
+    settings: 'Sütibeállítások',
+  },
   controls: {
     scope: 'Mit számolunk',
     scopeGeneral: 'Az egész állam',

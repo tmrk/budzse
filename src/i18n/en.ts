@@ -24,6 +24,14 @@ export const en: typeof hu = {
     footerNeutral: 'Büdzsé is an independent, non-governmental project. It shows official data without commentary.',
     footerApi: 'Data and API',
   },
+  consent: {
+    title: 'Cookies',
+    text: 'With your permission, Google Analytics uses cookies to measure visits to this site. Google processes that data, possibly outside the EU. It is not used for advertising. You can change your choice later with the Cookie settings button in the footer.',
+    more: 'How Google uses this data',
+    allow: 'Allow',
+    decline: 'Decline',
+    settings: 'Cookie settings',
+  },
   controls: {
     scope: 'What to count',
     scopeGeneral: 'The whole state',
