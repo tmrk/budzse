@@ -86,7 +86,7 @@ test.describe('the cookie question', () => {
     await context.addCookies([{ name: 'other', value: 'kept', domain: 'localhost', path: '/budzse/' }]);
 
     await page.getByTestId('consent-open').click();
-    await expect(page.getByTestId('consent-allow')).toBeFocused();
+    await expect(page.getByTestId('consent-decline')).toBeFocused();
     await page.getByTestId('consent-decline').click();
     await expect(page.getByTestId('consent-open')).toBeFocused();
 
@@ -132,6 +132,9 @@ test.describe('the cookie question', () => {
       expect(allow.height).toBeGreaterThanOrEqual(38);
       expect(decline.height).toBe(allow.height);
       expect(decline.width).toBe(allow.width);
+      expect(allow.x).toBeGreaterThan(decline.x);
+      await expect(page.getByTestId('consent-allow')).not.toHaveClass(/ghost/);
+      await expect(page.getByTestId('consent-decline')).toHaveClass(/ghost/);
       const results = await new AxeBuilder({ page }).include('[data-testid="consent"]').analyze();
       expect(results.violations.filter((v) => v.impact === 'serious' || v.impact === 'critical').map((v) => v.id)).toEqual([]);
       await ctx.close();
