@@ -2,7 +2,7 @@
 
 ## 2026-10-30: Hungary Helps
 
-A new section shows the two budget lines that carry the Hungary Helps name, the programme's grants and the agency's running costs, from the budget and final-accounts acts. They are cash lines, so the section shows them beside net ODA and states no share of it: no official source gives one and OECD data do not separate Hungary Helps.
+A new section shows the two budget lines that carry the Hungary Helps name, the programme's grants and the agency's running costs, from the budget and final-accounts acts. Hungary Helps is drawn inside the net ODA bars, with a second chart for the split between the lines and a calculated ratio marked as a guide: no official yearly share exists, because OECD data do not separate Hungary Helps. Net ODA for 2025 now comes from the OECD in forints, along with a small revision of the 2024 bilateral and multilateral split.
 
 ## 2026-10-30: calmer second pass
 

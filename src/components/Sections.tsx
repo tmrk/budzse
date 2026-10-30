@@ -1,10 +1,11 @@
 import { useId, useMemo } from 'react';
 import { isPhone, linePath, makeScales, niceAxis, runsOf, type Point, YEARS } from '../charts/geometry';
 import { statusName } from '../i18n';
-import { asPublished, bestObservation, helpsFor, measure, overshoot, planVersusActual, planYears, type Measured } from '../lib/measure';
+import { asPublished, bestObservation, helpsFor, helpsRatio, measure, overshoot, planVersusActual, planYears, type Measured } from '../lib/measure';
 import type { Indicator, Method, Observation } from '../types/data';
 import { useApp } from './context';
 import Timeline, { Bars, Hatch, useChartWidth, useTween } from './Timeline';
+import { formatPct } from '../lib/format';
 import { axisLabel, figure, gapFor, priceBasis, Readout, signedDifference, SourceButton } from './figures';
 
 /** A title and a sentence that never change, beside a chart that does. */
@@ -194,9 +195,68 @@ export function AidSection() {
   );
 }
 
+type HelpsStack = { year: number; program: number; total: number; settled: boolean };
+
+/** One year's two lines stacked: the programme below, the agency on top. */
+function HelpsBars({ scales: s, stacks, year }: { scales: ReturnType<typeof makeScales>; stacks: HelpsStack[]; year: number }) {
+  const eased = useTween(stacks.flatMap((b) => [s.y(b.program), s.y(b.total)]));
+  const w = Math.max(2, s.band - Math.max(2, s.band * 0.22));
+  return (
+    <g>
+      {stacks.map((b, i) => {
+        const low = eased[i * 2] ?? s.y(b.program);
+        const top = eased[i * 2 + 1] ?? s.y(b.total);
+        const state = `${b.year === year ? ' chosen' : ''}${b.settled ? '' : ' open'}`;
+        return (
+          <g key={b.year}>
+            <rect className={`bar bar-ink${state}`} x={s.x(b.year) - w / 2} y={low} width={w} height={Math.max(1, s.y(0) - low)} />
+            {b.total > b.program && <rect className={`bar bar-agency${state}`} x={s.x(b.year) - w / 2} y={top} width={w} height={Math.max(1.5, low - top - 1.5)} />}
+          </g>
+        );
+      })}
+    </g>
+  );
+}
+
+/** Whole net ODA with Hungary Helps standing inside it: same axis, so the size is the answer. */
+function HelpsInOda({ stacks, oda, height }: { stacks: HelpsStack[]; oda: { year: number; value: number; settled: boolean }[]; height: number }) {
+  const { year, lang, m } = useApp();
+  const [hostRef, width] = useChartWidth();
+  const { domain, ticks } = niceAxis(0, Math.max(...oda.map((b) => b.value), ...stacks.map((b) => b.total)), 2);
+  const s = makeScales(width, height, domain, { top: 6, bottom: 0 });
+  const shown = ticks.filter((t) => t !== 0 && s.y(t) > s.top + 14);
+  return (
+    <div className="strip">
+      <div className="strip-head"><span>{m.helps.inOda}</span></div>
+      <Timeline scales={s} hostRef={hostRef} ticks={shown} tickLabel={axisLabel(shown, lang, 'HUF')} label={m.helps.chartInOda} testId="helps-oda-chart">
+        <line className="zero" x1={0} x2={s.width} y1={s.y(0)} y2={s.y(0)} />
+        <Bars scales={s} values={oda} hatch="" tone="oda" year={year} />
+        <HelpsBars scales={s} stacks={stacks} year={year} />
+      </Timeline>
+    </div>
+  );
+}
+
+/** The same two lines on their own axis, where the split between them can be read. */
+function HelpsSplit({ stacks, height }: { stacks: HelpsStack[]; height: number }) {
+  const { year, lang, m } = useApp();
+  const [hostRef, width] = useChartWidth();
+  const { domain, ticks } = niceAxis(0, Math.max(...stacks.map((b) => b.total)), 2);
+  const s = makeScales(width, height, domain, { top: 6, bottom: 26 });
+  const shown = ticks.filter((t) => t !== 0 && s.y(t) > s.top + 14);
+  return (
+    <div className="strip">
+      <div className="strip-head"><span>{m.helps.split}</span></div>
+      <Timeline scales={s} hostRef={hostRef} ticks={shown} tickLabel={axisLabel(shown, lang, 'HUF')} label={m.helps.chart} axis zeroLine futureFrom={stacks.find((b) => !b.settled)?.year} futureLabel={m.chart.projected} testId="helps-chart">
+        <HelpsBars scales={s} stacks={stacks} year={year} />
+      </Timeline>
+    </div>
+  );
+}
+
 export function HelpsSection() {
   const { data, view, year, m, lang } = useApp();
-  const [hostRef, width] = useChartWidth();
+  const phone = isPhone();
   const mode = { real: view.real, ref: view.ref, relative: false };
   const of = (o?: Observation) => (o ? measure(data, o, mode) : null);
   const stacks = YEARS.flatMap((y) => {
@@ -205,12 +265,10 @@ export function HelpsSection() {
     if (lower === undefined) return [];
     return [{ year: y, program: lower, total: lower + (of(agency)?.value ?? 0), settled: program!.status === 'actual' }];
   });
-  const { domain, ticks } = niceAxis(0, Math.max(...stacks.map((b) => b.total)), 3);
-  const s = makeScales(width, isPhone() ? 200 : 260, domain, { top: 10, bottom: 26 });
-  const eased = useTween(stacks.flatMap((b) => [s.y(b.program), s.y(b.total)]));
-  const w = Math.max(2, s.band - Math.max(2, s.band * 0.22));
+  const oda = strip(data, 'oda', (o) => measure(data, o, mode));
   const { program, agency } = helpsFor(data, year);
-  const odaObs = data.observations.find((o) => o.indicator === 'oda' && o.year === year);
+  const odaObs = bestObservation(data, 'oda', year, 'general');
+  const ratio = helpsRatio(data, year);
   const tagOf = (o?: Observation) => (o && o.status !== 'actual' ? m.helps.budgeted : undefined);
 
   return (
@@ -219,22 +277,12 @@ export function HelpsSection() {
         items={[
           { key: 'program', label: m.helps.program, swatch: <i className="mark mark-ink" aria-hidden="true" />, measured: of(program), obs: program, tag: tagOf(program), testId: 'helps-program', reason: gapFor(data, 'hungaryHelpsProgram', year)?.reason[lang] },
           { key: 'agency', label: m.helps.agency, swatch: <i className="mark mark-in" aria-hidden="true" />, measured: of(agency), obs: agency, tag: tagOf(agency), testId: 'helps-agency', reason: gapFor(data, 'hungaryHelpsAgency', year)?.reason[lang] },
-          { key: 'oda', label: m.helps.oda, measured: of(odaObs), obs: odaObs, testId: 'helps-oda', reason: gapFor(data, 'oda', year)?.reason[lang] },
+          { key: 'oda', label: m.helps.oda, swatch: <i className="mark mark-oda" aria-hidden="true" />, measured: of(odaObs), obs: odaObs, testId: 'helps-oda', reason: gapFor(data, 'oda', year)?.reason[lang] },
+          { key: 'ratio', label: m.helps.ratio, text: ratio === null ? null : formatPct(ratio, lang, 1) },
         ]}
       />
-      <Timeline scales={s} hostRef={hostRef} ticks={ticks} tickLabel={axisLabel(ticks, lang, 'HUF')} label={m.helps.chart} axis zeroLine futureFrom={stacks.find((b) => !b.settled)?.year} futureLabel={m.chart.projected} testId="helps-chart">
-        {stacks.map((b, i) => {
-          const low = eased[i * 2] ?? s.y(b.program);
-          const top = eased[i * 2 + 1] ?? s.y(b.total);
-          const state = `${b.year === year ? ' chosen' : ''}${b.settled ? '' : ' open'}`;
-          return (
-            <g key={b.year}>
-              <rect className={`bar bar-ink${state}`} x={s.x(b.year) - w / 2} y={low} width={w} height={Math.max(1, s.y(0) - low)} />
-              {b.total > b.program && <rect className={`bar bar-agency${state}`} x={s.x(b.year) - w / 2} y={top} width={w} height={Math.max(1.5, low - top - 1.5)} />}
-            </g>
-          );
-        })}
-      </Timeline>
+      <HelpsInOda stacks={stacks} oda={oda} height={phone ? 110 : 130} />
+      <HelpsSplit stacks={stacks} height={phone ? 150 : 190} />
       <p className="fine" data-testid="helps-note">{m.helps.note}</p>
       {view.relative && <p className="fine">{m.helps.alwaysForint}</p>}
     </Section>

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { asPublished, bestObservation, compareMeasured, compatibility, figureRows, helpsFor, ledgerFor, ledgerRows, measure, overshoot, planVersusActual, planYears, tableRows } from '../../src/lib/measure';
+import { asPublished, bestObservation, compareMeasured, compatibility, figureRows, helpsFor, helpsRatio, ledgerFor, ledgerRows, measure, overshoot, planVersusActual, planYears, tableRows } from '../../src/lib/measure';
 import { DEFAULT_VIEW, type ViewState } from '../../src/lib/view';
 import { dataset, obs } from './helpers';
 
@@ -228,6 +228,21 @@ describe('scope switching', () => {
 describe('part-year figures', () => {
   it('are not shown as a share of annual GDP', () => {
     expect(measure(dataset, obs('central.deficit.2026.ytd'), v({ relative: true }))).toBeNull();
+  });
+});
+
+describe('helpsRatio', () => {
+  it('sets both lines against net ODA for a closed year', () => {
+    expect(helpsRatio(dataset, 2023)).toBeCloseTo(((6_983_800_000 + 1_840_900_000) / 90_622_130_000) * 100, 6);
+  });
+
+  it('uses the programme alone when the agency has no line', () => {
+    expect(helpsRatio(dataset, 2021)).toBeCloseTo((11_176_000_000 / 131_891_610_000) * 100, 6);
+  });
+
+  it('never sets a plan against a reported figure', () => {
+    expect(helpsRatio(dataset, 2025)).toBeNull();
+    expect(helpsRatio(dataset, 2018)).toBeNull();
   });
 });
 

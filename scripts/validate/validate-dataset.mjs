@@ -88,7 +88,7 @@ for (let y = 2000; y <= LAST_FULL_YEAR; y++) {
   if (!has(`gdp.${y}.actual`)) fail(`Missing GDP ${y}`);
   if (!has(`cpi.${y}.actual`)) fail(`Missing CPI ${y}`);
 }
-for (let y = 2003; y <= 2024; y++) if (!has(`oda.${y}.actual`)) fail(`Missing ODA ${y}`);
+for (let y = 2003; y <= 2025; y++) if (!has(`oda.${y}.actual`)) fail(`Missing ODA ${y}`);
 for (let y = 2000; y <= 2002; y++) if (has(`oda.${y}.actual`)) fail(`ODA ${y} appeared: update the gap register`);
 
 for (let y = 2019; y <= 2024; y++) if (!has(`hungaryHelpsProgram.${y}.actual`)) fail(`Missing Hungary Helps programme ${y}`);

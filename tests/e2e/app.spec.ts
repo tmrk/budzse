@@ -365,11 +365,15 @@ test.describe('sources, comparisons and exports', () => {
     await expect(page.getByTestId('helps-program')).toHaveText('HUF 6.98 billion');
     await expect(page.getByTestId('helps-agency')).toHaveText('HUF 1.84 billion');
     await expect(page.getByTestId('helps-oda')).toHaveText('HUF 90.6 billion');
+    await expect(page.getByTestId('helps').locator('.readout-item').nth(3)).toContainText('9.7%');
+    await expect(page.getByTestId('helps-oda-chart').locator('.bar-oda')).toHaveCount(23);
     await page.getByTestId('year-select').selectOption('2021');
     await expect(page.getByTestId('helps-program')).toHaveText('HUF 11.2 billion');
     await expect(page.getByTestId('helps').locator('.no-data')).toHaveAttribute('title', /no separate line/);
     await page.getByTestId('year-select').selectOption('2025');
     await expect(page.getByTestId('helps').locator('.readout-item').first()).toContainText('plan');
+    await expect(page.getByTestId('helps-oda')).toHaveText('HUF 114 billion');
+    await expect(page.getByTestId('helps').locator('.readout-item').nth(3)).toContainText('–');
   });
 
   test('missing data says so instead of showing zero', async ({ page }) => {
@@ -412,7 +416,7 @@ test.describe('sources, comparisons and exports', () => {
     await openFold(page, 'table-section');
     await page.getByTestId('table-indicator').selectOption('oda');
     await page.getByTestId('table-status').selectOption('actual');
-    await expect(page.getByTestId('table-count')).toHaveText('22 figures');
+    await expect(page.getByTestId('table-count')).toHaveText('23 figures');
   });
 
   test('range selects constrain the table', async ({ page }) => {

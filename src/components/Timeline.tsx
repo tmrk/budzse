@@ -148,7 +148,7 @@ export default function Timeline({ scales: s, hostRef, ticks, tickLabel, label, 
 }
 
 /** Thin bars for one measure per year: hatched by default, solid for the chosen year, outlined when not an outcome. */
-export function Bars({ scales: s, values, hatch, tone, year }: { scales: Scales; values: { year: number; value: number; settled: boolean }[]; hatch: string; tone: 'out' | 'ink'; year: number }) {
+export function Bars({ scales: s, values, hatch, tone, year }: { scales: Scales; values: { year: number; value: number; settled: boolean }[]; hatch: string; tone: 'out' | 'ink' | 'oda'; year: number }) {
   const base = s.y(0);
   const eased = useTween(values.map((b) => s.y(b.value)));
   const w = Math.max(2, s.band - Math.max(2, s.band * 0.22));

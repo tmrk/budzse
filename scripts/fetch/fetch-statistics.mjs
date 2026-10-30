@@ -55,7 +55,7 @@ async function eurostat() {
 
 async function oecd() {
   const url =
-    'https://sdmx.oecd.org/public/rest/data/OECD.DCD.FSD,DSD_DAC1@DF_DAC1,1.6/HUN.......?startPeriod=2000&dimensionAtObservation=AllDimensions&format=csvfilewithlabels';
+    'https://sdmx.oecd.org/public/rest/data/OECD.DCD.FSD,DSD_DAC1@DF_DAC1,1.8/HUN.......?startPeriod=2000&dimensionAtObservation=AllDimensions&format=csvfilewithlabels';
   const csv = await get(url, { Accept: 'application/vnd.sdmx.data+csv; version=2.0.0' });
   const [header, ...lines] = csv.trim().split(/\r?\n/);
   const cols = parseCsvLine(header);

@@ -1,685 +1,7 @@
 {
  "accessed": "2026-10-30",
- "url": "https://sdmx.oecd.org/public/rest/data/OECD.DCD.FSD,DSD_DAC1@DF_DAC1,1.6/HUN.......?startPeriod=2000&dimensionAtObservation=AllDimensions&format=csvfilewithlabels",
+ "url": "https://sdmx.oecd.org/public/rest/data/OECD.DCD.FSD,DSD_DAC1@DF_DAC1,1.8/HUN.......?startPeriod=2000&dimensionAtObservation=AllDimensions&format=csvfilewithlabels",
  "series": {
-  "oda": {
-   "USD": {
-    "2003": {
-     "value": "21.23",
-     "mult": 6,
-     "status": "A"
-    },
-    "2004": {
-     "value": "70.14",
-     "mult": 6,
-     "status": "A"
-    },
-    "2005": {
-     "value": "100.37",
-     "mult": 6,
-     "status": "A"
-    },
-    "2006": {
-     "value": "149.49",
-     "mult": 6,
-     "status": "A"
-    },
-    "2007": {
-     "value": "103.47",
-     "mult": 6,
-     "status": "A"
-    },
-    "2008": {
-     "value": "106.94",
-     "mult": 6,
-     "status": "A"
-    },
-    "2009": {
-     "value": "116.92",
-     "mult": 6,
-     "status": "A"
-    },
-    "2010": {
-     "value": "114.34",
-     "mult": 6,
-     "status": "A"
-    },
-    "2011": {
-     "value": "139.73",
-     "mult": 6,
-     "status": "A"
-    },
-    "2012": {
-     "value": "118.38",
-     "mult": 6,
-     "status": "A"
-    },
-    "2013": {
-     "value": "128.18",
-     "mult": 6,
-     "status": "A"
-    },
-    "2014": {
-     "value": "144.03",
-     "mult": 6,
-     "status": "A"
-    },
-    "2015": {
-     "value": "155.55",
-     "mult": 6,
-     "status": "A"
-    },
-    "2016": {
-     "value": "199.12",
-     "mult": 6,
-     "status": "A"
-    },
-    "2017": {
-     "value": "148.68",
-     "mult": 6,
-     "status": "A"
-    },
-    "2018": {
-     "value": "284.94",
-     "mult": 6,
-     "status": "A"
-    },
-    "2019": {
-     "value": "312.06",
-     "mult": 6,
-     "status": "A"
-    },
-    "2020": {
-     "value": "417.88",
-     "mult": 6,
-     "status": "A"
-    },
-    "2021": {
-     "value": "435.06",
-     "mult": 6,
-     "status": "A"
-    },
-    "2022": {
-     "value": "371.28",
-     "mult": 6,
-     "status": "A"
-    },
-    "2023": {
-     "value": "256.61",
-     "mult": 6,
-     "status": "A"
-    },
-    "2024": {
-     "value": "204.14",
-     "mult": 6,
-     "status": "A"
-    }
-   },
-   "XDC": {
-    "2003": {
-     "value": "4761.83",
-     "mult": 6,
-     "status": "A"
-    },
-    "2004": {
-     "value": "14211.02",
-     "mult": 6,
-     "status": "A"
-    },
-    "2005": {
-     "value": "20026.5",
-     "mult": 6,
-     "status": "A"
-    },
-    "2006": {
-     "value": "31452.99",
-     "mult": 6,
-     "status": "A"
-    },
-    "2007": {
-     "value": "18996.06",
-     "mult": 6,
-     "status": "A"
-    },
-    "2008": {
-     "value": "18777.27",
-     "mult": 6,
-     "status": "A"
-    },
-    "2009": {
-     "value": "23549.91",
-     "mult": 6,
-     "status": "A"
-    },
-    "2010": {
-     "value": "23755.74",
-     "mult": 6,
-     "status": "A"
-    },
-    "2011": {
-     "value": "28072.71",
-     "mult": 6,
-     "status": "A"
-    },
-    "2012": {
-     "value": "26614.55",
-     "mult": 6,
-     "status": "A"
-    },
-    "2013": {
-     "value": "28653.41",
-     "mult": 6,
-     "status": "A"
-    },
-    "2014": {
-     "value": "33504.13",
-     "mult": 6,
-     "status": "A"
-    },
-    "2015": {
-     "value": "43428.41",
-     "mult": 6,
-     "status": "A"
-    },
-    "2016": {
-     "value": "56056.46",
-     "mult": 6,
-     "status": "A"
-    },
-    "2017": {
-     "value": "40809.15",
-     "mult": 6,
-     "status": "A"
-    },
-    "2018": {
-     "value": "76996.83",
-     "mult": 6,
-     "status": "A"
-    },
-    "2019": {
-     "value": "90685.45",
-     "mult": 6,
-     "status": "A"
-    },
-    "2020": {
-     "value": "128703.4",
-     "mult": 6,
-     "status": "A"
-    },
-    "2021": {
-     "value": "131891.61",
-     "mult": 6,
-     "status": "A"
-    },
-    "2022": {
-     "value": "138329.39",
-     "mult": 6,
-     "status": "A"
-    },
-    "2023": {
-     "value": "90622.13",
-     "mult": 6,
-     "status": "A"
-    },
-    "2024": {
-     "value": "74668",
-     "mult": 6,
-     "status": "A"
-    }
-   }
-  },
-  "bilateral": {
-   "USD": {
-    "2003": {
-     "value": "13.88",
-     "mult": 6,
-     "status": "A"
-    },
-    "2004": {
-     "value": "35.49",
-     "mult": 6,
-     "status": "A"
-    },
-    "2005": {
-     "value": "39.58",
-     "mult": 6,
-     "status": "A"
-    },
-    "2006": {
-     "value": "84.34",
-     "mult": 6,
-     "status": "A"
-    },
-    "2007": {
-     "value": "33.03",
-     "mult": 6,
-     "status": "A"
-    },
-    "2008": {
-     "value": "15.45",
-     "mult": 6,
-     "status": "A"
-    },
-    "2009": {
-     "value": "29.6",
-     "mult": 6,
-     "status": "A"
-    },
-    "2010": {
-     "value": "28.36",
-     "mult": 6,
-     "status": "A"
-    },
-    "2011": {
-     "value": "33.15",
-     "mult": 6,
-     "status": "A"
-    },
-    "2012": {
-     "value": "21.77",
-     "mult": 6,
-     "status": "A"
-    },
-    "2013": {
-     "value": "34.28",
-     "mult": 6,
-     "status": "A"
-    },
-    "2014": {
-     "value": "30.1",
-     "mult": 6,
-     "status": "A"
-    },
-    "2015": {
-     "value": "47.34",
-     "mult": 6,
-     "status": "A"
-    },
-    "2016": {
-     "value": "54.78",
-     "mult": 6,
-     "status": "A"
-    },
-    "2017": {
-     "value": "39.38",
-     "mult": 6,
-     "status": "A"
-    },
-    "2018": {
-     "value": "129.12",
-     "mult": 6,
-     "status": "A"
-    },
-    "2019": {
-     "value": "159.13",
-     "mult": 6,
-     "status": "A"
-    },
-    "2020": {
-     "value": "225.93",
-     "mult": 6,
-     "status": "A"
-    },
-    "2021": {
-     "value": "253.23",
-     "mult": 6,
-     "status": "A"
-    },
-    "2022": {
-     "value": "294.32",
-     "mult": 6,
-     "status": "A"
-    },
-    "2023": {
-     "value": "202.78",
-     "mult": 6,
-     "status": "A"
-    },
-    "2024": {
-     "value": "161.03",
-     "mult": 6,
-     "status": "A"
-    }
-   },
-   "XDC": {
-    "2003": {
-     "value": "3113.25",
-     "mult": 6,
-     "status": "A"
-    },
-    "2004": {
-     "value": "7190.61",
-     "mult": 6,
-     "status": "A"
-    },
-    "2005": {
-     "value": "7897.27",
-     "mult": 6,
-     "status": "A"
-    },
-    "2006": {
-     "value": "17745.3",
-     "mult": 6,
-     "status": "A"
-    },
-    "2007": {
-     "value": "6063.98",
-     "mult": 6,
-     "status": "A"
-    },
-    "2008": {
-     "value": "2712.82",
-     "mult": 6,
-     "status": "A"
-    },
-    "2009": {
-     "value": "5962",
-     "mult": 6,
-     "status": "A"
-    },
-    "2010": {
-     "value": "5892.19",
-     "mult": 6,
-     "status": "A"
-    },
-    "2011": {
-     "value": "6660.06",
-     "mult": 6,
-     "status": "A"
-    },
-    "2012": {
-     "value": "4894.4",
-     "mult": 6,
-     "status": "A"
-    },
-    "2013": {
-     "value": "7662.96",
-     "mult": 6,
-     "status": "A"
-    },
-    "2014": {
-     "value": "7001.83",
-     "mult": 6,
-     "status": "A"
-    },
-    "2015": {
-     "value": "13216.98",
-     "mult": 6,
-     "status": "A"
-    },
-    "2016": {
-     "value": "15421.72",
-     "mult": 6,
-     "status": "A"
-    },
-    "2017": {
-     "value": "10808.88",
-     "mult": 6,
-     "status": "A"
-    },
-    "2018": {
-     "value": "34890.96",
-     "mult": 6,
-     "status": "A"
-    },
-    "2019": {
-     "value": "46243.59",
-     "mult": 6,
-     "status": "A"
-    },
-    "2020": {
-     "value": "69584.47",
-     "mult": 6,
-     "status": "A"
-    },
-    "2021": {
-     "value": "76768.52",
-     "mult": 6,
-     "status": "A"
-    },
-    "2022": {
-     "value": "109656.07",
-     "mult": 6,
-     "status": "A"
-    },
-    "2023": {
-     "value": "71612",
-     "mult": 6,
-     "status": "A"
-    },
-    "2024": {
-     "value": "58899.72",
-     "mult": 6,
-     "status": "A"
-    }
-   }
-  },
-  "multilateral": {
-   "USD": {
-    "2003": {
-     "value": "7.35",
-     "mult": 6,
-     "status": "A"
-    },
-    "2004": {
-     "value": "34.65",
-     "mult": 6,
-     "status": "A"
-    },
-    "2005": {
-     "value": "60.79",
-     "mult": 6,
-     "status": "A"
-    },
-    "2006": {
-     "value": "65.15",
-     "mult": 6,
-     "status": "A"
-    },
-    "2007": {
-     "value": "70.44",
-     "mult": 6,
-     "status": "A"
-    },
-    "2008": {
-     "value": "91.49",
-     "mult": 6,
-     "status": "A"
-    },
-    "2009": {
-     "value": "87.32",
-     "mult": 6,
-     "status": "A"
-    },
-    "2010": {
-     "value": "85.98",
-     "mult": 6,
-     "status": "A"
-    },
-    "2011": {
-     "value": "106.58",
-     "mult": 6,
-     "status": "A"
-    },
-    "2012": {
-     "value": "96.61",
-     "mult": 6,
-     "status": "A"
-    },
-    "2013": {
-     "value": "93.9",
-     "mult": 6,
-     "status": "A"
-    },
-    "2014": {
-     "value": "113.93",
-     "mult": 6,
-     "status": "A"
-    },
-    "2015": {
-     "value": "108.21",
-     "mult": 6,
-     "status": "A"
-    },
-    "2016": {
-     "value": "144.33",
-     "mult": 6,
-     "status": "A"
-    },
-    "2017": {
-     "value": "109.3",
-     "mult": 6,
-     "status": "A"
-    },
-    "2018": {
-     "value": "155.82",
-     "mult": 6,
-     "status": "A"
-    },
-    "2019": {
-     "value": "152.93",
-     "mult": 6,
-     "status": "A"
-    },
-    "2020": {
-     "value": "191.95",
-     "mult": 6,
-     "status": "A"
-    },
-    "2021": {
-     "value": "181.82",
-     "mult": 6,
-     "status": "A"
-    },
-    "2022": {
-     "value": "76.96",
-     "mult": 6,
-     "status": "A"
-    },
-    "2023": {
-     "value": "53.83",
-     "mult": 6,
-     "status": "A"
-    },
-    "2024": {
-     "value": "43.1",
-     "mult": 6,
-     "status": "A"
-    }
-   },
-   "XDC": {
-    "2003": {
-     "value": "1648.58",
-     "mult": 6,
-     "status": "A"
-    },
-    "2004": {
-     "value": "7020.42",
-     "mult": 6,
-     "status": "A"
-    },
-    "2005": {
-     "value": "12129.23",
-     "mult": 6,
-     "status": "A"
-    },
-    "2006": {
-     "value": "13707.69",
-     "mult": 6,
-     "status": "A"
-    },
-    "2007": {
-     "value": "12932.08",
-     "mult": 6,
-     "status": "A"
-    },
-    "2008": {
-     "value": "16064.45",
-     "mult": 6,
-     "status": "A"
-    },
-    "2009": {
-     "value": "17587.91",
-     "mult": 6,
-     "status": "A"
-    },
-    "2010": {
-     "value": "17863.55",
-     "mult": 6,
-     "status": "A"
-    },
-    "2011": {
-     "value": "21412.65",
-     "mult": 6,
-     "status": "A"
-    },
-    "2012": {
-     "value": "21720.15",
-     "mult": 6,
-     "status": "A"
-    },
-    "2013": {
-     "value": "20990.44",
-     "mult": 6,
-     "status": "A"
-    },
-    "2014": {
-     "value": "26502.29",
-     "mult": 6,
-     "status": "A"
-    },
-    "2015": {
-     "value": "30211.43",
-     "mult": 6,
-     "status": "A"
-    },
-    "2016": {
-     "value": "40631.93",
-     "mult": 6,
-     "status": "A"
-    },
-    "2017": {
-     "value": "30000.27",
-     "mult": 6,
-     "status": "A"
-    },
-    "2018": {
-     "value": "42105.87",
-     "mult": 6,
-     "status": "A"
-    },
-    "2019": {
-     "value": "44441.86",
-     "mult": 6,
-     "status": "A"
-    },
-    "2020": {
-     "value": "59118.93",
-     "mult": 6,
-     "status": "A"
-    },
-    "2021": {
-     "value": "55120.06",
-     "mult": 6,
-     "status": "A"
-    },
-    "2022": {
-     "value": "28673.32",
-     "mult": 6,
-     "status": "A"
-    },
-    "2023": {
-     "value": "19010.13",
-     "mult": 6,
-     "status": "A"
-    },
-    "2024": {
-     "value": "15764.63",
-     "mult": 6,
-     "status": "A"
-    }
-   }
-  },
   "gni": {
    "USD": {
     "2003": {
@@ -789,6 +111,11 @@
     },
     "2024": {
      "value": "217369.87",
+     "mult": 6,
+     "status": "A"
+    },
+    "2025": {
+     "value": "218298.78",
      "mult": 6,
      "status": "A"
     }
@@ -903,6 +230,931 @@
      "value": "79507073.03",
      "mult": 6,
      "status": "A"
+    },
+    "2025": {
+     "value": "77084901.15",
+     "mult": 6,
+     "status": "A"
+    }
+   }
+  },
+  "multilateral": {
+   "USD": {
+    "2003": {
+     "value": "7.35",
+     "mult": 6,
+     "status": "A"
+    },
+    "2004": {
+     "value": "34.65",
+     "mult": 6,
+     "status": "A"
+    },
+    "2005": {
+     "value": "60.79",
+     "mult": 6,
+     "status": "A"
+    },
+    "2006": {
+     "value": "65.15",
+     "mult": 6,
+     "status": "A"
+    },
+    "2007": {
+     "value": "70.44",
+     "mult": 6,
+     "status": "A"
+    },
+    "2008": {
+     "value": "91.49",
+     "mult": 6,
+     "status": "A"
+    },
+    "2009": {
+     "value": "87.32",
+     "mult": 6,
+     "status": "A"
+    },
+    "2010": {
+     "value": "85.98",
+     "mult": 6,
+     "status": "A"
+    },
+    "2011": {
+     "value": "106.58",
+     "mult": 6,
+     "status": "A"
+    },
+    "2012": {
+     "value": "96.61",
+     "mult": 6,
+     "status": "A"
+    },
+    "2013": {
+     "value": "93.9",
+     "mult": 6,
+     "status": "A"
+    },
+    "2014": {
+     "value": "113.93",
+     "mult": 6,
+     "status": "A"
+    },
+    "2015": {
+     "value": "108.21",
+     "mult": 6,
+     "status": "A"
+    },
+    "2016": {
+     "value": "144.33",
+     "mult": 6,
+     "status": "A"
+    },
+    "2017": {
+     "value": "109.3",
+     "mult": 6,
+     "status": "A"
+    },
+    "2018": {
+     "value": "155.82",
+     "mult": 6,
+     "status": "A"
+    },
+    "2019": {
+     "value": "152.93",
+     "mult": 6,
+     "status": "A"
+    },
+    "2020": {
+     "value": "191.95",
+     "mult": 6,
+     "status": "A"
+    },
+    "2021": {
+     "value": "181.82",
+     "mult": 6,
+     "status": "A"
+    },
+    "2022": {
+     "value": "76.96",
+     "mult": 6,
+     "status": "A"
+    },
+    "2023": {
+     "value": "53.83",
+     "mult": 6,
+     "status": "A"
+    },
+    "2024": {
+     "value": "36.4",
+     "mult": 6,
+     "status": "A"
+    },
+    "2025": {
+     "value": "51.92",
+     "mult": 6,
+     "status": "A"
+    }
+   },
+   "XDC": {
+    "2003": {
+     "value": "1648.58",
+     "mult": 6,
+     "status": "A"
+    },
+    "2004": {
+     "value": "7020.42",
+     "mult": 6,
+     "status": "A"
+    },
+    "2005": {
+     "value": "12129.23",
+     "mult": 6,
+     "status": "A"
+    },
+    "2006": {
+     "value": "13707.69",
+     "mult": 6,
+     "status": "A"
+    },
+    "2007": {
+     "value": "12932.08",
+     "mult": 6,
+     "status": "A"
+    },
+    "2008": {
+     "value": "16064.45",
+     "mult": 6,
+     "status": "A"
+    },
+    "2009": {
+     "value": "17587.91",
+     "mult": 6,
+     "status": "A"
+    },
+    "2010": {
+     "value": "17863.55",
+     "mult": 6,
+     "status": "A"
+    },
+    "2011": {
+     "value": "21412.65",
+     "mult": 6,
+     "status": "A"
+    },
+    "2012": {
+     "value": "21720.15",
+     "mult": 6,
+     "status": "A"
+    },
+    "2013": {
+     "value": "20990.44",
+     "mult": 6,
+     "status": "A"
+    },
+    "2014": {
+     "value": "26502.29",
+     "mult": 6,
+     "status": "A"
+    },
+    "2015": {
+     "value": "30211.43",
+     "mult": 6,
+     "status": "A"
+    },
+    "2016": {
+     "value": "40631.93",
+     "mult": 6,
+     "status": "A"
+    },
+    "2017": {
+     "value": "30000.27",
+     "mult": 6,
+     "status": "A"
+    },
+    "2018": {
+     "value": "42105.87",
+     "mult": 6,
+     "status": "A"
+    },
+    "2019": {
+     "value": "44441.86",
+     "mult": 6,
+     "status": "A"
+    },
+    "2020": {
+     "value": "59118.93",
+     "mult": 6,
+     "status": "A"
+    },
+    "2021": {
+     "value": "55120.06",
+     "mult": 6,
+     "status": "A"
+    },
+    "2022": {
+     "value": "28673.32",
+     "mult": 6,
+     "status": "A"
+    },
+    "2023": {
+     "value": "19010.13",
+     "mult": 6,
+     "status": "A"
+    },
+    "2024": {
+     "value": "13313.98",
+     "mult": 6,
+     "status": "A"
+    },
+    "2025": {
+     "value": "18333.81",
+     "mult": 6,
+     "status": "A"
+    }
+   }
+  },
+  "oda": {
+   "USD": {
+    "2003": {
+     "value": "21.23",
+     "mult": 6,
+     "status": "A"
+    },
+    "2004": {
+     "value": "70.14",
+     "mult": 6,
+     "status": "A"
+    },
+    "2005": {
+     "value": "100.37",
+     "mult": 6,
+     "status": "A"
+    },
+    "2006": {
+     "value": "149.49",
+     "mult": 6,
+     "status": "A"
+    },
+    "2007": {
+     "value": "103.47",
+     "mult": 6,
+     "status": "A"
+    },
+    "2008": {
+     "value": "106.94",
+     "mult": 6,
+     "status": "A"
+    },
+    "2009": {
+     "value": "116.92",
+     "mult": 6,
+     "status": "A"
+    },
+    "2010": {
+     "value": "114.34",
+     "mult": 6,
+     "status": "A"
+    },
+    "2011": {
+     "value": "139.73",
+     "mult": 6,
+     "status": "A"
+    },
+    "2012": {
+     "value": "118.38",
+     "mult": 6,
+     "status": "A"
+    },
+    "2013": {
+     "value": "128.18",
+     "mult": 6,
+     "status": "A"
+    },
+    "2014": {
+     "value": "144.03",
+     "mult": 6,
+     "status": "A"
+    },
+    "2015": {
+     "value": "155.55",
+     "mult": 6,
+     "status": "A"
+    },
+    "2016": {
+     "value": "199.12",
+     "mult": 6,
+     "status": "A"
+    },
+    "2017": {
+     "value": "148.68",
+     "mult": 6,
+     "status": "A"
+    },
+    "2018": {
+     "value": "284.94",
+     "mult": 6,
+     "status": "A"
+    },
+    "2019": {
+     "value": "312.06",
+     "mult": 6,
+     "status": "A"
+    },
+    "2020": {
+     "value": "417.88",
+     "mult": 6,
+     "status": "A"
+    },
+    "2021": {
+     "value": "435.06",
+     "mult": 6,
+     "status": "A"
+    },
+    "2022": {
+     "value": "371.28",
+     "mult": 6,
+     "status": "A"
+    },
+    "2023": {
+     "value": "256.61",
+     "mult": 6,
+     "status": "A"
+    },
+    "2024": {
+     "value": "204.14",
+     "mult": 6,
+     "status": "A"
+    },
+    "2025": {
+     "value": "323.65",
+     "mult": 6,
+     "status": "A"
+    }
+   },
+   "XDC": {
+    "2003": {
+     "value": "4761.83",
+     "mult": 6,
+     "status": "A"
+    },
+    "2004": {
+     "value": "14211.02",
+     "mult": 6,
+     "status": "A"
+    },
+    "2005": {
+     "value": "20026.5",
+     "mult": 6,
+     "status": "A"
+    },
+    "2006": {
+     "value": "31452.99",
+     "mult": 6,
+     "status": "A"
+    },
+    "2007": {
+     "value": "18996.06",
+     "mult": 6,
+     "status": "A"
+    },
+    "2008": {
+     "value": "18777.27",
+     "mult": 6,
+     "status": "A"
+    },
+    "2009": {
+     "value": "23549.91",
+     "mult": 6,
+     "status": "A"
+    },
+    "2010": {
+     "value": "23755.74",
+     "mult": 6,
+     "status": "A"
+    },
+    "2011": {
+     "value": "28072.71",
+     "mult": 6,
+     "status": "A"
+    },
+    "2012": {
+     "value": "26614.55",
+     "mult": 6,
+     "status": "A"
+    },
+    "2013": {
+     "value": "28653.41",
+     "mult": 6,
+     "status": "A"
+    },
+    "2014": {
+     "value": "33504.13",
+     "mult": 6,
+     "status": "A"
+    },
+    "2015": {
+     "value": "43428.41",
+     "mult": 6,
+     "status": "A"
+    },
+    "2016": {
+     "value": "56056.46",
+     "mult": 6,
+     "status": "A"
+    },
+    "2017": {
+     "value": "40809.15",
+     "mult": 6,
+     "status": "A"
+    },
+    "2018": {
+     "value": "76996.83",
+     "mult": 6,
+     "status": "A"
+    },
+    "2019": {
+     "value": "90685.45",
+     "mult": 6,
+     "status": "A"
+    },
+    "2020": {
+     "value": "128703.4",
+     "mult": 6,
+     "status": "A"
+    },
+    "2021": {
+     "value": "131891.61",
+     "mult": 6,
+     "status": "A"
+    },
+    "2022": {
+     "value": "138329.39",
+     "mult": 6,
+     "status": "A"
+    },
+    "2023": {
+     "value": "90622.13",
+     "mult": 6,
+     "status": "A"
+    },
+    "2024": {
+     "value": "74668",
+     "mult": 6,
+     "status": "A"
+    },
+    "2025": {
+     "value": "114286.16",
+     "mult": 6,
+     "status": "A"
+    }
+   }
+  },
+  "bilateral": {
+   "USD": {
+    "2003": {
+     "value": "13.88",
+     "mult": 6,
+     "status": "A"
+    },
+    "2004": {
+     "value": "35.49",
+     "mult": 6,
+     "status": "A"
+    },
+    "2005": {
+     "value": "39.58",
+     "mult": 6,
+     "status": "A"
+    },
+    "2006": {
+     "value": "84.34",
+     "mult": 6,
+     "status": "A"
+    },
+    "2007": {
+     "value": "33.03",
+     "mult": 6,
+     "status": "A"
+    },
+    "2008": {
+     "value": "15.45",
+     "mult": 6,
+     "status": "A"
+    },
+    "2009": {
+     "value": "29.6",
+     "mult": 6,
+     "status": "A"
+    },
+    "2010": {
+     "value": "28.36",
+     "mult": 6,
+     "status": "A"
+    },
+    "2011": {
+     "value": "33.15",
+     "mult": 6,
+     "status": "A"
+    },
+    "2012": {
+     "value": "21.77",
+     "mult": 6,
+     "status": "A"
+    },
+    "2013": {
+     "value": "34.28",
+     "mult": 6,
+     "status": "A"
+    },
+    "2014": {
+     "value": "30.1",
+     "mult": 6,
+     "status": "A"
+    },
+    "2015": {
+     "value": "47.34",
+     "mult": 6,
+     "status": "A"
+    },
+    "2016": {
+     "value": "54.78",
+     "mult": 6,
+     "status": "A"
+    },
+    "2017": {
+     "value": "39.38",
+     "mult": 6,
+     "status": "A"
+    },
+    "2018": {
+     "value": "129.12",
+     "mult": 6,
+     "status": "A"
+    },
+    "2019": {
+     "value": "159.13",
+     "mult": 6,
+     "status": "A"
+    },
+    "2020": {
+     "value": "225.93",
+     "mult": 6,
+     "status": "A"
+    },
+    "2021": {
+     "value": "253.23",
+     "mult": 6,
+     "status": "A"
+    },
+    "2022": {
+     "value": "294.32",
+     "mult": 6,
+     "status": "A"
+    },
+    "2023": {
+     "value": "202.78",
+     "mult": 6,
+     "status": "A"
+    },
+    "2024": {
+     "value": "167.74",
+     "mult": 6,
+     "status": "A"
+    },
+    "2025": {
+     "value": "271.73",
+     "mult": 6,
+     "status": "A"
+    }
+   },
+   "XDC": {
+    "2003": {
+     "value": "3113.25",
+     "mult": 6,
+     "status": "A"
+    },
+    "2004": {
+     "value": "7190.61",
+     "mult": 6,
+     "status": "A"
+    },
+    "2005": {
+     "value": "7897.27",
+     "mult": 6,
+     "status": "A"
+    },
+    "2006": {
+     "value": "17745.3",
+     "mult": 6,
+     "status": "A"
+    },
+    "2007": {
+     "value": "6063.98",
+     "mult": 6,
+     "status": "A"
+    },
+    "2008": {
+     "value": "2712.82",
+     "mult": 6,
+     "status": "A"
+    },
+    "2009": {
+     "value": "5962",
+     "mult": 6,
+     "status": "A"
+    },
+    "2010": {
+     "value": "5892.19",
+     "mult": 6,
+     "status": "A"
+    },
+    "2011": {
+     "value": "6660.06",
+     "mult": 6,
+     "status": "A"
+    },
+    "2012": {
+     "value": "4894.4",
+     "mult": 6,
+     "status": "A"
+    },
+    "2013": {
+     "value": "7662.96",
+     "mult": 6,
+     "status": "A"
+    },
+    "2014": {
+     "value": "7001.83",
+     "mult": 6,
+     "status": "A"
+    },
+    "2015": {
+     "value": "13216.98",
+     "mult": 6,
+     "status": "A"
+    },
+    "2016": {
+     "value": "15421.72",
+     "mult": 6,
+     "status": "A"
+    },
+    "2017": {
+     "value": "10808.88",
+     "mult": 6,
+     "status": "A"
+    },
+    "2018": {
+     "value": "34890.96",
+     "mult": 6,
+     "status": "A"
+    },
+    "2019": {
+     "value": "46243.59",
+     "mult": 6,
+     "status": "A"
+    },
+    "2020": {
+     "value": "69584.47",
+     "mult": 6,
+     "status": "A"
+    },
+    "2021": {
+     "value": "76768.52",
+     "mult": 6,
+     "status": "A"
+    },
+    "2022": {
+     "value": "109656.07",
+     "mult": 6,
+     "status": "A"
+    },
+    "2023": {
+     "value": "71612",
+     "mult": 6,
+     "status": "A"
+    },
+    "2024": {
+     "value": "61354.02",
+     "mult": 6,
+     "status": "A"
+    },
+    "2025": {
+     "value": "95952.35",
+     "mult": 6,
+     "status": "A"
+    }
+   }
+  },
+  "multilateralGe": {
+   "USD": {
+    "2016": {
+     "value": "144.33",
+     "mult": 6,
+     "status": "A"
+    },
+    "2017": {
+     "value": "109.3",
+     "mult": 6,
+     "status": "A"
+    },
+    "2018": {
+     "value": "155.82",
+     "mult": 6,
+     "status": "A"
+    },
+    "2019": {
+     "value": "152.93",
+     "mult": 6,
+     "status": "A"
+    },
+    "2020": {
+     "value": "191.95",
+     "mult": 6,
+     "status": "A"
+    },
+    "2021": {
+     "value": "181.82",
+     "mult": 6,
+     "status": "A"
+    },
+    "2022": {
+     "value": "76.96",
+     "mult": 6,
+     "status": "A"
+    },
+    "2023": {
+     "value": "53.83",
+     "mult": 6,
+     "status": "A"
+    },
+    "2024": {
+     "value": "36.4",
+     "mult": 6,
+     "status": "A"
+    },
+    "2025": {
+     "value": "51.92",
+     "mult": 6,
+     "status": "A"
+    }
+   },
+   "XDC": {
+    "2016": {
+     "value": "40631.93",
+     "mult": 6,
+     "status": "A"
+    },
+    "2017": {
+     "value": "30000.27",
+     "mult": 6,
+     "status": "A"
+    },
+    "2018": {
+     "value": "42105.87",
+     "mult": 6,
+     "status": "A"
+    },
+    "2019": {
+     "value": "44441.86",
+     "mult": 6,
+     "status": "A"
+    },
+    "2020": {
+     "value": "59118.93",
+     "mult": 6,
+     "status": "A"
+    },
+    "2021": {
+     "value": "55120.06",
+     "mult": 6,
+     "status": "A"
+    },
+    "2022": {
+     "value": "28673.32",
+     "mult": 6,
+     "status": "A"
+    },
+    "2023": {
+     "value": "19010.13",
+     "mult": 6,
+     "status": "A"
+    },
+    "2024": {
+     "value": "13313.98",
+     "mult": 6,
+     "status": "A"
+    },
+    "2025": {
+     "value": "18333.81",
+     "mult": 6,
+     "status": "A"
+    }
+   }
+  },
+  "bilateralGe": {
+   "USD": {
+    "2016": {
+     "value": "54.78",
+     "mult": 6,
+     "status": "A"
+    },
+    "2017": {
+     "value": "39.38",
+     "mult": 6,
+     "status": "A"
+    },
+    "2018": {
+     "value": "129.12",
+     "mult": 6,
+     "status": "A"
+    },
+    "2019": {
+     "value": "159.13",
+     "mult": 6,
+     "status": "A"
+    },
+    "2020": {
+     "value": "225.93",
+     "mult": 6,
+     "status": "A"
+    },
+    "2021": {
+     "value": "253.23",
+     "mult": 6,
+     "status": "A"
+    },
+    "2022": {
+     "value": "294.32",
+     "mult": 6,
+     "status": "A"
+    },
+    "2023": {
+     "value": "213.79",
+     "mult": 6,
+     "status": "A"
+    },
+    "2024": {
+     "value": "153.22",
+     "mult": 6,
+     "status": "A"
+    },
+    "2025": {
+     "value": "251.44",
+     "mult": 6,
+     "status": "A"
+    }
+   },
+   "XDC": {
+    "2016": {
+     "value": "15421.72",
+     "mult": 6,
+     "status": "A"
+    },
+    "2017": {
+     "value": "10808.88",
+     "mult": 6,
+     "status": "A"
+    },
+    "2018": {
+     "value": "34890.96",
+     "mult": 6,
+     "status": "A"
+    },
+    "2019": {
+     "value": "46243.59",
+     "mult": 6,
+     "status": "A"
+    },
+    "2020": {
+     "value": "69584.47",
+     "mult": 6,
+     "status": "A"
+    },
+    "2021": {
+     "value": "76768.52",
+     "mult": 6,
+     "status": "A"
+    },
+    "2022": {
+     "value": "109656.07",
+     "mult": 6,
+     "status": "A"
+    },
+    "2023": {
+     "value": "75500.2",
+     "mult": 6,
+     "status": "A"
+    },
+    "2024": {
+     "value": "56043.06",
+     "mult": 6,
+     "status": "A"
+    },
+    "2025": {
+     "value": "88787.61",
+     "mult": 6,
+     "status": "A"
     }
    }
   },
@@ -952,6 +1204,11 @@
      "value": "189.62",
      "mult": 6,
      "status": "A"
+    },
+    "2025": {
+     "value": "303.36",
+     "mult": 6,
+     "status": "A"
     }
    },
    "XDC": {
@@ -999,196 +1256,9 @@
      "value": "69357.04",
      "mult": 6,
      "status": "A"
-    }
-   }
-  },
-  "multilateralGe": {
-   "USD": {
-    "2016": {
-     "value": "144.33",
-     "mult": 6,
-     "status": "A"
     },
-    "2017": {
-     "value": "109.3",
-     "mult": 6,
-     "status": "A"
-    },
-    "2018": {
-     "value": "155.82",
-     "mult": 6,
-     "status": "A"
-    },
-    "2019": {
-     "value": "152.93",
-     "mult": 6,
-     "status": "A"
-    },
-    "2020": {
-     "value": "191.95",
-     "mult": 6,
-     "status": "A"
-    },
-    "2021": {
-     "value": "181.82",
-     "mult": 6,
-     "status": "A"
-    },
-    "2022": {
-     "value": "76.96",
-     "mult": 6,
-     "status": "A"
-    },
-    "2023": {
-     "value": "53.83",
-     "mult": 6,
-     "status": "A"
-    },
-    "2024": {
-     "value": "43.1",
-     "mult": 6,
-     "status": "A"
-    }
-   },
-   "XDC": {
-    "2016": {
-     "value": "40631.93",
-     "mult": 6,
-     "status": "A"
-    },
-    "2017": {
-     "value": "30000.27",
-     "mult": 6,
-     "status": "A"
-    },
-    "2018": {
-     "value": "42105.87",
-     "mult": 6,
-     "status": "A"
-    },
-    "2019": {
-     "value": "44441.86",
-     "mult": 6,
-     "status": "A"
-    },
-    "2020": {
-     "value": "59118.93",
-     "mult": 6,
-     "status": "A"
-    },
-    "2021": {
-     "value": "55120.06",
-     "mult": 6,
-     "status": "A"
-    },
-    "2022": {
-     "value": "28673.32",
-     "mult": 6,
-     "status": "A"
-    },
-    "2023": {
-     "value": "19010.13",
-     "mult": 6,
-     "status": "A"
-    },
-    "2024": {
-     "value": "15764.63",
-     "mult": 6,
-     "status": "A"
-    }
-   }
-  },
-  "bilateralGe": {
-   "USD": {
-    "2016": {
-     "value": "54.78",
-     "mult": 6,
-     "status": "A"
-    },
-    "2017": {
-     "value": "39.38",
-     "mult": 6,
-     "status": "A"
-    },
-    "2018": {
-     "value": "129.12",
-     "mult": 6,
-     "status": "A"
-    },
-    "2019": {
-     "value": "159.13",
-     "mult": 6,
-     "status": "A"
-    },
-    "2020": {
-     "value": "225.93",
-     "mult": 6,
-     "status": "A"
-    },
-    "2021": {
-     "value": "253.23",
-     "mult": 6,
-     "status": "A"
-    },
-    "2022": {
-     "value": "294.32",
-     "mult": 6,
-     "status": "A"
-    },
-    "2023": {
-     "value": "213.79",
-     "mult": 6,
-     "status": "A"
-    },
-    "2024": {
-     "value": "146.52",
-     "mult": 6,
-     "status": "A"
-    }
-   },
-   "XDC": {
-    "2016": {
-     "value": "15421.72",
-     "mult": 6,
-     "status": "A"
-    },
-    "2017": {
-     "value": "10808.88",
-     "mult": 6,
-     "status": "A"
-    },
-    "2018": {
-     "value": "34890.96",
-     "mult": 6,
-     "status": "A"
-    },
-    "2019": {
-     "value": "46243.59",
-     "mult": 6,
-     "status": "A"
-    },
-    "2020": {
-     "value": "69584.47",
-     "mult": 6,
-     "status": "A"
-    },
-    "2021": {
-     "value": "76768.52",
-     "mult": 6,
-     "status": "A"
-    },
-    "2022": {
-     "value": "109656.07",
-     "mult": 6,
-     "status": "A"
-    },
-    "2023": {
-     "value": "75500.2",
-     "mult": 6,
-     "status": "A"
-    },
-    "2024": {
-     "value": "53592.42",
+    "2025": {
+     "value": "107121.42",
      "mult": 6,
      "status": "A"
     }
@@ -1307,6 +1377,11 @@
     },
     "2024": {
      "value": "0.09",
+     "mult": 0,
+     "status": "A"
+    },
+    "2025": {
+     "value": "0.14",
      "mult": 0,
      "status": "A"
     }

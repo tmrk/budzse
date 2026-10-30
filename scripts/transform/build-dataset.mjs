@@ -126,6 +126,9 @@ for (const [y, cell] of Object.entries(eurostat.gdpGrowth)) {
 }
 
 // OECD DAC1: the OECD publishes national-currency values itself, so no conversion is needed.
+// The latest year stays preliminary until the OECD's detailed December release.
+const DAC_PRELIMINARY = 2025;
+const dacRevision = (year) => (year >= DAC_PRELIMINARY ? 'preliminary' : 'final');
 const dacSeries = [
   ['oda', 'oda', 'dacNet', 'MEASURE=1010, FLOW_TYPE=1140'],
   ['bilateral', 'odaBilateral', 'dacNet', 'MEASURE=1015, FLOW_TYPE=1140'],
@@ -149,7 +152,7 @@ for (const [key, indicator, method, loc] of dacSeries) {
       institution: 'OECD',
       source: 'oecd-dac1',
       locator: `DONOR=HUN, ${loc}, UNIT_MEASURE=XDC, PRICE_BASE=V, TIME_PERIOD=${year}`,
-      revision: 'final',
+      revision: dacRevision(year),
       ...(key === 'odaGe' && year < 2018
         ? { note: { hu: 'A támogatási egyenérték 2018-tól a hivatalos DAC-főszám; a korábbi évek csak tájékoztató jellegűek.', en: 'Grant equivalent became the official DAC headline in 2018; earlier years are indicative.' } }
         : {}),
@@ -171,7 +174,7 @@ for (const [y, cell] of Object.entries(oecd.series.gni.XDC)) {
     institution: 'OECD',
     source: 'oecd-dac1',
     locator: `DONOR=HUN, MEASURE=1, FLOW_TYPE=1140, UNIT_MEASURE=XDC, PRICE_BASE=V, TIME_PERIOD=${year}`,
-    revision: 'final',
+    revision: dacRevision(year),
   });
 }
 for (const [key, method, loc] of [['pctGniNet', 'dacNet', 'MEASURE=2, FLOW_TYPE=1140'], ['pctGniGe', 'dacGrantEquivalent', 'MEASURE=11002, FLOW_TYPE=1160']]) {
@@ -190,49 +193,10 @@ for (const [key, method, loc] of [['pctGniNet', 'dacNet', 'MEASURE=2, FLOW_TYPE=
       institution: 'OECD',
       source: 'oecd-dac1',
       locator: `DONOR=HUN, ${loc}, UNIT_MEASURE=PT_B5G, TIME_PERIOD=${year}`,
-      revision: 'final',
+      revision: dacRevision(year),
     });
   }
 }
-
-// OECD preliminary 2025: USD only, grant-equivalent headline; converted at the MNB annual average.
-const USD_2025 = '303.4';
-const rate2025 = mnb.annual['2025'].usdHufAverage;
-push({
-  id: 'odaGe.2025.actual',
-  year: 2025,
-  indicator: 'odaGe',
-  scope: 'donor',
-  status: 'actual',
-  method: 'dacGrantEquivalent',
-  value: Math.round(303.4e6 * rate2025),
-  unit: 'HUF',
-  original: { value: USD_2025, unit: 'million USD', currency: 'USD', usd: `${USD_2025} million USD` },
-  institution: 'OECD',
-  source: 'oecd-profile-2026',
-  locator: 'ODA allocation overview, first sentence',
-  revision: 'preliminary',
-  derivation: { formula: 'USD × MNB annual average rate (2025)', inputs: ['mnb-rates'], rate: rate2025 },
-  note: {
-    hu: 'Előzetes adat. Az OECD csak dollárban közli, a forintérték számított: 303,4 millió USD × az MNB 2025-ös éves átlagárfolyama.',
-    en: 'Preliminary. The OECD publishes this in dollars only, so the forint value is calculated: USD 303.4 million × the MNB 2025 annual average rate.',
-  },
-});
-push({
-  id: 'odaPctGni.2025.actual',
-  year: 2025,
-  indicator: 'odaPctGni',
-  scope: 'donor',
-  status: 'actual',
-  method: 'dacGrantEquivalent',
-  value: 0.14,
-  unit: 'pct',
-  original: { value: '0.14', unit: 'percent of GNI', currency: '' },
-  institution: 'OECD',
-  source: 'oecd-profile-2026',
-  locator: 'Performance against commitments table, 2025, preliminary',
-  revision: 'preliminary',
-});
 
 // European Commission forecast years. Eurostat stays authoritative for every year it covers.
 for (const [series, indicator, scope, method] of [

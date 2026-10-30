@@ -127,6 +127,14 @@ export function helpsFor(data: Dataset, year: number): { program?: Observation; 
   return { program, agency };
 }
 
+/** The two lines against net ODA, in percent. Only for outcomes: a plan is not set against a reported figure. */
+export function helpsRatio(data: Dataset, year: number): number | null {
+  const { program, agency } = helpsFor(data, year);
+  const oda = bestObservation(data, 'oda', year, 'central');
+  if (program?.status !== 'actual' || !oda) return null;
+  return ((program.value + (agency?.value ?? 0)) / oda.value) * 100;
+}
+
 /** Published percentages (growth, inflation) stand as they are in every lens. */
 export const asPublished = (o: Observation): Measured => ({ obs: o, value: o.value, unit: o.unit, estimated: o.status === 'forecast' });
 

@@ -68,11 +68,13 @@ describe('verified historical figures', () => {
     expect(dataset.observations.filter((o) => o.indicator === 'oda' && o.year < 2003)).toEqual([]);
   });
 
-  it('converts preliminary 2025 ODA at the documented MNB rate', () => {
+  it('takes preliminary 2025 ODA in forints from the OECD itself', () => {
     const o = obs('odaGe.2025.actual');
-    expect(o.derivation?.rate).toBe(353.1983);
-    expect(o.value).toBe(Math.round(303.4e6 * 353.1983));
+    expect(o.derivation).toBeUndefined();
+    expect(o.value).toBe(107_121_420_000);
     expect(o.revision).toBe('preliminary');
+    expect(obs('oda.2025.actual').value).toBe(114_286_160_000);
+    expect(obs('oda.2025.actual').revision).toBe('preliminary');
   });
 });
 

@@ -216,6 +216,7 @@ a { color: inherit; text-underline-offset: 3px; text-decoration-thickness: 1px; 
 .mark-revenue, .mark-in { width: 16px; height: 3px; background: var(--c-in); }
 .mark-expenditure { width: 16px; height: 3px; background: var(--c-out); }
 .mark-ink { width: 16px; height: 3px; background: var(--ink); }
+.mark-oda { width: 16px; height: 3px; background: var(--rule); }
 .mark-plan { width: 16px; height: 3px; background: var(--ink); }
 .mark-gap {
   width: 16px; height: 13px;
@@ -284,6 +285,8 @@ a { color: inherit; text-underline-offset: 3px; text-decoration-thickness: 1px; 
 .bar-ink.chosen { fill: var(--ink); }
 .bar-ink.open:not(.chosen) { fill: none; stroke: var(--bar-ink); stroke-width: 1; stroke-dasharray: 2 2; }
 .bar-ink.open.chosen { fill: none; stroke: var(--ink); stroke-width: 1.5; }
+.bar-oda { fill: var(--rule); }
+.bar-oda.chosen { fill: var(--ink-soft); }
 .bar-agency { fill: var(--c-in); }
 .bar-agency.open { fill: none; stroke: var(--c-in); stroke-width: 1; stroke-dasharray: 2 2; }
 .gap-now { stroke: var(--c-out); stroke-width: 5; }
@@ -319,6 +322,8 @@ summary::-webkit-details-marker { display: none; }
 
 .readout { display: grid; grid-template-columns: repeat(var(--n), minmax(0, 230px)); column-gap: 24px; }
 .readout-item { min-width: 0; }
+/* Four figures only fit a row at a smaller size, and not at all on a narrower chart. */
+.readout:has(> :nth-child(4)) .readout-item dd { font-size: 26px; }
 .readout-item dt { font-size: 15px; color: var(--ink-soft); display: flex; align-items: center; gap: 8px; line-height: 1.3; white-space: nowrap; }
 .readout-item dd { height: 36px; font-family: var(--font-display); font-weight: 700; font-size: 30px; line-height: 36px; white-space: nowrap; }
 .readout-item.accent strong { font-weight: 800; color: var(--c-out); }
@@ -403,6 +408,9 @@ tbody th { font-weight: 500; }
 .footer { padding: 24px 0 40px; font-size: 14px; color: var(--ink-soft); display: grid; gap: 4px; max-width: 80ch; }
 
 /* Tablet and phone: one column, chart straight after the sum */
+@media (max-width: 1160px) {
+  .readout:has(> :nth-child(4)) { grid-template-columns: repeat(2, minmax(0, 230px)); row-gap: 6px; }
+}
 @media (max-width: 1040px) {
   .hero, .chapter { grid-template-columns: minmax(0, 1fr); gap: 16px; }
   .tagline { max-width: 40ch; font-size: 14px; top: 13px; }
@@ -442,9 +450,9 @@ tbody th { font-weight: 500; }
   .year-side { gap: 4px; }
   .stamp { font-size: 16px; padding: 1px 7px 2px; }
   .stamp-note { font-size: 12px; }
-  .readout { grid-template-columns: minmax(0, 1fr); }
+  .readout, .readout:has(> :nth-child(4)) { grid-template-columns: minmax(0, 1fr); row-gap: 0; }
   .readout-item { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; height: 38px; border-top: 1px solid var(--rule); padding-top: 4px; }
-  .readout-item dd { font-size: 24px; height: 30px; line-height: 30px; }
+  .readout-item dd, .readout:has(> :nth-child(4)) .readout-item dd { font-size: 24px; height: 30px; line-height: 30px; }
   .hero-controls { flex-direction: column; align-items: flex-start; gap: 0; }
   .segmented button { font-size: 15px; min-height: 42px; }
   .prov-row { grid-template-columns: minmax(0, 1fr); gap: 0; }

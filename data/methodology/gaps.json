@@ -13,19 +13,6 @@
   }
  },
  {
-  "id": "oda-net-2025",
-  "indicator": "oda",
-  "years": "2025",
-  "reason": {
-   "hu": "A 2025-ös nettó folyósítás, a kétoldalú és a többoldalú bontás még nem jelent meg. Az OECD szerint a részletes adatok 2026 decemberében várhatók. Csak az előzetes támogatási egyenérték ismert.",
-   "en": "Net disbursements and the bilateral and multilateral split for 2025 are not yet published. The OECD expects detailed data in December 2026. Only the preliminary grant equivalent is known."
-  },
-  "searched": {
-   "hu": "OECD DAC1, OECD-profil Magyarországról (2026. június).",
-   "en": "OECD DAC1, OECD profile of Hungary (June 2026)."
-  }
- },
- {
   "id": "oda-plan",
   "indicator": "oda",
   "years": "2000–2027",
@@ -147,12 +134,25 @@
   "indicator": "hungaryHelpsProgram",
   "years": "2019–2026",
   "reason": {
-   "hu": "Nem közlünk arányt az ODA-n belül. Hivatalos forrás nem adja meg, és az OECD-adatok a Hungary Helpst nem különítik el; a költségvetési sor készpénzszemléletű, az ODA az OECD DAC szabályai szerinti.",
-   "en": "We state no share of ODA. No official source gives one and OECD data do not separate Hungary Helps; the budget line is cash based, while ODA follows OECD DAC rules."
+   "hu": "Éves hivatalos arány nincs. Az ügynökség 2020-as beszámolója szerint abban az évben az adományok értékének 94%-a volt ODA-ként elszámolható; más évre nem találtunk ilyen számot. Az oldalon látható arány számított és tájékoztató jellegű.",
+   "en": "No official yearly share exists. The agency's 2020 report says 94% of that year's donations by value counted as ODA; we found no such figure for other years. The ratio on the page is calculated and only a guide."
   },
   "searched": {
-   "hu": "OECD CRS projektszintű adatok (2014–2024), OECD DAC szakértői értékelés (2023), Hungary Helps Ügynökség 2024-es kiegészítő melléklete.",
-   "en": "OECD CRS project-level data (2014–2024), OECD DAC peer review (2023), Hungary Helps Agency 2024 supplementary notes."
+   "hu": "OECD CRS projektszintű adatok (2014–2024), OECD DAC szakértői értékelés (2023), az ügynökség 2020–2024-es országgyűlési beszámolói és 2024–2025-ös éves beszámolói (hungaryhelps.gov.hu).",
+   "en": "OECD CRS project-level data (2014–2024), OECD DAC peer review (2023), the agency's 2020–2024 reports to Parliament and 2024–2025 annual accounts (hungaryhelps.gov.hu)."
+  }
+ },
+ {
+  "id": "hungary-helps-2025-actual",
+  "indicator": "hungaryHelpsAgency",
+  "years": "2025",
+  "reason": {
+   "hu": "A 2025-ös tény nem ismert: a 2026. évi törvények között (LXVII. törvényig) nincs zárszámadási törvény, a Kincstár csak a főösszegeket közli. Ezért az eredeti törvény szerepel. Az ügynökség 2025-ös éves beszámolója a saját elszámolását mutatja, nem a költségvetési sor teljesítését, ezért nem helyettesíti.",
+   "en": "The 2025 outcome is not known: the 2026 acts, up to Act LXVII, include no final-accounts act, and the Treasury publishes main sums only. The original act is shown instead. The agency's 2025 annual accounts show its own bookkeeping, not the outcome of the budget line, so they do not replace it."
+  },
+  "searched": {
+   "hu": "mkogy.jogtar.hu 2026. évi törvények, Magyar Államkincstár zárszámadási mérleg, Pénzügyminisztérium 2025-ös zárszámadási útmutató, az ügynökség 2025-ös éves beszámolója. A törvényjavaslat az Országgyűlés honlapján automatizált eszközzel nem érhető el.",
+   "en": "2026 acts on mkogy.jogtar.hu, the Treasury final-accounts balance, the Ministry of Finance 2025 final-accounts guide, the agency's 2025 annual accounts. Any bill on Parliament's website cannot be reached with automated tools."
   }
  }
 ]
