@@ -139,7 +139,8 @@ test.describe('the year', () => {
     await page.goto('/budzse/en/?y=2026');
     await ready(page);
     await expect(page.getByTestId('stamp')).toHaveText('Forecast');
-    await expect(page.getByTestId('stamp-note')).toHaveText('European Commission');
+    await expect(page.getByTestId('stamp-note')).toHaveText('Government');
+    await expect(page.getByTestId('ledger-deficit')).toHaveText('6.90');
   });
 
   test('revenue covered per 100 forints follows the year', async ({ page }) => {
@@ -200,12 +201,21 @@ test.describe('the year', () => {
     await ctx.close();
   });
 
-  test('the bar takes over the year once it has scrolled away', async ({ page }) => {
+  test('the bar takes over the year as soon as it has scrolled away, and keeps language and theme', async ({ page }) => {
     await page.goto('/budzse/en/?y=2020');
     await ready(page);
     await expect(page.getByTestId('bar-steps')).toHaveCount(0);
-    await page.getByTestId('aid').scrollIntoViewIfNeeded();
+    const year = (await page.locator('.year-big').boundingBox())!;
+    const bar = (await page.locator('header.bar').boundingBox())!;
+    // Just short of the year clearing the bar, then just past it.
+    await page.evaluate((y) => window.scrollTo(0, y), year.y + year.height - bar.height - 8);
+    await expect(page.getByTestId('bar-steps')).toHaveCount(0);
+    await page.evaluate((y) => window.scrollTo(0, y), year.y + year.height - bar.height + 8);
     await expect(page.getByTestId('bar-steps')).toBeVisible();
+    await expect(page.getByTestId('lang-hu')).toBeVisible();
+    await expect(page.getByTestId('theme')).toBeVisible();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+    expect((await page.locator('header.bar').boundingBox())!.height).toBe(bar.height);
     await page.getByTestId('bar-steps').getByRole('button', { name: 'Previous year' }).click();
     await expect(page).toHaveURL(/y=2019/);
     await expect(page.getByTestId('bar-steps')).toContainText('2019');
@@ -352,11 +362,20 @@ test.describe('sources, comparisons and exports', () => {
     await expect(dialog.getByRole('link', { name: /Consumer price index/ })).toHaveAttribute('href', /ksh\.hu/);
   });
 
-  test('secondary citations are disclosed', async ({ page }) => {
+  test('the 2027 draft cites the Fiscal Council, not the press', async ({ page }) => {
     await page.goto('/budzse/en/?y=2027&s=c');
     await ready(page);
     await page.getByTestId('ledger-deficit').click();
-    await expect(page.getByTestId('source-dialog')).toContainText('Secondary citation');
+    const dialog = page.getByTestId('source-dialog');
+    await expect(dialog).toContainText('Fiscal Council of Hungary');
+    await expect(dialog).not.toContainText('Secondary citation');
+  });
+
+  test('a calculated forecast says how it was calculated', async ({ page }) => {
+    await page.goto('/budzse/en/?y=2027');
+    await ready(page);
+    await page.getByTestId('ledger-revenue').click();
+    await expect(page.getByTestId('source-dialog')).toContainText('Share of GDP × nominal GDP forecast');
   });
 
   test('Hungary Helps shows both budget lines beside net ODA, and a missing line stays missing', async ({ page }) => {
@@ -397,7 +416,7 @@ test.describe('sources, comparisons and exports', () => {
   test('the sum compares with the year before', async ({ page }) => {
     await page.goto('/budzse/en/?y=2020');
     await ready(page);
-    await expect(page.getByTestId('ledger')).toContainText('vs prior year');
+    await expect(page.getByTestId('ledger')).toContainText('change on prior year');
     await expect(page.locator('.ledger-row .delta').first()).toHaveText('+1.1%');
   });
 

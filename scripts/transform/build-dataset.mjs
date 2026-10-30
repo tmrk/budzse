@@ -231,6 +231,36 @@ for (const [series, indicator, scope, method] of [
   }
 }
 
+// The government states its forecast revenue and expenditure only as shares of GDP.
+// Its forint figures are calculated from those shares and its own GDP forecast, so all three lines of a year share one publisher.
+for (const year of [2026, 2027]) {
+  const gdp = obs.find((o) => o.id === `gdp.${year}.forecast.gov`);
+  for (const indicator of ['revenue', 'expenditure']) {
+    const share = obs.find((o) => o.id === `general.${indicator}PctGdp.${year}.forecast.gov`);
+    push({
+      id: `general.${indicator}.${year}.forecast.gov`,
+      year,
+      indicator,
+      scope: 'generalGovernment',
+      status: 'forecast',
+      method: 'esa2010',
+      value: toSafe(BigInt(gdp.value / 1000) * BigInt(Math.round(share.value * 10)), `general.${indicator}.${year}.forecast.gov`),
+      unit: 'HUF',
+      original: { value: `${share.original.value} × ${gdp.original.value}`, unit: 'billion HUF', currency: 'HUF' },
+      institution: 'Pénzügyminisztérium',
+      source: 'pm-mtp-2027',
+      locator: `${share.locator} × ${gdp.locator}`,
+      revision: 'projection',
+      publisher: 'gov',
+      derivation: { formula: 'Share of GDP × nominal GDP forecast', inputs: ['pm-mtp-2027'] },
+      note: {
+        hu: 'Számított érték: a Pénzügyminisztérium egy tizedesre közölt GDP-arányának és GDP-előrejelzésének szorzata. A kerekítés miatt a kiadás és a bevétel különbsége néhány tíz milliárd forinttal eltérhet a közölt hiánytól.',
+        en: 'Calculated: the Ministry of Finance share of GDP, published to one decimal, times its GDP forecast. Because of that rounding, expenditure minus revenue can differ from the published deficit by a few tens of billions of forints.',
+      },
+    });
+  }
+}
+
 // CPI. The published annual index (previous year = 100) is the only input; levels are chained.
 const annualCpi = [];
 let level = 100;
@@ -353,6 +383,7 @@ const dataset = {
     { label: 'Eurostat', date: eurostat.govUpdated.slice(0, 10) },
     { label: 'KSH CPI', date: '2026-10-07' },
     { label: 'Pénzügyminisztérium', date: '2026-10-28' },
+    { label: 'Költségvetési Tanács', date: '2026-10-29' },
   ],
 };
 

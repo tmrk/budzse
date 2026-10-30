@@ -23,6 +23,20 @@ describe('verified historical figures', () => {
     expect(obs('central.deficit.2020.actual').value).toBe(5_311_318_000_000);
   });
 
+  it('the Fiscal Council opinion of 29 October 2026, read from its tables', () => {
+    expect(obs('central.revenue.2027.draft').value).toBe(42_483_800_000_000);
+    expect(obs('central.expenditure.2027.draft').value).toBe(47_586_500_000_000);
+    expect(obs('central.deficit.2027.draft').value).toBe(5_102_700_000_000);
+    expect(obs('general.deficit.2027.forecast.gov').value).toBe(4_790_000_000_000);
+  });
+
+  it('government forint forecasts are the published shares times the published GDP', () => {
+    expect(obs('general.revenue.2026.forecast.gov').value).toBe(40_336_411_000_000);
+    expect(obs('general.expenditure.2026.forecast.gov').value).toBe(47_259_136_000_000);
+    expect(obs('general.revenue.2027.forecast.gov').value).toBe(41_431_584_000_000);
+    expect(obs('general.expenditure.2027.forecast.gov').value).toBe(46_219_668_000_000);
+  });
+
   it('2026 original act and October 2026 amendment', () => {
     expect(obs('central.deficit.2026.original').value).toBe(4_218_534_600_000);
     expect(obs('central.deficit.2026.revised').value).toBe(7_110_123_100_000);
@@ -86,7 +100,7 @@ describe('classification rules', () => {
   it('labels 2027 central figures as a draft, not as a budget', () => {
     const rows = dataset.observations.filter((o) => o.year === 2027 && o.scope === 'centralSubsystem');
     expect(rows.map((o) => o.status)).toEqual(['draft', 'draft', 'draft']);
-    expect(rows.every((o) => o.secondary)).toBe(true);
+    expect(rows.every((o) => o.source === 'kt-2027' && !o.secondary)).toBe(true);
   });
 
   it('labels part-year execution with its period', () => {

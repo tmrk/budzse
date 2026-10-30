@@ -16,6 +16,7 @@ Pipeline: official sources → `raw/` and `observations/` → `scripts/transform
 | CPI | KSH STADAT ara0002, ara0040 | `npm run data:fetch ksh` | Monthly |
 | USD rates | MNB `arfolyamok.asmx` | `npm run data:fetch mnb` | As needed |
 | Commission forecast | AMECO | `npm run data:fetch ameco` | May, November |
+| 2027 draft main sums and ESA target | Fiscal Council opinion (PDF, parlament.hu) | Manual, in Chrome after a person passes the CAPTCHA | Until the bill is filed |
 | Budget-time GDP and ESA plans | State Audit Office opinions (PDF) | Manual | Yearly |
 | Government forecast | Ministry of Finance programme (PDF) | Manual | When published |
 

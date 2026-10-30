@@ -14,10 +14,10 @@ import type { Dataset, Lang, Observation } from './types/data';
 
 const NEXT_THEME: Record<ThemeChoice, ThemeChoice> = { auto: 'light', light: 'dark', dark: 'auto' };
 
-function TopBar({ lang, setLang, m, theme, setTheme, scrolled, children }: { lang: Lang; setLang: (l: Lang) => void; m: AppContextValue['m']; theme: ThemeChoice; setTheme: (t: ThemeChoice) => void; scrolled: boolean; children?: React.ReactNode }) {
+function TopBar({ barRef, lang, setLang, m, theme, setTheme, scrolled, children }: { barRef?: React.Ref<HTMLElement>; lang: Lang; setLang: (l: Lang) => void; m: AppContextValue['m']; theme: ThemeChoice; setTheme: (t: ThemeChoice) => void; scrolled: boolean; children?: React.ReactNode }) {
   const themeName = theme === 'auto' ? m.app.themeAuto : theme === 'light' ? m.app.themeLight : m.app.themeDark;
   return (
-    <header className={scrolled ? 'bar scrolled' : 'bar'}>
+    <header ref={barRef} className={scrolled ? 'bar scrolled' : 'bar'}>
       <div className="bar-inner">
         <h1 className="wordmark">Büdzsé</h1>
         <div className="bar-tools">{children}</div>
@@ -54,7 +54,7 @@ export default function App() {
   const [target, setTarget] = useState<{ obs: Observation; measured?: Measured | null } | null>(null);
   const [preview, setPreview] = useState<number | null>(null);
   const [scrolled, setScrolled] = useState(false);
-  const heroEnd = useRef<HTMLDivElement>(null);
+  const barRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     let live = true;
@@ -76,11 +76,12 @@ export default function App() {
   const ctx = useMemo<AppContextValue | null>(() => (data ? { data, lang, m, view, setView, year, setPreview, inspect } : null), [data, lang, m, view, setView, year, inspect]);
   const rows = useMemo(() => (data ? ledgerRows(data, view.scope, view) : []), [data, view.scope, view.real, view.ref, view.relative]);
 
-  // Once the big year has scrolled away, the bar takes over the job of showing and changing it.
+  // As soon as the big year has passed under the bar, the bar takes over showing and changing it.
   useEffect(() => {
-    const el = heroEnd.current;
-    if (!el) return;
-    const onScroll = () => setScrolled(el.getBoundingClientRect().top < 0);
+    const year = document.querySelector('.year-big');
+    const bar = barRef.current;
+    if (!year || !bar) return;
+    const onScroll = () => setScrolled(year.getBoundingClientRect().bottom <= bar.getBoundingClientRect().bottom);
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
@@ -94,7 +95,7 @@ export default function App() {
       <a className="skip" href="#data-table" onClick={() => document.querySelector<HTMLDetailsElement>('#data-table')?.setAttribute('open', '')}>{m.app.skip}</a>
       {ctx ? (
         <AppContext.Provider value={ctx}>
-          <TopBar lang={lang} setLang={setLang} m={m} theme={choice} setTheme={setChoice} scrolled={scrolled}>
+          <TopBar barRef={barRef} lang={lang} setLang={setLang} m={m} theme={choice} setTheme={setChoice} scrolled={scrolled}>
             {scrolled && (
               <>
                 <YearStepper testId="bar-steps" compact />
@@ -118,7 +119,6 @@ export default function App() {
                 </div>
               </div>
             </section>
-            <div ref={heroEnd} className="hero-end" />
             <PlanSection />
             <EconomySection />
             <AidSection />

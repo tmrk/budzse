@@ -1,5 +1,13 @@
 # Recent changes
 
+## 2026-10-30: newest figures for 2026 and 2027
+
+The whole-state figures for 2026 and 2027 now show the government's October forecast instead of the Commission's spring one, which predates the change of government: the 2026 deficit is HUF 6,902 billion rather than 5,671, and the 2027 deficit HUF 4,790 billion rather than 5,581. Revenue and expenditure are calculated from the government's shares of GDP and marked as such. The Commission's forecast stays listed under every figure for the year.
+
+The 2027 central figures now cite the Fiscal Council's opinion of 29 October 2026 rather than press reports. Its tables also confirm the 2025 Treasury balance and the amended 2026 act.
+
+The bar now takes over the year as soon as the big year has scrolled away, not after the whole first section. On phones the language and theme controls stay in the bar. The column of changes in the sum is now labelled "change on prior year", because a bare "+34.5%" beside the deficit could be read as the deficit itself.
+
 ## 2026-10-30: Hungary Helps
 
 A new section shows the two budget lines that carry the Hungary Helps name, the programme's grants and the agency's running costs, from the budget and final-accounts acts. Hungary Helps is drawn inside the net ODA bars, with a second chart for the split between the lines and a calculated ratio marked as a guide: no official yearly share exists, because OECD data do not separate Hungary Helps. Net ODA for 2025 now comes from the OECD in forints, along with a small revision of the 2024 bilateral and multilateral split.
@@ -22,7 +30,7 @@ Dataset of central budget acts 2000-2026, final accounts 2000-2024, Treasury 202
 
 ## Known limitations and outstanding work
 
-- 2027 central figures are from press reports of the Fiscal Council opinion. Replace with the official bill or the adopted act.
+- 2027 central figures are from the Fiscal Council opinion. Replace with the official bill or the adopted act. Its annexes will also give the 2027 Hungary Helps lines.
 - Check for the 2025 final-accounts act and swap it in for the Treasury balance.
 - EC Autumn 2026 forecast is due 17 November 2026; OECD detailed 2025 ODA in December 2026.
 - Budget-time GDP assumptions before 2017 and ESA plans before 2021 are gaps; older bills are on parlament.hu.

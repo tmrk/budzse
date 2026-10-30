@@ -22,7 +22,8 @@ Every displayed number needs a traceable source or a documented calculation from
 - Net ODA and grant-equivalent ODA are separate series. Do not join them. Hungary Helps or ministry lines are not total ODA.
 - CPI-adjusted GDP is not real GDP. Percentages are not deflated. Part-year figures have no GDP share.
 - Forecast-year CPI makes adjusted values estimates; `measure()` flags them.
-- `parlament.hu` shows a CAPTCHA to automation and `njt.hu` resets connections from some networks. Do not try to bypass. The 2027 draft figures are `secondary: true` for this reason: replace them with the official bill or act when it can be read.
+- `parlament.hu` shows a CAPTCHA to automation and `njt.hu` resets connections from some networks. Do not try to bypass. A person can pass the CAPTCHA in Chrome, and the site then reads normally there, including `/irom43/NNNNN/NNNNN.pdf`. The 2027 draft figures come from the Fiscal Council opinion (`kt-2027`): replace them with the official bill or act once it is filed.
+- The government forecast states revenue and expenditure only as shares of GDP, so its forint figures for 2026-27 are calculated (`derivation`) and can miss the published deficit by a few tens of billions. It outranks the Commission in the ledger because it is newer.
 - Charts are hand-written SVG (`src/components/Timeline.tsx`, `src/charts/geometry.ts`), and every chart shares one x scale. Colours are CSS variables; keep light and dark tokens in `src/styles/app.css` in step, and run the palette through a CVD check when changing them.
 - Orange means one thing: the gap between money in and money out. The hatch is its mark. Do not reuse either for anything else.
 - The ledger shows one figure set per year (`ledgerFor`), all from one status and publisher. A part-year figure never stands for a year.

@@ -69,12 +69,12 @@
   "indicator": "deficit",
   "years": "2027",
   "reason": {
-   "hu": "2027-re még nincs elfogadott költségvetési törvény. A tervezet számai sajtóközlésből származnak, mert az Országgyűlés honlapja automatizált eszközzel nem volt elérhető.",
-   "en": "No budget act has been adopted for 2027. The draft's figures come from press reports because Parliament's website could not be reached with automated tools."
+   "hu": "2027-re még nincs elfogadott költségvetési törvény. A tervezet számait a Költségvetési Tanács 2026. október 29-i véleménye közli; a benyújtott törvényjavaslat 2026. október 30-án még nem volt az Országgyűlés honlapján.",
+   "en": "No budget act has been adopted for 2027. The draft's figures are as stated in the Fiscal Council's opinion of 29 October 2026; the bill itself was not yet on Parliament's website on 30 October 2026."
   },
   "searched": {
-   "hu": "parlament.hu (CAPTCHA), kormany.hu költségvetési oldalak, a Költségvetési Tanács véleményének sajtóközlései.",
-   "en": "parlament.hu (CAPTCHA), kormany.hu budget pages, press reports of the Fiscal Council opinion."
+   "hu": "A Költségvetési Tanács véleménye (parlament.hu), az Országgyűlés 43. ciklusának irományai 949-es számig.",
+   "en": "The Fiscal Council's opinion (parlament.hu), the papers of Parliament's 43rd term up to number 949."
   }
  },
  {
@@ -108,8 +108,8 @@
   "indicator": "hungaryHelpsProgram",
   "years": "2000–2018, 2027",
   "reason": {
-   "hu": "2019 előtt nincs a Hungary Helps nevet viselő költségvetési sor. Az üldözött keresztények segítésének korábbi sorait nem nevezzük át utólag. A 2027-es költségvetés törvényszövegét még nem tudtuk elolvasni.",
-   "en": "No budget line carries the Hungary Helps name before 2019. We do not relabel the earlier lines for helping persecuted Christians. The text of the 2027 budget act could not yet be read."
+   "hu": "2019 előtt nincs a Hungary Helps nevet viselő költségvetési sor. Az üldözött keresztények segítésének korábbi sorait nem nevezzük át utólag. A 2027-es törvényjavaslat szövege 2026. október 30-án még nem volt elérhető.",
+   "en": "No budget line carries the Hungary Helps name before 2019. We do not relabel the earlier lines for helping persecuted Christians. The text of the 2027 bill was not yet available on 30 October 2026."
   },
   "searched": {
    "hu": "A 2017–2026-os költségvetési és a 2017–2024-es zárszámadási törvények mellékletei (mkogy.jogtar.hu).",
@@ -121,8 +121,8 @@
   "indicator": "hungaryHelpsAgency",
   "years": "2000–2018, 2021, 2027",
   "reason": {
-   "hu": "Az ügynökség 2019-ben jött létre. 2021-ben a zárszámadási törvényben nincs külön sora, ezért nincs adat, nem nulla. A 2021-es és a 2022-es eredeti törvényben sincs ilyen sor. A 2027-es törvényszöveget még nem tudtuk elolvasni.",
-   "en": "The agency was created in 2019. The 2021 final-accounts act has no separate line for it, so there is no data, not zero. The original 2021 and 2022 acts have no such line either. The text of the 2027 act could not yet be read."
+   "hu": "Az ügynökség 2019-ben jött létre. 2021-ben a zárszámadási törvényben nincs külön sora, ezért nincs adat, nem nulla. A 2021-es és a 2022-es eredeti törvényben sincs ilyen sor. A 2027-es törvényjavaslat szövege 2026. október 30-án még nem volt elérhető.",
+   "en": "The agency was created in 2019. The 2021 final-accounts act has no separate line for it, so there is no data, not zero. The original 2021 and 2022 acts have no such line either. The text of the 2027 bill was not yet available on 30 October 2026."
   },
   "searched": {
    "hu": "A 2019–2026-os költségvetési és a 2019–2024-es zárszámadási törvények mellékletei. Az ügynökség országgyűlési beszámolói (parlament.hu) automatizált eszközzel nem érhetők el.",
@@ -151,8 +151,8 @@
    "en": "The 2025 outcome is not known: the 2026 acts, up to Act LXVII, include no final-accounts act, and the Treasury publishes main sums only. The original act is shown instead. The agency's 2025 annual accounts show its own bookkeeping, not the outcome of the budget line, so they do not replace it."
   },
   "searched": {
-   "hu": "mkogy.jogtar.hu 2026. évi törvények, Magyar Államkincstár zárszámadási mérleg, Pénzügyminisztérium 2025-ös zárszámadási útmutató, az ügynökség 2025-ös éves beszámolója. A törvényjavaslat az Országgyűlés honlapján automatizált eszközzel nem érhető el.",
-   "en": "2026 acts on mkogy.jogtar.hu, the Treasury final-accounts balance, the Ministry of Finance 2025 final-accounts guide, the agency's 2025 annual accounts. Any bill on Parliament's website cannot be reached with automated tools."
+   "hu": "mkogy.jogtar.hu 2026. évi törvények, Magyar Államkincstár zárszámadási mérleg, Pénzügyminisztérium 2025-ös zárszámadási útmutató, az ügynökség 2025-ös éves beszámolója, az Országgyűlés 43. ciklusának 560–949. számú irományai (első oldalak, 2026. október 30.). A Költségvetési Tanács 2026. október 29-i véleménye is még előzetes 2025-ös tényt közöl.",
+   "en": "2026 acts on mkogy.jogtar.hu, the Treasury final-accounts balance, the Ministry of Finance 2025 final-accounts guide, the agency's 2025 annual accounts, papers 560–949 of Parliament's 43rd term (opening pages, 30 October 2026). The Fiscal Council's opinion of 29 October 2026 also still gives a preliminary 2025 outcome."
   }
  }
 ]

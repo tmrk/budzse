@@ -45,7 +45,7 @@ export const en: typeof hu = {
     unitForint: (scale: string) => `HUF ${scale}`,
     unitShare: '% of GDP',
     prices: (y: number) => `at ${y} prices`,
-    previous: 'vs prior year',
+    previous: 'change on prior year',
     points: 'pts',
     cover: (n: string) => `Every 100 forints spent were matched by ${n} forints of revenue.`,
     scopeWarning: 'The 2010 change of scope means these two years cannot be compared.',
@@ -337,8 +337,9 @@ export const en: typeof hu = {
         title: 'Forecasts for 2026 and 2027',
         body: [
           'For 2026 we show the original act, the amendment promulgated in October 2026, Treasury execution for the first nine months, and forecasts separately. No full-year actual exists yet.',
-          "No budget has been adopted for 2027. Central subsystem figures come from the draft bill. General government figures come from the Ministry of Finance's October 2026 programme and the European Commission's Spring 2026 forecast.",
-          "The Commission's forecast predates the government's own and uses older information, so the two differ. Each is labelled with its publisher.",
+          "No budget has been adopted for 2027. Central subsystem figures come from the draft bill as stated in the Fiscal Council's opinion of October 2026. General government figures come from that opinion, the Ministry of Finance's October 2026 programme and the European Commission's Spring 2026 forecast.",
+          "The main figures show the government's forecast, the newest one. It states revenue and expenditure as shares of GDP, so their forint amounts are calculated from those shares and its GDP forecast, and can differ from the published deficit by a few tens of billions of forints.",
+          "The Commission's forecast predates the government's own and the change of government, so the two differ. It stays listed under every figure for the year, labelled with its publisher.",
         ],
       },
       {

@@ -72,7 +72,8 @@ for (const [k, g] of groups) {
   const diff = g.expenditure.value - g.revenue.value - g.deficit.value;
   // Eurostat publishes TR and TE as whole millions but B9 to 0.1 million, leaving small residuals
   // (largest: 2.2 million HUF in 2016). Budget acts and the Treasury must reconcile almost exactly.
-  const tolerance = g.deficit.scope === 'generalGovernment' ? 5e6 : 1000;
+  // Forint figures calculated from shares published to 0.1% of GDP can miss by up to that much in all.
+  const tolerance = g.revenue.derivation ? g.revenue.value * 0.0025 : g.deficit.scope === 'generalGovernment' ? 5e6 : 1000;
   if (Math.abs(diff) > tolerance) fail(`${k}: expenditure - revenue differs from deficit by ${diff} HUF`);
 }
 const counted = [...groups.values()].filter((g) => g.revenue && g.expenditure && g.deficit).length;

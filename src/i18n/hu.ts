@@ -45,7 +45,7 @@ export const hu = {
     unitForint: (scale: string) => `${scale} Ft`,
     unitShare: 'a GDP %-ában',
     prices: (y: number) => `${huYearAdjective(y)} áron`,
-    previous: 'előző évhez',
+    previous: 'változás az előző évhez',
     points: 'pont',
     cover: (n: string) => `100 forint kiadásra ${n} forint bevétel jutott.`,
     scopeWarning: 'A 2010-es számbavétel-váltás miatt ez a két év nem vethető össze.',
@@ -337,8 +337,9 @@ export const hu = {
         title: 'Előrejelzések, 2026 és 2027',
         body: [
           '2026-ra külön mutatjuk az eredeti törvényt, a 2026 októberében kihirdetett módosítást, az első kilenc hónap kincstári teljesítését és az előrejelzéseket. Teljes éves tény még nincs.',
-          '2027-re nincs elfogadott költségvetés. A központi alrendszer számai a törvényjavaslat tervezetéből származnak, a kormányzati szektornál a Pénzügyminisztérium 2026. októberi programja és az Európai Bizottság 2026. tavaszi előrejelzése szerepel.',
-          'A Bizottság előrejelzése a kormányváltás előtti adatokon alapul és régebbi, mint a kormány előrejelzése, ezért a kettő eltér. Mindkettőt a közzétevő nevével jelöljük.',
+          '2027-re nincs elfogadott költségvetés. A központi alrendszer számai a törvényjavaslat tervezetéből származnak, a Költségvetési Tanács 2026. októberi véleménye szerint. A kormányzati szektornál ez a vélemény, a Pénzügyminisztérium 2026. októberi programja és az Európai Bizottság 2026. tavaszi előrejelzése szerepel.',
+          'A fő számok a kormány előrejelzését mutatják, mert ez a legfrissebb. A kormány a bevételt és a kiadást a GDP arányában közli, ezért a forintösszegüket ezekből az arányokból és a GDP-előrejelzéséből számoljuk, és néhány tíz milliárd forinttal eltérhetnek a közölt hiánytól.',
+          'A Bizottság előrejelzése régebbi a kormányénál és a kormányváltás előtti adatokon alapul, ezért a kettő eltér. Az év összes száma között továbbra is szerepel, a közzétevő nevével jelölve.',
         ],
       },
       {

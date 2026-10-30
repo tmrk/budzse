@@ -124,8 +124,9 @@ describe('the ledger', () => {
         expect(a.scope).toBe(c.scope);
       }
     }
-    // The government publishes a 2026 deficit but no forint revenue, so its figure cannot join the EC's.
-    expect(ledgerFor(dataset, 2026, 'general', nominal)!.publisher).toBe('ec');
+    // The government's October figures are newer than the Commission's spring forecast.
+    expect(ledgerFor(dataset, 2026, 'general', nominal)!.publisher).toBe('gov');
+    expect(ledgerFor(dataset, 2027, 'general', nominal)!.publisher).toBe('gov');
   });
 
   it('adds up to within rounding in the source', () => {
@@ -185,10 +186,19 @@ describe('every figure of a year', () => {
     expect(gov.cells.revenue!.measured!.value).toBe(43.7);
   });
 
-  it('leaves a figure missing rather than filling it', () => {
+  it('states the government forecast in forints, with revenue and expenditure marked as calculated', () => {
     const gov = figureRows(dataset, 2026, 'general', mode).find((r) => r.obs.publisher === 'gov')!;
-    expect(gov.cells.revenue).toBeNull();
     expect(gov.cells.deficit!.measured!.value).toBe(obs('general.deficit.2026.forecast.gov').value);
+    expect(gov.cells.deficit!.obs.derivation).toBeUndefined();
+    expect(gov.cells.revenue!.obs.derivation!.formula).toContain('GDP');
+    expect(gov.cells.expenditure!.obs.derivation!.formula).toContain('GDP');
+  });
+
+  it('leaves a figure missing rather than filling it', () => {
+    const rows = figureRows(dataset, 2026, 'general', mode).filter((r) => r.obs.status === 'planned');
+    expect(rows).toHaveLength(1);
+    expect(rows[0].cells.revenue).toBeNull();
+    expect(rows[0].cells.deficit!.measured!.value).toBe(obs('general.deficit.2026.planned').value);
   });
 });
 

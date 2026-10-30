@@ -136,17 +136,6 @@
   "publicationDate": "2026-10-28",
   "type": "report"
  },
- "press-2027-draft": {
-  "id": "press-2027-draft",
-  "institution": {
-   "hu": "Világgazdaság (a Költségvetési Tanács véleményét ismerteti)",
-   "en": "Világgazdaság (reporting the Fiscal Council opinion)"
-  },
-  "title": "A Költségvetési Tanács véleménye a 2027-es költségvetés tervezetéről (sajtóközlés)",
-  "url": "https://www.vg.hu/vilaggazdasag-magyar-gazdasag/2026/10/koltsegvetesi-tanacs-budzse-2027-velemeny",
-  "publicationDate": null,
-  "type": "secondary"
- },
  "asz-2017": {
   "id": "asz-2017",
   "institution": {
@@ -255,6 +244,17 @@
   "title": "Vélemény Magyarország 2026. évi központi költségvetéséről szóló törvényjavaslatról",
   "url": "https://www.ksh.hu/docs/bemutatkozas/hun/kozerdeku/asz_velemeny_2026.pdf",
   "publicationDate": "2025-05",
+  "type": "report"
+ },
+ "kt-2027": {
+  "id": "kt-2027",
+  "institution": {
+   "hu": "Költségvetési Tanács",
+   "en": "Fiscal Council of Hungary"
+  },
+  "title": "A Költségvetési Tanács véleménye Magyarország 2027. évi központi költségvetéséről szóló törvényjavaslat tervezetéről",
+  "url": "https://www.parlament.hu/documents/d/koltsegvetesi-tanacs/6-2026-10-29-a-koltsegvetesi-tanacs-velemenye-a-2027-evi-kozponti-koltsegvetes-tervezeterol",
+  "publicationDate": "2026-10-29",
   "type": "report"
  }
 }

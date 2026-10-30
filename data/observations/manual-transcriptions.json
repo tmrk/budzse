@@ -154,14 +154,13 @@
    "unit": "milliárd forint",
    "currency": "HUF"
   },
-  "institution": "Pénzügyminisztérium (Költségvetési Tanács véleménye nyomán)",
-  "source": "press-2027-draft",
-  "locator": "A cikk a tervezett bevételt, kiadást és a központi alrendszer pénzforgalmi hiányát közli; egyező szám: economx.hu, 2026. 10. 29.; index.hu, 2026. 10. 30.",
+  "institution": "Költségvetési Tanács",
+  "source": "kt-2027",
+  "locator": "1. táblázat, „Egyenleg összesen” blokk, bevétel sor, 2027. évi Tervezet oszlop (PDF 14. oldal); szövegben: 13. oldal",
   "revision": "projection",
-  "secondary": true,
   "note": {
-   "hu": "Törvényjavaslat-tervezet, nem elfogadott költségvetés. A számok a Költségvetési Tanács véleményét ismertető sajtóközlésekből származnak; a tervezet az Országgyűlés honlapján automatizált eszközzel nem volt elérhető.",
-   "en": "A draft bill, not an adopted budget. The figures come from press reports of the Fiscal Council's opinion; the draft on Parliament's website could not be reached with automated tools."
+   "hu": "Törvényjavaslat-tervezet, nem elfogadott költségvetés. A számokat a Költségvetési Tanács véleménye közli; a benyújtott törvényjavaslat 2026. október 30-án még nem volt az Országgyűlés honlapján.",
+   "en": "A draft bill, not an adopted budget. The figures are as stated in the Fiscal Council's opinion; the bill itself was not yet on Parliament's website on 30 October 2026."
   }
  },
  {
@@ -178,14 +177,13 @@
    "unit": "milliárd forint",
    "currency": "HUF"
   },
-  "institution": "Pénzügyminisztérium (Költségvetési Tanács véleménye nyomán)",
-  "source": "press-2027-draft",
-  "locator": "A cikk a tervezett bevételt, kiadást és a központi alrendszer pénzforgalmi hiányát közli; egyező szám: economx.hu, 2026. 10. 29.; index.hu, 2026. 10. 30.",
+  "institution": "Költségvetési Tanács",
+  "source": "kt-2027",
+  "locator": "1. táblázat, „Egyenleg összesen” blokk, kiadás sor, 2027. évi Tervezet oszlop (PDF 14. oldal); szövegben: 13. oldal",
   "revision": "projection",
-  "secondary": true,
   "note": {
-   "hu": "Törvényjavaslat-tervezet, nem elfogadott költségvetés. A számok a Költségvetési Tanács véleményét ismertető sajtóközlésekből származnak; a tervezet az Országgyűlés honlapján automatizált eszközzel nem volt elérhető.",
-   "en": "A draft bill, not an adopted budget. The figures come from press reports of the Fiscal Council's opinion; the draft on Parliament's website could not be reached with automated tools."
+   "hu": "Törvényjavaslat-tervezet, nem elfogadott költségvetés. A számokat a Költségvetési Tanács véleménye közli; a benyújtott törvényjavaslat 2026. október 30-án még nem volt az Országgyűlés honlapján.",
+   "en": "A draft bill, not an adopted budget. The figures are as stated in the Fiscal Council's opinion; the bill itself was not yet on Parliament's website on 30 October 2026."
   }
  },
  {
@@ -202,14 +200,13 @@
    "unit": "milliárd forint",
    "currency": "HUF"
   },
-  "institution": "Pénzügyminisztérium (Költségvetési Tanács véleménye nyomán)",
-  "source": "press-2027-draft",
-  "locator": "A cikk a tervezett bevételt, kiadást és a központi alrendszer pénzforgalmi hiányát közli; egyező szám: economx.hu, 2026. 10. 29.; index.hu, 2026. 10. 30.",
+  "institution": "Költségvetési Tanács",
+  "source": "kt-2027",
+  "locator": "1. táblázat, „Egyenleg összesen” sor, 2027. évi Tervezet oszlop (PDF 14. oldal); szövegben: 13. oldal",
   "revision": "projection",
-  "secondary": true,
   "note": {
-   "hu": "Törvényjavaslat-tervezet, nem elfogadott költségvetés. A számok a Költségvetési Tanács véleményét ismertető sajtóközlésekből származnak; a tervezet az Országgyűlés honlapján automatizált eszközzel nem volt elérhető.",
-   "en": "A draft bill, not an adopted budget. The figures come from press reports of the Fiscal Council's opinion; the draft on Parliament's website could not be reached with automated tools."
+   "hu": "Törvényjavaslat-tervezet, nem elfogadott költségvetés. A számokat a Költségvetési Tanács véleménye közli; a benyújtott törvényjavaslat 2026. október 30-án még nem volt az Országgyűlés honlapján.",
+   "en": "A draft bill, not an adopted budget. The figures are as stated in the Fiscal Council's opinion; the bill itself was not yet on Parliament's website on 30 October 2026."
   }
  },
  {
@@ -894,6 +891,30 @@
   "note": {
    "hu": "A 2026. októberi EDP-jelentés kormányzati tervszáma. Az eredeti (−) előjelet megfordítottuk: a pozitív érték hiány.",
    "en": "The government plan in the October 2026 EDP notification. The original (−) sign is reversed: positive means deficit."
+  }
+ },
+ {
+  "id": "general.deficit.2027.forecast.gov",
+  "year": 2027,
+  "indicator": "deficit",
+  "scope": "generalGovernment",
+  "status": "forecast",
+  "method": "esa2010",
+  "value": "4790000000000",
+  "unit": "HUF",
+  "original": {
+   "value": "-4 790,0",
+   "unit": "milliárd forint",
+   "currency": "HUF"
+  },
+  "institution": "Költségvetési Tanács",
+  "source": "kt-2027",
+  "locator": "2. táblázat, „Kormányzati szektor ESA egyenlege (Mrd Ft)” sor, 2027. évi Tervezet oszlop (PDF 15. oldal); szövegben: 14. oldal",
+  "revision": "projection",
+  "publisher": "gov",
+  "note": {
+   "hu": "A 2027. évi törvényjavaslat-tervezet hiánycélja a Költségvetési Tanács véleménye szerint. Az eredeti (−) előjelet megfordítottuk: a pozitív érték hiány.",
+   "en": "The deficit target in the draft 2027 bill, per the Fiscal Council's opinion. The original (−) sign is reversed: positive means deficit."
   }
  },
  {
