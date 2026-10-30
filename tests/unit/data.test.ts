@@ -1,0 +1,119 @@
+import { describe, expect, it } from 'vitest';
+import { dataset, obs } from './helpers';
+
+// Figures read directly from the primary documents, independently of the extraction scripts.
+describe('verified historical figures', () => {
+  it('2000 original budget, 1999. évi CXXV. törvény 1. §', () => {
+    expect(obs('central.revenue.2000.original').value).toBe(3_392_043_900_000);
+    expect(obs('central.expenditure.2000.original').value).toBe(3_788_275_600_000);
+    expect(obs('central.deficit.2000.original').value).toBe(396_231_700_000);
+  });
+
+  it('2000 amended main sums differ from the promulgated act', () => {
+    expect(obs('central.expenditure.2000.revised').value).toBe(3_902_606_300_000);
+  });
+
+  it('2000 final accounts, 2001. évi LXXV. törvény 1. §', () => {
+    expect(obs('central.revenue.2000.actual').value).toBe(3_681_943_900_000);
+    expect(obs('central.deficit.2000.actual').value).toBe(367_790_300_000);
+  });
+
+  it('2020 budget and outcome show the pandemic gap', () => {
+    expect(obs('central.deficit.2020.original').value).toBe(367_010_100_000);
+    expect(obs('central.deficit.2020.actual').value).toBe(5_311_318_000_000);
+  });
+
+  it('2026 original act and October 2026 amendment', () => {
+    expect(obs('central.deficit.2026.original').value).toBe(4_218_534_600_000);
+    expect(obs('central.deficit.2026.revised').value).toBe(7_110_123_100_000);
+    expect(obs('central.expenditure.2026.revised').value).toBe(49_025_644_900_000);
+  });
+
+  it('2025 Treasury final-accounts balance', () => {
+    expect(obs('central.revenue.2025.actual').value).toBe(39_338_844_700_000);
+    expect(obs('central.expenditure.2025.actual').value).toBe(44_885_243_500_000);
+  });
+
+  it('Eurostat 2025: revenue, expenditure and sign-reversed balance', () => {
+    expect(obs('general.revenue.2025.actual').value).toBe(37_447_425_000_000);
+    expect(obs('general.expenditure.2025.actual').value).toBe(41_592_419_000_000);
+    expect(obs('general.deficit.2025.actual').value).toBe(4_144_994_200_000);
+  });
+
+  it('GDP is in trillions of forints, not billions', () => {
+    expect(obs('gdp.2025.actual').value).toBe(87_307_647_000_000);
+    expect(obs('gdp.2000.actual').value).toBe(13_340_291_000_000);
+  });
+
+  it('OECD net ODA in national currency', () => {
+    expect(obs('oda.2003.actual').value).toBe(4_761_830_000);
+    expect(obs('oda.2024.actual').value).toBe(74_668_000_000);
+    expect(obs('odaGe.2024.actual').value).toBe(69_357_040_000);
+  });
+
+  it('keeps the ODA reporting gap of 2000-2002 empty', () => {
+    expect(dataset.observations.filter((o) => o.indicator === 'oda' && o.year < 2003)).toEqual([]);
+  });
+
+  it('converts preliminary 2025 ODA at the documented MNB rate', () => {
+    const o = obs('odaGe.2025.actual');
+    expect(o.derivation?.rate).toBe(353.1983);
+    expect(o.value).toBe(Math.round(303.4e6 * 353.1983));
+    expect(o.revision).toBe('preliminary');
+  });
+});
+
+describe('classification rules', () => {
+  it('has no actual figure after 2025', () => {
+    expect(dataset.observations.filter((o) => o.status === 'actual' && o.year > 2025)).toEqual([]);
+  });
+
+  it('labels 2027 central figures as a draft, not as a budget', () => {
+    const rows = dataset.observations.filter((o) => o.year === 2027 && o.scope === 'centralSubsystem');
+    expect(rows.map((o) => o.status)).toEqual(['draft', 'draft', 'draft']);
+    expect(rows.every((o) => o.secondary)).toBe(true);
+  });
+
+  it('labels part-year execution with its period', () => {
+    const ytd = dataset.observations.filter((o) => o.status === 'ytd');
+    expect(ytd).toHaveLength(3);
+    expect(ytd.every((o) => o.year === 2026 && o.period === '2026-01/2026-09')).toBe(true);
+  });
+
+  it('switches central scope exactly in 2010', () => {
+    expect(obs('central.revenue.2009.actual').scope).toBe('centralBudget');
+    expect(obs('central.revenue.2010.actual').scope).toBe('centralSubsystem');
+  });
+});
+
+describe('provenance', () => {
+  it('gives every observation a registered source, locator and original value', () => {
+    for (const o of dataset.observations) {
+      expect(dataset.sources[o.source], o.id).toBeTruthy();
+      expect(o.locator, o.id).toBeTruthy();
+      expect(o.original.value, o.id).toBeTruthy();
+      expect(dataset.sources[o.source].url, o.id).toMatch(/^https:\/\//);
+    }
+  });
+
+  it('never stores zero or a non-finite value', () => {
+    for (const o of dataset.observations) {
+      expect(o.value, o.id).not.toBe(0);
+      expect(Number.isFinite(o.value), o.id).toBe(true);
+    }
+  });
+
+  it('keeps forint values as whole numbers within safe integer range', () => {
+    for (const o of dataset.observations.filter((x) => x.unit === 'HUF')) {
+      expect(Number.isSafeInteger(o.value), o.id).toBe(true);
+    }
+  });
+
+  it('reconciles deficit = expenditure - revenue for every act', () => {
+    for (let y = 2000; y <= 2025; y++) {
+      const r = obs(`central.revenue.${y}.actual`).value;
+      const e = obs(`central.expenditure.${y}.actual`).value;
+      expect(e - r, String(y)).toBe(obs(`central.deficit.${y}.actual`).value);
+    }
+  });
+});
