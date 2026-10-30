@@ -35,4 +35,4 @@ Add acts to `scripts/fetch/legal-acts-manifest.mjs`, run `npm run data:acts`, mo
 
 ## Reuse
 
-Each source's terms apply: OECD data is CC BY 4.0, Eurostat and the European Commission allow reuse with attribution, Hungarian acts are official documents. Attribute the original publisher named in each observation's source.
+The MIT licence covers the code only. Each source's terms apply to its data: OECD data is CC BY 4.0, Eurostat and the European Commission allow reuse with attribution, Hungarian acts are official documents. Attribute the original publisher named in each observation's source.
