@@ -93,7 +93,7 @@ export const en: typeof hu = {
   },
   helps: {
     title: 'Hungary Helps',
-    intro: 'Hungary Helps is part of Hungarian ODA, not separate money: most of its grants are reported to the OECD as development assistance. Two budget lines carry the name: the programme\'s grants and the running of the agency.',
+    intro: 'Hungary Helps is part of Hungarian ODA, not separate money: in the two years with a published figure, 2019 and 2020, 86% and 94% of its donations by value counted as ODA. Two budget lines carry the name: the programme\'s grants and the running of the agency.',
     program: 'Programme',
     agency: 'Agency',
     oda: 'Net ODA',
@@ -269,9 +269,11 @@ export const en: typeof hu = {
   methodology: {
     title: 'Methodology',
     intro: 'A short explanation of where the numbers come from and what can be compared with what.',
+    references: 'Sources',
     sections: [
       {
         id: 'sources',
+        sources: ['ksh-cpi-annual', 'eurostat-gov', 'oecd-dac1', 'mnb-rates', 'mak-2025-final'],
         title: 'Source hierarchy',
         body: [
           'We use primary sources: the text of budget and final-accounts acts, Hungarian State Treasury balances, and data from KSH, Eurostat, the OECD and the Hungarian central bank (MNB).',
@@ -281,6 +283,7 @@ export const en: typeof hu = {
       },
       {
         id: 'scopes',
+        sources: ['act-a0800102', 'act-a0900130', 'eurostat-gov'],
         title: 'Accounting scopes',
         body: [
           'Central budget (2000–2009): the acts cover the central budget alone on a cash basis, without social security and separate state funds. Main sums exclude debt repayment and new borrowing.',
@@ -291,6 +294,7 @@ export const en: typeof hu = {
       },
       {
         id: 'sign',
+        sources: ['eurostat-gov'],
         title: 'Sign convention',
         body: [
           'Deficit = expenditure − revenue. Positive values are deficits, negative values surpluses.',
@@ -299,6 +303,7 @@ export const en: typeof hu = {
       },
       {
         id: 'inflation',
+        sources: ['ksh-cpi-annual', 'ksh-cpi-monthly', 'pm-mtp-2027'],
         title: 'Inflation adjustment',
         body: [
           "Adjusted value = nominal value × CPI(reference year) / CPI(original year). CPI is built by chaining KSH's annual average consumer price index (previous year = 100), with 2000 = 100.",
@@ -309,6 +314,7 @@ export const en: typeof hu = {
       },
       {
         id: 'gdp',
+        sources: ['eurostat-gdp', 'pm-mtp-2027'],
         title: 'GDP',
         body: [
           "Current-price GDP comes from Eurostat's national accounts, which are based on KSH data.",
@@ -318,6 +324,7 @@ export const en: typeof hu = {
       },
       {
         id: 'oda',
+        sources: ['oecd-dac1', 'oecd-profile-2026', 'mnb-rates'],
         title: 'Official development assistance (ODA)',
         body: [
           "ODA follows the international definition of the OECD's Development Assistance Committee (DAC). It is not the same as money sent abroad: it includes the eligible part of contributions to international bodies, including the EU, and some domestic costs such as scholarships and hosting refugees.",
@@ -330,16 +337,18 @@ export const en: typeof hu = {
       },
       {
         id: 'helps',
+        sources: ['act-a2000117', 'act-a2500085', 'hh-report-2019', 'hh-report-2020', 'oecd-crs-hu', 'oecd-peer-review-2023'],
         title: 'Hungary Helps',
         body: [
           'Both lines come from Annex 1 of the budget and final-accounts acts, under the name the act gives them. Outcomes are operating plus capital expenditure, leaving out the revenue columns. No final-accounts act exists yet for 2025 or 2026, so the original act is shown and marked as a plan.',
-          "Hungary Helps is part of ODA. The department that coordinates the programme compiles Hungary's ODA report to the OECD, and in the OECD's project-level database (CRS) this work sits under the Prime Minister's Office until 2022 and the foreign ministry after that. It has no code of its own and project titles rarely name it, so OECD data cannot show the exact part. Hungary reported the agency's operating costs as ODA for 2019-2022.",
-          "No official yearly share exists. There is one exact figure: the agency's 2020 report says 43 of that year's 51 donation payments, HUF 5,023,796 thousand of HUF 5,328,240 thousand (94%), counted as ODA. The ratio on the page is the two lines divided by net ODA, for closed years only. It is only a guide: the budget lines are cash based, ODA follows OECD rules, and the year of payment can differ.",
+          "Hungary Helps is part of ODA, but OECD data cannot show the exact part: it has no code of its own and project titles rarely name it. The OECD's activity-level data (CRS) list the agency's operating costs as ODA in 2019, under the Prime Minister's Office. By the 2023 DAC peer review, the humanitarian portfolio and oversight of the agency moved to the foreign ministry in 2022.",
+          "No official yearly share exists. There are two exact figures, from the agency's reports: 20 of 24 donation payments in 2019, HUF 3,181,796 thousand of HUF 3,689,128 thousand (86%), and 43 of 51 in 2020, HUF 5,023,796 thousand of HUF 5,328,240 thousand (94%), counted as ODA. The 2021-2023 reports give no such figure. The ratio on the page is the two lines divided by net ODA, for closed years only. It is only a guide: the budget lines are cash based, ODA follows OECD rules, and the year of payment can differ.",
           'What the lines contain has changed. In 2019-2020 the programme line sat beside separate lines under the same heading, such as the scholarship programme and the intervention fund; from 2021 these are no longer listed separately. In 2021 the agency has no line of its own, so that year shows no data, not zero.',
         ],
       },
       {
         id: 'plan',
+        sources: ['act-a2500069', 'consolidated-a2500069', 'mak-2025-final', 'asz-2026'],
         title: 'Budgeted and actual',
         body: [
           'Original act: the main sum of the budget act as promulgated. Amended act: the main sum after later amendment by Parliament. Actual: the final-accounts act, and for 2025 the Treasury final-accounts balance.',
@@ -351,6 +360,7 @@ export const en: typeof hu = {
       },
       {
         id: 'forecast',
+        sources: ['consolidated-a2500069', 'mak-2026-09', 'kt-2027', 'pm-mtp-2027', 'ec-ameco-2026-spring'],
         title: 'Forecasts for 2026 and 2027',
         body: [
           'For 2026 we show the original act, the amendment promulgated in October 2026, Treasury execution for the first nine months, and forecasts separately. No full-year actual exists yet.',
@@ -361,11 +371,12 @@ export const en: typeof hu = {
       },
       {
         id: 'limits',
+        sources: ['eurostat-gdp', 'oecd-profile-2026'],
         title: 'Limits and revisions',
         body: [
           "Statistics can be revised later: Eurostat and KSH data change regularly, and Eurostat's 2025 GDP is still preliminary.",
           'Central budget main sums are not perfectly like-for-like over long periods, because the structure of the acts changed several times. General government data is more reliable for comparisons across years.',
-          'The 2025 ODA figure is preliminary, and the OECD notes that Hungary did not report complete data on every detail.',
+          'The 2025 ODA figure is preliminary, and the OECD notes that Hungary did not provide complete data for ODA to Ukraine.',
         ],
       },
     ],

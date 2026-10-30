@@ -92,6 +92,8 @@ export interface Gap {
   years: string;
   reason: Localized;
   searched: Localized;
+  /** Documents behind what the reason states. */
+  sources?: string[];
 }
 
 export interface Dataset {

@@ -24,14 +24,30 @@ export function statusLabel(o: Pick<Observation, 'status' | 'publisher'>, msgs: 
 }
 
 export function gapFor(data: Dataset, indicator: Indicator, year: number) {
-  const key = indicator.startsWith('oda') ? 'oda' : indicator;
+  const family = indicator.startsWith('oda') ? 'oda' : indicator;
   const inRange = (spec: string) =>
     spec.split(',').some((part) => {
       const [a, b] = part.trim().split('–').map(Number);
       return year >= a && year <= (b ?? a);
     });
   // "The budget sets no ODA total" spans every year but says nothing about why a year's outcome is missing.
-  return data.gaps.find((g) => g.indicator === key && g.id !== 'oda-plan' && inRange(g.years));
+  const candidates = data.gaps.filter((g) => g.id !== 'oda-plan' && inRange(g.years));
+  return candidates.find((g) => g.indicator === indicator) ?? candidates.find((g) => g.indicator === family);
+}
+
+/** Links to the documents behind a piece of prose. */
+export function SourceList({ label, ids, sources }: { label?: string; ids: string[]; sources: Dataset['sources'] }) {
+  return (
+    <p className="fine refs">
+      {label && `${label}: `}
+      {ids.map((id, i) => (
+        <span key={id}>
+          {i > 0 && '; '}
+          <a href={sources[id].url} target="_blank" rel="noopener noreferrer">{sources[id].title}</a>
+        </span>
+      ))}
+    </p>
+  );
 }
 
 /** Says which prices an adjusted figure is in, wherever one is shown. */

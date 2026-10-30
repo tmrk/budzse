@@ -1674,10 +1674,10 @@
    "currency": "HUF"
   },
   "institution": "Országgyűlés",
-  "source": "act-a1000097",
+  "source": "act-a1000143",
   "locator": "módosító törvény, a főösszegeket megállapító szakasz",
   "revision": "revised",
-  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2010. évi a) bevételi főösszegét 12 703 719,3 millió forintban, b) kiadási főösszegét 13 568 030,4 millió forintban, c) hiányát 864 311,1 millió forintban állapítja meg"
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2010. évi a) bevételi főösszegét 12 764 719,3 millió forintban, b) kiadási főösszegét 13 629 030,4 millió forintban, c) hiányát 864 311,1 millió forintban állapítja meg"
  },
  {
   "id": "central.expenditure.2010.actual",
@@ -1726,18 +1726,18 @@
   "scope": "centralSubsystem",
   "status": "revised",
   "method": "cash",
-  "value": "13568030400000",
+  "value": "13629030400000",
   "unit": "HUF",
   "original": {
-   "value": "13 568 030,4",
+   "value": "13 629 030,4",
    "unit": "millió forint",
    "currency": "HUF"
   },
   "institution": "Országgyűlés",
-  "source": "act-a1000097",
+  "source": "act-a1000143",
   "locator": "módosító törvény, a főösszegeket megállapító szakasz",
   "revision": "revised",
-  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2010. évi a) bevételi főösszegét 12 703 719,3 millió forintban, b) kiadási főösszegét 13 568 030,4 millió forintban, c) hiányát 864 311,1 millió forintban állapítja meg"
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2010. évi a) bevételi főösszegét 12 764 719,3 millió forintban, b) kiadási főösszegét 13 629 030,4 millió forintban, c) hiányát 864 311,1 millió forintban állapítja meg"
  },
  {
   "id": "central.revenue.2010.actual",
@@ -1786,18 +1786,18 @@
   "scope": "centralSubsystem",
   "status": "revised",
   "method": "cash",
-  "value": "12703719300000",
+  "value": "12764719300000",
   "unit": "HUF",
   "original": {
-   "value": "12 703 719,3",
+   "value": "12 764 719,3",
    "unit": "millió forint",
    "currency": "HUF"
   },
   "institution": "Országgyűlés",
-  "source": "act-a1000097",
+  "source": "act-a1000143",
   "locator": "módosító törvény, a főösszegeket megállapító szakasz",
   "revision": "revised",
-  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2010. évi a) bevételi főösszegét 12 703 719,3 millió forintban, b) kiadási főösszegét 13 568 030,4 millió forintban, c) hiányát 864 311,1 millió forintban állapítja meg"
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2010. évi a) bevételi főösszegét 12 764 719,3 millió forintban, b) kiadási főösszegét 13 629 030,4 millió forintban, c) hiányát 864 311,1 millió forintban állapítja meg"
  },
  {
   "id": "central.deficit.2011.actual",
@@ -2026,18 +2026,18 @@
   "scope": "centralSubsystem",
   "status": "revised",
   "method": "cash",
-  "value": "576160700000",
+  "value": "671860700000",
   "unit": "HUF",
   "original": {
-   "value": "576 160,7",
+   "value": "671 860,7",
    "unit": "millió forint",
    "currency": "HUF"
   },
   "institution": "Országgyűlés",
-  "source": "act-a1200115",
+  "source": "act-a1200187",
   "locator": "módosító törvény, a főösszegeket megállapító szakasz",
   "revision": "revised",
-  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2012. évi a) bevételi főösszegét 14 437 120,2 millió forintban, b) kiadási főösszegét 15 013 280,9 millió forintban, c) hiányát 576 160,7 millió forintban állapítja meg"
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2012. évi a) bevételi főösszegét 14 437 120,2 millió forintban, b) kiadási főösszegét 15 108 980,9 millió forintban, c) hiányát 671 860,7 millió forintban állapítja meg"
  },
  {
   "id": "central.expenditure.2012.actual",
@@ -2086,18 +2086,18 @@
   "scope": "centralSubsystem",
   "status": "revised",
   "method": "cash",
-  "value": "15013280900000",
+  "value": "15108980900000",
   "unit": "HUF",
   "original": {
-   "value": "15 013 280,9",
+   "value": "15 108 980,9",
    "unit": "millió forint",
    "currency": "HUF"
   },
   "institution": "Országgyűlés",
-  "source": "act-a1200115",
+  "source": "act-a1200187",
   "locator": "módosító törvény, a főösszegeket megállapító szakasz",
   "revision": "revised",
-  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2012. évi a) bevételi főösszegét 14 437 120,2 millió forintban, b) kiadási főösszegét 15 013 280,9 millió forintban, c) hiányát 576 160,7 millió forintban állapítja meg"
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2012. évi a) bevételi főösszegét 14 437 120,2 millió forintban, b) kiadási főösszegét 15 108 980,9 millió forintban, c) hiányát 671 860,7 millió forintban állapítja meg"
  },
  {
   "id": "central.revenue.2012.actual",
@@ -2154,10 +2154,10 @@
    "currency": "HUF"
   },
   "institution": "Országgyűlés",
-  "source": "act-a1200115",
+  "source": "act-a1200187",
   "locator": "módosító törvény, a főösszegeket megállapító szakasz",
   "revision": "revised",
-  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2012. évi a) bevételi főösszegét 14 437 120,2 millió forintban, b) kiadási főösszegét 15 013 280,9 millió forintban, c) hiányát 576 160,7 millió forintban állapítja meg"
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2012. évi a) bevételi főösszegét 14 437 120,2 millió forintban, b) kiadási főösszegét 15 108 980,9 millió forintban, c) hiányát 671 860,7 millió forintban állapítja meg"
  },
  {
   "id": "central.deficit.2013.actual",
@@ -2206,18 +2206,18 @@
   "scope": "centralSubsystem",
   "status": "revised",
   "method": "cash",
-  "value": "1050834800000",
+  "value": "1125184400000",
   "unit": "HUF",
   "original": {
-   "value": "1 050 834,8",
+   "value": "1 125 184,4",
    "unit": "millió forint",
    "currency": "HUF"
   },
   "institution": "Országgyűlés",
-  "source": "act-a1300144",
+  "source": "act-a1300206",
   "locator": "módosító törvény, a főösszegeket megállapító szakasz",
   "revision": "revised",
-  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2013. évi a) bevételi főösszegét 15 325 316,1 millió forintban, b) kiadási főösszegét 16 376 150,9 millió forintban, c) hiányát 1 050 834,8 millió forintban állapítja meg"
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2013. évi a) bevételi főösszegét 15 460 815,7 millió forintban, b) kiadási főösszegét 16 586 000,1 millió forintban, c) hiányát 1 125 184,4 millió forintban állapítja meg"
  },
  {
   "id": "central.expenditure.2013.actual",
@@ -2266,18 +2266,18 @@
   "scope": "centralSubsystem",
   "status": "revised",
   "method": "cash",
-  "value": "16376150900000",
+  "value": "16586000100000",
   "unit": "HUF",
   "original": {
-   "value": "16 376 150,9",
+   "value": "16 586 000,1",
    "unit": "millió forint",
    "currency": "HUF"
   },
   "institution": "Országgyűlés",
-  "source": "act-a1300144",
+  "source": "act-a1300206",
   "locator": "módosító törvény, a főösszegeket megállapító szakasz",
   "revision": "revised",
-  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2013. évi a) bevételi főösszegét 15 325 316,1 millió forintban, b) kiadási főösszegét 16 376 150,9 millió forintban, c) hiányát 1 050 834,8 millió forintban állapítja meg"
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2013. évi a) bevételi főösszegét 15 460 815,7 millió forintban, b) kiadási főösszegét 16 586 000,1 millió forintban, c) hiányát 1 125 184,4 millió forintban állapítja meg"
  },
  {
   "id": "central.revenue.2013.actual",
@@ -2326,18 +2326,18 @@
   "scope": "centralSubsystem",
   "status": "revised",
   "method": "cash",
-  "value": "15325316100000",
+  "value": "15460815700000",
   "unit": "HUF",
   "original": {
-   "value": "15 325 316,1",
+   "value": "15 460 815,7",
    "unit": "millió forint",
    "currency": "HUF"
   },
   "institution": "Országgyűlés",
-  "source": "act-a1300144",
+  "source": "act-a1300206",
   "locator": "módosító törvény, a főösszegeket megállapító szakasz",
   "revision": "revised",
-  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2013. évi a) bevételi főösszegét 15 325 316,1 millió forintban, b) kiadási főösszegét 16 376 150,9 millió forintban, c) hiányát 1 050 834,8 millió forintban állapítja meg"
+  "evidence": "1. § Az Országgyűlés az államháztartás központi alrendszerének (a továbbiakban: központi alrendszer) 2013. évi a) bevételi főösszegét 15 460 815,7 millió forintban, b) kiadási főösszegét 16 586 000,1 millió forintban, c) hiányát 1 125 184,4 millió forintban állapítja meg"
  },
  {
   "id": "central.deficit.2014.actual",

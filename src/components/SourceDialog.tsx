@@ -5,7 +5,7 @@ import { cpiYear } from '../lib/cpi';
 import type { Measured } from '../lib/measure';
 import type { Gap, Observation } from '../types/data';
 import { useApp } from './context';
-import { statusLabel } from './figures';
+import { SourceList, statusLabel } from './figures';
 
 function Row({ label, children }: { label: string; children: React.ReactNode }) {
   return (
@@ -54,6 +54,7 @@ export default function SourceDialog({ target, onClose }: { target: SourceTarget
             <Row label={m.source.gapYears}>{gap.years}</Row>
             <Row label={m.source.gapReason}>{gap.reason[lang]}</Row>
             <Row label={m.coverage.searched}>{gap.searched[lang]}</Row>
+            {gap.sources && <Row label={m.methodology.references}><SourceList ids={gap.sources} sources={data.sources} /></Row>}
           </dl>
         </div>
       )}

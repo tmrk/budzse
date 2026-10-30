@@ -412,6 +412,7 @@ tbody th { font-weight: 500; }
 .gaps li { display: grid; grid-template-columns: 6.5em minmax(0, 1fr); column-gap: 14px; padding: 8px 0; border-top: 1px solid var(--rule); }
 .gaps li > strong { grid-row: span 2; font-weight: 600; }
 .gaps .fine { margin-top: 2px; font-size: var(--text-xs); }
+.refs { margin: 10px 0 14px; }
 .method-list { max-width: 74ch; padding-bottom: 20px; }
 .method-list details { border-top: 1px solid var(--rule); }
 .method-list summary { cursor: pointer; padding: 9px 0; font-weight: 600; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; }

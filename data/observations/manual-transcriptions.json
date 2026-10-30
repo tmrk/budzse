@@ -589,7 +589,7 @@
   "original": {
    "value": "2,4%",
    "unit": "a GDP százaléka",
-   "currency": "HUF"
+   "currency": ""
   },
   "institution": "Állami Számvevőszék",
   "source": "asz-2017",
@@ -612,7 +612,7 @@
   "original": {
    "value": "2,4%",
    "unit": "a GDP százaléka",
-   "currency": "HUF"
+   "currency": ""
   },
   "institution": "Állami Számvevőszék",
   "source": "asz-2018",
@@ -635,7 +635,7 @@
   "original": {
    "value": "1,8%",
    "unit": "a GDP százaléka",
-   "currency": "HUF"
+   "currency": ""
   },
   "institution": "Állami Számvevőszék",
   "source": "asz-2019",
@@ -658,7 +658,7 @@
   "original": {
    "value": "1%",
    "unit": "a GDP százaléka",
-   "currency": "HUF"
+   "currency": ""
   },
   "institution": "Állami Számvevőszék",
   "source": "asz-2020",
@@ -936,8 +936,8 @@
   "locator": "1. melléklet, XI. MINISZTERELNÖKSÉG fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Ügynökség Nonprofit Zrt. szakmai feladatainak ellátása” sor, Működési kiadás oszlop (a törvényszöveg 2. oldala)",
   "revision": "final",
   "note": {
-   "hu": "Készpénzszemléletű költségvetési sor. Túlnyomó részét ODA-ként jelentik az OECD-nek, de nem minden forintja ODA, és az ODA más módszerrel készül.",
-   "en": "A cash budget line. Most of it is reported to the OECD as ODA, but not every forint counts as ODA, and ODA follows a different method."
+   "hu": "Készpénzszemléletű költségvetési sor. Nem minden forintja ODA, és az ODA más módszerrel készül. Az ügynökség beszámolói szerint az adományok értékének 2019-ben 86%-a, 2020-ban 94%-a volt ODA-ként elszámolható; más évre nincs ilyen adat.",
+   "en": "A cash budget line. Not every forint counts as ODA, and ODA follows a different method. By the agency's reports, 86% of donations by value counted as ODA in 2019 and 94% in 2020; no such figure exists for other years."
   }
  },
  {
@@ -959,8 +959,8 @@
   "locator": "1. melléklet, XI. MINISZTERELNÖKSÉG fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Program” sor, Működési kiadás oszlop (a törvényszöveg 2. oldala)",
   "revision": "final",
   "note": {
-   "hu": "Készpénzszemléletű költségvetési sor. Túlnyomó részét ODA-ként jelentik az OECD-nek, de nem minden forintja ODA, és az ODA más módszerrel készül.",
-   "en": "A cash budget line. Most of it is reported to the OECD as ODA, but not every forint counts as ODA, and ODA follows a different method."
+   "hu": "Készpénzszemléletű költségvetési sor. Nem minden forintja ODA, és az ODA más módszerrel készül. Az ügynökség beszámolói szerint az adományok értékének 2019-ben 86%-a, 2020-ban 94%-a volt ODA-ként elszámolható; más évre nincs ilyen adat.",
+   "en": "A cash budget line. Not every forint counts as ODA, and ODA follows a different method. By the agency's reports, 86% of donations by value counted as ODA in 2019 and 94% in 2020; no such figure exists for other years."
   }
  },
  {
@@ -982,8 +982,8 @@
   "locator": "1. melléklet, XI. MINISZTERELNÖKSÉG fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Ügynökség Nonprofit Zrt. szakmai feladatainak ellátása” sor, Működési kiadás oszlop (a törvényszöveg 2. oldala)",
   "revision": "final",
   "note": {
-   "hu": "Készpénzszemléletű költségvetési sor. Túlnyomó részét ODA-ként jelentik az OECD-nek, de nem minden forintja ODA, és az ODA más módszerrel készül.",
-   "en": "A cash budget line. Most of it is reported to the OECD as ODA, but not every forint counts as ODA, and ODA follows a different method."
+   "hu": "Készpénzszemléletű költségvetési sor. Nem minden forintja ODA, és az ODA más módszerrel készül. Az ügynökség beszámolói szerint az adományok értékének 2019-ben 86%-a, 2020-ban 94%-a volt ODA-ként elszámolható; más évre nincs ilyen adat.",
+   "en": "A cash budget line. Not every forint counts as ODA, and ODA follows a different method. By the agency's reports, 86% of donations by value counted as ODA in 2019 and 94% in 2020; no such figure exists for other years."
   }
  },
  {
@@ -1005,8 +1005,8 @@
   "locator": "1. melléklet, XI. MINISZTERELNÖKSÉG fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Ügynökség Nonprofit Zrt. szakmai feladatainak ellátása” sor, Működési kiadás oszlop (a törvényszöveg 2. oldala)",
   "revision": "final",
   "note": {
-   "hu": "Készpénzszemléletű költségvetési sor. Túlnyomó részét ODA-ként jelentik az OECD-nek, de nem minden forintja ODA, és az ODA más módszerrel készül.",
-   "en": "A cash budget line. Most of it is reported to the OECD as ODA, but not every forint counts as ODA, and ODA follows a different method."
+   "hu": "Készpénzszemléletű költségvetési sor. Nem minden forintja ODA, és az ODA más módszerrel készül. Az ügynökség beszámolói szerint az adományok értékének 2019-ben 86%-a, 2020-ban 94%-a volt ODA-ként elszámolható; más évre nincs ilyen adat.",
+   "en": "A cash budget line. Not every forint counts as ODA, and ODA follows a different method. By the agency's reports, 86% of donations by value counted as ODA in 2019 and 94% in 2020; no such figure exists for other years."
   }
  },
  {
@@ -1028,8 +1028,8 @@
   "locator": "1. melléklet, XI. MINISZTERELNÖKSÉG fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Program” sor, Működési kiadás oszlop (a törvényszöveg 2. oldala)",
   "revision": "final",
   "note": {
-   "hu": "Készpénzszemléletű költségvetési sor. Túlnyomó részét ODA-ként jelentik az OECD-nek, de nem minden forintja ODA, és az ODA más módszerrel készül.",
-   "en": "A cash budget line. Most of it is reported to the OECD as ODA, but not every forint counts as ODA, and ODA follows a different method."
+   "hu": "Készpénzszemléletű költségvetési sor. Nem minden forintja ODA, és az ODA más módszerrel készül. Az ügynökség beszámolói szerint az adományok értékének 2019-ben 86%-a, 2020-ban 94%-a volt ODA-ként elszámolható; más évre nincs ilyen adat.",
+   "en": "A cash budget line. Not every forint counts as ODA, and ODA follows a different method. By the agency's reports, 86% of donations by value counted as ODA in 2019 and 94% in 2020; no such figure exists for other years."
   }
  },
  {
@@ -1051,8 +1051,8 @@
   "locator": "1. melléklet, XI. MINISZTERELNÖKSÉG fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Program” sor, Működési kiadás oszlop (a törvényszöveg 2. oldala)",
   "revision": "final",
   "note": {
-   "hu": "Készpénzszemléletű költségvetési sor. Túlnyomó részét ODA-ként jelentik az OECD-nek, de nem minden forintja ODA, és az ODA más módszerrel készül.",
-   "en": "A cash budget line. Most of it is reported to the OECD as ODA, but not every forint counts as ODA, and ODA follows a different method."
+   "hu": "Készpénzszemléletű költségvetési sor. Nem minden forintja ODA, és az ODA más módszerrel készül. Az ügynökség beszámolói szerint az adományok értékének 2019-ben 86%-a, 2020-ban 94%-a volt ODA-ként elszámolható; más évre nincs ilyen adat.",
+   "en": "A cash budget line. Not every forint counts as ODA, and ODA follows a different method. By the agency's reports, 86% of donations by value counted as ODA in 2019 and 94% in 2020; no such figure exists for other years."
   }
  },
  {
@@ -1074,8 +1074,8 @@
   "locator": "1. melléklet, XI. MINISZTERELNÖKSÉG fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Programhoz kapcsolódó támogatások” sor, Működési kiadás oszlop (a törvényszöveg 2. oldala)",
   "revision": "final",
   "note": {
-   "hu": "Készpénzszemléletű költségvetési sor. Túlnyomó részét ODA-ként jelentik az OECD-nek, de nem minden forintja ODA, és az ODA más módszerrel készül.",
-   "en": "A cash budget line. Most of it is reported to the OECD as ODA, but not every forint counts as ODA, and ODA follows a different method."
+   "hu": "Készpénzszemléletű költségvetési sor. Nem minden forintja ODA, és az ODA más módszerrel készül. Az ügynökség beszámolói szerint az adományok értékének 2019-ben 86%-a, 2020-ban 94%-a volt ODA-ként elszámolható; más évre nincs ilyen adat.",
+   "en": "A cash budget line. Not every forint counts as ODA, and ODA follows a different method. By the agency's reports, 86% of donations by value counted as ODA in 2019 and 94% in 2020; no such figure exists for other years."
   }
  },
  {
@@ -1097,8 +1097,8 @@
   "locator": "1. melléklet, XI. MINISZTERELNÖKSÉG fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Programhoz kapcsolódó támogatások” sor, Működési kiadás oszlop (a törvényszöveg 2. oldala)",
   "revision": "final",
   "note": {
-   "hu": "Készpénzszemléletű költségvetési sor. Túlnyomó részét ODA-ként jelentik az OECD-nek, de nem minden forintja ODA, és az ODA más módszerrel készül.",
-   "en": "A cash budget line. Most of it is reported to the OECD as ODA, but not every forint counts as ODA, and ODA follows a different method."
+   "hu": "Készpénzszemléletű költségvetési sor. Nem minden forintja ODA, és az ODA más módszerrel készül. Az ügynökség beszámolói szerint az adományok értékének 2019-ben 86%-a, 2020-ban 94%-a volt ODA-ként elszámolható; más évre nincs ilyen adat.",
+   "en": "A cash budget line. Not every forint counts as ODA, and ODA follows a different method. By the agency's reports, 86% of donations by value counted as ODA in 2019 and 94% in 2020; no such figure exists for other years."
   }
  },
  {
@@ -1120,8 +1120,8 @@
   "locator": "1. melléklet, XVIII. KÜLGAZDASÁGI ÉS KÜLÜGYMINISZTÉRIUM fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Ügynökség Nonprofit Zrt. szakmai feladatainak ellátása” sor, Működési kiadás oszlop (a törvényszöveg 3. oldala)",
   "revision": "final",
   "note": {
-   "hu": "Készpénzszemléletű költségvetési sor. Túlnyomó részét ODA-ként jelentik az OECD-nek, de nem minden forintja ODA, és az ODA más módszerrel készül.",
-   "en": "A cash budget line. Most of it is reported to the OECD as ODA, but not every forint counts as ODA, and ODA follows a different method."
+   "hu": "Készpénzszemléletű költségvetési sor. Nem minden forintja ODA, és az ODA más módszerrel készül. Az ügynökség beszámolói szerint az adományok értékének 2019-ben 86%-a, 2020-ban 94%-a volt ODA-ként elszámolható; más évre nincs ilyen adat.",
+   "en": "A cash budget line. Not every forint counts as ODA, and ODA follows a different method. By the agency's reports, 86% of donations by value counted as ODA in 2019 and 94% in 2020; no such figure exists for other years."
   }
  },
  {
@@ -1143,8 +1143,8 @@
   "locator": "1. melléklet, XVIII. KÜLGAZDASÁGI ÉS KÜLÜGYMINISZTÉRIUM fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Programhoz kapcsolódó támogatások” sor, Működési kiadás + Felhalmozási kiadás oszlop (a törvényszöveg 3. oldala)",
   "revision": "final",
   "note": {
-   "hu": "Készpénzszemléletű költségvetési sor. Túlnyomó részét ODA-ként jelentik az OECD-nek, de nem minden forintja ODA, és az ODA más módszerrel készül.",
-   "en": "A cash budget line. Most of it is reported to the OECD as ODA, but not every forint counts as ODA, and ODA follows a different method."
+   "hu": "Készpénzszemléletű költségvetési sor. Nem minden forintja ODA, és az ODA más módszerrel készül. Az ügynökség beszámolói szerint az adományok értékének 2019-ben 86%-a, 2020-ban 94%-a volt ODA-ként elszámolható; más évre nincs ilyen adat.",
+   "en": "A cash budget line. Not every forint counts as ODA, and ODA follows a different method. By the agency's reports, 86% of donations by value counted as ODA in 2019 and 94% in 2020; no such figure exists for other years."
   }
  },
  {
@@ -1166,8 +1166,8 @@
   "locator": "1. melléklet, XI. MINISZTERELNÖKSÉG fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Programhoz kapcsolódó támogatások” sor, Működési kiadás oszlop (a törvényszöveg 2. oldala)",
   "revision": "final",
   "note": {
-   "hu": "Készpénzszemléletű költségvetési sor. Túlnyomó részét ODA-ként jelentik az OECD-nek, de nem minden forintja ODA, és az ODA más módszerrel készül.",
-   "en": "A cash budget line. Most of it is reported to the OECD as ODA, but not every forint counts as ODA, and ODA follows a different method."
+   "hu": "Készpénzszemléletű költségvetési sor. Nem minden forintja ODA, és az ODA más módszerrel készül. Az ügynökség beszámolói szerint az adományok értékének 2019-ben 86%-a, 2020-ban 94%-a volt ODA-ként elszámolható; más évre nincs ilyen adat.",
+   "en": "A cash budget line. Not every forint counts as ODA, and ODA follows a different method. By the agency's reports, 86% of donations by value counted as ODA in 2019 and 94% in 2020; no such figure exists for other years."
   }
  },
  {
@@ -1189,8 +1189,8 @@
   "locator": "1. melléklet, XVIII. KÜLGAZDASÁGI ÉS KÜLÜGYMINISZTÉRIUM fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Ügynökség Nonprofit Zrt. szakmai feladatainak ellátása” sor, Működési kiadás + Felhalmozási kiadás oszlop (a törvényszöveg 3. oldala)",
   "revision": "final",
   "note": {
-   "hu": "Készpénzszemléletű költségvetési sor. Túlnyomó részét ODA-ként jelentik az OECD-nek, de nem minden forintja ODA, és az ODA más módszerrel készül.",
-   "en": "A cash budget line. Most of it is reported to the OECD as ODA, but not every forint counts as ODA, and ODA follows a different method."
+   "hu": "Készpénzszemléletű költségvetési sor. Nem minden forintja ODA, és az ODA más módszerrel készül. Az ügynökség beszámolói szerint az adományok értékének 2019-ben 86%-a, 2020-ban 94%-a volt ODA-ként elszámolható; más évre nincs ilyen adat.",
+   "en": "A cash budget line. Not every forint counts as ODA, and ODA follows a different method. By the agency's reports, 86% of donations by value counted as ODA in 2019 and 94% in 2020; no such figure exists for other years."
   }
  },
  {
@@ -1212,8 +1212,8 @@
   "locator": "1. melléklet, XVIII. KÜLGAZDASÁGI ÉS KÜLÜGYMINISZTÉRIUM fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Ügynökség Nonprofit Zrt. szakmai feladatainak ellátása” sor, Működési kiadás oszlop (a törvényszöveg 3. oldala)",
   "revision": "final",
   "note": {
-   "hu": "Készpénzszemléletű költségvetési sor. Túlnyomó részét ODA-ként jelentik az OECD-nek, de nem minden forintja ODA, és az ODA más módszerrel készül.",
-   "en": "A cash budget line. Most of it is reported to the OECD as ODA, but not every forint counts as ODA, and ODA follows a different method."
+   "hu": "Készpénzszemléletű költségvetési sor. Nem minden forintja ODA, és az ODA más módszerrel készül. Az ügynökség beszámolói szerint az adományok értékének 2019-ben 86%-a, 2020-ban 94%-a volt ODA-ként elszámolható; más évre nincs ilyen adat.",
+   "en": "A cash budget line. Not every forint counts as ODA, and ODA follows a different method. By the agency's reports, 86% of donations by value counted as ODA in 2019 and 94% in 2020; no such figure exists for other years."
   }
  },
  {
@@ -1235,8 +1235,8 @@
   "locator": "1. melléklet, XVIII. KÜLGAZDASÁGI ÉS KÜLÜGYMINISZTÉRIUM fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Programhoz kapcsolódó támogatások” sor, Működési kiadás + Felhalmozási kiadás oszlop (a törvényszöveg 3. oldala)",
   "revision": "final",
   "note": {
-   "hu": "Készpénzszemléletű költségvetési sor. Túlnyomó részét ODA-ként jelentik az OECD-nek, de nem minden forintja ODA, és az ODA más módszerrel készül.",
-   "en": "A cash budget line. Most of it is reported to the OECD as ODA, but not every forint counts as ODA, and ODA follows a different method."
+   "hu": "Készpénzszemléletű költségvetési sor. Nem minden forintja ODA, és az ODA más módszerrel készül. Az ügynökség beszámolói szerint az adományok értékének 2019-ben 86%-a, 2020-ban 94%-a volt ODA-ként elszámolható; más évre nincs ilyen adat.",
+   "en": "A cash budget line. Not every forint counts as ODA, and ODA follows a different method. By the agency's reports, 86% of donations by value counted as ODA in 2019 and 94% in 2020; no such figure exists for other years."
   }
  },
  {
@@ -1258,8 +1258,8 @@
   "locator": "1. melléklet, XVIII. KÜLGAZDASÁGI ÉS KÜLÜGYMINISZTÉRIUM fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Programhoz kapcsolódó támogatások” sor, Működési kiadás oszlop (a törvényszöveg 3. oldala)",
   "revision": "final",
   "note": {
-   "hu": "Készpénzszemléletű költségvetési sor. Túlnyomó részét ODA-ként jelentik az OECD-nek, de nem minden forintja ODA, és az ODA más módszerrel készül.",
-   "en": "A cash budget line. Most of it is reported to the OECD as ODA, but not every forint counts as ODA, and ODA follows a different method."
+   "hu": "Készpénzszemléletű költségvetési sor. Nem minden forintja ODA, és az ODA más módszerrel készül. Az ügynökség beszámolói szerint az adományok értékének 2019-ben 86%-a, 2020-ban 94%-a volt ODA-ként elszámolható; más évre nincs ilyen adat.",
+   "en": "A cash budget line. Not every forint counts as ODA, and ODA follows a different method. By the agency's reports, 86% of donations by value counted as ODA in 2019 and 94% in 2020; no such figure exists for other years."
   }
  },
  {
@@ -1281,8 +1281,8 @@
   "locator": "1. melléklet, XVIII. KÜLGAZDASÁGI ÉS KÜLÜGYMINISZTÉRIUM fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Ügynökség Nonprofit Zrt. szakmai feladatainak ellátása” sor, Működési kiadás + Felhalmozási kiadás oszlop (a törvényszöveg 3. oldala)",
   "revision": "final",
   "note": {
-   "hu": "Készpénzszemléletű költségvetési sor. Túlnyomó részét ODA-ként jelentik az OECD-nek, de nem minden forintja ODA, és az ODA más módszerrel készül.",
-   "en": "A cash budget line. Most of it is reported to the OECD as ODA, but not every forint counts as ODA, and ODA follows a different method."
+   "hu": "Készpénzszemléletű költségvetési sor. Nem minden forintja ODA, és az ODA más módszerrel készül. Az ügynökség beszámolói szerint az adományok értékének 2019-ben 86%-a, 2020-ban 94%-a volt ODA-ként elszámolható; más évre nincs ilyen adat.",
+   "en": "A cash budget line. Not every forint counts as ODA, and ODA follows a different method. By the agency's reports, 86% of donations by value counted as ODA in 2019 and 94% in 2020; no such figure exists for other years."
   }
  },
  {
@@ -1304,8 +1304,8 @@
   "locator": "1. melléklet, XVIII. KÜLGAZDASÁGI ÉS KÜLÜGYMINISZTÉRIUM fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Ügynökség Nonprofit Zrt. szakmai feladatainak ellátása” sor, Működési kiadás oszlop (a törvényszöveg 3. oldala)",
   "revision": "final",
   "note": {
-   "hu": "Készpénzszemléletű költségvetési sor. Túlnyomó részét ODA-ként jelentik az OECD-nek, de nem minden forintja ODA, és az ODA más módszerrel készül.",
-   "en": "A cash budget line. Most of it is reported to the OECD as ODA, but not every forint counts as ODA, and ODA follows a different method."
+   "hu": "Készpénzszemléletű költségvetési sor. Nem minden forintja ODA, és az ODA más módszerrel készül. Az ügynökség beszámolói szerint az adományok értékének 2019-ben 86%-a, 2020-ban 94%-a volt ODA-ként elszámolható; más évre nincs ilyen adat.",
+   "en": "A cash budget line. Not every forint counts as ODA, and ODA follows a different method. By the agency's reports, 86% of donations by value counted as ODA in 2019 and 94% in 2020; no such figure exists for other years."
   }
  },
  {
@@ -1327,8 +1327,8 @@
   "locator": "1. melléklet, XVIII. KÜLGAZDASÁGI ÉS KÜLÜGYMINISZTÉRIUM fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Programhoz kapcsolódó támogatások” sor, Működési kiadás oszlop (a törvényszöveg 3. oldala)",
   "revision": "final",
   "note": {
-   "hu": "Készpénzszemléletű költségvetési sor. Túlnyomó részét ODA-ként jelentik az OECD-nek, de nem minden forintja ODA, és az ODA más módszerrel készül.",
-   "en": "A cash budget line. Most of it is reported to the OECD as ODA, but not every forint counts as ODA, and ODA follows a different method."
+   "hu": "Készpénzszemléletű költségvetési sor. Nem minden forintja ODA, és az ODA más módszerrel készül. Az ügynökség beszámolói szerint az adományok értékének 2019-ben 86%-a, 2020-ban 94%-a volt ODA-ként elszámolható; más évre nincs ilyen adat.",
+   "en": "A cash budget line. Not every forint counts as ODA, and ODA follows a different method. By the agency's reports, 86% of donations by value counted as ODA in 2019 and 94% in 2020; no such figure exists for other years."
   }
  },
  {
@@ -1350,8 +1350,8 @@
   "locator": "1. melléklet, XVIII. KÜLGAZDASÁGI ÉS KÜLÜGYMINISZTÉRIUM fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Programhoz kapcsolódó támogatások” sor, Működési kiadás oszlop (a törvényszöveg 3. oldala)",
   "revision": "final",
   "note": {
-   "hu": "Készpénzszemléletű költségvetési sor. Túlnyomó részét ODA-ként jelentik az OECD-nek, de nem minden forintja ODA, és az ODA más módszerrel készül.",
-   "en": "A cash budget line. Most of it is reported to the OECD as ODA, but not every forint counts as ODA, and ODA follows a different method."
+   "hu": "Készpénzszemléletű költségvetési sor. Nem minden forintja ODA, és az ODA más módszerrel készül. Az ügynökség beszámolói szerint az adományok értékének 2019-ben 86%-a, 2020-ban 94%-a volt ODA-ként elszámolható; más évre nincs ilyen adat.",
+   "en": "A cash budget line. Not every forint counts as ODA, and ODA follows a different method. By the agency's reports, 86% of donations by value counted as ODA in 2019 and 94% in 2020; no such figure exists for other years."
   }
  },
  {
@@ -1373,8 +1373,8 @@
   "locator": "1. melléklet, XVIII. KÜLGAZDASÁGI ÉS KÜLÜGYMINISZTÉRIUM fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Ügynökség Nonprofit Zrt. szakmai feladatainak ellátása” sor, Működési kiadás oszlop (a törvényszöveg 3. oldala)",
   "revision": "final",
   "note": {
-   "hu": "Készpénzszemléletű költségvetési sor. Túlnyomó részét ODA-ként jelentik az OECD-nek, de nem minden forintja ODA, és az ODA más módszerrel készül.",
-   "en": "A cash budget line. Most of it is reported to the OECD as ODA, but not every forint counts as ODA, and ODA follows a different method."
+   "hu": "Készpénzszemléletű költségvetési sor. Nem minden forintja ODA, és az ODA más módszerrel készül. Az ügynökség beszámolói szerint az adományok értékének 2019-ben 86%-a, 2020-ban 94%-a volt ODA-ként elszámolható; más évre nincs ilyen adat.",
+   "en": "A cash budget line. Not every forint counts as ODA, and ODA follows a different method. By the agency's reports, 86% of donations by value counted as ODA in 2019 and 94% in 2020; no such figure exists for other years."
   }
  },
  {
@@ -1396,8 +1396,8 @@
   "locator": "1. melléklet, XVIII. KÜLGAZDASÁGI ÉS KÜLÜGYMINISZTÉRIUM fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Programhoz kapcsolódó támogatások” sor, Működési kiadás oszlop (a törvényszöveg 3. oldala)",
   "revision": "final",
   "note": {
-   "hu": "Készpénzszemléletű költségvetési sor. Túlnyomó részét ODA-ként jelentik az OECD-nek, de nem minden forintja ODA, és az ODA más módszerrel készül.",
-   "en": "A cash budget line. Most of it is reported to the OECD as ODA, but not every forint counts as ODA, and ODA follows a different method."
+   "hu": "Készpénzszemléletű költségvetési sor. Nem minden forintja ODA, és az ODA más módszerrel készül. Az ügynökség beszámolói szerint az adományok értékének 2019-ben 86%-a, 2020-ban 94%-a volt ODA-ként elszámolható; más évre nincs ilyen adat.",
+   "en": "A cash budget line. Not every forint counts as ODA, and ODA follows a different method. By the agency's reports, 86% of donations by value counted as ODA in 2019 and 94% in 2020; no such figure exists for other years."
   }
  },
  {
@@ -1419,8 +1419,8 @@
   "locator": "1. melléklet, XVIII. KÜLGAZDASÁGI ÉS KÜLÜGYMINISZTÉRIUM fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Ügynökség Nonprofit Zrt. szakmai feladatainak ellátása” sor, Működési kiadás oszlop (a törvényszöveg 4. oldala)",
   "revision": "final",
   "note": {
-   "hu": "Készpénzszemléletű költségvetési sor. Túlnyomó részét ODA-ként jelentik az OECD-nek, de nem minden forintja ODA, és az ODA más módszerrel készül.",
-   "en": "A cash budget line. Most of it is reported to the OECD as ODA, but not every forint counts as ODA, and ODA follows a different method."
+   "hu": "Készpénzszemléletű költségvetési sor. Nem minden forintja ODA, és az ODA más módszerrel készül. Az ügynökség beszámolói szerint az adományok értékének 2019-ben 86%-a, 2020-ban 94%-a volt ODA-ként elszámolható; más évre nincs ilyen adat.",
+   "en": "A cash budget line. Not every forint counts as ODA, and ODA follows a different method. By the agency's reports, 86% of donations by value counted as ODA in 2019 and 94% in 2020; no such figure exists for other years."
   }
  },
  {
@@ -1442,8 +1442,8 @@
   "locator": "1. melléklet, XVIII. KÜLGAZDASÁGI ÉS KÜLÜGYMINISZTÉRIUM fejezet, Fejezeti kezelésű előirányzatok, Célelőirányzatok, „Hungary Helps Programhoz kapcsolódó támogatások” sor, Működési kiadás oszlop (a törvényszöveg 4. oldala)",
   "revision": "final",
   "note": {
-   "hu": "Készpénzszemléletű költségvetési sor. Túlnyomó részét ODA-ként jelentik az OECD-nek, de nem minden forintja ODA, és az ODA más módszerrel készül.",
-   "en": "A cash budget line. Most of it is reported to the OECD as ODA, but not every forint counts as ODA, and ODA follows a different method."
+   "hu": "Készpénzszemléletű költségvetési sor. Nem minden forintja ODA, és az ODA más módszerrel készül. Az ügynökség beszámolói szerint az adományok értékének 2019-ben 86%-a, 2020-ban 94%-a volt ODA-ként elszámolható; más évre nincs ilyen adat.",
+   "en": "A cash budget line. Not every forint counts as ODA, and ODA follows a different method. By the agency's reports, 86% of donations by value counted as ODA in 2019 and 94% in 2020; no such figure exists for other years."
   }
  }
 ]

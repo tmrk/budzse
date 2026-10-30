@@ -57,7 +57,7 @@ export function PlanSection() {
     <Section id="plan" title={m.plan.title} lead={m.plan.lead(stats.over, stats.total)} intro={m.plan.intro} basis={view.real ? priceBasis(data, view.ref, m, lang) : view.relative ? m.hero.unitShare : undefined}>
       <Readout
         items={[
-          { key: 'plan', label: m.plan.planMark, swatch: <i className="mark mark-plan" aria-hidden="true" />, measured: planM, obs: shown?.plan, testId: 'plan-plan', gap: gapFor(data, 'deficit', year) },
+          { key: 'plan', label: m.plan.planMark, swatch: <i className="mark mark-plan" aria-hidden="true" />, measured: planM, obs: shown?.plan, testId: 'plan-plan', gap: data.gaps.find((g) => g.id === 'central-original-2027') },
           { key: 'outcome', label: outcomeLabel, swatch: <i className="mark mark-gap" aria-hidden="true" />, measured: outcomeM, obs: shown?.outcome, testId: 'plan-outcome' },
           { key: 'diff', label: m.plan.difference, text: diff && planM && actualM ? signedDifference(actualM.value - planM.value, actualM.unit, lang, m.hero.points) : null, empty: shown?.actual ? undefined : m.plan.noOutcome },
         ]}
@@ -190,7 +190,7 @@ export function AidSection() {
             ? [{ key: 'share', label: shareObs?.method === 'dacGrantEquivalent' ? m.aid.shareGrant : m.aid.shareNet, measured: shareObs ? asPublished(shareObs) : null, obs: shareObs, testId: 'aid-share', gap }]
             : [
                 { key: 'net', label: m.aid.net, swatch: <i className="mark mark-in" aria-hidden="true" />, measured: netObs ? measure(data, netObs, mode) : null, obs: netObs, testId: 'aid-net', gap },
-                { key: 'grant', label: m.aid.grant, swatch: <i className="mark mark-ink" aria-hidden="true" />, measured: grantObs ? measure(data, grantObs, mode) : null, obs: grantObs, testId: 'aid-grant', gap },
+                { key: 'grant', label: m.aid.grant, swatch: <i className="mark mark-ink" aria-hidden="true" />, measured: grantObs ? measure(data, grantObs, mode) : null, obs: grantObs, testId: 'aid-grant', gap: gapFor(data, 'odaGe', year) },
               ]
         }
       />

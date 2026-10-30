@@ -650,6 +650,11 @@ test.describe('layout and accessibility', () => {
     await page.goto('/budzse/en/?s=c&y=2010');
     await ready(page);
     await page.locator('details').evaluateAll((all) => all.forEach((d) => ((d as HTMLDetailsElement).open = true)));
+    // Hungarian source titles in the open folds pull in the accented font subset. That load is not a hover.
+    await page.evaluate(async () => {
+      void document.body.offsetHeight;
+      await document.fonts.ready;
+    });
     const layout = () =>
       page.evaluate(() =>
         [document.documentElement.scrollHeight, ...[...document.querySelectorAll('main button:not(.table-scroll *), main a, main summary, main select, .timeline, .chapter, .ledger-row > *, .readout-item > *')].map((el) => {

@@ -1,4 +1,6 @@
 import { describe, expect, it } from 'vitest';
+import { en } from '../../src/i18n/en';
+import { hu } from '../../src/i18n/hu';
 import { dataset, obs } from './helpers';
 
 // Figures read directly from the primary documents, independently of the extraction scripts.
@@ -11,6 +13,16 @@ describe('verified historical figures', () => {
 
   it('2000 amended main sums differ from the promulgated act', () => {
     expect(obs('central.expenditure.2000.revised').value).toBe(3_902_606_300_000);
+  });
+
+  it('the last amending act of a year wins, even one adopted at the very end of it', () => {
+    expect(obs('central.deficit.2010.revised').source).toBe('act-a1000143');
+    expect(obs('central.revenue.2010.revised').value).toBe(12_764_719_300_000);
+    expect(obs('central.expenditure.2010.revised').value).toBe(13_629_030_400_000);
+    expect(obs('central.deficit.2012.revised').source).toBe('act-a1200187');
+    expect(obs('central.deficit.2012.revised').value).toBe(671_860_700_000);
+    expect(obs('central.deficit.2013.revised').source).toBe('act-a1300206');
+    expect(obs('central.deficit.2013.revised').value).toBe(1_125_184_400_000);
   });
 
   it('2000 final accounts, 2001. évi LXXV. törvény 1. §', () => {
@@ -89,6 +101,45 @@ describe('verified historical figures', () => {
     expect(o.revision).toBe('preliminary');
     expect(obs('oda.2025.actual').value).toBe(114_286_160_000);
     expect(obs('oda.2025.actual').revision).toBe('preliminary');
+  });
+});
+
+describe('every blank has a documented reason', () => {
+  const inRange = (spec: string, year: number) => spec.split(',').some((part) => {
+    const [a, b] = part.trim().split('–').map(Number);
+    return year >= a && year <= (b ?? a);
+  });
+  const gapCovers = (id: string, year: number) => inRange(dataset.gaps.find((g) => g.id === id)!.years, year);
+
+  it('names every year without an amended act', () => {
+    for (let y = 2000; y <= 2025; y++) {
+      if (!dataset.observations.some((o) => o.id === `central.deficit.${y}.revised`)) expect(gapCovers('central-revised-gaps', y), String(y)).toBe(true);
+    }
+  });
+
+  it('names every year without grant-equivalent ODA', () => {
+    for (let y = 2000; y <= 2025; y++) {
+      if (!dataset.observations.some((o) => o.id === `odaGe.${y}.actual`)) expect(gapCovers('oda-ge-early', y), String(y)).toBe(true);
+    }
+  });
+});
+
+describe('references for the prose', () => {
+  it('the methodology cites only registered sources, the same in both languages', () => {
+    hu.methodology.sections.forEach((section, i) => {
+      expect(section.sources.length, section.id).toBeGreaterThan(0);
+      expect(en.methodology.sections[i].sources).toEqual(section.sources);
+      for (const id of section.sources) expect(dataset.sources[id], id).toBeDefined();
+    });
+  });
+
+  it('states both published ODA shares of Hungary Helps donations', () => {
+    expect((3_181_796 / 3_689_128) * 100).toBeCloseTo(86.25, 2);
+    expect((5_023_796 / 5_328_240) * 100).toBeCloseTo(94.29, 2);
+    for (const text of [hu.methodology.sections, en.methodology.sections].map((s) => s.find((x) => x.id === 'helps')!.body.join(' '))) {
+      expect(text).toMatch(/86%/);
+      expect(text).toMatch(/94%/);
+    }
   });
 });
 

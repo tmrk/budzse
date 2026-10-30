@@ -13,6 +13,19 @@
   }
  },
  {
+  "id": "oda-ge-early",
+  "indicator": "odaGe",
+  "years": "2000–2015",
+  "reason": {
+   "hu": "Az OECD DAC1 Magyarországra 2016-tól közöl támogatási egyenértéken mért ODA-t. Ez 2018-tól a hivatalos főszám; a korábbi évek nettó folyósítása külön sorozat, nem helyettesíti.",
+   "en": "OECD DAC1 reports grant-equivalent ODA for Hungary from 2016. It is the official headline from 2018; net disbursements in earlier years are a separate series and do not stand in for it."
+  },
+  "searched": {
+   "hu": "OECD Data Explorer DAC1 (2000-től lekérdezve).",
+   "en": "OECD Data Explorer DAC1 (queried from 2000)."
+  }
+ },
+ {
   "id": "oda-plan",
   "indicator": "oda",
   "years": "2000–2027",
@@ -41,14 +54,14 @@
  {
   "id": "central-revised-gaps",
   "indicator": "deficit",
-  "years": "2007–2009, 2018, 2019, 2022, 2024, 2025",
+  "years": "2007–2009, 2018–2020, 2022, 2024, 2025",
   "reason": {
-   "hu": "Ezekre az évekre nem találtunk a főösszegeket megváltoztató törvényi módosítást. 2022-ben a módosítások veszélyhelyzeti kormányrendeletekkel történtek, ezeket a Büdzsé nem mutatja módosított törvényként.",
-   "en": "For these years we found no statutory amendment that changed the main sums. In 2022 changes were made by emergency government decree, and Büdzsé does not treat those as an amended act."
+   "hu": "Ezekre az évekre nem találtunk a főösszegeket megváltoztató törvényi módosítást. 2020-ban a 2020. évi LX. törvény módosította a költségvetési törvényt, de a főösszegeit nem. 2022-ben a módosítások veszélyhelyzeti kormányrendeletekkel történtek, ezeket a Büdzsé nem mutatja módosított törvényként.",
+   "en": "For these years we found no statutory amendment that changed the main sums. In 2020 Act LX of 2020 amended the budget act but not its main sums. In 2022 changes were made by emergency government decree, and Büdzsé does not treat those as an amended act."
   },
   "searched": {
-   "hu": "Az Országgyűlés jogszabálytárának törvénylistája és a törvények hatályos szövege.",
-   "en": "The act listings in Parliament's law collection and the consolidated texts."
+   "hu": "Az Országgyűlés jogszabálytárának 2010–2026-os törvényei cím szerint, és a törvények hatályos szövege, ahol elérhető.",
+   "en": "Every act of 2010–2026 in Parliament's law collection, by title, and the consolidated texts where available."
   }
  },
  {
@@ -86,8 +99,8 @@
    "en": "Budget-time ESA deficit estimates in forints were found from 2021. For 2017–2020 only the target as a share of GDP is known, and for earlier years neither."
   },
   "searched": {
-   "hu": "Az Állami Számvevőszék véleményei a KSH honlapján (2017–2026). A korábbi javaslatok az Országgyűlés honlapján automatizált eszközzel nem voltak elérhetők.",
-   "en": "State Audit Office opinions on the KSH website (2017–2026). Earlier bills on Parliament's website could not be reached with automated tools."
+   "hu": "Az Állami Számvevőszék véleményei a KSH honlapján (2017–2026). A korábbi törvényjavaslatokat nem dolgoztuk fel.",
+   "en": "State Audit Office opinions on the KSH website (2017–2026). Earlier bills have not been processed."
   }
  },
  {
@@ -125,8 +138,8 @@
    "en": "The agency was created in 2019. The 2021 final-accounts act has no separate line for it, so there is no data, not zero. The original 2021 and 2022 acts have no such line either. The text of the 2027 bill was not yet available on 30 October 2026."
   },
   "searched": {
-   "hu": "A 2019–2026-os költségvetési és a 2019–2024-es zárszámadási törvények mellékletei. Az ügynökség országgyűlési beszámolói (parlament.hu) automatizált eszközzel nem érhetők el.",
-   "en": "The annexes of the 2019–2026 budget acts and the 2019–2024 final-accounts acts. The agency's reports to Parliament (parlament.hu) cannot be reached with automated tools."
+   "hu": "A 2019–2026-os költségvetési és a 2019–2024-es zárszámadási törvények mellékletei.",
+   "en": "The annexes of the 2019–2026 budget acts and the 2019–2024 final-accounts acts."
   }
  },
  {
@@ -134,13 +147,19 @@
   "indicator": "hungaryHelpsProgram",
   "years": "2019–2026",
   "reason": {
-   "hu": "Éves hivatalos arány nincs. Az ügynökség 2020-as beszámolója szerint abban az évben az adományok értékének 94%-a volt ODA-ként elszámolható; más évre nem találtunk ilyen számot. Az oldalon látható arány számított és tájékoztató jellegű.",
-   "en": "No official yearly share exists. The agency's 2020 report says 94% of that year's donations by value counted as ODA; we found no such figure for other years. The ratio on the page is calculated and only a guide."
+   "hu": "Éves hivatalos arány nincs. Az ügynökség beszámolói szerint az adományok értékének 2019-ben 86%-a (3 689 128 ezer forintból 3 181 796 ezer forint), 2020-ban 94%-a (5 328 240 ezer forintból 5 023 796 ezer forint) volt ODA-ként elszámolható; a 2021–2023-as beszámolókban nincs ilyen szám. Az oldalon látható arány számított és tájékoztató jellegű.",
+   "en": "No official yearly share exists. The agency's reports say 86% of donations by value counted as ODA in 2019 (HUF 3,181,796 thousand of HUF 3,689,128 thousand) and 94% in 2020 (HUF 5,023,796 thousand of HUF 5,328,240 thousand); the 2021–2023 reports give no such figure. The ratio on the page is calculated and only a guide."
   },
   "searched": {
-   "hu": "OECD CRS projektszintű adatok (2014–2024), OECD DAC szakértői értékelés (2023), az ügynökség 2020–2024-es országgyűlési beszámolói és 2024–2025-ös éves beszámolói (hungaryhelps.gov.hu).",
-   "en": "OECD CRS project-level data (2014–2024), OECD DAC peer review (2023), the agency's 2020–2024 reports to Parliament and 2024–2025 annual accounts (hungaryhelps.gov.hu)."
-  }
+   "hu": "OECD CRS tevékenységszintű adatok (2018–2019), OECD DAC szakértői értékelés (2023), az ügynökség 2019–2023-as országgyűlési beszámolói (B/13992, B/17056, B/1820, B/5447, B/9725).",
+   "en": "OECD CRS activity-level data (2018–2019), OECD DAC peer review (2023), the agency's 2019–2023 reports to Parliament (B/13992, B/17056, B/1820, B/5447, B/9725)."
+  },
+  "sources": [
+   "hh-report-2019",
+   "hh-report-2020",
+   "oecd-crs-hu",
+   "oecd-peer-review-2023"
+  ]
  },
  {
   "id": "hungary-helps-2025-actual",

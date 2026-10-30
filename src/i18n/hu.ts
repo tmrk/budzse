@@ -93,7 +93,7 @@ export const hu = {
   },
   helps: {
     title: 'Hungary Helps',
-    intro: 'A Hungary Helps a magyar ODA része, nem külön pénz: a támogatások túlnyomó részét fejlesztési támogatásként jelentik az OECD-nek. A költségvetés két sora viseli a nevét: a program támogatásai és az ügynökség működése.',
+    intro: 'A Hungary Helps a magyar ODA része, nem külön pénz: a két évben, amelyre van közölt adat, 2019-ben és 2020-ban az adományok értékének 86%-a és 94%-a volt ODA-ként elszámolható. A költségvetés két sora viseli a nevét: a program támogatásai és az ügynökség működése.',
     program: 'Program',
     agency: 'Ügynökség',
     oda: 'Nettó ODA',
@@ -269,9 +269,11 @@ export const hu = {
   methodology: {
     title: 'Módszertan',
     intro: 'Rövid magyarázat arról, honnan származnak a számok, és mi mivel hasonlítható össze.',
+    references: 'Források',
     sections: [
       {
         id: 'sources',
+        sources: ['ksh-cpi-annual', 'eurostat-gov', 'oecd-dac1', 'mnb-rates', 'mak-2025-final'],
         title: 'Forráshierarchia',
         body: [
           'Elsődleges forrásokat használunk: a költségvetési és zárszámadási törvények szövegét, a Magyar Államkincstár mérlegeit, a KSH, az Eurostat, az OECD és az MNB adatait.',
@@ -281,6 +283,7 @@ export const hu = {
       },
       {
         id: 'scopes',
+        sources: ['act-a0800102', 'act-a0900130', 'eurostat-gov'],
         title: 'Számbavételi körök',
         body: [
           'Központi költségvetés (2000–2009): a törvények csak a központi költségvetést tartalmazzák, a társadalombiztosítási és az elkülönített alapok nélkül, pénzforgalmi szemléletben. A főösszegek az adósságtörlesztést és a hitelfelvételt nem tartalmazzák.',
@@ -291,6 +294,7 @@ export const hu = {
       },
       {
         id: 'sign',
+        sources: ['eurostat-gov'],
         title: 'Előjelek',
         body: [
           'Hiány = kiadás − bevétel. A pozitív érték hiányt, a negatív többletet jelent.',
@@ -299,6 +303,7 @@ export const hu = {
       },
       {
         id: 'inflation',
+        sources: ['ksh-cpi-annual', 'ksh-cpi-monthly', 'pm-mtp-2027'],
         title: 'Inflációs korrekció',
         body: [
           'Korrigált érték = névleges érték × CPI(árszint éve) / CPI(eredeti év). A CPI-t a KSH éves átlagos fogyasztói árindexének láncolásával számítjuk (előző év = 100), 2000 = 100 bázison.',
@@ -309,6 +314,7 @@ export const hu = {
       },
       {
         id: 'gdp',
+        sources: ['eurostat-gdp', 'pm-mtp-2027'],
         title: 'GDP',
         body: [
           'A GDP folyó áron az Eurostat nemzeti számláiból származik, amelyek a KSH adatain alapulnak.',
@@ -318,6 +324,7 @@ export const hu = {
       },
       {
         id: 'oda',
+        sources: ['oecd-dac1', 'oecd-profile-2026', 'mnb-rates'],
         title: 'Hivatalos fejlesztési támogatás (ODA)',
         body: [
           'Az ODA az OECD Fejlesztési Támogatási Bizottságának (DAC) nemzetközi definíciója. Nem azonos a külföldre utalt pénzzel: tartalmazza a nemzetközi szervezeteknek, köztük az EU-nak fizetett hozzájárulások beszámítható részét, valamint egyes hazai költségeket, például az ösztöndíjakat és a menekültek ellátását.',
@@ -330,16 +337,18 @@ export const hu = {
       },
       {
         id: 'helps',
+        sources: ['act-a2000117', 'act-a2500085', 'hh-report-2019', 'hh-report-2020', 'oecd-crs-hu', 'oecd-peer-review-2023'],
         title: 'Hungary Helps',
         body: [
           'A két sor a költségvetési és a zárszámadási törvények 1. mellékletéből származik, a törvényben szereplő néven. A tény a működési és a felhalmozási kiadás összege, a bevételi oszlopok nélkül. 2025-re és 2026-ra még nincs zárszámadási törvény, ezért az eredeti törvény szerepel, tervként jelölve.',
-          'A Hungary Helps az ODA része. A programot koordináló főosztály állítja össze az OECD-nek szóló ODA-jelentést, és az OECD projektszintű adatbázisában (CRS) a munka 2022-ig a Miniszterelnökség, utána a külügyminisztérium alatt szerepel. Külön kódja nincs, és a projektek címe ritkán nevezi meg, ezért az OECD-adatokból nem olvasható ki a pontos rész. Az ügynökség működési költségét Magyarország 2019–2022-re ODA-ként jelentette.',
-          'Hivatalos éves arány nincs. Egy pontos adat van: az ügynökség 2020-as beszámolója szerint abban az évben 51 adománykifizetésből 43, értékben 5 328 240 ezer forintból 5 023 796 ezer forint (94%) volt ODA-ként elszámolható. Az oldalon látható arány a két sor összege osztva a nettó ODA-val, csak lezárt évekre. Tájékoztató jellegű: a költségvetési sor készpénzszemléletű, az ODA az OECD szabályai szerint készül, és a kifizetés éve is eltérhet.',
+          'A Hungary Helps az ODA része, de az OECD-adatokból nem olvasható ki a pontos rész: külön kódja nincs, és a projektek címe ritkán nevezi meg. Az OECD tevékenységszintű adataiban (CRS) 2019-ben az ügynökség működési költsége ODA-ként szerepel, a Miniszterelnökség alatt. A 2023-as DAC-értékelés szerint a humanitárius terület és az ügynökség felügyelete 2022-ben került a külügyminisztériumhoz.',
+          'Hivatalos éves arány nincs. Két pontos adat van, az ügynökség beszámolóiból: 2019-ben 24 adománykifizetésből 20, értékben 3 689 128 ezer forintból 3 181 796 ezer forint (86%), 2020-ban 51-ből 43, értékben 5 328 240 ezer forintból 5 023 796 ezer forint (94%) volt ODA-ként elszámolható. A 2021–2023-as beszámolókban nincs ilyen szám. Az oldalon látható arány a két sor összege osztva a nettó ODA-val, csak lezárt évekre. Tájékoztató jellegű: a költségvetési sor készpénzszemléletű, az ODA az OECD szabályai szerint készül, és a kifizetés éve is eltérhet.',
           'A sorok tartalma változott. 2019–2020-ban a program sora mellett külön sorok álltak ugyanazon cím alatt, például az ösztöndíjprogram és az intervenciós keret; ezek 2021-től nem szerepelnek külön. 2021-ben az ügynökségnek nincs külön sora, ezért ott nincs adat, nem nulla.',
         ],
       },
       {
         id: 'plan',
+        sources: ['act-a2500069', 'consolidated-a2500069', 'mak-2025-final', 'asz-2026'],
         title: 'Terv és tény',
         body: [
           'Eredeti törvény: a kihirdetett költségvetési törvény főösszege. Módosított törvény: a főösszeg az Országgyűlés későbbi módosítása után. Tény: a zárszámadási törvény, 2025-re a Magyar Államkincstár zárszámadási mérlege.',
@@ -351,6 +360,7 @@ export const hu = {
       },
       {
         id: 'forecast',
+        sources: ['consolidated-a2500069', 'mak-2026-09', 'kt-2027', 'pm-mtp-2027', 'ec-ameco-2026-spring'],
         title: 'Előrejelzések, 2026 és 2027',
         body: [
           '2026-ra külön mutatjuk az eredeti törvényt, a 2026 októberében kihirdetett módosítást, az első kilenc hónap kincstári teljesítését és az előrejelzéseket. Teljes éves tény még nincs.',
@@ -361,11 +371,12 @@ export const hu = {
       },
       {
         id: 'limits',
+        sources: ['eurostat-gdp', 'oecd-profile-2026'],
         title: 'Korlátok és revíziók',
         body: [
           'A statisztikák utólag módosulhatnak: az Eurostat és a KSH adatai rendszeresen változnak, és az Eurostat 2025-ös GDP-je még előzetes.',
           'A központi költségvetés főösszegei hosszabb távon nem teljesen azonos tartalmúak: a törvények szerkezete többször változott. Évek közötti összevetéshez a kormányzati szektor adatai megbízhatóbbak.',
-          'A 2025-ös ODA-adat előzetes, és az OECD szerint Magyarország nem adott teljes körű adatot minden részletről.',
+          'A 2025-ös ODA-adat előzetes, és az OECD szerint Magyarország nem adott teljes körű adatot az Ukrajnának nyújtott ODA-ról.',
         ],
       },
     ],

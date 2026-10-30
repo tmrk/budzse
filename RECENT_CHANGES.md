@@ -1,5 +1,14 @@
 # Recent changes
 
+## 2026-10-30: full data check
+
+Every served figure was checked again against its source: all statistics re-fetched, every act re-read, each transcribed figure found on its page, and all acts of 2010-2026 listed by title to look for amendments. Corrected:
+
+- Amended main sums for three years stopped at an earlier amendment. 2010 now follows Act CXLIII of 2010 (revenue 12,764,719.3, expenditure 13,629,030.4 million), 2012 Act CLXXXVII of 2012 (deficit 671,860.7 million, was 576,160.7) and 2013 Act CCVI of 2013 (deficit 1,125,184.4 million, was 1,050,834.8). Originals and outcomes were not affected.
+- Hungary Helps: the page said only 2020 had a published ODA share. The agency's 2019 report has one too, 86%, beside 94% for 2020, and the text no longer says "most" for years with no figure. Two statements about the OECD's project data were narrowed to what its 2018-2019 file and the 2023 peer review show. The 2025 ODA caveat now says what the OECD says: incomplete data for ODA to Ukraine.
+- Gaps: 2020 was missing from the list of years without an amended act, grant-equivalent ODA before 2016 had no documented reason, and the plan readout for 2027 gave the reason for a missing outcome.
+- Each methodology section and the Hungary Helps share gap now link the documents behind them. Four sources were added. Percent figures from the State Audit Office no longer carry a stray currency.
+
 ## 2026-10-30: language follows the visitor's time zone
 
 The address without a language now opens in Hungarian on a device set to Hungary's time zone, and moves to `/en/` elsewhere, without a reload. A language link and a saved choice still win. The source sheet slides in and out, and open dropdown lists keep to the theme's colours.
@@ -56,4 +65,5 @@ Dataset of central budget acts 2000-2026, final accounts 2000-2024, Treasury 202
 - Check for the 2025 final-accounts act and swap it in for the Treasury balance.
 - EC Autumn 2026 forecast is due 17 November 2026; OECD detailed 2025 ODA in December 2026.
 - Budget-time GDP assumptions before 2017 and ESA plans before 2021 are gaps; older bills are on parlament.hu.
+- The OECD's public activity-level file for Hungary covers only 2018-2019, so the agency's operating costs are confirmed as ODA for 2019 only. Later years need the CRS bulk files.
 - Monthly CPI chains one-decimal indices, so it carries rounding error of a few tenths of a percent.

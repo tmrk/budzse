@@ -155,7 +155,10 @@ for (const [ind, label] of [['revenue', 'Revenue'], ['expenditure', 'Expenditure
 }
 
 if (!d.gaps.length) fail('Gap register is empty');
-for (const g of d.gaps) if (!g.reason?.hu || !g.reason?.en || !g.searched?.hu || !g.searched?.en) fail(`Gap ${g.id}: incomplete`);
+for (const g of d.gaps) {
+  if (!g.reason?.hu || !g.reason?.en || !g.searched?.hu || !g.searched?.en) fail(`Gap ${g.id}: incomplete`);
+  for (const s of g.sources ?? []) if (!d.sources[s]) fail(`Gap ${g.id}: source ${s} is not in the registry`);
+}
 
 // Coverage report.
 const years = Array.from({ length: 28 }, (_, i) => 2000 + i);

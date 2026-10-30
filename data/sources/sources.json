@@ -256,5 +256,58 @@
   "url": "https://www.parlament.hu/documents/d/koltsegvetesi-tanacs/6-2026-10-29-a-koltsegvetesi-tanacs-velemenye-a-2027-evi-kozponti-koltsegvetes-tervezeterol",
   "publicationDate": "2026-10-29",
   "type": "report"
+ },
+ "hh-report-2019": {
+  "id": "hh-report-2019",
+  "institution": {
+   "hu": "Magyarország Kormánya",
+   "en": "Government of Hungary"
+  },
+  "title": "B/13992. számú beszámoló a Hungary Helps Ügynökség Nonprofit Zrt. 2019. évi tevékenységéről és működéséről",
+  "url": "https://www.parlament.hu/irom41/13992/13992.pdf",
+  "publicationDate": null,
+  "type": "report",
+  "note": {
+   "hu": "Az ODA-ként elszámolható adományok: 12. oldal.",
+   "en": "Donations that count as ODA: page 12."
+  }
+ },
+ "hh-report-2020": {
+  "id": "hh-report-2020",
+  "institution": {
+   "hu": "Magyarország Kormánya",
+   "en": "Government of Hungary"
+  },
+  "title": "B/17056. számú beszámoló a Hungary Helps Ügynökség Nonprofit Zrt. 2020. évi tevékenységéről és működéséről",
+  "url": "https://www.parlament.hu/irom41/17056/17056.pdf",
+  "publicationDate": "2021-09",
+  "type": "report",
+  "note": {
+   "hu": "Az ODA-ként elszámolható adományok: 11. oldal.",
+   "en": "Donations that count as ODA: page 11."
+  }
+ },
+ "oecd-peer-review-2023": {
+  "id": "oecd-peer-review-2023",
+  "institution": {
+   "hu": "OECD",
+   "en": "OECD"
+  },
+  "title": "OECD Development Co-operation Peer Reviews: Hungary 2023",
+  "url": "https://www.oecd.org/en/publications/oecd-development-co-operation-peer-reviews-hungary-2023_ec7d67f1-en/full-report.html",
+  "publicationDate": "2023-02",
+  "type": "report",
+  "licence": "CC BY 4.0"
+ },
+ "oecd-crs-hu": {
+  "id": "oecd-crs-hu",
+  "institution": {
+   "hu": "OECD",
+   "en": "OECD"
+  },
+  "title": "Creditor Reporting System, activity-level data in IATI XML: Hungary, 2018–2019",
+  "url": "https://webfs.oecd.org/crs-iati-xml/Donors/iati_HU.zip",
+  "publicationDate": "2021-08-19",
+  "type": "dataset"
  }
 }

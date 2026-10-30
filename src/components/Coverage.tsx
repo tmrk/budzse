@@ -1,6 +1,7 @@
 import { FIRST_YEAR, LAST_YEAR } from '../lib/view';
 import type { Observation } from '../types/data';
 import { useApp } from './context';
+import { SourceList } from './figures';
 
 const YEARS = Array.from({ length: LAST_YEAR - FIRST_YEAR + 1 }, (_, i) => FIRST_YEAR + i);
 
@@ -60,6 +61,7 @@ export default function Coverage() {
             <strong>{g.years}</strong>
             <p>{g.reason[lang]}</p>
             <p className="fine">{m.coverage.searched}: {g.searched[lang]}</p>
+            {g.sources && <SourceList label={m.methodology.references} ids={g.sources} sources={data.sources} />}
           </li>
         ))}
       </ul>

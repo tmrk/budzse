@@ -24,7 +24,7 @@ Pipeline: official sources → `raw/` and `observations/` → `scripts/transform
 
 Open the document, read the figure in context (render PDF tables visually when text extraction is ambiguous), and add it to `observations/manual-transcriptions.json` with the reported text, unit and page or row. Normalised values are exact strings of whole forints. A second check against another document is recorded in a test where possible.
 
-`fetch-acts.mjs` stops with an error if expenditure minus revenue differs from the deficit stated in the same clause.
+`fetch-acts.mjs` stops with an error if expenditure minus revenue differs from the deficit stated in the same clause. It reads only the amending acts listed in `scripts/fetch/legal-acts-manifest.mjs`, and `net.jogtar.hu` has no consolidated text for 2010-2017 or 2019-2022, so an unlisted act goes unnoticed. To add or check a year, go through every act of that year and the next by title: an amendment can come in the last days of the year.
 
 ## Refreshing
 
