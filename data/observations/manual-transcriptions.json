@@ -147,20 +147,20 @@
   "scope": "centralSubsystem",
   "status": "draft",
   "method": "cash",
-  "value": "42483800000000",
+  "value": "42484933000000",
   "unit": "HUF",
   "original": {
-   "value": "42 483,8",
-   "unit": "milliárd forint",
+   "value": "42 484 933,0",
+   "unit": "millió forint",
    "currency": "HUF"
   },
-  "institution": "Költségvetési Tanács",
-  "source": "kt-2027",
-  "locator": "1. táblázat, „Egyenleg összesen” blokk, bevétel sor, 2027. évi Tervezet oszlop (PDF 14. oldal); szövegben: 13. oldal",
+  "institution": "Magyarország Kormánya",
+  "source": "bill-t950-2027",
+  "locator": "1. § (1) bekezdés b) pont (PDF 5. oldal); ugyanez az 1. melléklet „Központi alrendszer összesen” sorában (PDF 196. oldal)",
   "revision": "projection",
   "note": {
-   "hu": "Törvényjavaslat-tervezet, nem elfogadott költségvetés. A számokat a Költségvetési Tanács véleménye közli; a benyújtott törvényjavaslat 2026. október 30-án még nem volt az Országgyűlés honlapján.",
-   "en": "A draft bill, not an adopted budget. The figures are as stated in the Fiscal Council's opinion; the bill itself was not yet on Parliament's website on 30 October 2026."
+   "hu": "Benyújtott törvényjavaslat, nem elfogadott költségvetés. Az Országgyűlés még módosíthatja. A Költségvetési Tanács 2026. október 29-i véleménye a tervezet korábbi változatából 42 483,8 milliárd forintot közölt.",
+   "en": "A bill filed in Parliament, not an adopted budget. Parliament can still change it. The Fiscal Council's opinion of 29 October 2026 gave HUF 42,483.8 billion from an earlier version of the draft."
   }
  },
  {
@@ -170,20 +170,20 @@
   "scope": "centralSubsystem",
   "status": "draft",
   "method": "cash",
-  "value": "47586500000000",
+  "value": "47587633000000",
   "unit": "HUF",
   "original": {
-   "value": "47 586,5",
-   "unit": "milliárd forint",
+   "value": "47 587 633,0",
+   "unit": "millió forint",
    "currency": "HUF"
   },
-  "institution": "Költségvetési Tanács",
-  "source": "kt-2027",
-  "locator": "1. táblázat, „Egyenleg összesen” blokk, kiadás sor, 2027. évi Tervezet oszlop (PDF 14. oldal); szövegben: 13. oldal",
+  "institution": "Magyarország Kormánya",
+  "source": "bill-t950-2027",
+  "locator": "1. § (1) bekezdés a) pont (PDF 5. oldal); ugyanez az 1. melléklet „Központi alrendszer összesen” sorában (PDF 196. oldal)",
   "revision": "projection",
   "note": {
-   "hu": "Törvényjavaslat-tervezet, nem elfogadott költségvetés. A számokat a Költségvetési Tanács véleménye közli; a benyújtott törvényjavaslat 2026. október 30-án még nem volt az Országgyűlés honlapján.",
-   "en": "A draft bill, not an adopted budget. The figures are as stated in the Fiscal Council's opinion; the bill itself was not yet on Parliament's website on 30 October 2026."
+   "hu": "Benyújtott törvényjavaslat, nem elfogadott költségvetés. Az Országgyűlés még módosíthatja. A Költségvetési Tanács 2026. október 29-i véleménye a tervezet korábbi változatából 47 586,5 milliárd forintot közölt.",
+   "en": "A bill filed in Parliament, not an adopted budget. Parliament can still change it. The Fiscal Council's opinion of 29 October 2026 gave HUF 47,586.5 billion from an earlier version of the draft."
   }
  },
  {
@@ -196,17 +196,17 @@
   "value": "5102700000000",
   "unit": "HUF",
   "original": {
-   "value": "5 102,7",
-   "unit": "milliárd forint",
+   "value": "5 102 700,0",
+   "unit": "millió forint",
    "currency": "HUF"
   },
-  "institution": "Költségvetési Tanács",
-  "source": "kt-2027",
-  "locator": "1. táblázat, „Egyenleg összesen” sor, 2027. évi Tervezet oszlop (PDF 14. oldal); szövegben: 13. oldal",
+  "institution": "Magyarország Kormánya",
+  "source": "bill-t950-2027",
+  "locator": "1. § (1) bekezdés c) pont (PDF 5. oldal); ugyanez az 1. melléklet „Központi alrendszer összesen” sorában (PDF 196. oldal)",
   "revision": "projection",
   "note": {
-   "hu": "Törvényjavaslat-tervezet, nem elfogadott költségvetés. A számokat a Költségvetési Tanács véleménye közli; a benyújtott törvényjavaslat 2026. október 30-án még nem volt az Országgyűlés honlapján.",
-   "en": "A draft bill, not an adopted budget. The figures are as stated in the Fiscal Council's opinion; the bill itself was not yet on Parliament's website on 30 October 2026."
+   "hu": "Benyújtott törvényjavaslat, nem elfogadott költségvetés. Az Országgyűlés még módosíthatja.",
+   "en": "A bill filed in Parliament, not an adopted budget. Parliament can still change it."
   }
  },
  {
@@ -440,6 +440,29 @@
   }
  },
  {
+  "id": "gdp.2027.planned",
+  "year": 2027,
+  "indicator": "gdp",
+  "scope": "economy",
+  "status": "planned",
+  "method": "nationalAccounts",
+  "value": "97716000000000",
+  "unit": "HUF",
+  "original": {
+   "value": "97 716",
+   "unit": "Mrd Ft",
+   "currency": "HUF"
+  },
+  "institution": "Magyarország Kormánya",
+  "source": "bill-t950-2027",
+  "locator": "Általános indokolás, 1. táblázat, „Nominális GDP (Mrd Ft)” sor, 2027. évi előrejelzés oszlop (PDF 318. oldal)",
+  "revision": "projection",
+  "note": {
+   "hu": "A 2027. évi törvényjavaslat indokolásának GDP-feltevése. Nem törvényi főösszeg.",
+   "en": "The GDP assumption in the justification of the 2027 bill. Not a statutory main sum."
+  }
+ },
+ {
   "id": "general.deficit.2021.planned",
   "year": 2021,
   "indicator": "deficit",
@@ -575,6 +598,29 @@
   "note": {
    "hu": "A költségvetési törvényjavaslat indokolásának ESA-hiánybecslése az Állami Számvevőszék véleménye szerint. Nem törvényi főösszeg.",
    "en": "The ESA deficit estimate in the budget bill's justification, per the State Audit Office opinion. Not a statutory main sum."
+  }
+ },
+ {
+  "id": "general.deficit.2027.planned",
+  "year": 2027,
+  "indicator": "deficit",
+  "scope": "generalGovernment",
+  "status": "planned",
+  "method": "esa2010",
+  "value": "4790000000000",
+  "unit": "HUF",
+  "original": {
+   "value": "−4790,0",
+   "unit": "Mrd Ft",
+   "currency": "HUF"
+  },
+  "institution": "Magyarország Kormánya",
+  "source": "bill-t950-2027",
+  "locator": "Általános indokolás, 9. táblázat, „Kormányzati szektor ESA-egyenlege” sor (PDF 331. oldal)",
+  "revision": "projection",
+  "note": {
+   "hu": "A 2027. évi törvényjavaslat indokolásának ESA-hiánybecslése. Nem törvényi főösszeg. Az eredeti (−) előjelet megfordítottuk: a pozitív érték hiány.",
+   "en": "The ESA deficit estimate in the justification of the 2027 bill. Not a statutory main sum. The original (−) sign is reversed: positive means deficit."
   }
  },
  {
@@ -903,18 +949,18 @@
   "value": "4790000000000",
   "unit": "HUF",
   "original": {
-   "value": "-4 790,0",
-   "unit": "milliárd forint",
+   "value": "−4790,0",
+   "unit": "Mrd Ft",
    "currency": "HUF"
   },
-  "institution": "Költségvetési Tanács",
-  "source": "kt-2027",
-  "locator": "2. táblázat, „Kormányzati szektor ESA egyenlege (Mrd Ft)” sor, 2027. évi Tervezet oszlop (PDF 15. oldal); szövegben: 14. oldal",
+  "institution": "Magyarország Kormánya",
+  "source": "bill-t950-2027",
+  "locator": "Általános indokolás, 9. táblázat, „Kormányzati szektor ESA-egyenlege” sor (PDF 331. oldal)",
   "revision": "projection",
   "publisher": "gov",
   "note": {
-   "hu": "A 2027. évi törvényjavaslat-tervezet hiánycélja a Költségvetési Tanács véleménye szerint. Az eredeti (−) előjelet megfordítottuk: a pozitív érték hiány.",
-   "en": "The deficit target in the draft 2027 bill, per the Fiscal Council's opinion. The original (−) sign is reversed: positive means deficit."
+   "hu": "A 2027. évi törvényjavaslat hiánycélja. Az eredeti (−) előjelet megfordítottuk: a pozitív érték hiány.",
+   "en": "The deficit target in the 2027 bill. The original (−) sign is reversed: positive means deficit."
   }
  },
  {
@@ -1424,6 +1470,29 @@
   }
  },
  {
+  "id": "hungaryHelpsAgency.2027.draft",
+  "year": 2027,
+  "indicator": "hungaryHelpsAgency",
+  "scope": "centralSubsystem",
+  "status": "draft",
+  "method": "cash",
+  "value": "411400000",
+  "unit": "HUF",
+  "original": {
+   "value": "411,4",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Magyarország Kormánya",
+  "source": "bill-t950-2027",
+  "locator": "1. melléklet, XVIII. KÜLÜGYMINISZTÉRIUM fejezet, 7. cím Fejezeti kezelésű előirányzatok, 9. alcím, 3. jogcímcsoport, „Hungary Helps Ügynökség Nonprofit Zrt. szakmai feladatainak ellátása” sor, Működési kiadás oszlop (PDF 104. oldal)",
+  "revision": "projection",
+  "note": {
+   "hu": "Benyújtott törvényjavaslat, nem elfogadott költségvetés. Az Országgyűlés még módosíthatja. Készpénzszemléletű költségvetési sor. Nem minden forintja ODA, és az ODA más módszerrel készül. Az ügynökség beszámolói szerint az adományok értékének 2019-ben 86%-a, 2020-ban 94%-a volt ODA-ként elszámolható; más évre nincs ilyen adat.",
+   "en": "A bill filed in Parliament, not an adopted budget. Parliament can still change it. A cash budget line. Not every forint counts as ODA, and ODA follows a different method. By the agency's reports, 86% of donations by value counted as ODA in 2019 and 94% in 2020; no such figure exists for other years."
+  }
+ },
+ {
   "id": "hungaryHelpsProgram.2026.original",
   "year": 2026,
   "indicator": "hungaryHelpsProgram",
@@ -1444,6 +1513,29 @@
   "note": {
    "hu": "Készpénzszemléletű költségvetési sor. Nem minden forintja ODA, és az ODA más módszerrel készül. Az ügynökség beszámolói szerint az adományok értékének 2019-ben 86%-a, 2020-ban 94%-a volt ODA-ként elszámolható; más évre nincs ilyen adat.",
    "en": "A cash budget line. Not every forint counts as ODA, and ODA follows a different method. By the agency's reports, 86% of donations by value counted as ODA in 2019 and 94% in 2020; no such figure exists for other years."
+  }
+ },
+ {
+  "id": "hungaryHelpsProgram.2027.draft",
+  "year": 2027,
+  "indicator": "hungaryHelpsProgram",
+  "scope": "centralSubsystem",
+  "status": "draft",
+  "method": "cash",
+  "value": "100700000",
+  "unit": "HUF",
+  "original": {
+   "value": "100,7",
+   "unit": "millió forint",
+   "currency": "HUF"
+  },
+  "institution": "Magyarország Kormánya",
+  "source": "bill-t950-2027",
+  "locator": "1. melléklet, XVIII. KÜLÜGYMINISZTÉRIUM fejezet, 7. cím Fejezeti kezelésű előirányzatok, 9. alcím, 1. jogcímcsoport, „Hungary Helps Programhoz kapcsolódó támogatások” sor, Működési kiadás oszlop (PDF 104. oldal)",
+  "revision": "projection",
+  "note": {
+   "hu": "Benyújtott törvényjavaslat, nem elfogadott költségvetés. Az Országgyűlés még módosíthatja. Készpénzszemléletű költségvetési sor. Nem minden forintja ODA, és az ODA más módszerrel készül. Az ügynökség beszámolói szerint az adományok értékének 2019-ben 86%-a, 2020-ban 94%-a volt ODA-ként elszámolható; más évre nincs ilyen adat.",
+   "en": "A bill filed in Parliament, not an adopted budget. Parliament can still change it. A cash budget line. Not every forint counts as ODA, and ODA follows a different method. By the agency's reports, 86% of donations by value counted as ODA in 2019 and 94% in 2020; no such figure exists for other years."
   }
  }
 ]

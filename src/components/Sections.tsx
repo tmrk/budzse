@@ -283,7 +283,7 @@ export function HelpsSection() {
   const { program, agency } = helpsFor(data, year);
   const odaObs = bestObservation(data, 'oda', year, 'general');
   const ratio = helpsRatio(data, year);
-  const tagOf = (o?: Observation) => (o && o.status !== 'actual' ? m.helps.budgeted : undefined);
+  const tagOf = (o?: Observation) => (!o || o.status === 'actual' ? undefined : o.status === 'draft' ? m.helps.billed : m.helps.budgeted);
 
   return (
     <Section

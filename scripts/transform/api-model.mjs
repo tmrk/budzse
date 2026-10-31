@@ -36,7 +36,7 @@ export const LABELS = {
     statuses: {
       original: 'Eredeti törvény',
       revised: 'Módosított törvény',
-      draft: 'Törvénytervezet',
+      draft: 'Törvényjavaslat',
       planned: 'Tervezéskori becslés',
       actual: 'Tény',
       ytd: 'Évközi teljesítés',
@@ -45,7 +45,7 @@ export const LABELS = {
     statusHelp: {
       original: 'Az Országgyűlés által elfogadott költségvetési törvény eredeti főösszege.',
       revised: 'A törvény főösszege az Országgyűlés későbbi módosítása után.',
-      draft: 'Még nem törvény: a kormány tervezete.',
+      draft: 'Még nem törvény: a kormány benyújtott törvényjavaslata.',
       planned: 'A költségvetési törvényjavaslat indokolásának becslése, nem törvényi főösszeg.',
       actual: 'A teljes évre vonatkozó teljesítési adat.',
       ytd: 'Csak az év egy részére vonatkozik, nem éves tény.',
@@ -92,7 +92,7 @@ export const LABELS = {
     statuses: {
       original: 'Original budget act',
       revised: 'Amended budget act',
-      draft: 'Draft bill',
+      draft: 'Budget bill',
       planned: 'Budget-time estimate',
       actual: 'Actual',
       ytd: 'Year to date',
@@ -101,7 +101,7 @@ export const LABELS = {
     statusHelp: {
       original: 'The main sum of the budget act as Parliament first adopted it.',
       revised: 'The main sum after a later amendment by Parliament.',
-      draft: 'Not yet law: a government draft.',
+      draft: 'Not yet law: a bill the government has filed in Parliament.',
       planned: "An estimate from the budget bill's justification, not a statutory main sum.",
       actual: 'The outcome for the full year.',
       ytd: 'Covers only part of the year, so it is not an annual outcome.',
@@ -147,8 +147,8 @@ export const FIGURE_KINDS = {
     en: 'The main sum of the budget act after a later amendment. A budget, not an outturn.',
   },
   draft: {
-    hu: 'Tervezet. Még nem törvény, és nem tény.',
-    en: 'A draft. Not a law, and not an outturn.',
+    hu: 'Törvényjavaslat. Még nem törvény, és nem tény.',
+    en: 'A bill. Not a law, and not an outturn.',
   },
   planned: {
     hu: 'Tervezéskori hivatalos becslés. Nem törvényi főösszeg, és nem tény.',
@@ -418,8 +418,8 @@ function kindCaveat(o) {
       en: 'This is the amended budget, not an outturn.',
     },
     draft: {
-      hu: 'Ez tervezet, még nem törvény, és nem teljesítési adat.',
-      en: 'This is a draft, not a law and not an outturn.',
+      hu: 'Ez törvényjavaslat, még nem törvény, és nem teljesítési adat.',
+      en: 'This is a bill, not a law and not an outturn.',
     },
     planned: {
       hu: 'Ez tervezéskori becslés, nem törvényi főösszeg és nem teljesítési adat.',

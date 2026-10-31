@@ -246,6 +246,22 @@
   "publicationDate": "2025-05",
   "type": "report"
  },
+ "bill-t950-2027": {
+  "id": "bill-t950-2027",
+  "institution": {
+   "hu": "Magyarország Kormánya",
+   "en": "Government of Hungary"
+  },
+  "title": "T/950. számú törvényjavaslat Magyarország 2027. évi központi költségvetéséről",
+  "url": "https://www.parlament.hu/irom43/00950/00950.pdf",
+  "publicationDate": "2026-10-30",
+  "accessed": "2026-10-31",
+  "type": "report",
+  "note": {
+   "hu": "Benyújtott törvényjavaslat, nem kihirdetett törvény. Főösszegek: 1. § (PDF 5. oldal). Hungary Helps sorai: 1. melléklet, PDF 104. oldal. GDP: PDF 318. oldal. ESA-híd: PDF 331. oldal.",
+   "en": "A bill as filed, not a promulgated act. Main sums: § 1 (PDF p. 5). Hungary Helps lines: Annex 1, PDF p. 104. GDP: PDF p. 318. ESA bridge: PDF p. 331."
+  }
+ },
  "kt-2027": {
   "id": "kt-2027",
   "institution": {

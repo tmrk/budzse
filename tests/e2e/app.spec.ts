@@ -192,7 +192,7 @@ test.describe('the year', () => {
     await expect(page.getByTestId('ledger-deficit')).toHaveText('7.11');
     await page.goto('/budzse/en/?y=2027&s=c');
     await ready(page);
-    await expect(page.getByTestId('stamp')).toHaveText('Draft bill');
+    await expect(page.getByTestId('stamp')).toHaveText('Budget bill');
     await page.goto('/budzse/en/?y=2026');
     await ready(page);
     await expect(page.getByTestId('stamp')).toHaveText('Forecast');
@@ -367,7 +367,7 @@ test.describe('lens and scope', () => {
     await expect(plan).toContainText('Amended plan');
     await expect(plan).toContainText('HUF 7.11 trillion');
     await page.getByTestId('year-select').selectOption('2027');
-    await expect(plan).toContainText('Draft');
+    await expect(plan).toContainText('Bill');
   });
 });
 
@@ -470,12 +470,13 @@ test.describe('sources, comparisons and exports', () => {
     await expect(dialog.getByRole('link', { name: /Consumer price index/ })).toHaveAttribute('href', /ksh\.hu/);
   });
 
-  test('the 2027 draft cites the Fiscal Council, not the press', async ({ page }) => {
+  test('the 2027 figures cite the bill itself', async ({ page }) => {
     await page.goto('/budzse/en/?y=2027&s=c');
     await ready(page);
     await page.getByTestId('ledger-deficit').click();
     const dialog = page.getByTestId('source-dialog');
-    await expect(dialog).toContainText('Fiscal Council of Hungary');
+    await expect(dialog).toContainText('T/950');
+    await expect(dialog.getByRole('link', { name: /T\/950/ })).toHaveAttribute('href', 'https://www.parlament.hu/irom43/00950/00950.pdf');
     await expect(dialog).not.toContainText('Secondary citation');
   });
 
@@ -484,6 +485,14 @@ test.describe('sources, comparisons and exports', () => {
     await ready(page);
     await page.getByTestId('ledger-revenue').click();
     await expect(page.getByTestId('source-dialog')).toContainText('Share of GDP × nominal GDP forecast');
+  });
+
+  test('the 2027 Hungary Helps lines are marked as a bill', async ({ page }) => {
+    await page.goto('/budzse/en/?y=2027');
+    await ready(page);
+    await expect(page.getByTestId('helps-program')).toHaveText('HUF 101 million');
+    await expect(page.getByTestId('helps-agency')).toHaveText('HUF 411 million');
+    await expect(page.getByTestId('helps').locator('.readout-item').first()).toContainText('bill');
   });
 
   test('Hungary Helps shows both budget lines beside net ODA, and a missing line stays missing', async ({ page }) => {

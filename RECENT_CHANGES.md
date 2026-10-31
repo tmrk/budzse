@@ -1,5 +1,13 @@
 # Recent changes
 
+## 2026-10-31: the 2027 budget bill
+
+The 2027 figures now come from the bill itself, T/950, filed on 30 October 2026 (https://www.parlament.hu/irom43/00950/00950.pdf), rather than the Fiscal Council's opinion of an earlier version. Revenue is HUF 42,484,933.0 million and expenditure HUF 47,587,633.0 million, each HUF 1,133 million above that version. The deficit, HUF 5,102,700.0 million, and the ESA target, HUF 4,790.0 billion, did not change.
+
+New from the bill: the 2027 Hungary Helps lines (programme HUF 100.7 million, agency HUF 411.4 million, against 2,149.9 and 1,643.0 in the 2026 act under the same names), and the budget-time GDP assumption (HUF 97,716 billion) and ESA estimate. The bill's GDP, CPI and shares of GDP match the Ministry of Finance programme already in use.
+
+A filed bill is no longer called a draft in the text: the label is now "Budget bill" and "Törvényjavaslat". The methodology also said no scholarship line had been listed separately since 2021; the 2026 act and the bill list one, which is still not counted.
+
 ## 2026-10-30: full data check
 
 Every served figure was checked again against its source: all statistics re-fetched, every act re-read, each transcribed figure found on its page, and all acts of 2010-2026 listed by title to look for amendments. Corrected:
@@ -61,7 +69,7 @@ Dataset of central budget acts 2000-2026, final accounts 2000-2024, Treasury 202
 
 ## Known limitations and outstanding work
 
-- 2027 central figures are from the Fiscal Council opinion. Replace with the official bill or the adopted act. Its annexes will also give the 2027 Hungary Helps lines.
+- 2027 central figures and Hungary Helps lines are from the bill T/950, which Parliament can still change. Replace them with the promulgated act.
 - Check for the 2025 final-accounts act and swap it in for the Treasury balance.
 - EC Autumn 2026 forecast is due 17 November 2026; OECD detailed 2025 ODA in December 2026.
 - Budget-time GDP assumptions before 2017 and ESA plans before 2021 are gaps; older bills are on parlament.hu.

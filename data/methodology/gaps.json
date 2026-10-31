@@ -34,8 +34,8 @@
    "en": "Budget acts contain no total ODA figure. Single ministry lines such as Hungary Helps do not match total ODA, so no plan is shown."
   },
   "searched": {
-   "hu": "A 2000–2026-os költségvetési törvények főösszegi részei, nefe.kormany.hu.",
-   "en": "The main-sum sections of the 2000–2026 budget acts, nefe.kormany.hu."
+   "hu": "A 2000–2026-os költségvetési törvények főösszegi részei, a 2027-es törvényjavaslat, nefe.kormany.hu.",
+   "en": "The main-sum sections of the 2000–2026 budget acts, the 2027 bill, nefe.kormany.hu."
   }
  },
  {
@@ -47,8 +47,8 @@
    "en": "We found no official, complete ODA forecast."
   },
   "searched": {
-   "hu": "A Pénzügyminisztérium középtávú programja, OECD-profil.",
-   "en": "The Ministry of Finance medium-term programme, OECD profile."
+   "hu": "A Pénzügyminisztérium középtávú programja, a 2027-es törvényjavaslat, OECD-profil.",
+   "en": "The Ministry of Finance medium-term programme, the 2027 bill, OECD profile."
   }
  },
  {
@@ -82,13 +82,16 @@
   "indicator": "deficit",
   "years": "2027",
   "reason": {
-   "hu": "2027-re még nincs elfogadott költségvetési törvény. A tervezet számait a Költségvetési Tanács 2026. október 29-i véleménye közli; a benyújtott törvényjavaslat 2026. október 30-án még nem volt az Országgyűlés honlapján.",
-   "en": "No budget act has been adopted for 2027. The draft's figures are as stated in the Fiscal Council's opinion of 29 October 2026; the bill itself was not yet on Parliament's website on 30 October 2026."
+   "hu": "2027-re még nincs elfogadott költségvetési törvény. A számok a kormány 2026. október 30-án benyújtott törvényjavaslatából (T/950.) származnak, amelyet az Országgyűlés még módosíthat.",
+   "en": "No budget act has been adopted for 2027. The figures come from the bill the government filed on 30 October 2026 (T/950), which Parliament can still change."
   },
   "searched": {
-   "hu": "A Költségvetési Tanács véleménye (parlament.hu), az Országgyűlés 43. ciklusának irományai 949-es számig.",
-   "en": "The Fiscal Council's opinion (parlament.hu), the papers of Parliament's 43rd term up to number 949."
-  }
+   "hu": "A T/950. számú törvényjavaslat (parlament.hu), az Országgyűlés 43. ciklusának irományai 950-es számig.",
+   "en": "Bill T/950 (parlament.hu), the papers of Parliament's 43rd term up to number 950."
+  },
+  "sources": [
+   "bill-t950-2027"
+  ]
  },
  {
   "id": "general-plan-early",
@@ -106,40 +109,40 @@
  {
   "id": "gdp-plan-early",
   "indicator": "gdp",
-  "years": "2000–2016, 2027",
+  "years": "2000–2016",
   "reason": {
-   "hu": "Tervezéskori GDP-feltevést 2017–2026-ra találtunk. 2027-re a kormány előrejelzése szerepel.",
-   "en": "Budget-time GDP assumptions were found for 2017–2026. For 2027 the government forecast is shown instead."
+   "hu": "Tervezéskori GDP-feltevést 2017-től találtunk.",
+   "en": "Budget-time GDP assumptions were found from 2017 on."
   },
   "searched": {
-   "hu": "Az Állami Számvevőszék véleményei, a Pénzügyminisztérium középtávú programja.",
-   "en": "State Audit Office opinions, the Ministry of Finance medium-term programme."
+   "hu": "Az Állami Számvevőszék véleményei, a 2027. évi törvényjavaslat.",
+   "en": "State Audit Office opinions, the 2027 bill."
   }
  },
  {
   "id": "hungary-helps-program",
   "indicator": "hungaryHelpsProgram",
-  "years": "2000–2018, 2027",
+  "years": "2000–2018",
   "reason": {
-   "hu": "2019 előtt nincs a Hungary Helps nevet viselő költségvetési sor. Az üldözött keresztények segítésének korábbi sorait nem nevezzük át utólag. A 2027-es törvényjavaslat szövege 2026. október 30-án még nem volt elérhető.",
-   "en": "No budget line carries the Hungary Helps name before 2019. We do not relabel the earlier lines for helping persecuted Christians. The text of the 2027 bill was not yet available on 30 October 2026."
+   "hu": "2019 előtt nincs a Hungary Helps nevet viselő költségvetési sor. Az üldözött keresztények segítésének korábbi sorait nem nevezzük át utólag.",
+   "en": "No budget line carries the Hungary Helps name before 2019. We do not relabel the earlier lines for helping persecuted Christians."
   },
   "searched": {
-   "hu": "A 2017–2026-os költségvetési és a 2017–2024-es zárszámadási törvények mellékletei (mkogy.jogtar.hu).",
-   "en": "The annexes of the 2017–2026 budget acts and the 2017–2024 final-accounts acts (mkogy.jogtar.hu)."
+   "hu": "A 2017–2026-os költségvetési és a 2017–2024-es zárszámadási törvények mellékletei (mkogy.jogtar.hu), a 2027-es törvényjavaslat 1. melléklete.",
+   "en": "The annexes of the 2017–2026 budget acts and the 2017–2024 final-accounts acts (mkogy.jogtar.hu), Annex 1 of the 2027 bill."
   }
  },
  {
   "id": "hungary-helps-agency",
   "indicator": "hungaryHelpsAgency",
-  "years": "2000–2018, 2021, 2027",
+  "years": "2000–2018, 2021",
   "reason": {
-   "hu": "Az ügynökség 2019-ben jött létre. 2021-ben a zárszámadási törvényben nincs külön sora, ezért nincs adat, nem nulla. A 2021-es és a 2022-es eredeti törvényben sincs ilyen sor. A 2027-es törvényjavaslat szövege 2026. október 30-án még nem volt elérhető.",
-   "en": "The agency was created in 2019. The 2021 final-accounts act has no separate line for it, so there is no data, not zero. The original 2021 and 2022 acts have no such line either. The text of the 2027 bill was not yet available on 30 October 2026."
+   "hu": "Az ügynökség 2019-ben jött létre. 2021-ben a zárszámadási törvényben nincs külön sora, ezért nincs adat, nem nulla. A 2021-es és a 2022-es eredeti törvényben sincs ilyen sor.",
+   "en": "The agency was created in 2019. The 2021 final-accounts act has no separate line for it, so there is no data, not zero. The original 2021 and 2022 acts have no such line either."
   },
   "searched": {
-   "hu": "A 2019–2026-os költségvetési és a 2019–2024-es zárszámadási törvények mellékletei.",
-   "en": "The annexes of the 2019–2026 budget acts and the 2019–2024 final-accounts acts."
+   "hu": "A 2019–2026-os költségvetési és a 2019–2024-es zárszámadási törvények mellékletei, a 2027-es törvényjavaslat 1. melléklete.",
+   "en": "The annexes of the 2019–2026 budget acts and the 2019–2024 final-accounts acts, Annex 1 of the 2027 bill."
   }
  },
  {

@@ -36,8 +36,8 @@ describe('verified historical figures', () => {
   });
 
   it('the Fiscal Council opinion of 29 October 2026, read from its tables', () => {
-    expect(obs('central.revenue.2027.draft').value).toBe(42_483_800_000_000);
-    expect(obs('central.expenditure.2027.draft').value).toBe(47_586_500_000_000);
+    expect(obs('central.revenue.2027.draft').value).toBe(42_484_933_000_000);
+    expect(obs('central.expenditure.2027.draft').value).toBe(47_587_633_000_000);
     expect(obs('central.deficit.2027.draft').value).toBe(5_102_700_000_000);
     expect(obs('general.deficit.2027.forecast.gov').value).toBe(4_790_000_000_000);
   });
@@ -148,10 +148,24 @@ describe('classification rules', () => {
     expect(dataset.observations.filter((o) => o.status === 'actual' && o.year > 2025)).toEqual([]);
   });
 
-  it('labels 2027 central figures as a draft, not as a budget', () => {
+  it('labels 2027 central figures as a bill, not as a budget', () => {
     const rows = dataset.observations.filter((o) => o.year === 2027 && o.scope === 'centralSubsystem');
-    expect(rows.map((o) => o.status)).toEqual(['draft', 'draft', 'draft']);
-    expect(rows.every((o) => o.source === 'kt-2027' && !o.secondary)).toBe(true);
+    expect(rows).toHaveLength(5);
+    expect(rows.every((o) => o.status === 'draft' && o.source === 'bill-t950-2027' && !o.secondary)).toBe(true);
+  });
+
+  it('reads the 2027 bill consistently', () => {
+    expect(obs('central.expenditure.2027.draft').value - obs('central.revenue.2027.draft').value).toBe(obs('central.deficit.2027.draft').value);
+    // The bill's justification repeats the medium-term programme's GDP, and its ESA bridge ends at the target.
+    expect(obs('gdp.2027.planned').value).toBe(obs('gdp.2027.forecast.gov').value);
+    expect(obs('general.deficit.2027.planned').value).toBe(obs('general.deficit.2027.forecast.gov').value);
+    expect(obs('central.deficit.2027.draft').value - 13_300_000_000 - 299_400_000_000).toBe(obs('general.deficit.2027.planned').value);
+  });
+
+  it('takes the 2027 Hungary Helps lines from the bill by the same names as the 2026 act', () => {
+    expect(obs('hungaryHelpsProgram.2027.draft').value).toBe(100_700_000);
+    expect(obs('hungaryHelpsAgency.2027.draft').value).toBe(411_400_000);
+    expect(obs('hungaryHelpsProgram.2027.draft').locator).toContain('Hungary Helps Programhoz kapcsolódó támogatások');
   });
 
   it('labels part-year execution with its period', () => {

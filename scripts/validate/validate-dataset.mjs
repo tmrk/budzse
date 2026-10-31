@@ -97,7 +97,9 @@ for (const o of d.observations) {
   if (!o.indicator.startsWith('hungaryHelps')) continue;
   if (o.year < 2019) fail(`${o.id}: no line carries the name before 2019`);
   if (o.scope !== 'centralSubsystem' || o.method !== 'cash') fail(`${o.id}: must be a cash line of the central subsystem`);
-  if (!d.sources[o.source]?.url.startsWith('https://mkogy.jogtar.hu/')) fail(`${o.id}: must come from a promulgated act`);
+  // A bill is not an act: it may only be labelled as a draft, and it stays one until the promulgated text replaces it.
+  const home = o.status === 'draft' ? 'https://www.parlament.hu/irom43/' : 'https://mkogy.jogtar.hu/';
+  if (!d.sources[o.source]?.url.startsWith(home)) fail(`${o.id}: must come from ${home}`);
 }
 
 // CPI: consecutive years, plausible indices, chain equal to the product of published indices.
@@ -176,8 +178,8 @@ const rows = [
   ['GDP: forecast', (y) => has(`gdp.${y}.forecast.gov`)],
   ['ODA: net disbursements', (y) => has(`oda.${y}.actual`)],
   ['ODA: grant equivalent', (y) => has(`odaGe.${y}.actual`)],
-  ['Hungary Helps: programme', (y) => has(`hungaryHelpsProgram.${y}.actual`) || has(`hungaryHelpsProgram.${y}.original`)],
-  ['Hungary Helps: agency', (y) => has(`hungaryHelpsAgency.${y}.actual`) || has(`hungaryHelpsAgency.${y}.original`)],
+  ['Hungary Helps: programme', (y) => has(`hungaryHelpsProgram.${y}.actual`) || has(`hungaryHelpsProgram.${y}.original`) || has(`hungaryHelpsProgram.${y}.draft`)],
+  ['Hungary Helps: agency', (y) => has(`hungaryHelpsAgency.${y}.actual`) || has(`hungaryHelpsAgency.${y}.original`) || has(`hungaryHelpsAgency.${y}.draft`)],
   ['CPI: KSH', (y) => has(`cpi.${y}.actual`)],
   ['CPI: forecast', (y) => has(`cpi.${y}.forecast.gov`)],
 ];
