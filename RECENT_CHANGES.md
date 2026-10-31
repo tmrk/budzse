@@ -1,5 +1,9 @@
 # Recent changes
 
+## 2026-10-31: last updated note
+
+The footer now says when the site was last updated, under the project statement and on the same line as the links. The date is the dataset's `generatedAt`, which every deploy sets, so it also moves when only the code changed.
+
 ## 2026-10-31: the 2027 budget bill
 
 The 2027 figures now come from the bill itself, T/950, filed on 30 October 2026 (https://www.parlament.hu/irom43/00950/00950.pdf), rather than the Fiscal Council's opinion of an earlier version. Revenue is HUF 42,484,933.0 million and expenditure HUF 47,587,633.0 million, each HUF 1,133 million above that version. The deficit, HUF 5,102,700.0 million, and the ESA target, HUF 4,790.0 billion, did not change.

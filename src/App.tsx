@@ -12,6 +12,7 @@ import { useAnalytics } from './hooks/useAnalytics';
 import { useAppState } from './hooks/useAppState';
 import { useTheme, type ThemeChoice } from './hooks/useTheme';
 import { ledgerRows, type Measured } from './lib/measure';
+import { formatDate } from './lib/format';
 import type { Dataset, Gap, Lang, Observation } from './types/data';
 
 const NEXT_THEME: Record<ThemeChoice, ThemeChoice> = { auto: 'light', light: 'dark', dark: 'auto' };
@@ -148,14 +149,15 @@ export default function App() {
       )}
       <footer className="footer">
         <p>{m.app.footerNeutral}</p>
-        <div className="footer-side">
-          <p>{m.app.footerLicence}</p>
-          <p className="footer-links">
-            <a href="https://github.com/tmrk/budzse">{m.app.footerCode}</a>
-            <a href={`${import.meta.env.BASE_URL}${lang}/api/`} data-testid="api-link">{m.app.footerApi}</a>
-            <button type="button" className="text-button" onClick={consent.reopen} data-testid="consent-open">{m.consent.settings}</button>
-          </p>
-        </div>
+        <p>{m.app.footerLicence}</p>
+        <p className="footer-updated" data-testid="last-updated">
+          {data && <>{m.app.footerUpdated} <time dateTime={data.generatedAt}>{formatDate(data.generatedAt, lang)}</time></>}
+        </p>
+        <p className="footer-links">
+          <a href="https://github.com/tmrk/budzse">{m.app.footerCode}</a>
+          <a href={`${import.meta.env.BASE_URL}${lang}/api/`} data-testid="api-link">{m.app.footerApi}</a>
+          <button type="button" className="text-button" onClick={consent.reopen} data-testid="consent-open">{m.consent.settings}</button>
+        </p>
       </footer>
       {consent.asking && <ConsentBanner lang={lang} m={m} focus={consent.reopened} onChoose={consent.choose} />}
     </div>

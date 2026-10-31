@@ -458,10 +458,11 @@ tbody th { font-weight: 500; }
 
 .status-line { min-height: 60vh; padding: 24px 0; font-size: var(--text-md); color: var(--ink-soft); }
 .footer {
-  display: grid; grid-template-columns: var(--cols); column-gap: var(--gap-col); align-items: start;
+  display: grid; grid-template-columns: var(--cols); gap: 4px var(--gap-col); align-items: start;
   padding: 20px 0 40px; font-size: var(--text-xs); line-height: 1.45; color: var(--ink-soft);
 }
-.footer-side { display: grid; gap: 4px; }
+/* Shares its row with the links, and holds the line before the data arrives. */
+.footer-updated { min-height: 1.45em; }
 .footer-links { display: flex; flex-wrap: wrap; gap: 4px 18px; }
 
 /* Fixed, so it takes no room from the page and leaving moves nothing. */
@@ -498,6 +499,7 @@ tbody th { font-weight: 500; }
   .chapter-notes { padding-top: 0; max-width: 72ch; }
   .chapter-notes:empty { display: none; }
   .footer { row-gap: 8px; }
+  .footer-updated { order: 1; }
 }
 
 /* Too narrow for the measure as well as the year. It stays above the first chart. */

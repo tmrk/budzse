@@ -470,6 +470,18 @@ test.describe('sources, comparisons and exports', () => {
     await expect(dialog.getByRole('link', { name: /Consumer price index/ })).toHaveAttribute('href', /ksh\.hu/);
   });
 
+  test('the footer says when the site was last updated, in the language of the page', async ({ page }) => {
+    await page.goto('/budzse/en/');
+    await ready(page);
+    const note = page.getByTestId('last-updated');
+    const iso = (await note.locator('time').getAttribute('datetime'))!;
+    expect(iso).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+    const year = iso.slice(0, 4);
+    await expect(note).toHaveText(new RegExp('^Last updated \\d{1,2} \\w+ ' + year + '$'));
+    await page.getByTestId('lang-hu').click();
+    await expect(note).toHaveText(new RegExp('^Utoljára frissítve: ' + year + '\\. '));
+  });
+
   test('the 2027 figures cite the bill itself', async ({ page }) => {
     await page.goto('/budzse/en/?y=2027&s=c');
     await ready(page);
